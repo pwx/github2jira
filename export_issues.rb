@@ -8,14 +8,14 @@ require 'csv'
 require 'date'
 
 module ExportIssues
-  def ExportIssues.get_issues
+  def ExportIssues.get_issues(total_issues, per_page)
     issue_pages = []
-    # You should be able to make out total pages and per page values below
-    # from the serial number of the last issue created on your github repo:
-    total_pages = 1
-    per_page = 100
+    issues = []
+    
+    total_pages = total_issues/per_page
+    total_pages += 1 if total_issues % per_page > 0
 
-    # Run the script - but make sure you stay below GitHub's (current, generous)
+    # pull the issues: make sure you stay below GitHub's (current, generous)
     # rate limit of 5000 requests per hour.
 
     1.upto(total_pages).each do |page|
@@ -34,7 +34,24 @@ module ExportIssues
       puts "#{issue_pages[page-1].size} issues retrieved in page #{page}"
     end
 
-    issue_pages
+    issue_pages.each do |ip|
+      ip.each do |issue|
+        issue_id = issue['number']
+        summary = issue['title']
+        desc = issue['body']
+        date_created = DateTime.parse(issue['created_at']).strftime("%m/%d/%y %I:%M:%S %p")
+        date_updated = DateTime.parse(issue['updated_at']).strftime("%m/%d/%y %I:%M:%S %p")
+        status = issue['state']
+        reporter = get_username(issue['user']['login'])
+        version = issue['milestone']['title']
+        comments = issue['comments'] > 0 ? get_issue_comments(issue_id) : []
+        
+        issues << [summary, description, date_created, date_updated, 
+                   status, reporter, version] + comments
+      end
+    end
+
+    issues
   end
 
   def ExportIssues.get_username(name)
@@ -46,9 +63,10 @@ module ExportIssues
 
   def ExportIssues.get_issue_comments(issue_id, total_comments)
     #Follow the recommended comment format for importing (http://goo.gl/xOh4k):
-    #Tester Notes: MarkChai: 02/27/05 10:36:14 AM: Sufficiently tested attempting demos.
+    #Comment: MarkChai: 02/27/05 10:36:14 AM: Sufficiently tested attempting demos.
     comment_pages = []
     comments = []
+
     per_page = 25
     total_pages = total_comments/per_page
     total_pages += 1 if total_comments % per_page > 0
@@ -72,41 +90,22 @@ module ExportIssues
     comment_pages.each do |cp|
       cp.each do |comment|
         username = get_username(comment['user']['login'])
-        date = DateTime.parse(comment['created_at']).strftime("%m/%d/%y %I:%M:%S %p")
-        
-        comments << [comment['body'], username, date]
+        date = DateTime.parse(comment['created_at']).strftime("%m/%d/%y %I:%M:%S %p")        
+        comments << ["Comment: #{username}: #{date}: #{comment['body']}"]
       end
     end
 
     comments
   end
 
-  def ExportIssues.generate_csv(issue_pages)
+  def ExportIssues.generate_csv(issues, max_comments)
     outfile = File.open('ghissues.csv', 'wb')
-    max_comment_num = 0
     
     CSV::Writer.generate(outfile) do |csv|
-      comment_cols = ['CommentBody'] * max_comment_num
-
+      comment_cols = ['CommentBody'] * max_comments
       csv << ['Summary', 'Description', 'DateCreated', 'DateModified', 
               'Status', 'Reporter', 'Assignee', 'AffectsVersion'] + comment_cols
-
-      issue_pages.each do |ip|
-        ip.each do |issue|
-          issue_id = issue['number']
-          summary = issue['title']
-          desc = issue['body']
-          date_created = DateTime.parse(issue['created_at']).strftime("%m/%d/%y %I:%M:%S %p")
-          date_updated = DateTime.parse(issue['updated_at']).strftime("%m/%d/%y %I:%M:%S %p")
-          status = issue['state']
-          reporter = get_username(issue['user']['login'])
-          version = issue['milestone']['title']
-          comments = issue['comments'] > 0 ? get_issue_comments(issue_id) : []
-          
-          csv << [summary, description, date_created, date_updated, 
-                  status, reporter, version] + comments
-        end
-      end
+      csv << issues
     end
     
     outfile.close
