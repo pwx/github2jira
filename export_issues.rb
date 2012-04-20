@@ -40,8 +40,8 @@ module ExportIssues
         issue_id = issue['number']
         summary = issue['title']
         desc = issue['body']
-        date_created = DateTime.parse(issue['created_at']).strftime("%m/%d/%y %I:%M:%S %p")
-        date_updated = DateTime.parse(issue['updated_at']).strftime("%m/%d/%y %I:%M:%S %p")
+        date_created = DateTime.parse(issue['created_at']).strftime("%d/%m/%Y %H:%M:%S")
+        date_updated = DateTime.parse(issue['updated_at']).strftime("%d/%m/%Y %H:%M:%S")
         status = issue['state']
         reporter = get_username(issue['user']['login'])
         assignee = issue['assignee']['login'] if issue['assignee']
