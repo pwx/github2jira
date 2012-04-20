@@ -11,6 +11,7 @@ module ExportIssues
   def ExportIssues.get_issues(total_issues, per_page)
     issue_pages = []
     issues = []
+    max_comments = 0
     
     total_pages = total_issues/per_page
     total_pages += 1 if total_issues % per_page > 0
@@ -43,15 +44,17 @@ module ExportIssues
         date_updated = DateTime.parse(issue['updated_at']).strftime("%m/%d/%y %I:%M:%S %p")
         status = issue['state']
         reporter = get_username(issue['user']['login'])
-        version = issue['milestone']['title']
-        comments = issue['comments'] > 0 ? get_issue_comments(issue_id) : []
+        assignee = issue['assignee']['login'] if issue['assignee']
+        version = issue['milestone']['title'] if issue['milestone']
+        comments = issue['comments'] > 0 ? get_issue_comments(issue_id, issue['comments']) : []
+        max_comments = comments.size if comments.size > max_comments
         
-        issues << [summary, description, date_created, date_updated, 
-                   status, reporter, version] + comments
+        issues << [summary, desc, date_created, date_updated, 
+                   status, reporter, assignee, version] + comments
       end
     end
 
-    issues
+    generate_csv(issues, max_comments)
   end
 
   def ExportIssues.get_username(name)
@@ -84,7 +87,7 @@ module ExportIssues
         comment_pages[page-1] = JSON.parse(response.body)
       }
       
-      puts "#{comment_pages[page-1].size} issues retrieved in page #{page}"
+      puts "#{comment_pages[page-1].size} comments retrieved in page #{page}, issue #{issue_id}"
     end
 
     comment_pages.each do |cp|
@@ -103,9 +106,11 @@ module ExportIssues
     
     CSV::Writer.generate(outfile) do |csv|
       comment_cols = ['CommentBody'] * max_comments
-      csv << ['Summary', 'Description', 'DateCreated', 'DateModified', 
+      csv << ['Summary', 'Description', 'DateCreated', 'DateModified',
               'Status', 'Reporter', 'Assignee', 'AffectsVersion'] + comment_cols
-      csv << issues
+      issues.each do |issue|
+        csv << issue
+      end
     end
     
     outfile.close
