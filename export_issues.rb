@@ -37,6 +37,7 @@ module ExportIssues
 
     issue_pages.each do |ip|
       ip.each do |issue|
+        comments = []
         issue_id = issue['number']
         summary = issue['title']
         desc = issue['body']
@@ -46,8 +47,13 @@ module ExportIssues
         reporter = get_username(issue['user']['login'])
         assignee = get_username(issue['assignee']['login']) if issue['assignee']
         version = issue['milestone']['title'] if issue['milestone']
-        comments = issue['comments'] > 0 ? get_issue_comments(issue_id, issue['comments']) : []
-        max_comments = comments.size if comments.size > max_comments
+
+        if issue['comments'] > 0          
+          comments = get_issue_comments(issue_id, issue['comments'])
+          max_comments = comments.size if comments.size > max_comments
+        else
+          puts "0 comments retrieved in issue #{issue_id}"
+        end
         
         issues << [summary, desc, date_created, date_updated, 
                    status, reporter, assignee, version] + comments
@@ -87,7 +93,7 @@ module ExportIssues
         comment_pages[page-1] = JSON.parse(response.body)
       }
       
-      puts "#{comment_pages[page-1].size} comments retrieved in page #{page}, issue #{issue_id}"
+      puts "#{comment_pages[page-1].size} comments retrieved in issue #{issue_id}"
     end
 
     comment_pages.each do |cp|
