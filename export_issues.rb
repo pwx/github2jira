@@ -44,7 +44,7 @@ module ExportIssues
         date_updated = DateTime.parse(issue['updated_at']).strftime("%d/%m/%Y %H:%M:%S")
         status = issue['state']
         reporter = get_username(issue['user']['login'])
-        assignee = issue['assignee']['login'] if issue['assignee']
+        assignee = get_username(issue['assignee']['login']) if issue['assignee']
         version = issue['milestone']['title'] if issue['milestone']
         comments = issue['comments'] > 0 ? get_issue_comments(issue_id, issue['comments']) : []
         max_comments = comments.size if comments.size > max_comments
@@ -93,8 +93,8 @@ module ExportIssues
     comment_pages.each do |cp|
       cp.each do |comment|
         username = get_username(comment['user']['login'])
-        date = DateTime.parse(comment['created_at']).strftime("%m/%d/%y %I:%M:%S %p")        
-        comments << ["Comment: #{username}: #{date}: #{comment['body']}"]
+        date = DateTime.parse(comment['created_at']).strftime("%d/%m/%y %H:%M:%S")
+        comments << ["#{date}; #{username}; #{comment['body']}"]
       end
     end
 
