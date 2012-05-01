@@ -12,7 +12,7 @@ require 'date'
 SKIP_LIST = [639, 542]
 
 module ExportIssues
-  def ExportIssues.get_issues(total_issues, per_page)
+  def ExportIssues.get_issues(total_issues, per_page=100)
     issue_pages = []
     issues = []
     max_comments = 0
@@ -24,7 +24,7 @@ module ExportIssues
     # rate limit of 5000 requests per hour.
 
     1.upto(total_pages).each do |page|
-      uri = URI.parse("https://api.github.com/repos/pwx/code/issues?page=#{page}&per_page=#{per_page}")
+      uri = URI.parse("https://api.github.com/repos/pwx/code/issues?state=closed&page=#{page}&per_page=#{per_page}")
       http = Net::HTTP.new uri.host, uri.port
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
       http.use_ssl = true
@@ -45,11 +45,20 @@ module ExportIssues
         next if SKIP_LIST.include?(issue_id)
         comments = []
         summary = issue['title']
+        reporter = get_username(issue['user']['login'])
         desc = issue['body']
+
+        if desc.match(/\*\*Author:\s.+\*\*/)
+          uname = get_username(desc.match(/\*\*Author:\s(.+)\*\*/)[1])
+          if uname
+            reporter = uname
+            desc = desc.gsub(/\*\*Author:\s.+\*\*/,'')
+          end
+        end
+
         date_created = DateTime.parse(issue['created_at']).strftime("%d/%m/%Y %H:%M:%S")
         date_updated = DateTime.parse(issue['updated_at']).strftime("%d/%m/%Y %H:%M:%S")
         status = issue['state']
-        reporter = get_username(issue['user']['login'])
         assignee = get_username(issue['assignee']['login']) if issue['assignee']
         version = issue['milestone']['title'] if issue['milestone']
 
@@ -69,8 +78,7 @@ module ExportIssues
   end
 
   def ExportIssues.get_username(name)
-    unames = { 'vcolaco' => 'vinita', 'madanvk' => 'madan', 'mkristian' => 'kristian',
-      'satyagrahi' => 'rajesh', 'ajaya' => 'ajaya', 'vamsee' => 'vamsee', 'thornedev' => 'larrie' }
+    unames = { 'vcolaco' => 'vinita', 'madanvk' => 'madan', 'mkristian' => 'kristian', 'satyagrahi' => 'rajesh', 'ajaya' => 'ajaya', 'vamsee' => 'vamsee', 'thornedev' => 'larrie', 'ajay' => 'ajaya' }
 
     unames[name]
   end
