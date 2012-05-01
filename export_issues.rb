@@ -56,7 +56,8 @@ module ExportIssues
 
       date_created = DateTime.parse(issue['created_at']).strftime("%d/%m/%Y %H:%M:%S")
       date_updated = DateTime.parse(issue['updated_at']).strftime("%d/%m/%Y %H:%M:%S")
-      status = issue['state']
+      status = issue['state'].capitalize
+      resolution = status == 'Open' ? 'Unresolved' : 'Fixed'
       assignee = get_username(issue['assignee']['login']) if issue['assignee']
       version = issue['milestone']['title'] if issue['milestone']
 
@@ -67,8 +68,7 @@ module ExportIssues
         puts "0 comments retrieved in issue #{issue_id}"
       end
         
-      issues_n_comments << [summary, desc, date_created, date_updated, 
-                            status, reporter, assignee, version] + comments
+      issues_n_comments << [summary, desc, date_created, date_updated, status, reporter, assignee, version, resolution] + comments
     end
 
     generate_csv(issues_n_comments, max_comments)
@@ -191,8 +191,7 @@ module ExportIssues
   def ExportIssues.generate_csv(issues, max_comments)
     FasterCSV.open('ghissues.csv', 'w') do |csv|   
       comment_cols = ['CommentBody'] * max_comments
-      csv << ['Summary', 'Description', 'DateCreated', 'DateModified',
-              'Status', 'Reporter', 'Assignee', 'AffectsVersion'] + comment_cols
+      csv << ['Summary', 'Description', 'DateCreated', 'DateModified', 'Status', 'Reporter', 'Assignee', 'AffectsVersion', 'Resolution'] + comment_cols
       issues.each do |issue|
         csv << issue
       end
