@@ -44,7 +44,7 @@ module ExportIssues
       comments = []
       summary = issue['title']
       reporter = get_username(issue['user']['login'])
-      desc = issue['body']
+      desc = issue['body'] || 'No description given'
 
       if desc.match(/\*\*Author:\s.+\*\*/)
         uname = get_username(desc.match(/\*\*Author:\s(.+)\*\*/)[1])
