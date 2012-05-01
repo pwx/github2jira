@@ -4,8 +4,12 @@
 require 'rubygems'
 require 'net/https'
 require 'json'
-require 'csv'
+require 'fastercsv'
 require 'date'
+
+# add the issues that are causing problems with import
+# we can fix these later
+SKIP_LIST = [639, 542]
 
 module ExportIssues
   def ExportIssues.get_issues(total_issues, per_page)
@@ -37,8 +41,9 @@ module ExportIssues
 
     issue_pages.each do |ip|
       ip.each do |issue|
-        comments = []
         issue_id = issue['number']
+        next if SKIP_LIST.include?(issue_id)
+        comments = []
         summary = issue['title']
         desc = issue['body']
         date_created = DateTime.parse(issue['created_at']).strftime("%d/%m/%Y %H:%M:%S")
@@ -60,7 +65,7 @@ module ExportIssues
       end
     end
 
-    generate_csv(issues, max_comments)
+    generate_csv(issues.reverse, max_comments)
   end
 
   def ExportIssues.get_username(name)
@@ -108,9 +113,7 @@ module ExportIssues
   end
 
   def ExportIssues.generate_csv(issues, max_comments)
-    outfile = File.open('ghissues.csv', 'wb')
-    
-    CSV::Writer.generate(outfile) do |csv|
+    FasterCSV.open('ghissues.csv', 'w') do |csv|   
       comment_cols = ['CommentBody'] * max_comments
       csv << ['Summary', 'Description', 'DateCreated', 'DateModified',
               'Status', 'Reporter', 'Assignee', 'AffectsVersion'] + comment_cols
@@ -118,7 +121,5 @@ module ExportIssues
         csv << issue
       end
     end
-    
-    outfile.close
   end
 end
