@@ -9,10 +9,10 @@ require 'date'
 
 # add the issues that are causing problems with import
 # we can fix these later
-SKIP_LIST = [639, 542]
+SKIP_LIST = [639, 542, 234, 235]
 
 module ExportIssues
-  def ExportIssues.get_all_issues(total_issues)
+  def ExportIssues.get_all_issues(issue_start, issue_end)
     issues = []
     issues_n_comments = []
     max_comments = 0
@@ -20,7 +20,7 @@ module ExportIssues
     # pull the issues: make sure you stay below GitHub's (current, generous)
     # rate limit of 5000 requests per hour.
 
-    1.upto(total_issues).each do |inum|
+    issue_start.upto(issue_end).each_with_index do |inum, idx|
       uri = URI.parse("https://api.github.com/repos/pwx/code/issues/#{inum}")
       http = Net::HTTP.new uri.host, uri.port
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
@@ -30,7 +30,7 @@ module ExportIssues
         req = Net::HTTP::Get.new(uri.request_uri)
         req.basic_auth 'vamsee', 'v4m533K4NGH'
         response = http.request(req)
-        issues[inum-1] = JSON.parse(response.body)
+        issues[idx] = JSON.parse(response.body)
       }
       
       puts "Retrieved issue #{inum}"
@@ -40,11 +40,16 @@ module ExportIssues
 
     issues.each do |issue|
       issue_id = issue['number']
-      next if SKIP_LIST.include?(issue_id)
       comments = []
       summary = issue['title']
       reporter = get_username(issue['user']['login'])
       desc = issue['body'] || 'No description given'
+
+      if SKIP_LIST.include?(issue_id)
+        # issue is giving problems either in description or in comments,
+        # so setup only title and do the rest manually (including comments):
+        desc = "Skipped migration due to csv probs. Please refer https://github.com/pwx/code/issues/#{issue_id}"
+      end
 
       if desc.match(/\*\*Author:\s.+\*\*/)
         uname = get_username(desc.match(/\*\*Author:\s(.+)\*\*/)[1])
@@ -61,7 +66,7 @@ module ExportIssues
       assignee = get_username(issue['assignee']['login']) if issue['assignee']
       version = issue['milestone']['title'] if issue['milestone']
 
-      if issue['comments'] > 0          
+      if issue['comments'] > 0 && !SKIP_LIST.include?(issue_id)
         comments = get_issue_comments(issue_id, issue['comments'])
         max_comments = comments.size if comments.size > max_comments
       else
