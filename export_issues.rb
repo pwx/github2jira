@@ -9,7 +9,7 @@ require 'date'
 
 # add the issues that are causing problems with import
 # we can fix these later
-SKIP_LIST = [639, 542, 234, 235]
+SKIP_LIST = []
 
 module ExportIssues
   def ExportIssues.get_all_issues(issue_start, issue_end)

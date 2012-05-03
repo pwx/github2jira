@@ -1,8 +1,9 @@
 {
   "value.Status.Open" : "1",
   "project.lead" : "vamsee",
-  "user.email.suffix" : "@peerwater.org",
   "field.Status" : "status",
+  "user.email.suffix" : "@peerwater.org",
+  "value.Resolution.Fixed" : "1",
   "field.Summary" : "summary",
   "field.DateCreated" : "created",
   "value.Status.Closed" : "6",
@@ -12,10 +13,11 @@
   "date.fields" : "DateCreated",
   "field.CommentBody" : "comment",
   "field.Reporter" : "reporter",
-  "project.name" : "PWX Development",
   "field.DateModified" : "updated",
+  "project.name" : "PWX Development",
   "project.key" : "DEV",
   "mapfromcsv" : "false",
   "field.Resolution" : "resolution",
+  "value.Resolution.Unresolved" : "",
   "field.AffectsVersion" : "versions"
 }

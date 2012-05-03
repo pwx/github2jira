@@ -1,0 +1,1672 @@
+Summary,Description,DateCreated,DateModified,Status,Reporter,Assignee,AffectsVersion,Resolution,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody
+When a project date expires - notify admin or org member,"When a project date expires - admin needs to be notified so reminders can be sent to the org member to update the report.
+
+or better
+
+automate the notification and a copy comes to admin
+
+copying @ajaya ",23/01/2012 12:36:02,23/01/2012 12:36:03,Open,rajesh,vamsee,Wish List,Unresolved
+daily digest of notifications via email,"
+Here is some feedback from the members on the email flood during app (and member) review:
+
+
+ -   In the last less than 2 days we have received 49 messages from you all about comments on proposals, need to review applications, etc. I guess I would add this to my list of things you all may need to think about. At one level it is great to get alerts that things are happening but 49 of these in less than 2 days is completely overwhelming and makes me feel like I have to move now this second on this when we have a lot on our plates. I think some balance would be great – we have been given a deadline for submissions and comments and so it would seem less overwhelming if we in fact relied on this instead of a constant stream of e-mails.
+
+- One way to reduce the volume of emails is to offer a daily “digest” option, collecting all the emails for the day into one, so we just get one daily reminder to look at the system.
+
+
+- One suggestion for the dashboard/home page – maybe you can put some stats by the applications for example. i.e. 2 questions open that are unanswered, or some such thing. Just a thought. Maybe the reviews too? Not sure though.
+
+Also notify when the applicant modifies/changes the application
+
+@vcolaco @vamsee @mkristian @madanvk 
+
+",23/01/2012 12:41:01,01/03/2012 08:39:03,Open,rajesh,ajaya,Notifications,Unresolved
+expose videos in proj_reports to public,"currently video attachments can only be in org, app, and proj_reports.
+
+if there are photos in proj_reports they get displayed in project right column as
+ ""Attachments (For All Implementation Phase Reports)"" or 
+ ""Attachments (For All Peer Reports)"" 
+depending on where they are.
+
+if there are video links, its hard to find.
+
+need to display video links on the project page, either like the photos or in a different way.
+
+@vamsee @mkristian @vcolaco ",24/01/2012 08:03:05,24/01/2012 08:03:05,Open,rajesh,ajaya,Wish List,Unresolved
+project right hand column is messed up,"logged in as rajesh and 
+http://demo.peerwater.org/en/projects/117-LW2-STP-2-Design-Construction-and-Deployment-of-Sewage-Treatment-Plant
+
+the right hand column does not handle html tags properly and even the ""Submit Report"" link is gone.
+
+compare with:
+http://peerwater.org/projects/117
+
+@vcolaco - is this in the testing process?",24/01/2012 08:11:33,15/03/2012 05:50:58,Closed,rajesh,vamsee,Rails 3,Fixed,"27/01/12 11:03:03; vamsee; Are you still seeing this issue? Sorry for the delay, both your testing has unearthed some deeper issues. Did another round of fixes and deployed again. Please commence your regular testing. If you run into a system error, don't bother creating an issue as I will either do a quick fix or create a ticket myself as I'll get the mailer any way. But if you see usability issues (like those extra 'p' tags, messed up design, etc) please open new tickets. Thanks a lot!","15/03/12 05:50:58; rajesh; fixed and tested:
+http://qa.peerwater.org/en/projects/117-LW2-STP-2-Design-Construction-and-Deployment-of-Sewage-Treatment-Plant
+
+2 reports created."
+proj_report crashes,"submitting a visitor report, after logging out, i got an error
+
+System Error!
+Something has gone wrong. Please try refreshing the page or try again later. We truly apologize for the inconvienence as we work hard to provide good experiences to you and new innovations you can use.
+
+The system administrator has been notified of this error.
+© 2006-11 Peer Water Exchange
+
+
+-------------
+- who gets demo error emails?
+- can we disable the cleansing of errors (as on www) and show the raw rails error log (like qa) ?",24/01/2012 08:16:05,07/02/2012 06:26:18,Closed,rajesh,vamsee,Rails 3,Fixed,"24/01/12 11:30:50; vamsee; I'm not getting demo error emails either, so I think it's not configured yet. Will do this pronto.","24/01/12 14:27:49; vamsee; Okay, step 1 - I configured the error notification mailers. You should have also received it by now. I'm not sure what you mean by ""cleansing of errors"", can you check out the latest and see if that's how you like it? (Mailer subject should have [demo_peerwater_org-PWX] in it).","24/01/12 14:41:21; rajesh; 
+    i mean the error page on
+      www is cleansed (looks nice) while the error pages on qa are rails
+      error pages which can be more helpful. so we should have the same
+      strategy in this branch. note that demo might originally have been
+      setup for client demos so it may be treated similar to www, not to
+      qa.
+      ps: got the email error","24/01/12 14:43:07; rajesh; 
+    error emails should not go
+      to www@ but dev@ (best) or qa@ and hopefully don't need to add
+      your gmail either","27/01/12 11:07:53; vamsee; This should be gone too. However, for some reason I'm not able to attach pix to project reports on demo. I'm able to do this on local, though. Will do some further testing on this. "
+System error when clicking on links in demo@peerwater.org,"@vamsee
+
+I referred an Org (Sid Foundation) in demo and received 4 notifications from system@peerwater.org. 
+
+Also noticed 
+
+after every para?
+
+Clicked on the link to apply for membership – Please click on this link : System error System Error! 
+Something has gone wrong. Please try refreshing the page or try again later. We truly apologize for the inconvienence as we work hard to provide good experiences to you and new innovations you can use. 
+The system administrator has been notified of this error.
+
+Please correct the spelling of ‘inconvenience’ in the notification.
+
+Clicked on the link again, get the same error. The below link also does not work either.
+
+If the link doesn't work then please copy and paste the following link in your browser.
+
+http://demo.peerwater.org/en/organizations/new?code=2c3db7058b989a7aa9d40e2e093d8ce1
+
+
+cc: @rajesh",24/01/2012 13:56:13,27/01/2012 14:12:46,Closed,vinita,vamsee,Rails 3,Fixed,"24/01/12 14:37:50; rajesh; what's with the security issues in allowing embedded html tags?
+
+should we revisit the issue or is there some limited tags we can allow to keep the site secure?
+
+@ajaya @mkristian ","24/01/12 14:43:10; vamsee; Well, theoretically people can put in javascript in between script tags and do bad things. So it's a good idea not to trust user input. If we have to allow some sort of markup for user input, then we should go for something like markdown (like the one Github uses for comments, for example).","24/01/12 14:46:47; rajesh; 
+    i am probably the only user on pwx who has used any html or markdown
+    type
+    can we limit it to like formatting only? 
+    hard to explain how to use href to others. or other wiki language
+    formating.",27/01/12 11:08:49; vamsee; @vcolaco please try this now.,"27/01/12 14:12:46; vinita; Referred new org again and submitted - No erro.
+
+Email notification is clean and all the links work fine."
+Data import - not working in demo@pwx,Imported the 1999 Palmyra data and clicked on submit. Error on page -system error.,24/01/2012 14:13:04,27/01/2012 15:24:26,Closed,vinita,vamsee,Rails 3,Fixed,24/01/12 14:30:52; rajesh; wow - the latest code breaks!,"24/01/12 14:40:14; vamsee; Beware, thar be dragons :). Like I said, I'd be surprised if there aren't any breakages. Please be patient and report everything over this week, we'll iron out most of the kinks by the weekend.","27/01/12 11:24:34; vamsee; This should be fixed too, I forgot to include the roo gem requied for import feature. My bad. Also, looks like I closed this one while sending the commit message (issue closes if it sees the word 'fix' and the ticket number). If you're still seeing issues, re-open this please. ","27/01/12 14:25:52; vinita; Vamsee - I don’t have permissions to reopen the ticket. I don’t think you have set my permissions.
+
+Imported the data on demo@pwx and clicked on submit - page error 'system error'.
+
+-----Original Message-----
+From: Vamsee Kanakala [mailto:reply@reply.github.com] 
+Sent: Friday, January 27, 2012 4:55 PM
+To: vcolaco
+Subject: Re: [code] Data import - not working in demo@pwx (#607)
+
+This should be fixed too, I forgot to include the roo gem requied for import feature. My bad. Also, looks like I closed this one while sending the commit message (issue closes if it sees the word 'fix' and the ticket number). If you're still seeing issues, re-open this please.
+
+--- 
+Reply to this email directly or view it on GitHub:
+https://github.com/pwx/code/issues/607#issuecomment-3685297","27/01/12 15:24:26; vamsee; Sorry @vcolaco, my bad. Should have tested everything. Fixed the issue now, please check. I'll re-open this if there are more errors related to this issue."
+Unable to edit application in demo@pwx - error ,Ruby (Rack) application could not be started,24/01/2012 14:17:53,24/01/2012 14:36:23,Closed,vinita,vamsee,Rails 3,Fixed,24/01/12 14:32:53; rajesh; clarify your comment please,"24/01/12 14:36:23; vamsee; I understand what she means, there was a small syntax error and the deploy borked. Fixed it, should be fine now. Closing this ticket."
+Embed video code not working in demo@pwx,"youtu.be link: http://youtu.be/DEnlrE4iMBU  does not work for Org - blank.
+
+In the Appln, youtu.be, youttube & vimeo code does not work. Shows up as <div>unknown video provider</div> 
+
+In the project status report, youtu.be, youttube & vimeo code does not work. Shows the code in the video box.
+
+Peer/ Visitor report - put in the short code and clicked on submit. Error on page - system error. Clicked on back and noticed the report under visitor reports. http://demo.peerwater.org/en/projects/111-Kalembo-Secondary-School-in-Songea-1-3-/proj_reports/561
+youtu.be, youttube & vimeo code does not work. Shows the code in the video box.
+
+
+
+ 
+",25/01/2012 07:00:38,07/02/2012 06:41:03,Closed,vinita,vamsee,Rails 3,Fixed,"25/01/12 11:31:13; rajesh; don't know if this belongs to @vamsee  or @mkristian 
+
+is it as simple as merging @mkristian recent fix to rails3 branch?
+","25/01/12 12:36:43; vamsee; Yeah, one I haven't merged Kristian's code yet, also I need to put html_safe here too. Thanks for reporting.",27/01/12 03:46:00; kristian; shall I merge it into the rails3 branch and do the safe_html adjustments ?,"27/01/12 05:11:17; vamsee; @mkristian please wait a day or two, I'm fixing other bugs, and I'll try to merge your changes and see if I run into any probs. Will let you know if I need help. Thanks :)","01/02/12 09:24:24; vamsee; I have merged your video url changes into rails_3011 branch and deployed it to demo.peerwater.org. @mkristian please  check if I missed anything (had some conflicts, had to resolve them). "
+Error 139 while entering too much text in Apps,"We are running into a problem when applicants enter too much data into the forms, as this is hitting the 8kb per row limit on InnoDB database engine. We need to normalize the table a bit and move some of the TEXT columns into other tables and make the necessary code adjustments. ",27/01/2012 05:14:19,27/01/2012 15:15:50,Open,vamsee,vamsee,Bug Fix,Unresolved,"27/01/12 05:40:31; rajesh; @vamsee says: Easiest way to avoid this error is to reduce the number of TEXT columns in apps table and enforce the char limit in the application fields (through a JS hint, maybe). look for some columns that can be moved into other tables.
+
+@ajaya said 2 years ago: Not yet.   We need to do this right.  I am exploring more in the ideas of dynamic app forms with customizable app fields.  this is will position us for offering customized app forms for different funders if need to be.
+
+@madanvk and @satyagrahi say: if we are thinking of a more architectural level change, want to mention that Madan and i had a conversation on restructuring the 3 pages of the app and creating a page on 'Maintenance and Sustainability'. This would include the info on creating KPIs and choosing the right monitoring reporting indicators (Structured Reporting for Cisco2). If we are making DB/UIchanges, might as well ...
+","27/01/12 15:15:50; rajesh; if we are going to split the table, lets create a table for sustainability (project operation) and move stuff there with new stuff that includes monitoring and custom fields for tracking, etc.
+
+don't know how much text fields will move, but just ideating ..."
+Fix path errors in cycles/create,"Due to the updated paths, many controllers are giving path errors. Fix these, including cycles. ",27/01/2012 05:18:10,02/05/2012 07:55:04,Closed,vamsee,vamsee,Rails 3,Fixed,"27/01/12 11:21:50; vamsee; @vcolaco / @satyagrahi Don't know who tested this one, but this should be fixed too.","27/01/12 12:04:49; rajesh; trying to create new agreement for funding cycle:
+
+http://demo.peerwater.org/en/admin/cycles/45/agreements/new 
+
+Page Not Found!
+Sorry. We couldn't find the page you have requested.
+","27/01/12 14:16:44; vamsee; Sorry, agreement paths were not configured correctly. Try now. "
+"Analytix error: ""undefined local variable or method `project_funders`"" ",Seems like a bit of a re-write in analtyix/console_controller is due. ,29/01/2012 07:37:10,22/03/2012 17:04:32,Closed,vamsee,vamsee,Rails 3,Fixed,"29/01/12 11:11:22; rajesh; this came about when i clicked on a project in right column funders.
+
+not in analytix","30/01/12 05:23:14; vamsee; I believe that's a different issue, (which is new to me) and it seems to be happening only occasionally. Digging into this, but if you see mailers with project_funders issue, you can see that it also happens in console#proj_list_json. Looks like I need to clean up some scopes in project.rb.","08/03/12 11:42:25; vamsee; This should be gone by now, too. Please check and close.",22/03/12 17:04:32; rajesh; works fine! sorry for the delay in closing.
+search in 3,"search is currently not working in demo. search for 'blue' does not results in BPN coming up.
+
+want to track it separately so here is the text from the other tix #586:
+
+@vamsee Ferret is also most likely to go in 3.0.x, I'm gravitating towards Apache Solr for full text search. 
+
+@mkristian: solr is quite a big application (worked with lucene and solr quite regularly) and a s java application it is memory greedy (cost factor - maybe). on the other hand i think it is a good choice.
+
+about the search and reading your reply I do have the feeling that putting the search behind a facade would help to switch from ferret to solr to sphinx (or is it thinking_sphinx) to solr to lucene to . . . . i.e. get the code use the facade-API and then you can switch implementations easily. solr as such is great - not sure if ferret is really much better in production under load. java usually plays really nice when it comes to load and concurrency but the initial memory consumption is the only problem (or not).
+
+also adding @ajaya ",30/01/2012 08:14:09,20/03/2012 03:31:35,Closed,rajesh,vamsee,Rails 3,Fixed,"31/01/12 11:02:08; vamsee; I was hoping to post-pone this decision until later, as I was hoping ferret will work fine (it seemed to). But however, looks like  it's quite buggy when it comes to Rails 3, and seems to be ignoring conditions passed, etc. What's more, it's causing some weird problems on demo while attaching images (doesn't happen on local, though). Tried everything, and it looks like we have to switch to have reliable search.
+
+I took a look at Solr, but this means we have to install Java SDK and Tomcat to boot, which I'm not sure is a good idea for the m1.small instance we're using now. We can forget this completely in something like t1.micro (unless we're installing solr in a separate t1.micro than the server). Though I'm tempted to go with Solr given the nice features it has, in the interest of memory usage and quick setup I'm planning to go with Sphinx.
+
+This means ripping out a fair amount of code in both kb_controller.rb and map_controller.rb, but I don't see a choice now. Unless you guys have other interesting choices, I'm going to go ahead with Sphinx/TS. ","31/01/12 14:17:57; kristian; just some thoughts about solr: I do run a java-server (jetty since
+less memory footprint) with a couple of websites, including one using
+solr (http://search.tipitaka.org/solr/web?fq=script:romn). the jvm
+runs with 256MB maximum heap, I stripped down solr to minimum which is
+needed to run the search. and as I mentioned it before java usually
+wins when it comes to concurrent use this also on the memory side.
+setup and installation is easy (from my point of view) not so much the
+configuration of solr (it just has TOO many features). so the quick
+setup does not go for sphinx, the memory consumption on a mostly idle
+system yes.
+
+how I manage the above tipitaka search have a look at
+https://github.com/mkristian/tipitaka
+
+On Tue, Jan 31, 2012 at 4:32 PM, Vamsee Kanakala
+<reply@reply.github.com>
+wrote:
+> I was hoping to post-pone this decision until later, as I was hoping ferret will work fine (it seemed to). But however, looks like  it's quite buggy when it comes to Rails 3, and seems to be ignoring conditions passed, etc. What's more, it's causing some weird problems on demo while attaching images (doesn't happen on local, though). Tried everything, and it looks like we have to switch to have reliable search.
+>
+> I took a look at Solr, but this means we have to install Java SDK and Tomcat to boot, which I'm not sure is a good idea for the m1.small instance we're using now. We can forget this completely in something like t1.micro (unless we're installing solr in a separate t1.micro than the server). Though I'm tempted to go with Solr given the nice features it has, in the interest of memory usage and quick setup I'm planning to go with Sphinx.
+>
+> This means ripping out a fair amount of code in both kb_controller.rb and map_controller.rb, but I don't see a choice now. Unless you guys have other interesting choices, I'm going to go ahead with Sphinx/TS.
+>
+> ---
+> Reply to this email directly or view it on GitHub:
+> https://github.com/pwx/code/issues/613#issuecomment-3737020","01/02/12 09:48:14; vamsee; Ah, didn't realize solr comes with a inbuilt jetty server. I'll give it a shot, especially since @satyagrahi fell in love with solr's capability to search inside word/pdf documents :)","01/02/12 16:04:00; rajesh; @mkristian +1
+@vamsee  +1
+@satyagrahi +1 (did not know ferret did not search inside of attachments, a very important part of our KB
+
+so @ajaya unless you have some serious reservations and/or alternative, we are going with solr
+if you want us to wait 36 hours till we meet, let us know that too","02/02/12 13:07:33; vamsee; Hate to get one more variable into the mix, but I think this is a good time to start with a configuration management tool. Reason for that being, though it doesn't happen very often, Amazon sends mailers like 'your server is running on degraded hardware, so we will shut it down in 20 days' or some such. Then we have to scramble to get a similar setup going on a different instance. It happened a couple of times with an earlier client, and I think we should consider ourselves lucky this hasn't happened to us yet (touch wood). So basically we're on borrowed time unless we have a template/image that we can quickly deploy/configure in case of an ec2 instance imploding. 
+
+I tried Chef before with Vagrant, but I can't say I'm terribly impressed. The documentation was hard to parse, no easy start tutorials, etc. So I'm going to give Puppet a try (docs/tutorials much better). Though Chef has the advantage of it being written in Ruby, I think Puppet's declarative language is just fine for config management. Since solr is the only thing we have to setup (on the new t1.micro instance), it shouldn't take too much time either. Any thoughts? Perhaps all this should go into a different ticket. ","02/02/12 13:23:13; rajesh; different ticket for sure!
+","02/02/12 13:31:20; vamsee; Cool, take the discussion to #616 please.","02/03/12 11:24:37; vamsee; Alright, I've begun the process of moving ferret search calls to solr ones. I'll ask some of my doubts here. I'm beginning with App, so here goes:
+
+* We seem to have a lot of fields that we're indexing. How many of these are really needed? Smaller index means quicker search, so let's try to index only things that people will actually search for. Here's the current list of fields we're indexing in App:
+
+:name, :implementor_background, :cost_details, :technology_used, :community_org, :community_contribution, :ancillary_activities, :other_issues, :maintainance_revenue, :people_drinking_details, :project_background, :people_other_details, :school_children_drinking_details, :people_sanitation_details, :short_project_description
+
+I'll add all of them if need be, but if we can make it smaller, that will be great. I'll be posting other model's indexed fields after this (only if they look like a lot).","02/03/12 13:44:01; vamsee; Also, anybody know why the Query model exists? I don't see a queries table in the db, and it seems to be used all over to process params. Only, there's nothing happening in the Query model besides creating a column name on the fly (which I think amounts to a db hit every time a Query.new is called). So basically, instead of doing:
+
+```@query = Query.new(params[:query])```
+```App.find_with_ferret(@query.keywords)```
+
+We can simply do ```App.find_with_ferret(params[:query])``` for all intents and purposes. Let me know if there is any reason why I should not phase out the usage of 'Query' model.",02/03/12 16:44:37; ajaya; You can probably get rid of the query model.,02/03/12 16:47:23; ajaya; Current search assumes we searching all fields.  We are still a small shop with very little data.  I would doubt these amount data should pose any problem at all.  ,"03/03/12 14:31:44; rajesh; does solr not search thru fields it does not index?
+
+if yes, then we need to index all for now as Ajaya says.
+
+ideally and long-term, a dual speed search with some results popping in instantaneously and others a few seconds later for a complete search would be the appropriate solution when we have tens of thousands of projects.","03/03/12 16:30:14; kristian; what I usually do with lucene/solr is to concat the whole list of
+attributes to one string which gets index. along with the second field
+for the 'id'
+
+On Sat, Mar 3, 2012 at 8:01 PM, rajesh
+<reply@reply.github.com>
+wrote:
+> does solr not search thru fields it does not index?
+>
+> if yes, then we need to index all for now as Ajaya says.
+>
+> ideally and long-term, a dual speed search with some results popping in instantaneously and others a few seconds later for a complete search would be the appropriate solution when we have tens of thousands of projects.
+>
+> ---
+> Reply to this email directly or view it on GitHub:
+> https://github.com/pwx/code/issues/613#issuecomment-4301055","03/03/12 16:43:17; rajesh; 
+    that sounds good. 
+    in our search results we are only linking to the page with the text,
+    not to a field.
+    can we highlight the search text on the page?
+    On 3/3/12 10:00 PM, mkristian wrote:
+    
+      what I usually do with lucene/solr is to concat the whole list of
+attributes to one string which gets index. along with the second field
+for the 'id'","03/03/12 16:50:44; kristian; On Sat, Mar 3, 2012 at 10:13 PM, rajesh
+<reply@reply.github.com>
+wrote:
+> can we highlight the search text on the page?
+
+from the lucene/solr point of view: it offers highlighting but for
+that you need to store the data and since query and result needs to
+match again. queries can be something like ""~watter"" which is a fuzzy
+matching and will find ""water"" as well.","04/03/12 01:18:22; vamsee; Yes, we can highlight the searched-for words. But I'm not sure how applicable it is because sometimes we're sometimes searching in fields that are not shown in searches. For example, some organizations show up because the words matched their description. So this might not be very obvious to the user. If you still want it, I'll enable this once the porting thing is done.
+
+Alright, I'll keep all the current fields being searched with ferret in the index. I'm excluding updated_at from Qanda model though, as I don't see it being used in any of the conditions in ferret search calls. Will list others as I run into them.","04/03/12 01:20:49; vamsee; Also, all ye people who are replying from mail clients - please remove quoted text below in the mails before repyling - the context is usually clear on the ticket, and we can keep the tickets clean.","08/03/12 11:33:34; vamsee; Alright, guys, thanks for your inputs on this. Solr integration is done (as of now, you can test it on demo). No doubt you will find some bugs in search (some old and some new) please report them and assign them to me. This was the last pending big task as part of Rails 3, so I'm going to be finishing some smaller issues tomorrow and move the codebase (branch rails_3011) to QA sometime early next week. It will be great if you can report any big issues you see before we hit QA. ","20/03/12 03:31:35; rajesh; seems to work, any specifics will be on another ticket."
+integration with facebook,"@ajaya @vamsee @mkristian @madanvk please see: https://www.facebook.com/Aguayuda
+
+we really need to quickly push project reports into FB and pull notifications out of FB into project reports
+
+anyone understand FB well?",30/01/2012 09:28:02,31/01/2012 15:55:54,Open,rajesh,vamsee,Wish List,Unresolved,"31/01/12 07:46:00; kristian; On Mon, Jan 30, 2012 at 2:58 PM, rajesh
+<reply@reply.github.com>
+wrote:
+> anyone understand FB well?
+
+do not have FB account and will never have
+
+what about G+ ?","31/01/12 10:21:39; vamsee; Well, to be fair I'm not a fan of Fb either, but funny thing is the larger world is just waking up to status updates through Fb/Twitter, so it might be prudent to have a way to update it. But, being a fan of G+, I would say we should have a page there too and update both (and post shortened reports to Twitter?).","31/01/12 15:55:54; rajesh; 
+    i would like to see 2-way integration on FB. here is the bare
+    essence of my thinking, details need to be clearly worked out:
+    -> when someone posts an update/status report on a project, the
+    FB page assigned to the project/org gets updated
+    <- when some org/project page gets an update on FB, a status
+    report is created on PWX
+    FB_project <-> PWX_project - auto
+    FB_org <- PWX_Project - auto
+    FB_org -> PWX_project : temporary auto (single connection) or
+    manual like thru a message central
+    twitter: similar
+    g+ : later"
+message central not working,the right hand column is 'Processing' (contacts list),30/01/2012 10:13:24,22/03/2012 15:37:33,Closed,rajesh,vamsee,Rails 3,Fixed,"31/01/12 13:06:05; vamsee; This should be fixed now, please check.",19/03/12 11:01:31; vamsee; Can we have a 'test and close' on this one? Thx.,22/03/12 15:37:32; rajesh; fixed!
+Config Management with Puppet,"Hate to get one more variable into the mix, but I think this is a good time to start with a configuration management tool. Reason for that being, though it doesn't happen very often, Amazon sends mailers like 'your server is running on degraded hardware, so we will shut it down in 20 days' or some such. Then we have to scramble to get a similar setup going on a different instance. It happened a couple of times with an earlier client, and I think we should consider ourselves lucky this hasn't happened to us yet (touch wood). So basically we're on borrowed time unless we have a template/image that we can quickly deploy/configure in case of an ec2 instance imploding.
+
+I tried Chef before with Vagrant, but I can't say I'm terribly impressed. The documentation was hard to parse, no easy start tutorials, etc. So I'm going to give Puppet a try (docs/tutorials much better). Though Chef has the advantage of it being written in Ruby, I think Puppet's declarative language is just fine for config management. Since solr is the only thing we have to setup (on the new t1.micro instance - see #613), it shouldn't take too much time either. Any thoughts?",02/02/2012 13:30:16,08/03/2012 11:41:34,Closed,vamsee,vamsee,Rails 3,Fixed,"02/02/12 13:45:29; rajesh; we want to start with solr, but very soon add the R3 machine and then qa and www, not to forget bpn, all hopefully on different machines ...
+
+so a config mgmt tool is smart. can't go wrong with either, since our setup will be simple and standard for the foreseeable future.
+
+@ajaya @mkristian please lets close on this at the same time as we close on solr","08/03/12 11:41:34; vamsee; Alright, we went with puppet and have a decently working puppet module that installs solr on tomcat6 and sets up multi-core indexes (works only with Ubuntu as of now, but should be fairly simple to adapt to other OSes). I've created a seperate repo called 'puppet' so we can keep adding modules which configure different parts of our infrastructure."
+speed up map and analytix map,"two of our most used / demo'ed features are the map and the project analytix page (which includes the analytix map).
+
+i would really like to speed them up by a huge factor. i don't think r1.9.2/R3.1 will provide that improvement so we may need to do something different.
+
+one idea (if you shoot it down, you are responsible for putting a replacement up) is to have the two datasets ready (update every hour, or on a notifier event). this is more than caching the data, it is to have the query results packaged and ready. then all as to be done is to ship the data to googlemaps - the delay is all in the internet and not at our end.
+
+all ideas welcome from @vamsee @mkristian @ajaya ",02/02/2012 18:11:41,30/04/2012 16:33:46,Open,rajesh,ajaya,Ruby 1.9.3 Rails 3.2,Unresolved,"04/02/12 06:40:56; rajesh; another feature we need to consider is clustering. @ajaya had written the code and we sort of played round with it and also got Mark to design icons. its turned off right now.
+
+now with another 200 sites coming in Uganda, we may want to turn it on, enhance, and polish the main map so that even the google side of the map can be speeded up tremendously.","04/02/12 10:00:40; vamsee; I would suggest we create a new milestone for map/analytix speedup/optimization and file this issue there. We should try to look at either new features, enhancements, (major) upgrades as separate endeavors. Mixing them up always causes us to lose focus and slowdown releases. Every release should have a specific focus, and we should not deviate from it unless there is no other option or unless the improvement takes only a trivial effort. 
+
+From what I can see, this is substantial effort (mostly because it involves some brainstorming, back and forth, etc) and makes sense to put it in a different bucket. But, I can look into speeding up map/analytix db queries as much as I can in this release. For Rails 3, I see the focus as: do the bare minimum possible to put a Rails 3 enabled release out there. I only did I18n, though it's a new feature, because it's rather straight-forward and small effort to enable it.","04/02/12 10:06:56; vamsee; I regretted even that, because the new format (including locale) in the urls were causing routes to blow up. So I was at a situation where I didn't know the errors were coming from the upgrade or the I18n settings. Luckily it didn't become a headache and was able to solve these issues fairly easily.","04/02/12 16:59:42; rajesh; Right you are, though its not like we have big releases much more a continuous process and while the focus is on Cisco features, we need to keep tweaking a bit. Moved the issue to Future and will create a milestone or incorporate this into another release.","12/04/12 03:57:52; rajesh; @ajaya , thanks for offering some time on the map. Lets do clustering first - its your code and we have Mark's icons which should do for now. 
+
+don't know which branch to work on, will let you, @vamsee, @mkristian decide.
+
+but if it speeds up map it will be great. if it helps to break into parts, i would suggest do maps first and then after getting it working, do analytix map.","23/04/12 03:28:42; ajaya; I would work on a map branch and merge.   Should be a topic branch.   It really doesn't matter.   Map would require some thinking on whether we should continue on the 6 yr old plugin.  But we have customized it to the hell so gonna be tough.  I would try to fix first and see how it goes.   If becomes messy, will look at a better implementation.  Stay tuned. ","30/04/12 16:33:45; rajesh; I am tuned! Waiting for some music on this channel ...
+
+:)"
+app review linking lines on map do not work,"clicking on the map - app icon - to show links to reviewers not working.
+
+some wierd page comes up that has the bubble data.
+
+@vcolaco is added for testing and verifying fix",03/02/2012 04:16:19,07/02/2012 04:32:27,Closed,rajesh,vamsee,Rails 3,Fixed,"05/02/12 07:38:35; vamsee; Argh. Funny how the smallest bugs cause the maximum heart-burn. Was pulling my hair out why this was happening for most of yesterday :). Finally found that we're setting all the return data types to text/html in action_controller, and since Rails 3 is a bit more strict about setting the correct data types - it's not sending the javascript event triggers. Also fixed the error with the maximize map, though it's a bit unrelated to this issue (had to change header names to reflect Cartographer's new api). 
+
+Anyways, the good news is while I was trying everything to get the reviewer links to work, I switched the default JS driver to jQuery. This doesn't mean we can get rid of Prototype yet, but this is the first step. We can do that when we get rid of the javascript plugins that depend on it still (calendar_date_select, etc). Also upgraded the resident jQuery version from 1.4.2 to 1.7.1. 
+
+However, this also means that there might be sneaky JS errors that I will not be notified about. Please keep an eye out. As usual, except for ""system errors"" which I do notice in mailers, please open new tickets for any UI/UX/JS errors that you notice going forward. I will have no idea you have encountered those unless you open tickets. Thank you.","05/02/12 07:47:23; rajesh; this is fixed. lines work, multiple lines work, clearing the links work, filters work (hard to test :) )
+
+usually, we close issues as they deployed, but in the R3 case, am closing them as they get fixed.","05/02/12 12:46:48; rajesh; links are not the same on demo as www.
+
+could be data has changed - if for testing, its fine. but if due to migration then bad.
+or if the link drawing calculations have changed, then that's bad too.
+
+will mail screen shots.
+
+on map, select only 2010 and 2011 apps
+click on the top one in Tamil Nadu: apps/371 (Ekoventure Safe Drinking water and Ecological sanitation in five villages of Sethubavachattram block,Tanjore district, Tamilnadu)
+
+click on show links (6).
+
+on demo: one link goes to South Africa, not true of www.
+
+@vcolaco after this is fixed, we need to do some thorough testing. such things are really hard to catch.","06/02/12 11:02:40; vamsee; Two things:
+
+1. Somebody added a secondary address to BPR organization with location set to Johannesburg (only in demo). Which is why that weird extra line was showing up.
+
+2. Currently, we seem to be showing both primary and secondary addresses for each organization in these reviewer lines. Is this needed? My guess is only the first is enough in order not to confuse people with more lines than reviewer number (which as expected doesn't reflect multiple addresses).","06/02/12 11:29:49; rajesh; @vcolaco can you please confirm you added a second address.
+
+yes, its good to show both addresses, as often the field office is the one that participates in the reviews.
+sorry to make you undo - for these kinds of opinions, its best to let the issue digest and get feedback before acting.
+
+long-term:
+1. link a person to an office
+2. show the links to the locations of the people who participated in the review.
+","06/02/12 13:01:55; vinita; No I did not add the second address to Ekoventure.
+
+Vamsee - I also noticed there are no tickets assigned to me, is that correct ;-)??
+
+-----Original Message-----
+From: rajesh [mailto:reply@reply.github.com] 
+Sent: Monday, February 06, 2012 5:00 PM
+To: vcolaco
+Subject: Re: [code] app review linking lines on map do not work (#618)
+
+@vcolaco can you please confirm you added a second address.
+
+yes, its good to show both addresses, as often the field office is the one that participates in the reviews.
+sorry to make you undo - for these kinds of opinions, its best to let the issue digest and get feedback before acting.
+
+long-term:
+1. link a person to an office
+2. show the links to the locations of the people who participated in the review.
+
+--- 
+Reply to this email directly or view it on GitHub:
+https://github.com/pwx/code/issues/618#issuecomment-3827040","06/02/12 15:49:38; rajesh; 
+    second address i am the guilty party of adding/playing around with.
+    just remembered when i saw the street address.
+    so all is working okay. if the 2nd location is put back in the
+    links, we can close the ticket.
+    my apologies for this entire diversion.","07/02/12 03:25:44; vamsee; No problem, good that you noticed something so small. I would have totally missed it. Yes, the second location is back on now (so it should show that Jo'burg extra line). Also, I fixed the app_project_path error that showed up in the mailer. But I'm not able to test it. Can you run through that path again test if it's still erroring out? Thanks.","07/02/12 03:27:52; rajesh; Sorry, which error are you talking about?
+
+Which test?","07/02/12 03:50:40; vamsee; The show_projects one. Just forwarded that error to you. Sorry, should have created that issue immediately. Was a small fix, so got lazy.",07/02/12 04:32:27; rajesh; lines work!
+date format may be wrong,"i think the date format that is expected is MM/DD/YY and the ILF file the date format is DD/MM/YY.
+
+let us know so we ( @vcolaco want to learn how to write formulas or formats?) can fix it in the spreadsheet without code changes",03/02/2012 05:24:30,03/02/2012 10:43:54,Closed,rajesh,vamsee,Cisco | import,Fixed,"03/02/12 05:46:03; vamsee; Hmm, how about installing LibreOffice and changing all the dates manually? I can see which dates are wrong and need to be fixed. I can do this if @vcolaco has problems installing LibreOffice on her Laptop.","03/02/12 10:43:54; rajesh; You can change the dates in Excel, don't need to install another program.
+
+And now its done. One issue closed!"
+internationalization - create the setup for Spanish,"have finished the text changes below and now want to focus on the following comments and have updated the subject line to reflect that.
+
+need to create ways to allow for translation ...
+
+------------------------
+
+hopefully, @vamsee will get R3 working on my new machine when it arrives and then i can contribute.
+
+here is a list of text changes to remind myself of:
+
+1. add 'a' in the para on bank info for pwx
+
+2. change map intro ""Our pioneering innovation achieves 100% transparency and shows how PWX is forging links through across its human network through peer review. "" -> ""PWX transparently shows how its forging links across its human network thru peer review""
+
+",07/02/2012 03:07:11,22/03/2012 17:06:44,Open,rajesh,vamsee,Internationalization | Spanish,Unresolved,"07/02/12 03:36:01; vamsee; Well, the translation stuff is in R3 anyway, so there's plenty of room for you to contribute :). Will setup a 'translate' branch for you once you get back, so you can start moving every english string into en.yml first, then you can set up other languages as your time permits (or send off the english strings so somebody else can give equivalent translations). Hopefully then I can put you back on develop branch and not give 'privileged' access to staging :D.
+
+As for setting up DB access to translated strings, though there is a way to do this, many people are discouraging this, as:
+
+1. Translation is not something that is changed very often; so no point adding db hit for every access for something that only needs to be set up once.
+
+2. We will be changing the html.erb files any way each time we add new translations (since we replace strings with variable names). Putting in translated strings should be a single or two-time effort max.","07/02/12 04:37:40; rajesh; not sure what you are talking about here. did i ask for DB access?
+
+and what does single or two-time really mean?","07/02/12 07:05:24; vamsee; You mentioned the translations being able to be imported in an excel sheet, admin being able to change them, etc. The general idea is that translations are only bothered with rarely enough that putting them in a DB is not worth the constant DB hits it will produce on the app.","07/02/12 07:07:52; rajesh; i meant that it would be best for the translations to be in a spreadsheet
+for translating into various languages.
+don't care where they sit inside the app. if its in a DB or yaml fie or
+whatever.
+
+just for me its easier to edit, update, and load in a xls file than a yml (or many yml for each page/section/...)
+","22/03/12 15:21:04; rajesh; we have a Spanish translator who is not only going to translate but also will go to Nicaragua and train El Porvenir staff!
+
+what a deal!"
+photo (attach) does not work,"created project status reports on demo 
+http://demo.peerwater.org/en/projects/532-r3-test/proj_reports/572
+
+cannot add photos. after you click on upload, it returns after a bit with nothing having happened.
+
+@vcolaco after this is fixed, please test everywhere photos can be attached and multi-file upload too",07/02/2012 04:35:12,22/03/2012 17:20:32,Closed,rajesh,vamsee,Rails 3,Fixed,07/02/12 06:06:34; rajesh; logo attach for an org also does not work.,"07/02/12 07:03:33; vamsee; Yes, this is due to the new ferret + Rails 3 throwing a fit on the server for some weird reason. The error is being caught, so it redirects back to the upload page. I'll let you guys know once I remove ferret and throw in solr when this is working and ready to test.",08/03/12 11:36:42; vamsee; Please try this now. It should work.,08/03/12 14:28:51; vinita; Works fine.
+quotes page formatting is off,"compare the quotes page on demo v www:
+http://demo.peerwater.org/en/home_page/quotes
+
+all the <br> are visible. 
+
+@vcolaco is added (i guess so she can steal my treats)",07/02/2012 10:03:31,10/03/2012 14:58:13,Closed,rajesh,vamsee,Rails 3,Fixed,"07/02/12 10:08:07; rajesh; http://demo.peerwater.org/en/news/30 also here the mdash is not displayed
+
+(separate bug, but putting it in same issue)","10/03/12 14:58:13; rajesh; looks good, both quotes and news article"
+"1st bug - Assigned (click on review status to redo, remove, ...) error on page","Unable to click on status - erros on page <span style=""color:orange;""> Currently Reviewing</span>",07/02/2012 14:36:59,20/03/2012 10:24:52,Closed,vinita,vamsee,Rails 3,Fixed,"07/02/12 15:22:36; vamsee; Thanks! But please write detailed notes on the error, as to how I can re-create it. Step by step instructions would be great. You can also copy paste the error message if it is visible.","07/02/12 16:31:23; vinita; Sorry missed attaching the error. Login as admin:
+
+Referrals->womensvoice(new org)->org profile->admin->assign reviews
+
+-----Original Message-----
+From: Vamsee Kanakala [mailto:reply@reply.github.com] 
+Sent: Tuesday, February 07, 2012 8:53 PM
+To: vcolaco
+Subject: Re: [code] 1st bug - Assigned (click on review status to redo, remove, ...) error on page (#623)
+
+Thanks! But please write detailed notes on the error, as to how I can re-create it. Step by step instructions would be great. You can also copy paste the error message if it is visible.
+
+--- 
+Reply to this email directly or view it on GitHub:
+https://github.com/pwx/code/issues/623#issuecomment-3849718","20/03/12 10:24:52; rajesh; this is fixed, but related to #568"
+Fix data refresh on server,Seems like the recent changes to the code has broken the data refersh rake task. Something about a task not being supported by the new mysql2 gem.,08/02/2012 07:05:06,08/03/2012 11:35:57,Closed,vamsee,vamsee,Rails 3,Fixed,"08/03/12 11:35:56; vamsee; This is done (on rails_3011 branch), please re-open if you see this again."
+Map of a particular project ,"Clicked on project 533 (Palmyra) map and noticed all other orgs projects, locations etc shows up in the map.
+
+http://demo.peerwater.org/en/map?focus=project&id=533&loc=1456
+
+Whereas only this particular project (533) should show up on the map.",09/02/2012 08:24:34,19/03/2012 10:10:41,Closed,vinita,vamsee,Rails 3,Fixed,"10/02/12 13:08:52; rajesh; all sites for that project should show up, but only for that project.
+
+verify the behavior for another project that is also on www and compare.","10/03/12 13:11:28; vamsee; This is weird, but I see the same problem in www. Most probably because option 'all' seems to be set by default. I'll try to fix this. But the map controller code is one of the most convoluted incomprehensible mess of code I've ever seen. My spidey sense says 'thar be dragons', but I guess it needs to be fixed at some point.","10/03/12 14:52:44; rajesh; i don't see the same problem in www:
+
+http://peerwater.org/map/473?focus=project&loc=1330
+
+http://demo.peerwater.org/en/map?focus=project&id=473&loc=1330
+
+feel free to ask for help from @ajaya for this one","10/03/12 14:56:03; rajesh; similarly for a gram vikas project with 95 sites:
+
+http://peerwater.org/map/153?focus=project&loc=332
+
+http://demo.peerwater.org/en/map?focus=project&id=153&loc=332
+
+demo shows the entire map, cannot focus on one project.","12/03/12 02:11:42; vamsee; Ah, my bad. The call was going to default map/index (default) instead of map/show. Had to add a route to appease the new api. This should be fixed now, please check.","15/03/12 05:47:25; rajesh; not fixed, neither of the 2 testing links work:
+http://qa.peerwater.org/en/map?focus=project&id=473&loc=1330
+http://qa.peerwater.org/en/map?focus=project&id=533&loc=1456","16/03/12 00:56:36; vamsee; The issue was the malformed url, so you should be testing from the app, not by clicking on the earlier urls.","19/03/12 10:10:41; rajesh; ok, works now!"
+Organisations still in peer review not to show up on the map,"",20/02/2012 07:34:47,23/02/2012 07:17:33,Open,vinita,vamsee,Wish List,Unresolved,22/02/12 01:13:53; rajesh; i think its good that peer review orgs show up on the map.,"22/02/12 05:02:21; vinita; Rajesh,
+
+When we met last time, you mentioned that peer review orgs shouldn’t show up on the map, that’s why the ticket.
+
+Regards,
+Vini
+
+---Original Message-----
+From: rajesh [mailto:reply@reply.github.com] 
+Sent: Wednesday, February 22, 2012 6:44 AM
+To: vcolaco
+Subject: Re: [code] Organisations still in peer review not to show up on the map (#626)
+
+i think its good that peer review orgs show up on the map.
+
+--- 
+Reply to this email directly or view it on GitHub:
+https://github.com/pwx/code/issues/626#issuecomment-4093589",22/02/12 21:46:49; rajesh; i meant 'draft' or 'rejected' orgs should not show up
+allow filtering based on date visited & time after completion,"allow searches such as:
+
+- projects visited greater than 3 years after completion
+- projects not visited more than 1 year after completion
+- projects visited by 3rd party more than one year after completion
+
+adding @madanvk and @ajaya so that create more use cases",01/03/2012 08:25:33,01/03/2012 08:25:33,Open,rajesh,vamsee,AnalytiX 2.0,Unresolved
+analytix table needs ability to choose columns,"the table in project analytix needs to be customizable to select columns
+
+need to add customization in My Profile or cookies to remember preferences
+
+adding @madanvk @ajaya ",01/03/2012 08:27:12,01/03/2012 08:27:12,Open,rajesh,vamsee,,Unresolved
+components in projects,"each project can have several components:
+
+eg.
+ - pump
+   - hand / electric
+     - make
+        - manufacturer
+          - horsepower
+
+need to add 'date installed'
+and events - handle broke | handle fixed ....
+
+adding @ajaya @madanvk ",01/03/2012 08:32:04,06/03/2012 04:34:01,Open,rajesh,rajesh,Component Database,Unresolved,"06/03/12 04:34:01; rajesh; adding @thornedev (welcome to the github team, Larrie!)"
+reminder on dashboard & via email for status updates,"need to remind implementers when status is due
+
+initially on dashboard and email and SMS (if not txtweb, use android phone?)
+
+the reminder can be fixed or customizable by admin
+
+the receiver should be chosen by project, with an escalation
+
+very closely tied to Structured Reporting, but also in case there are no structured reports chosen for the project
+
+@madanvk @ajaya  @vamsee @vcolaco",01/03/2012 08:38:26,01/03/2012 12:21:34,Open,rajesh,rajesh,Notifications,Unresolved
+project data for funders,"provide project data in an easy way (xml or otherwise) to funders to put on their website:
+
+Mark has provided a wish list: 
+- project summary
+- primary photo
+- impact count
+- verified (by self or 3rd party)
+- etc",01/03/2012 09:10:55,14/03/2012 04:12:46,Open,rajesh,vamsee,Website integration and linking,Unresolved,"14/03/12 04:12:46; rajesh; from Mark:
+
+Funder Project Summary List
+As you all know by now, I am most focussed on the ""summary"" style display of projects for funders, implementers and public viewing purposes. I'd like to see each ""box"" for a project get standardized with certain content fields. This could work for just one project box pop-up over a map, or on a long list - just slightly different formatting for size and shape, but same info. 
+
+So we need to nail down what fields are necessary. I think we'd all agree it is somewhere between what charity:water shows in it's pop up windows to ""Prove It"" and what we have on a full PWX report page.
+
+charity: water's map pop up boxes have:
+Picture, Project Name, Plaque Text, Type, Beneficiaries, GPS, Description, Completion Date
+
+They also have a more detailed project description page in the Dollars to Projects section - part of their mychyarity: water. But they do not have any list formats. Their full project reports look really nice and contain:
+
+Project Name, Completion Date, Country, People Served
+Project Type (i.e. drilled well), Region, GPS, Project Cost
+Local Partner, Project ID, Field Notes, and of course, Photos
+eg:  http://mycharitywater.org/p/myprojectsview?project_id=ET.GOH.Q4.09.048.213
+
+I have an example of a report summary list for the Smith Family Trust that we can reference and comment on.
+http://blueplanetnetwork.org/projects/mssct
+
+The content fields I have used are:
+Country, Implementer, Funder Contribution, Community Contribution, People Impacted, Date Completed, Status, Last Report Date, Project Name,  Description, Status/Learning, link to detailed report (links to sites if between 1 and 5, or to a list page if more than 6)
+
+What I have learned from creating this...
+
+1) The project description and status/learnings require editorial work to condense, clean up and clarify. I feel like they make the short listing very effective, but I'd want to hear that from a funder to make sure it is worth the effort.
+
+2) The people impacted number, as I mentioned in an earlier topic, is a bit problematic, and we'll have to define it and likely have a few variations like total impact, water, sanitation, hygiene and indirect impact. In the Protos projects, the number of people impacted displayed in the PWX report is for the entire project, but MSSCT only funded 10% of the project. So I made the number here 10%. 
+
+3) Overall this may be very difficult to automate. For now, though, showing all these fields quickly and efficiently can really help us differentiate ourselves, showcasing how we have meaningful, measurable data, community buy-in, and shared learning. "
+application data to put on other websites,"provide application data in an easy way (xml or otherwise) to applicants/funders to put on their website:
+ 
+- project summary
+- primary photo
+- impact count
+- etc",01/03/2012 09:12:47,01/03/2012 09:12:47,Open,rajesh,rajesh,Website integration and linking,Unresolved
+not published news articles should not show up on news page,"if you do not click 'Published' on a news article, it does not show up on the home page.
+
+correct behavior.
+
+-------
+
+however, it still shows up on the news page:
+http://peerwater.org/news/index
+
+it should not show up here either.
+
+@vamsee don't know if this can go in www or r3, lets discuss",09/03/2012 03:51:22,09/03/2012 07:55:34,Open,rajesh,ajaya,Bug Fix,Unresolved,"09/03/12 05:06:06; ajaya; Done.  Please deploy to qa, review and push to www if looks ok.","09/03/12 06:15:33; vamsee; Thanks, but please fix against rails_3011 or develop from now on (and we need tests!)","09/03/12 06:38:00; rajesh; this was an urgent fix to not display Arghyam's PR. or i would have to delete it and recreate it.
+so have to fast forward into www.
+@vamsee need your help to deploy to qa, test and then deploy to www.
+
+also, @ajaya let us know when you get the R3 env setup, if you have not so far.","09/03/12 07:13:12; vamsee; Even for fast-forwarding, develop is the right place. It's been deployed all the way up to www as of now. Fixing it upstream means that I have to merge the change back into staging, develop, and finally rails_3011 (incidentally, I fixed this issue in rails_3011 already).","09/03/12 07:55:34; rajesh; You should not fast-forward without testing.
+
+It does not work on qa or www (if you have deployed to qa and www)."
+focu on admin dashboard does not work,"admin has lost ability to add focus for projects and orgs.
+
+
+http://demo.peerwater.org/en/metadata/focu
+
+results in:
+
+Page Not Found!
+Sorry. We couldn't find the page you have requested.
+
+
+adding @vcolaco ",09/03/2012 06:27:46,22/03/2012 16:56:37,Closed,rajesh,vamsee,Rails 3,Fixed,"09/03/12 06:31:35; rajesh; also the error page does not show the login info and shows the login box.
+
+and when you click on 'Home' (or 'About') in the menu bar, it goes to www
+
+",10/03/12 02:58:57; vamsee; Try now. Also let me know what else do you want from the params. Most of them don't work as of now. Please create a separate ticket for the error page (needs a comprehensive cleanup?).,"10/03/12 03:50:52; rajesh; None of the funcitons on focu work.
+
+Only pagination works.
+
+Search, edit, delete (do get the ok/cancel box), show, create - none work.","10/03/12 06:55:28; vamsee; The activescaffold plugin doesn't seem to work very well. It's a pretty old plugin, and nobody really uses it any more. Do we need activescaffold for admin stuff? Can't we use the usual scaffold and be done with it?","10/03/12 08:01:55; rajesh; 
+    i don't care if its activescaffold or scaffold or ladder or
+    forklift.
+    you keep trying to get me into technology, and i just say - make it
+    work!
+    does not have to work exactly as before, but has to have the same
+    functionality.
+    differences in look and feel and intuition acceptable for admin.","12/03/12 02:40:55; vamsee; This is also fixed, but I guess I have made more work for myself by doing it manually :). Pretty much all the other params should fail, let me know what others (important ones) you want to be able to use to update stuff. ","22/03/12 16:56:36; rajesh; i see that this is fixed.
+
+now that all is one page, we don't need a search, so its gone."
+error page needs to be fixed,"error page does not show the login info (i was logged in as pwxadmin) and instead shows the login box.
+
+and when you click on 'Home' (or 'About') in the menu bar, it goes to www (not to demo where i was)
+
+
+@vcolaco added for testing",10/03/2012 03:52:35,22/03/2012 17:19:53,Open,rajesh,vamsee,Bug Fix,Unresolved
+search inside attachments,"now that we have a fancy-dancy search engine that can poke inside docs, lets use it",10/03/2012 03:56:34,10/03/2012 03:56:34,Open,rajesh,vamsee,Wish List,Unresolved
+search enhancement - highlight search term,"highlight the searched-for words. 
+
+@vamsee writes: ""But I'm not sure how applicable it is because sometimes we're sometimes searching in fields that are not shown in searches. For example, some organizations show up because the words matched their description.""
+
+this is the right behavior! if a word like 'arsenic' shows up in their description its because they put it there and they might be working on that issue.",10/03/2012 04:00:13,10/03/2012 04:00:13,Open,rajesh,vamsee,Wish List,Unresolved
+Fix numbers on front page,"Currently the 'Total $ Managed' shows zero, and needs a different way of counting than earlier. Clarify with Rajesh and set this up - also, look into moving the numbers onto memcache instead of loading it from a config file (which prevents the numbers being updated until we deploy again).",12/03/2012 10:45:40,18/04/2012 15:51:35,Open,vamsee,vinita,Ruby 1.9.3 Rails 3.2,Unresolved,01/04/12 02:54:55; vamsee; @satyagrahi would a cached number that updates every 1 hour do for our purposes? ,"01/04/12 02:59:57; rajesh; more than do! anything in the daily realm would be fine (every 24 hours, or 6 hours, ...).
+
+an enhancement would be to allow a 'tickle' function to reset after we import a set of data.","01/04/12 03:18:31; vamsee; The easiest way to implement that tickle will be to create a cache key name based on number of projects computed, but that would still send a db request every time the front page is accessed. I think the next best thing is to create a button/link  in admin dashboard that will invalidate all front page related numbers in the cache. Will do this after we fix the numbers.","01/04/12 05:54:59; rajesh; we should avoid a db request for home page for sure.
+
+admin button sounds great!
+
+i am okay with ssh'ing into the server and tickling a reset_cache type of file!
+
+other thing is to do it is to make it part of import script.","10/04/12 03:41:42; rajesh; i will let @vcolaco create some projects (of say $1MM) and see if things change properly.
+also delete a couple of cycles (after counting app amounts) and see if numbers change exactly.",18/04/12 15:51:35; vamsee; check n close?
+multiple file upload does not work,"on www and qa (r3).
+
+each file goes to completion (>90%) and then ends in http: error
+
+the medium priority thing to do is to disable that option for now, until the permanent fix comes.
+
+@vcolaco ",12/03/2012 11:07:52,23/04/2012 03:26:35,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Unresolved,"12/03/12 13:02:38; vinita; I tested on QA (uploaded 7 pics), the multiple file upload works - http://qa.peerwater.org/en/projects/476-Healthy-Schools-2-12/attachments/new?multi=yes&type=photo
+","12/03/12 16:01:59; vamsee; Ah-ha. Looks like pulling out ferret fixed this problem too (didn't suspect this, as the problem seemed to be on qa/www too, where I thought there wasn't any existing prob from ferret). I tried this only a couple of weeks ago (on demo, before solr) and it didn't work. Anyway, glad it works again. Thanks for testing.","13/03/12 05:44:36; rajesh; when i am not logged in, i got no errors - file upload worked (proj status report).
+
+logged in (admin) and tried to attach the same way (fewer files) but got error three times. (http error)","16/03/12 11:55:51; vamsee; okay, this is driving me crazy, but here's the thing:
+
+multi -upload works for proj_reports, both logged in and logged out. 
+
+multi upload doesn't work for projects (can't attach anonymously anyway) but works only for individual upload while logged in as pwxadmin (is this correct behavior or only owner can attach to projects?). 
+
+I tried everything for multi, so far it has me flummoxed. For some reason sessionobj is not being loaded for project attachments (which is needed for attaching to projects). I'll take a crack at this again after fixing a few others. Might get more ideas then. Meanwhile you're free to test the rest.","16/03/12 11:59:46; rajesh; forget admin, get it working for all others first ...
+
+esp. edit of names/description after multi-upload - otherwise its useless (pretty much).",16/03/12 12:01:39; vamsee; edits should be fixed everywhere - please check (commented in no.641),"19/03/12 06:46:44; rajesh; can't still do multi file upload (OSX lion, FF 10) http://qa.peerwater.org/en/organizations/153-hello-dolly/attachments/new?multi=yes&type=photo. get HTTP error ALSO cannot return to the project page 'Finish and Go Back' does not work","19/03/12 06:52:05; rajesh; even doing one file, shows the same error",14/04/12 15:21:36; vamsee; How about we give the uploader a makeover? http://blueimp.github.com/jQuery-File-Upload/,"14/04/12 17:58:31; rajesh; +1
+
+@mkristian @ajaya (esp @ajaya ) you have any issues?
+","23/04/12 03:26:35; ajaya; I logged in as admin and got errors. HTTP Error.  Firefox 11 on OS X
+"
+emails not going bcc to qa@,"just referred a new org.
+the email is received but the copy that normally comes to qa@ does not happen.
+
+@vcolaco ",12/03/2012 12:05:10,19/03/2012 07:19:12,Closed,rajesh,vamsee,Rails 3,Fixed,"13/03/12 05:45:55; rajesh; emails for creating a profile and also submitting not going bcc to qa@ no way for admin to find out what is going on.
+
+proj_reports are going out fine.",14/03/12 13:43:55; rajesh; @vcolaco please test all the places we get email (might have to wait for funding cycle to close this),"19/03/12 07:19:11; rajesh; seems working, if @vcolaco finds problems, please reopen"
+admin cannot edit attachment data,"@vcolaco added
+
+i created a project status report:
+http://qa.peerwater.org/en/projects/1-Well-repairing-at-Ahmadiyya-Primary-School-Malaisoko-Port-Loko-District-Sierra-Leone/proj_reports/570
+
+i uploaded a single photo and then multiple photos.
+
+now, the user (3rd party reporter) should be able to edit them (for like 24 or 48 hours) but there is no way they can edit the photo title or caption - for multi-file upload, its important.
+
+admin can 'edit' but gets and error (on both the single uploaded photo and multi-uploaded photo):
+
+Errors
+
+Following problems occurred. Please review and correct of necessary
+
+    Invalid Attachment Type
+
+",13/03/2012 05:38:04,20/03/2012 10:20:30,Closed,rajesh,vamsee,Rails 3,Fixed,"16/03/12 11:38:50; vamsee; This should be fixed now, please check.","20/03/12 10:20:30; rajesh; works,"
+more html safe stuff needed as admin screens show tags,"
+http://qa.peerwater.org/en/organizations/159-hello-dolly-/reviews/list_reviewers (after logging in as admin)
+
+see the bottom.
+
+if you want i can email the screen shot separately.
+
+@vcolaco ",13/03/2012 07:20:20,22/03/2012 15:30:48,Closed,rajesh,vamsee,Rails 3,Fixed,"17/03/12 05:26:59; vamsee; this project is gone from QA, and I'm not sure how to get to list_reviewers. Can you post another example on QA?","17/03/12 05:52:49; rajesh; have to create a new org, but am getting pressure to quit the comp now","19/03/12 10:02:02; vamsee; Please create one when you have time. And comment here, so I can test/fix this.","22/03/12 15:30:48; rajesh; this is fixed, was it the last?"
+fix route for default,"can we not have /en in the default urls?
+
+things work without the en, but it would be nicer not to have it at all for 99% of operations.
+
+@vcolaco ",13/03/2012 07:23:47,10/04/2012 03:43:09,Closed,rajesh,vamsee,Rails 3,Fixed,"16/03/12 12:10:08; vamsee; I for one, think /en is cool - for most geeks it's signal that the project has multi-lingual capabilities. It might be more trouble than it's worth to take this out, but I'll try.","17/03/12 05:26:26; rajesh; 
+    geeks rule!
+    as long as urls without /en/ work, i can be convinced that you have
+    better things to do."
+org join dates,"with Arghyam, we start needing stats for annual report of activity.
+
+one of the first will be # of orgs joining in a year.
+
+http://qa.peerwater.org/en/organization_search/organization_search?items_per_page=ALL&reset=1
+
+can we add a column of join date?
+
+if not, an export of data will have to suffice.
+
+adding @vcolaco @madanvk @thornedev ",13/03/2012 09:19:34,15/03/2012 05:59:51,Closed,rajesh,vamsee,Rails 3,Fixed,"13/03/12 12:30:48; vamsee; Okay, this is done, please check.","15/03/12 05:59:50; rajesh; checked and adjusted and looks good.
+
+except, @vamsee we need to refresh the db (the member data is old) - is that script working?
+but get permission from Vinita/Rajesh as you will destroy some membership review testing."
+notification emails to other project well users,"currently when any project activity happens for Project Well, Meera gets an email.
+
+PW wants two other users Jane and Paramita to get the email.
+they can then quickly edit the SMS (they are going to use it daily and have already sent 4-5 today)
+
+this was a hack and it needs to be added to.
+
+the best way for the hack to work is to create a mailing list: projectwell@peerwater.org and have the email go there from which it can get distributed.
+
+---------------
+
+while you are hacking, remove the EMW notification
+
+--------------
+
+while @mkristian is adding to profiles, it would be nice to add this to the Org Profile:
+
+checkbox: notify Primary contact about any project activity.
+
+then we can convert the hack into something.
+
+adding @vcolaco @madanvk ",13/03/2012 09:55:06,10/04/2012 03:40:20,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Unresolved,"17/03/12 03:06:44; vamsee; I suggest you split this ticket into two - the hack for Project Well in R3, the other a potential feature in another milestone.",26/03/12 10:54:23; rajesh; have created an email distribution list projectwell@peerwater.org which should be used for the projectwell hack.
+activity summary,"Arghyam needs a lot of material from its grantees - an annual report for one.
+
+We need to find a way to get get usage and statistics for PWX activity annually (or some such time period):
+
+* no of orgs joined
+* $/INR of funding
+* no of apps / projects funded
+* no of orgs funded
+* no or projects created (same as funded above)
+* no of SMS received (attached)
+* no of proj_reports by implementers
+* no of proj_reports by peers
+* no of proj_reports by visitors
+* any import data/summary that you can pull up? start capturing? (date of import?)
+
+adding @vcolaco @madanvk @thornedev 
+",13/03/2012 10:00:31,28/03/2012 13:20:27,Open,rajesh,vamsee,Wish List,Unresolved,"13/03/12 10:03:27; rajesh; got a response from Arghyam (so am reducing its priority and moving it to Z Future, unless someone else wants it now):
+
+Dear Rajesh,
+
+Thanks for the details and we shall refer to the information in website as suggested.
+
+We need very high level information on the activities done so far and we will communicate to you in case we need any further assistance.
+
+Thanks again !
+Suresh Ponnappa
+Senior Finance Manager
+Arghyam
+ ","13/03/12 10:08:16; rajesh; adding to the list:
+
+* no of peer reviews assigned
+* no of peer reviews completed
+* no of comments (in app)
+
+would also be great.","13/03/12 12:42:01; madan; Wouldn't it be easier to create an engine that can be used to export a
+selected set of columns.  This data table can then be fed to Excel or
+analytiX.  We can then plot columnX vs. columnY, create a bar graph of
+columnA, etc.  Otherwise we could keep coming up with lots of measures.
+ For example, no. of comments by ProjectWell, no. of questions not
+answered, no. of questions asked by ProjectWell, no. of peer reviews done
+by ProjectWell, no. of peer reviews assigned to ProjectWell, etc.
+So, the question to Vamsee/Kristian, is:
+- Is it easier to keep creating these specific measures.  Which we keep
+adding to.
+- OR would be easier to create a general purpose approach and then quickly
+deploy new measures.  Possibly, even allow the user to generate measures of
+interest to them?
+- OR are we hoping to define 80% of all questions a-priori.
+
+
+Here are a couple interesting links:
+http://spotfire.tibco.com/demo/default.aspx ----  This is an interesting
+demo
+http://ondemand.spotfire.com/Public/ViewAnalysis.aspx?file=Public/World%20Facts%20Analysis&waid=dc73a931512b95fbae20b-b6d0
+http://www.tableausoftware.com/products/desktop   --- try the see it in
+action demo.
+
+
+
+On Tue, Mar 13, 2012 at 3:38 PM, rajesh <
+reply@reply.github.com
+> wrote:
+
+> adding to the list:
+>
+> * no of peer reviews assigned
+> * no of peer reviews completed
+> * no of comments (in app)
+>
+> would also be great.
+>
+> ---
+> Reply to this email directly or view it on GitHub:
+> https://github.com/pwx/code/issues/646#issuecomment-4470429
+>
+
+
+
+-- 
+Thanks,
+Madan Kumar","15/03/12 10:08:37; madan; http://www.oba-data.org/index.cfm?page=projects
+http://www.oba-data.org/index.cfm
+Simple but clean presentation of data and easy filtering.","28/03/12 13:20:27; larrie; To support Madan's comments, I will add the following.  A tool that was created by a fellow in my last position did something similar to what Madan is commenting about, but with extensibility built into it.  The tool stored the SQL as a text field in a data table, and an engine / widget was created to pull the specifically needed item from the table, execute it, and return the results.  As new items were required, the new SQL was added to the table. This is easily done, but where it becomes hard is abstracting how the UI widget feeds a key value and whatever variables the SQL requires for execution.  The items could be executed in the BG storing the values in a ""results"" table for the UI to access, as a way to increase the speed at which such a process would execute, which would make an easy feed into AnalytiX."
+paginate has to provide item information,"lists such as application lists from the home page (pwx stats) used to have info (e.g. ""items 11-20 out of 45"")
+
+now that we using paginate that manual code has been replaced by paginate, and we see ""Page 2 of 5"" but have lost item count.
+
+please put item count back.
+
+@vcolaco ",14/03/2012 11:57:34,20/03/2012 07:56:45,Closed,rajesh,vamsee,Rails 3,Fixed,15/03/12 14:27:00; vamsee; This should be done now too.,"15/03/12 15:00:20; vamsee; Also, I fixed the paginate error in distribute apps page, so that should work too. Please check, @vcolaco ",16/03/12 05:14:23; vinita; It works now.,16/03/12 12:08:41; vamsee; @satyagrahi wants to be able to edit model names. Setup the template options.,"17/03/12 10:24:09; vamsee; I've changed the names for Apps, Projects and Orgs. Please check it out.","19/03/12 10:05:59; rajesh; all looking good - except people!
+
+and of course, i edited all the list titles too.",20/03/12 07:41:54; vamsee; People too should show up correctly now. Please check.,20/03/12 07:56:45; rajesh; people issue being tracked separtely on #653
+q&a does not work - check remote true,"can't post a q on the membership qanda
+
+logged in as protos and tried to post a q for hello dolly:
+http://qa.peerwater.org/en/organizations/159-hello-dolly-/qandas?complete=new+Effect.BlindDown%28%22qanda-new%22%29&remote=true&url=%2Fen%2Forganizations%2F159%2Fqandas%2Fpost_new
+
+
+adding @vcolaco",14/03/2012 13:41:34,19/03/2012 07:10:51,Closed,rajesh,vamsee,Rails 3,Fixed,"15/03/12 13:51:41; rajesh; qandas not being stored it seems.
+
+got a message (assume @vamsee was testing) from qa saying there was a post.
+
+but logged in as dolly and qanda is blank.","15/03/12 14:25:50; vamsee; Yep, please don't test a bug until I give the green light here. Sometimes there will be leftover bugs that I overlooked, so I don't usually comment on a ticket until I'm fairly sure everything is covered. 
+
+Coming to the bug itself, this was harder than I expected - involved updating the form_for syntax, translating some helpers from Prototype to jQuery, etc. Please unleash your test horses now and let me know if it's failing somewhere. Lots of small  changes in this one. ",19/03/12 07:10:50; rajesh; qandas work
+report visibility defaults for project,"adding @vamsee @ajaya 
+
+this is a placeholder requirement for the future; will move it to Z Future later, but want to ensure that for now all thoughts are down and we are designing/implementing so that we can do this in the future.
+
+we could have a project funded by A who wants all reports visible and one by B who does not care. 
+
+so we may have to allow for a report visibility default which is the initial basis of visibility for all project reports in that project.
+
+it would inherit the org default but could be changed.",15/03/2012 19:09:51,10/04/2012 08:40:38,Open,rajesh,kristian,Controlled Visibility / Privacy,Unresolved,10/04/12 07:33:38; kristian; so basically a new projects takes the defaults from the org and can be changed (with the same permissions as all the other visibilities) and any new proj_report will use the project defaults.,"10/04/12 07:37:39; rajesh; yes, for now we can choose not to 'enable' this feature with no UI interface.
+
+so user cannot change project default. this is because the UI changes/help page/testing/etc will take more resources.
+
+can we code the feature without the UI and after getting more acceptance in the field, take it forward.","10/04/12 07:40:21; kristian; yes, no problem but testing will be only test-suite then","10/04/12 08:01:54; rajesh; actually, if you put in the code, we can 'reveal' the feature (in its ugliness), test it and then comment out the UI part. that way, when UI designers come, we just have to 'review' in its pretty form.",10/04/12 08:20:20; kristian; maybe make the UI part admin only ? with all its ugliness !,"10/04/12 08:40:38; rajesh; 
+    only pwxadmin can see it?
+    that's a good idea.
+    as long as we can document how to turn the feature on for an org
+    easily."
+Custom robots.txt for each env,Allow bots only on production server. ,17/03/2012 03:04:02,17/03/2012 10:23:29,Closed,vamsee,vamsee,Rails 3,Fixed,17/03/12 10:23:29; vamsee; This is done.
+notification emails about project activity,"proper enhancement of #645 
+
+add notification option(s) to the Org Profile:
+
+* notify Primary contact about any project updates
+* allow other contacts to get (optionally) project update notifications 
+this means that the same question(s) will be added to the individual profiles where currently email notification about org/app reviews exist 
+
+or break down further:
+* notify Primary contact about project updates
+* notify Primary contact about any project attachments
+* notify Primary contact about project status updates
+* notify Primary contact about any project status attachments
+
+adding @vamsee 
+@vcolaco can you create a list of all notifications that are sent out?",17/03/2012 07:10:42,17/03/2012 07:10:43,Open,rajesh,rajesh,Wish List,Unresolved
+File downloads do not work,"downloading an attachment from an organization:
+http://qa.peerwater.org/en/organizations/118-Gram-Vikas-Mandal-Dethali/attachments/2467
+
+get a doc of zero bytes with the right filename.
+
+download from www works with the same attachment producing doc:
+http://peerwater.org/organizations/118-Gram-Vikas-Mandal-Dethali/attachments/2467
+
+adding @vcolaco 
+",18/03/2012 03:50:58,20/03/2012 03:29:29,Closed,rajesh,vamsee,Rails 3,Fixed,"19/03/12 06:55:20; rajesh; just on qa logged in as dolly (new org): uploaded files and tried to download them as protos.
+http://qa.peerwater.org/en/organizations/153-hello-dolly/attachments/4311
+
+get the error: 
+The file “BPN_-_User_Epics_r2.pdf” could not be opened because it is empty.","19/03/12 07:16:51; vamsee; Hmm. Most likely some config problem on the server. I was able to download an uploaded file on local. Can you check if you an do the same on local? If you don't have a copy, can you upload to localhost and try to download it?",19/03/12 07:35:25; rajesh; uploaded some other file to local and tested download - works,"19/03/12 09:56:26; vamsee; Sorry about this, Rails 3 enables x-sendfile by default which will only work with x-accel-redirect in Apache, which I didn't enable. This prob should be gone now. Please check.",20/03/12 03:29:29; rajesh; works!
+people page (admin) has link problems,"when i am on the Users page after logging in as admin:
+http://qa.peerwater.org/en/person/list
+
+click on drop down ""All"" to view all entries.
+the result is project list!
+http://qa.peerwater.org/en/project_info/project_search?filter=4
+
+so 2 things (maybe its the same) to fix:
+1. pagination for User page
+2. jumping to project page when changing the number of items to view per page
+
+3. enhancement - nice to have some faster way to search for users: filter (by org) perhaps?
+
+adding @vcolaco 
+",19/03/2012 05:01:43,03/04/2012 05:12:21,Closed,rajesh,vamsee,Rails 3,Fixed,"03/04/12 03:46:22; vamsee; The ""jumping"" behavior in person list should be gone now, please check. ","03/04/12 05:12:21; rajesh; yes, its fixed.
+
+however, the column spacing somehow changes (widens into RHS) when you choose 50 and expands even more when you choose ""All"".
+
+don't worry about this, but its interesting."
+Error while deleting progress/status report,"On the project report page
+-> click on the operating/ implementation status report
+->select the status report and click on Edit
+->select delete-you get a pop-up 'sure you want to delete the report'. Click yes and the below error shows up:
+
+ActiveRecord::RecordNotFound in ProjReportsController#edit 
+Couldn't find ProjReport with ID=593 [WHERE (`proj_reports`.project_id = 511)]
+
+",19/03/2012 07:03:22,22/03/2012 11:48:01,Closed,vinita,vamsee,Rails 3,Fixed,19/03/12 07:19:07; vamsee; Will look into this. That's a wonderful bug report. Thank you.,22/03/12 09:13:05; vamsee; Can you also check this again please. This should be gone.,"22/03/12 11:47:56; vinita; Works.
+
+Tested on QA, deleted the progress report and the page gets redirected to the 'project summary' page stating the progress report was sucessfully deleted "
+beneficiary counts on member dash don't add up,"logged in as protos and set beneficiary counts to different numbers and changed dates of projects.
+
+the graph seemed to make sense year (changing end date of project) but not numerically.
+
+please test with paper / pencil in hand and verify graphs.",19/03/2012 10:04:20,10/04/2012 03:39:27,Open,rajesh,vinita,Ruby 1.9.3 Rails 3.2,Unresolved
+Memberhip reviews - status is garbled,"http://qa.peerwater.org/en/organizations/155-Chal-chal-mere-bhai/reviews/list_reviewers
+
+",19/03/2012 10:05:09,20/03/2012 07:49:19,Closed,vinita,vamsee,Rails 3,Fixed,"20/03/12 07:42:58; vamsee; Should be fine now, please check. ",20/03/12 07:49:19; rajesh; fixed
+Ratings and comments - not working,http://qa.peerwater.org/en/organizations/155-Chal-chal-mere-bhai/reviews ,19/03/2012 10:11:54,22/03/2012 12:35:19,Closed,vinita,vamsee,Rails 3,Fixed,"22/03/12 09:07:05; vamsee; Turned out to be a routing error, please check if this works now (and comment if you find any further errors in this module). This is something I'm not very familiar with, so please check the whole cycle. cc/ @satyagrahi ","22/03/12 09:11:09; rajesh; when you submit your rating, it does not go to the finished form page.
+http://qa.peerwater.org/en/organizations/153-hello-dolly/reviews/1108
+
+but stays on the current one. and if you click submit again, you get an error:
+
+1 error prohibited this review from being saved
+
+There were problems with the following fields:
+
+    You have already reviewed and submitted the rating for this Organization
+
+
+even though, you are still on the form with the submit and cancel buttons.
+it should go to the completed form on submission:
+http://qa.peerwater.org/en/organizations/153-hello-dolly/reviews (which i got to by clicking 'Cancel', returning to the profile and then again clicking on Ratings.
+
+","22/03/12 09:49:43; vamsee; Okay, this should behave as expected now - please check (I tested with 147)","22/03/12 12:35:19; rajesh; all fixed.
+
+even the mail that was broken.
+
+and an earlier bug in display of status on admin screen."
+admin page for membership review - redo buttons,"adding @vcolaco 
+
+on the admin page of membership, you can remove a reviewer, redo a review by clicking on review status.
+
+that functionality has disappeared.",20/03/2012 07:40:49,22/03/2012 15:24:51,Closed,rajesh,vamsee,Rails 3,Fixed,"22/03/12 09:07:55; vamsee; This should also be working now - please check the whole functionality and post here if you see any more errors - I'm not very familiar with this functionality either, so please check everything to make sure it works.",22/03/12 11:44:43; vinita; Tested and it works.,22/03/12 12:09:54; vamsee; @satyagrahi I also fixed the issue with denoting 'Did not finish review' correctly in the list_reviewers page: http://qa.peerwater.org/en/organizations/153-hello-dolly/reviews,22/03/12 15:24:51; rajesh; all good!
+duplicate proj report created,"as anon, i created a proj report and found 2 copies.
+
+how did it happen?
+
+i did try to attach photos after submitting.
+http://qa.peerwater.org/en/projects/1-Well-repairing-at-Ahmadiyya-Primary-School-Malaisoko-Port-Loko-District-Sierra-Leone",20/03/2012 10:21:56,10/04/2012 04:00:40,Open,rajesh,vamsee,Bug Fix,Unresolved,"26/03/12 07:35:17; vamsee; I tried recreating this, but no dice. I tried both single upload and multi-upload on project report attachments. I don't remember running into this earlier either. Any other reasons this might have happened?",10/04/12 04:00:34; rajesh; keeping it alive in bug fix - close if it does not happen again in next few months
+search not working with wildcards,"search for ""af*"" on www and qa.
+big difference in results
+
+the urls are also different but that's okay:
+http://qa.peerwater.org/en/kb/search?utf8=%E2%9C%93&query[keywords]=af*&commit=Search
+http://peerwater.org/kb/search?query[keywords]=af*&x=13&y=9
+
+in www, one sees South Africa as a country.
+also, the orgs with names that include Africa are there and more, quotes, news releases, ...
+
+adding @vcolaco @mkristian ",22/03/2012 18:08:52,18/04/2012 15:46:22,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Unresolved,"22/03/12 18:16:08; rajesh; try aff* too for affordable, afflicted - the difference is enormous.","22/03/12 18:24:23; rajesh; as @mkristian points out ""Africa"" shows up many of the ones missing in the search with wildcards.
+
+will leave it to @vcolaco to test and ensure all the results for Africa (and a few other terms) match.","26/03/12 07:10:55; vamsee; Okay, here's what I'm observing: try just 'af' in both qa and www. Both of them give the same results, and typing 'africa' also gives the same results, the qa search finding more discussions than www one. 
+
+So the question is, do we really need wildcard searching? Afaik, only we are aware of this feature, right? How many users are even aware of wildcards? Adding this is fairly easy, just trying to understand if it's something we really need to enable. 
+
+The downside is that the index has to create more tokens, which means it will increase the size of the index substantially.","26/03/12 07:26:20; vamsee; Also, if we do enable wildcards, the results will usually be so many that the query usually returns slowly (because a lot of db records have to be retrieved) thus denting the ux and the user has to wade through a lot of text (if he's not used to using ctrl+f search feature on a web page). Is this feature worth the trouble?","26/03/12 08:55:42; rajesh; how did ferret deal with wildcards? did it have a larger index? was it substantially slower?
+
+yes, the results for some are larger, but then for others its richer (Africa v African).
+
+summary of the points to think about:
+- size of index
+- speed
+- filtering of results (when huge volume, with or without wildcards)
+
+yes, we are the only ones using wild cards (its really powerful when you demo), i would only let the first two points detract me from providing wildcards.
+","26/03/12 09:47:17; rajesh; i really want to understand what the constraints are.
+
+now that search is running on its own server what are the issues there? what will it take for us to need a bigger server?
+
+when we release search results inside docs, what are the indexing problems? and what are the UX issues?
+
+note we are still talking about a relatively small db.","26/03/12 10:27:29; kristian; I do not understand a few comments I read before. so I just randomly but my
+thoughts it everything !!
+
+typically with lucene/solr you define a filter chain which you use to build
+up your index and which you also use for filtering your search query before
+passing the query on to the QueryParser. these filters can be used to
+normalize your text, example in german ""ae"" and ""ä"" are equivalent, so you
+need to make sure both the index and the query use the same normalized
+form. or for seraching french it is advisable to map ""é"", ""è"" onto ""e"" to
+increase potentials matches. wildcard or fuzzy searches do not influence
+the creation of the index with ONE exception: searched like ""*bug"" with the
+wildcard at the beginning are not supported which can be fixed by the
+""ReversedWildcardFilter""
+http://solr.pl/en/2010/12/20/wildcard-queries-and-how-solr-handles-them/
+as far I understand that one it indeed will increase the index size !!
+
+one great thing about google is that they try to correct my spellings :)  -
+lucene does not offer this. what I did in the past was offering two buttons
+""exact match"" and ""similar matches"" and with the latter I just do a fuzzy
+search. i.e. search for ""Christian Meier"" or for ""Kristian Meir"" should
+always find me ""Kristian Meier"" - IMO
+
+big search result is a problem independent of whether you use wildcards or
+not. maybe wildcards lead more often to bigger result set then
+none-wildcards searches.
+
+but I think to paginate the search result is obvious (but it seems not to
+be there :( ) this will speed up search significantly from the users point
+of view (since users hardly dive into the more than 2-3 pages of the search
+!! - how do you do this ? )
+
+I am surprised that wildcard search is not working since the default query
+parser does offer it ?!","26/03/12 10:40:39; vamsee; On, www, you can easily observe the difference between 'af' and 'af*' - the latter taking several seconds more to respond. Regardless of the search engine, enabling wild cards means bigger indexes and slower responses, simply because there are more keywords to match (http://dishevelled.net/sakai-solr-benchmark/). But what's more important is that apart from the bling factor it adds little to actual ux.
+
+As for searching inside attachments, that's a different problem altogether, and we can't avoid a bigger index in that case anyway. Enabling wildcards means we'll explode the number of possible matches, which might mean more time to search/return results. I think the default search behavior is just fine for most usecases. 
+
+Plus, I just checked, we also seem to have a bit of technical limitation - sunspot (the rails solr adapter) uses the 'dismax query parser', which cannot do 'true' wildcard queries - we have to use something called 'ngrams', but the downside is that it makes all queries wildcard enabled - that is, the results will be the same for blu* as it is for blu (first para here: https://github.com/sunspot/sunspot/wiki/Wildcard-searching-with-ngrams). If you need this, I can enable it.","26/03/12 10:41:44; rajesh; @mkristian 
+how does lucene do fuzzy search?
+
+-------------
+
+in case, there was a doubt, for now we don't need wildcard at beginning.
+
+
+-------------
+
+paginate was there (it is still on www). @ajaya put a custom pagination inside each sections,
+@vamsee can we put this back? do you need a separate ticket? ","26/03/12 10:43:46; vamsee; Or, we can wait until sunspot enables edismax query parser, which does support wild cards properly. There doesn't seem to be a proper ETA for this though: https://github.com/sunspot/sunspot/issues/93","26/03/12 10:49:59; kristian; @mkristian
+
+> how does lucene do fuzzy search?
+>
+
+solr does it out of the box by using the default lucene query parser. so
+you get different results for
+
+bug
+bug*
+bug~
+
+the latter being the fuzzy search.
+
+all this magic stuff can be configured in solr/conf/schema.xml and should
+be totally transparent to solr client !!! but I do not know why sunspot is
+involved in this here.","26/03/12 10:59:10; rajesh; i totally expect ""af"" and ""af*"" to have different response times.
+
+what i am asking is whether the indexing issues are formidable to allow for ""af\*"".
+*will the index be really  large?
+will it take long to create?
+and will ""af"" take **noticeably** longer on PWX* where **""af\*""** has been **enabled** v one where **""af\*""** is **disabled** ?","26/03/12 10:59:55; kristian; still I do not see the reason why to use an ngram tokenizer. ngrams can be
+used to achieve a fuzzy effect but even without them you can have wildcard
+searches as even the benchmark from the above url states clearly (using the
+no-ngram schema.xml for it) !!! so no increase of index size to be able to
+do wildcard and fuzzy searches on a lucene indexes !","26/03/12 11:01:25; kristian; well I do need to mention that searches become slower with wildcard or
+fuzzy ones (I did not speak out against that fact)","26/03/12 11:10:31; rajesh; as the single largest user of PWX, i expect that *sometimes* my requests be considered seriously and not as bling factor. :)","26/03/12 12:25:49; vamsee; Sunspot is the library which enables solr to be plugged into ActiveRecord. Basically it generates the correct config files required for Model.search method to work with a standard solr install. As far as I know 'dismax' is still the standard query parser in Solr, and though 'edismax' has been around for a while, it's still in experimental mode and not supported by Sunspot (yet). 
+
+Please note that not all features of Lucene are supported by Solr; edismax is supposed to be able to bridge that gap. But since it's not standard yet in Solr itself, it's not supported by Sunspot yet. ReversedWildCardFilterFactory is used by the standard query parser to speed up performance, not to support actual wild card searches (http://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#solr.ReversedWildcardFilterFactory). 
+
+I'm guessing Sunspot won't support edismax until it becomes standard in Solr itself. I tried switching the dismax declarations in solrconfig.xml to edismax and tried, but still RSolr sends a dismax query. This is new ground to me, so I'm willing to be corrected about this.
+
+As for requests being considered seriously, most of them are, as long as you can back them up with a solid use case :). Since you're the largest user of PWX, when was the last time you could find something only with a wild card (while not testing?).","26/03/12 13:22:52; rajesh; today, for example. i did not know the full name of a new SMS sender, so i just typed Jal*.
+
+call me lazy, but why would i type African Empowerment Project, when i can type emp* and then find all orgs in the results?
+i use search to find user names, apps, sites and then for demo. usually do it on qa (when its refreshed) so to also test at the same time, but this new user joined today so i could not!","26/03/12 13:47:27; kristian; ad ReversedWildCardFilterFactory: it enables query with leading wildcard
+like ""*bug"" which you otherwise would not have (which you do not have with
+lucene only) !!!! apparently it does improve performance for certain
+queries.
+
+ad sunspot vs solr
+so basically you are saying I can not use custom query parsers or custom
+filters with sunspot. until now whether I used lucene or solr in past there
+was the need for such a custom component which is actually quite easy to
+write. when I just download solr and get the sample application running I
+do have all the nice features like wildcard und fuzzy search but when I use
+sunspot I do not have it - strange !?
+
+it also sounds strange that a query gets analyzed before it gets send to
+solr since the analyzers sit on the solr instance and solr offers a restful
+api (depends what you did configure) to do the actual query and indexing.
+
+yes you are right I might mix a little lucene and solr, but again if
+something did not work with solr but did work with lucene then a little
+custom component made it work in solr as well !
+
+so my assumption what sunspot is able to do and what you write does not
+match (yet).
+
+before we continue this ping-pong I have to stop and see myself what can be
+done (to trick sunspot :)","26/03/12 16:37:14; kristian; so I did some digging and found a few things - just through poking and
+comparing:
+
+* first it was convenient that the  admin pages of solr were public
+accessible http://ec2-107-21-71-159.compute-1.amazonaws.com:8080/solr/
+
+* then I found out that sunspot uses apache-solr-core-1.4.0 from 2009,
+the one I deployed on search.tipitaka.org is apache-solr-core-3.4.0.
+the first is based on lucene-2.9.1 and the latter on lucene-3.4.0.
+latest solr is 3.5.0
+
+* indeed there is no ExtendedDismaxQParser in that old version of solr
+
+* sunspot does indeed sends the defType=dismax to the server - :-(
+which puts the a lot of knowledge about solr on the client side
+instead of leaving it on the server. even the admin interface does not
+offer the defType as advanced option (though it is a valid option)
+
+* the actual search (as anonymous) goes over three fields and there
+are other issues like that solr allows to use copyField into one for
+""easier/faster searching"" - the comments are still add the end of the
+schema.xml
+
+* I do have an old tarfile of solr-3.2.0 and I looked into the example
+and they use this ""edismax"" as default and call the whole config an
+robust example. the javadocs does say something about experimental API
+but javadocs and being up to date . . . . ?!
+
+* . . . . I am sure there is more :)
+
+but I am not sure to continue with such an ""old"" solr - it is less the
+actual age but more ""not being on the 3.x.y branch"". at least that is
+a version I would never start writing custom components for !","26/03/12 23:53:44; vamsee; We need to differentiate a bit - the one we use on local comes from an (optional) gem called sunspot_solr which bundles a jetty+solr version. This is indeed old (but it was a surprise - I thought it would be more up to date). As it happens the server (on aws) also runs the same version, but from a different source, the tomcat-solr package from Ubuntu 10.04. 
+
+But the thing is, even if they don't support edismax, if sunspot sends an edismax query, they will at least should error out that edismax is not supported. So the issue is with sunspot (sunspot_rails) gem and it's dependency rsolr gem supporting/sending edismax queries. This will most likely need a patch to one or both of these gems, I'll investigate more in the coming days after I fix other high priority issues in R3. Don't want to get side-tracked with yak-shaving if I can help it now :)","27/03/12 03:24:33; kristian; http://ec2-107-21-71-159.compute-1.amazonaws.com:8080/solr/qa/admin/registry.jsp
+
+tells clearly the (almost) same version as sunspot locally !!!","27/03/12 04:35:27; vamsee; I thought I said the same thing :). I'm just saying they happen to be from different sources. Anyways, the older solr versions are not the problem (we can always upgrade them), but the actual problem is to get sunspot/rsolr to send edismax queries (at least that's what I think the problem is for now, will dig a bit more later).","27/03/12 05:27:52; kristian; with that hint
+
+http://groups.google.com/group/ruby-sunspot/browse_thread/thread/9df5ef74609aaae4/1621d5f42167d1db?lnk=gst&q=wildcards#1621d5f42167d1db
+
+the wildcard + fuzzy searches asr a matter of upgrading solr !!! the
+remaining thing is that the index from solr point of view is less then
+optimal",27/03/12 05:39:15; vamsee; Aha. Haven't tried the solrconfig changes + upgraded solr. Will try this and report. Thanks.,"14/04/12 18:44:42; vamsee; Alright, full report - at the end, I had to change both ends to make them talk edismax. Had to upgrade Solr to 3.5, and also make Sunspot send in edismax as defType (6a585676f907899d640d41b5435acb694dcffe1c). Also, it meant that I had to rewrite the puppet config, and then I got slightly greedy and pulled out tomcat and replaced it with jetty, which is a bit more lightweight. 
+
+Turns out that the second step wasn't such a great move, as jetty 6.1 (older version on Ubuntu 10.04) will only talk to sun jdk instead of openjdk, which has been pulled out by Oracle. Had to jump through some hoops, but finally the search is all setup with wildcard support. I also feel it's a little speedier now. Please test (it's both on qa and www) and let me know if you need any changes to the wildcard behavior.","14/04/12 19:04:26; rajesh; thanks for burning the midnight oil!
+
+\*land\* on www produces some very interesting results! (not from pwx data, for sure!! - its from pwx code options)",15/04/12 06:43:09; vamsee; I'm not sure what you mean - pwx code options?,"15/04/12 08:54:36; rajesh; 
+    if you do the search that i mention \*land\* then you will see what
+    i mean. the code that populates country dropdowns.","18/04/12 15:46:22; vamsee; The country wildcard bug should be fixed. Turns out that I made the same mistake with orgs also while cleaning up earlier ferret code. Sorry about this, please check now."
+project analytix - 3 view options,"when dashboard comes up, we can show project analytix with 3 options:
+- list
+- map
+- combo
+
+we can have user selected defaults, but we can start with list to speed up delivery.
+
+@madanvk @vamsee ",26/03/2012 15:54:50,26/03/2012 15:54:50,Open,rajesh,rajesh,Wish List,Unresolved
+email formatting is lost,"need to fix emails sent during application process - but if you are fixing one, please fix as many as possible.
+
+below is email received by @vcolaco 
+
+--------------------------
+
+From: system@peerwater.org [mailto:system@peerwater.org]
+Sent: Monday, March 26, 2012 6:23 PM
+To: madyvini@airtelmail.in
+Subject: [QA]: Application ""Tap water in 1 school in Akashaya school"" from Organization ""Namma Neeru"" received
+
+ 
+
+Dear vini madhan, Thank you for submitting an application for consideration for funding through the PWX peer review process. We will send out the application for review which includes a question and answer opportunity between the reviewers of your application and you. Your responses will help the reviewers decide on the worthiness of your application. You can also modify your application based on input your peers provide. You will also be assigned to review other applications during the review period. This process is designed to increase collaboration and reduce overhead and it is your participation that makes it work. Sincerely, The Peer Water Exchange Team ---------- Please do not reply to this system generated email -----------",26/03/2012 16:38:51,10/04/2012 03:36:51,Closed,rajesh,vamsee,Rails 3,Fixed,"01/04/12 05:31:24; vamsee; Looks like the line breaks coming from the db are not converted to br tags. I now added replacement regex for all templates coming from db. Should be fixed, please check now."
+org profile: show website snap,"can we get a snapshot of their website and put it in as an image linking to the website?
+
+make the profile more glamorous.
+
+@vamsee @madanvk ",26/03/2012 16:47:47,28/03/2012 17:13:13,Open,rajesh,rajesh,Wish List,Unresolved,"28/03/12 15:05:35; madan; What exactly are we trying to do?  There already is a link to their
+website.  Is it just a cute change or we actually looking into how the page
+becomes more useful, delivers greater value?  If it is the latter, lets
+take another look at what we want to achieve with partner page.
+
+On Mon, Mar 26, 2012 at 10:17 PM, rajesh <
+reply@reply.github.com
+> wrote:
+
+> can we get a snapshot of their website and put it in as an image linking
+> to the website?
+>
+> make the profile more glamorous.
+>
+> @vamsee @madanvk
+>
+> ---
+> Reply to this email directly or view it on GitHub:
+> https://github.com/pwx/code/issues/663
+>
+
+
+
+-- 
+Thanks,
+Madan Kumar",28/03/12 17:13:13; rajesh; this is just a place to track a request from Lisa; actually a liberal interpretation of her request for us to to bear the burden of updating the org's profile.
+org profile: show date of last update,"put date of last update of profile data.
+
+maybe in the future, we will set a notification that the data is stale.",26/03/2012 16:49:49,26/03/2012 16:49:49,Open,rajesh,vamsee,Wish List,Unresolved
+Assign reviews for new applications - error on page,"On QA - dashboard -> select 'distribute application for review' ->select the sub tab 'assign reviews' get the below error:
+
+NameError in Admin/distribute_app#display_review_orgs 
+Showing /mnt/apps/qa/releases/20120322120424/app/views/admin/distribute_app/display_review_orgs.html.erb where line #8 raised: 
+
+undefined local variable or method `select_reviewers_distribute_app_url' for #<#<Class:0xb44b3d4>:0xae948b4>
+
+Extracted source (around line #8): 
+
+5:   <%= render :partial => ""apps/menu"", :locals => { :c => @app, :section => 'admin', :subsection => 'admin' }%>
+6:   <h2 class=""app"">Assign Reviewers</h2>
+7:   <div> 
+8:     <%= form_for :validorgs, @validorg, :url => select_reviewers_distribute_app_url, :html => {:method => :post} do |f|%>
+9:       <%=hidden_field_tag('app_id', @app.id)%>
+10:       <table class=""rightNavGrey"" border=""0"" cellspacing=""0"" cellpadding=""0"" width=""100%"">
+11:         <%= params['error_count_selected']%>
+
+",27/03/2012 08:11:22,10/04/2012 03:38:42,Open,vinita,vamsee,Ruby 1.9.3 Rails 3.2,Unresolved,"27/03/12 12:28:33; rajesh; 
+there is another way to get to the same point, from the 'Admin' tab of the app:
+http://qa.peerwater.org/en/apps/398-Tap-water-in-1-school-in-Akashaya-school/history
+
+get another error:
+
+NameError in Admin/distribute_app#display_review_orgs
+
+Showing /mnt/apps/qa/releases/20120322120424/app/views/admin/distribute_app/display_review_orgs.html.erb where line #8 raised:
+
+undefined local variable or method `select_reviewers_distribute_app_url' for #<#<Class:0xb168720>:0xb563dd4>
+
+Extracted source (around line #8):
+
+5:   <%= render :partial => ""apps/menu"", :locals => { :c => @app, :section => 'admin', :subsection => 'admin' }%>
+6:   <h2 class=""app"">Assign Reviewers</h2>
+7:   <div> 
+8:     <%= form_for :validorgs, @validorg, :url => select_reviewers_distribute_app_url, :html => {:method => :post} do |f|%>
+9:       <%=hidden_field_tag('app_id', @app.id)%>
+10:       <table class=""rightNavGrey"" border=""0"" cellspacing=""0"" cellpadding=""0"" width=""100%"">
+11:         <%= params['error_count_selected']%>
+
+Rails.root: /mnt/apps/qa/releases/20120322120424
+Application Trace | Framework Trace | Full Trace
+
+app/views/admin/distribute_app/display_review_orgs.html.erb:8:in `_app_views_admin_distribute_app_display_review_orgs_html_erb___289016490_95097230_0'","31/03/12 14:04:14; vamsee; I'm afraid I can't do much about the overflowing of the 'Changes' column right now, but since it's on the admin side I think we can tolerate this for a while. A more flexible layout should help us tackle this without too much trouble. Rest of the path-related errors should be fixed, please check.","03/04/12 05:39:34; rajesh; Crash! When i selected 3 reviewers and pressed Submit.
+
+http://qa.peerwater.org/en/admin/distribute_app/select_reviewers
+
+Routing Error
+
+No route matches ""/en/admin/distribute_app/select_reviewers""","03/04/12 06:12:26; rajesh; also, if you select 'Clear' after checking a few boxes you get an error:
+
+http://qa.peerwater.org/en/admin/distribute_app/display_review_orgs?app_id=398
+
+Routing Error
+
+No route matches {:action=>""show"", :locale=>:en, :controller=>""apps""}","03/04/12 07:24:08; vamsee; Both assign reviewers and clear should work properly now, please check.","03/04/12 07:42:40; rajesh; works, but now the 'click to remove / redo' is not necessary.
+
+the options are always visible!!!"
+remove 'in' from solr,"searching for 'in' causes a crash.
+it is a common English word, but 'the' does not cause a crash.
+
+@mkristian observes that it may be due to 'in' being a iso country code.
+
+need to remove it from solr.
+
+adding @vcolaco",27/03/2012 14:01:57,02/05/2012 07:36:20,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Unresolved,"18/04/12 15:47:58; vamsee; Turns out that it crashes for an entirely different reason - I wasn't checking for a nil where I should have. This is fixed now, the search should work correctly for 'in' (showing India, etc) as well as things like 'project' (which caused a crash earlier), etc. Please check.",02/05/12 07:36:20; rajesh; 'in' should NOT get india. or 'ke' should not get Kenya. 'in*' and 'ke*' should work.
+logging in from the login help page ends up at previous page,"when you login from the login help page, you end up at the page on which you tried to login.
+http://qa.peerwater.org/en/home_page/login_help (same bug exists on www)
+
+could be the home page, project page you are viewing, or ...
+
+you should end up at the dashboard.
+
+OR
+
+the same behaviour should be if you logged in correctly. that is if you are viewing a project and you decide to log in, then you end up back at the project page logged in. this is a nice feature, though execptions such as you should NOT end up on home page but on the dash.
+
+so its simpler to end up on the dashboard.
+
+adding @vcolaco ",28/03/2012 05:56:00,28/03/2012 05:56:00,Open,rajesh,vamsee,Bug Fix,Unresolved
+SMS registration - email notification (enhancement),"When a member logins in and registers his/ her mobile no, a code gets generated. Admin (rajesh/ vinita) should be notified so we can identify the cell phone number if it is registered incorrectly.
+
+From	Subject	Received	Size	Categories	
+Peer Water Exchange	PWX: [SMS] received	Wed 10:46 AM	12 KB
+
+	Dear Admin
+
+A message has been received in PWX
+ 
+Message = *14865
+Time = Tue Mar 27 22:08:13 -0700 2012
+From number/hash = 172c9693-67e0-4910-95bd-9b3b74bfa0ca
+
+	
+",29/03/2012 05:56:16,29/03/2012 06:35:34,Open,vinita,vamsee,Wish List,Unresolved
+Messages - search for project ID does not work,"http://peerwater.org/messages - On the messages page -> Projects -> search - for project ID 495 for e.g. - http://peerwater.org/projects/495-Arsenic-free-bore-dugwell-PW216-funded-by-Project-Well
+
+the search results shows '0'",29/03/2012 06:01:52,29/03/2012 06:37:15,Open,vinita,vamsee,Bug Fix,Unresolved
+marketing title and summary,"allow an external facing title / summary for projects.
+
+this would be a marketing ploy to attract / entice / engage the public, a service provided by PWX.
+
+this would be shown when nobody is logged in (or for funders)
+
+logged in users (or implementers only) would see the original title.
+
+example:
+""Arsenic Safe Drinking Water:Gaighata PWSET2A""
+to
+""Dug-well gives 100 people arsenic-free water""
+
+adding @madanvk ",29/03/2012 17:31:11,29/03/2012 17:31:11,Open,rajesh,rajesh,Wish List,Unresolved
+Error on page when you select 'remover reviewer' - assign reviewer for new orgs,"New Org ->admin -> assign members for membership review ->Assigned (click on review status to redo, remove, ...)-> click on “remove reviewer”->are you sure? Click on Yes
+ActiveRecord::RecordNotFound in ReviewsController#destroy
+
+Couldn't find Review with ID=1110
+
+Rails.root: /mnt/apps/qa/releases/20120403034225
+",03/04/2012 06:41:47,18/04/2012 15:52:20,Open,vinita,vamsee,Ruby 1.9.3 Rails 3.2,Unresolved,"18/04/12 15:52:20; vamsee; Is this still happening, @vcolaco ?"
+Register via sms does not work,My profile ->People->name->contact page->select sms via registration – pop up does not show up.,03/04/2012 07:06:26,18/04/2012 15:44:21,Open,vinita,vamsee,Rails 3,Unresolved,"03/04/12 10:48:03; vamsee; Fixed, please check now.",11/04/12 04:56:23; vamsee; Is there still a problem with this?,11/04/12 05:33:41; rajesh; sorry to add a process - please check with Kusum via email/phone and Vinita (in Mumbai and offline) via phone if this is fixed.,"18/04/12 15:44:21; vamsee; Vinita, can you please coordinate with Kusum and check/close this ticket?"
+Text 'unknown video provider' needs to be removed from the Video box,"When there is no video link, the text 'unknown video provider' shows up in the video box. It should be left 'Blank'.",03/04/2012 12:36:11,03/04/2012 12:36:11,Open,vinita,,,Unresolved
+message central error,"got an SMS from Palymra today and when i said 'Save & Attach' (both person & project were correctly chosen by PWX) got an error on http://peerwater.org/en/messages (in 2 separate red boxes):
+
+Errors
+
+Following problems occurred. Please review and correct of necessary
+*
+
+
+Successfully updated the message but could not attach to project
+",05/04/2012 12:51:56,14/04/2012 05:05:52,Closed,rajesh,vamsee,Rails 3,Fixed,"12/04/12 13:27:29; vamsee; Afaik, this happens only when the mail was not delivered and it resulted in an error. But I could be wrong. Is there an org/project with which we can safely test on www?","13/04/12 08:14:20; vamsee; Sorry about that, turns out that R3 needs a mailer configuration that was optional earlier (and it was only on QA, now I had to put it on www too). Please check now, you should be able to attach Dhanam's message.","14/04/12 04:34:41; rajesh; attached Dhanam's message. 
+
+--------------
+
+but noticed there were 2 more SMS from Project Well staff there, for which we never got an email of the type we got for Dhanam (see below). this is a high-priority bug, since we don't go to message central unless we see an SMS pending request. need to see why this happened, what broke? and fix it please
+
+Dear Admin
+A message has been received in PWX
+Message = p512 selected ten members for sanitation in Endiyur village dhanam
+Time = Wed Apr 04 22:53:54 -0700 2012
+>From number/hash = 
+
+","14/04/12 04:53:55; vamsee; Like I mentioned, this is most likely because the domain option was not set for mailer settings in production. This used to be optional before (only QA had it before, since it's different from system host name - 'qa.peerwater.org'). Now I've set this for production too ('peerwater.org', of course). I'd be very surprised if this happens again. Let's test again and ask them to send some more reports maybe?","14/04/12 05:05:51; rajesh; ok, since you tested by sending some SMS to www and we got them, i will close this."
+updating visibility should not update time of last report update,"i changed the visibility of a project on demo:
+http://demo.peerwater.org/en/projects/1-Well-repairing-at-Ahmadiyya-Primary-School-Malaisoko-Port-Loko-District-Sierra-Leone
+
+and it shows ""Last Report
+  Update 	: 	06 Apr, 2012
+(2 minutes ago)""
+
+changing visibility should not update actual report (since even the editing process is different)
+
+@vcolaco ",06/04/2012 03:17:21,10/04/2012 16:17:32,Closed,rajesh,rajesh,Controlled Visibility / Privacy,Fixed,"06/04/12 05:42:16; kristian; here I need to turn of these automatic timestamp of rails to update
+only the visibility","06/04/12 05:44:50; rajesh; 
+    this is not automatic an timestamp - there is a date field which we
+    update and then display.","06/04/12 05:49:16; kristian; looking in the code it is clear that this date field get automatically
+updated by rails - it is a feature which is used all over the place in
+the application. I will turn it off for changing the visibility to
+keep the updated_at date field as is on visibility changes."
+gracefully handle error,"when you visit a page that you are not supposed to see, need to gracefully handle error ""Sorry this page cannot be visited"" and return to home page (or dashboard if logged in).
+
+http://demo.peerwater.org/en/projects/1-Well-repairing-at-Ahmadiyya-Primary-School-Malaisoko-Port-Loko-District-Sierra-Leone/proj_reports/517 
+
+privacy set to funder, visited as projectwell (you can visit as public too) got error:
+System Error!
+Something has gone wrong. Please try refreshing the page or try again later. We truly apologize for the inconvenience as we work hard to provide good experiences to you and new innovations you can use.
+
+The system administrator has been notified of this error.
+
+@vamsee can you comment on what they will see on www?
+
+@vcolaco for testing",06/04/2012 03:27:14,10/04/2012 17:00:40,Closed,rajesh,rajesh,Controlled Visibility / Privacy,Fixed,"06/04/12 05:23:07; kristian; I would like to setup a global directive on what shall happen on
+""permission denied"".
+
+something like ""nothing to see"" in case you are logged in and go back
+to ""homepage"". if you not logged in maybe something else since you
+might have the permissions after login.
+
+this would hold true for all the ""permission denied"" where ever we use
+the new authorization framework.
+
+code speak:
+add in ApplicationController
+
+rescue Ixtlan::Guard::PermissionsDenied do . . . .","06/04/12 05:34:35; rajesh; 
+    i know that the behavior is different on www v qa/demo (@ajaya, can
+    you please comment?).
+    can there be a gentle message that pops up ""You request cannot be
+    honored"".
+    if public -> home page (where you can login in)
+    if logged in -> dashboard (home page for users)",10/04/12 17:00:40; rajesh; i think i encountered this grace!
+funder should not be allowed to change visibility,"logged in a 'rajesh' (BPN) and clicked on the same report:
+http://demo.peerwater.org/en/projects/1-Well-repairing-at-Ahmadiyya-Primary-School-Malaisoko-Port-Loko-District-Sierra-Leone/proj_reports/517
+
+visibility is fine (i am funder), but i also see: 
+
+> Report Visibility/Privacy
+Click to change
+
+changing (and clicking update) caused an error. but it did allow the change to go thru.
+
+only org (we have to decide if its primary contact of org) and pwxadmin can change.
+
+@vcolaco ",06/04/2012 03:37:25,11/04/2012 10:57:43,Open,rajesh,rajesh,Controlled Visibility / Privacy,Unresolved,06/04/12 03:38:03; rajesh; changing by the funder did not change the report update date.,"06/04/12 05:31:23; kristian; I guess you saw the System error page, how did you conclude that the
+changes got through ? I guess you need a forced reload to see the data
+from the server instead of the javascript state of the browser.","06/04/12 05:32:40; kristian; how does WWW handles this ? since I did not do anything with update
+dates of any entity which is done by the rails framework (active
+record timestamps)","06/04/12 05:35:39; rajesh; 
+    @vamsee @ajaya, when there
+      is an error on www, we try to show something more graceful, while
+      in qa, we show the rails error to provide debugging info.
+      how is this done?","06/04/12 05:36:10; rajesh; 
+    good point, do you want me to deploy again?","06/04/12 05:40:29; kristian; I saw the permission denied error email but I doubt the server got updated and the page you saw is stale., since the javascript of the page has state.
+
+updating the funder shall change the updated_at timestamp should also fail on www since this has nothing to do with my restricted code.","06/04/12 05:48:11; rajesh; 
+    this ticket is to ensure that the funder (or any other org) cannot
+    change the visibility permissions of a project report of another
+    org.
+    the visibility option should not be visible!
+    the option should only be visible to the org (or primary contact of
+    the org) and admin.","06/04/12 05:50:53; kristian; now I understand the ticket - it is the not showing part - sorry for
+taking so long","06/04/12 07:53:03; kristian; currently the permission for changing visibility follows the
+permission to change the default visibility of a new proj_report. so
+someone who can change the default visibility can also change the
+visibility of a report.
+
+the primary contact can open/close that permission to primary contact
+only or to all members of the org.
+
+pwxadmin always as permission to do anything.
+
+does that makes sense from practical point of view ? can be changed
+anytime later when found impractical !","06/04/12 19:32:37; rajesh; that makes sense for now.
+when we get many proj_reports that need to be tweaked (becoming impractical) we can revisit the issue.","11/04/12 10:57:32; kristian; again there was a mixture of cached display and wrong ""view"" elements"
+peer visit causes error,"visibility set to peer (by the funder!)
+and went in as 'projectwell'.
+
+can see the status report on the main report page
+http://demo.peerwater.org/en/projects/1-Well-repairing-at-Ahmadiyya-Primary-School-Malaisoko-Port-Loko-District-Sierra-Leone
+
+but when i click on the operating status report, get error.
+http://demo.peerwater.org/en/projects/1-Well-repairing-at-Ahmadiyya-Primary-School-Malaisoko-Port-Loko-District-Sierra-Leone/proj_reports/517
+
+
+@vcolaco for testing
+",06/04/2012 03:41:13,11/04/2012 10:56:08,Open,rajesh,rajesh,Controlled Visibility / Privacy,Unresolved,"06/04/12 05:46:11; kristian; assuming the funder did not change the visibility then you will the
+error page (which is this permission denied thingy)
+
+I do not see any operational reports on the above project page as
+'projectwell'. it feels I miss some info or state has changed in the
+meanwhile.","06/04/12 05:51:03; rajesh; 
+    the funder did get an
+      error, but it also updated the visibility (which was set to funder
+      and became peer).","06/04/12 06:00:00; kristian; since you get an error when you want to see the report the visibility
+seems correct - no ? the display of the link seems to be wrong - and
+which I do not see when I log in !",10/04/12 09:21:39; kristian; the fix was to make sure a that the primary contact matches the current_org (and not the org of the current_user),"10/04/12 16:24:40; rajesh; the visibility options should not be visible on peer (or visitor) reports.
+
+logged in as projectwell and put in a peer report on projects/1 (saferfuture).
+after uploading photos, i get visibility option.
+allowed to change, but when i click 'update' get an error and thrown back to dashboard (i guess this is graceful! :) )
+
+peer reports need to be public for now. nobody (maybe admin in future) should see the visibility options for peer and visitor reports.",10/04/12 16:25:16; rajesh; my guess is to check on the owner of project (not proj_report) and compare to the user.,"11/04/12 10:55:58; kristian; the error was OK since that is the actual protection, the display was wrong"
+privacy defaults for SMS not updating,"logged in as saferfuture and editing My Profile -> Visibility Defaults.
+
+if i change the SMS defaults, nothing happens (unable to update). when i change website report defaults, both 'Update' buttons show up.
+
+so, SMS defaults Update button needs to be linked to SMS defaults, not website default.
+
+adding @vcolaco for testing",07/04/2012 06:39:49,07/04/2012 17:18:05,Closed,rajesh,rajesh,Controlled Visibility / Privacy,Fixed,07/04/12 12:01:28; rajesh; @mkristian - i think i fixed this - please check
+Private means not even allowing org to see report,"mark a report private renders it invisible to org itself.
+
+logged in as safer future: http://demo.peerwater.org/en/projects/1 and the one report plumping is not visible.
+",07/04/2012 10:01:30,10/04/2012 10:26:00,Closed,rajesh,rajesh,Controlled Visibility / Privacy,Fixed,10/04/12 10:26:00; rajesh; tested and works.
+update text on visibility options,"the text that @mkristian created as the walls came closer needs to be explained in english, said the @vcolaco",07/04/2012 10:05:16,10/04/2012 10:15:39,Open,rajesh,rajesh,Controlled Visibility / Privacy,Unresolved,10/04/12 10:15:39; rajesh; now put text on help pages.
+email preference page does not load,"logged in as 'saferfuture'
+
+go to edit 'My Profile' and edit person 'Idriss Kamara' and 'Manage Email Preferences'
+http://demo.peerwater.org/en/person/8/email_preference
+
+get an error:
+Page Not Found!
+Sorry. We couldn't find the page you have requested.
+
+@vcolaco for testing",09/04/2012 18:28:38,16/04/2012 16:06:42,Closed,rajesh,rajesh,Controlled Visibility / Privacy,Fixed,"10/04/12 08:47:43; vinita; Get the error: Page not found.
+
+Logged in as Auroville on QA.","10/04/12 14:15:45; kristian; so it is also on qa ? 
+
+I see what is going wrong but I do now understand why the first URL works on QA and not on DEMO - same wrong code. shall I fix it ?","10/04/12 16:13:22; rajesh; qa works for me. logged in as Protos.
+
+however, demo (as projectwell) does not work, gives error.
+
+i am not sure what your explanation is, but it should be fixed!","11/04/12 10:28:14; kristian; github seems to  be too intelligent: it closed the issue because I wrote ""fixed #682"" in my commit message :(
+
+anyways, I did not understand why this works on QA and not on demo/restricted - maybe I looked at the wrong diff.","16/04/12 11:51:59; rajesh; this is still not working.
+
+compare with qa:
+1. when you press ""Manage Email Preferences"" on qa you get to the page where they are displayed (and then you click edit); on demo you get to the edit page
+
+2. when you submit or cancel on demo, you are on the edit page; on qa you go to the display page.","16/04/12 12:48:57; kristian; I will revert this and when merging ""develop"" branch this will become
+the same as QA, if not then it is an issue for @vamsee
+
+On Mon, Apr 16, 2012 at 5:22 PM, rajesh
+<reply@reply.github.com>
+wrote:
+> this is still not working.
+>
+> compare with qa:
+> 1. when you press ""Manage Email Preferences"" on qa you get to the page where they are displayed (and then you click edit); on demo you get to the edit page
+>
+> 2. when you submit or cancel on demo, you are on the edit page; on qa you go to the display page.
+>
+> ---
+> Reply to this email directly or view it on GitHub:
+> https://github.com/pwx/code/issues/682#issuecomment-5150552"
+display agreement as would be seen by grantee,"enhancement: can admin see how the agreement (with all the formatting) will look?
+
+http://peerwater.org/en/admin/cycles/36 - the agreement is shown raw and it would be really nice to see how it looks in final form.",10/04/2012 03:54:17,10/04/2012 03:54:17,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Unresolved
+refreshing page causes update,"if you change any privacy settings (i was on demo as saferfuture) at org level, but do not press 'update'.
+
+then refresh the page, it appears that the update button is clicked.
+
+@vcolaco for testing",10/04/2012 10:12:11,10/04/2012 16:09:28,Closed,rajesh,kristian,Controlled Visibility / Privacy,Fixed,"10/04/12 10:14:02; rajesh; making it medium, as i don't know what other conditions can cause same behaviour","10/04/12 10:27:31; kristian; do you mean the slider did not change back to what is in the DB, i.e.
+the update button is enabled !??","10/04/12 10:37:55; rajesh; yes, the behaviour is that page refresh causes Update to be pressed, so slider retains new value (which was not confirmed via update)","10/04/12 10:45:18; kristian; OK verified the behavior but there is no action on the database !! a
+""shift"" (pressing shift) while clicking reload, shows the state from
+the databse (because it does not load the page from the database).
+
+can we put this on low prior since is really on a display thingy","10/04/12 11:54:19; rajesh; i see action in the database, as i reload page, the privacy 'options' are set to the new values.
+
+happy to make it low.","10/04/12 12:37:15; kristian; since we might run into browser cache issues again in future. just
+hitting reload does make the page appear as the value changed BUT a
+reload sends a GET request to the server, the actually visibility
+action only gets triggers on a PUT request.
+
+but when I keep the ""shift"" key pressed while hitting reload, I tell
+the browser (firefox) to NOT use the cached content and reload the
+page from the server, which does change back to the correct settings.
+double check the behavior twice now. of course you can clear the cache
+before reloading instead of the ""shift"" reload","10/04/12 16:09:28; rajesh; you are correct. what threw me off was the behavior of the tabs/update_button.  when i refreshed the page again, they still went to the new position and if you went to the original the update button lit up.
+
+however, leaving the page and coming back to it, restored the actual db setting."
+formatting error when private report is displayed,"http://demo.peerwater.org/en/projects/1-Well-repairing-at-Ahmadiyya-Primary-School-Malaisoko-Port-Loko-District-Sierra-Leone
+
+Last Progress/
+  Status Report 	: 	25 Jul, 2007<br><span class=""hint"" style=""display:block;"">(over 4 years ago)</span> 
+
+html tags are shown not getting resolved. (Last Progress/
+  Status Report 	: 	25 Jul, 2007< br>< span class=""hint"" style=""display:block;"">(over 4 years ago)< /span> ",10/04/2012 10:23:28,10/04/2012 16:16:31,Closed,rajesh,rajesh,Controlled Visibility / Privacy,Fixed
+"on proj_report page, RHS will not show any non-public reports","
+http://demo.peerwater.org/en/projects/32-Arsenic-Safe-Drinking-Water-Gaighata-PWSET2A/proj_reports/442
+
+one proj_report is PRIVATE, FUNDER, PEER.
+
+logged in as projectwell and on the project report page, the RHS shows: Operating Status Reports (4) and does not show any report marked private, or funder, or peer.
+
+the main project page:
+http://demo.peerwater.org/en/projects/32-Arsenic-Safe-Drinking-Water-Gaighata-PWSET2A
+shows all Operating Status Reports (7)
+
+@vcolaco ",10/04/2012 10:36:17,12/04/2012 03:26:18,Open,rajesh,kristian,Controlled Visibility / Privacy,Unresolved,"12/04/12 03:26:18; rajesh; on proj_report page, i can see all the proj_reports even if marked private.
+
+logged in as saferfuture and sent a peer report to projectwell projects/32
+http://demo.peerwater.org/en/projects/32-Arsenic-Safe-Drinking-Water-Gaighata-PWSET2A/proj_reports/653
+i can see the PRIVATE & FUNDER report which i cannot see on project page:
+http://demo.peerwater.org/en/projects/32-Arsenic-Safe-Drinking-Water-Gaighata-PWSET2A
+
+visibility should be same both at projects/?? and proj_reports/??"
+org logo has a 'xd',"@vcolaco and i saw the same thing: an 'xd' next to the logo in demo.
+login as projectwell or saferfuture and go to my profile, an 'xd' appears next to logo.
+
+only happens in my profile.
+not if you see any other profile or logo collage.",10/04/2012 11:46:48,10/04/2012 16:06:20,Closed,rajesh,rajesh,Controlled Visibility / Privacy,Fixed,"10/04/12 12:32:33; kristian; ""xd"" is the keyboard shortcut on my editor for saving the file - I guess I missed the 'control' key :)"
+Assign reviewers not working in demo,"Assign a reviewer with the deadline date and click submit - does not work. Once you click on submit the reviewer should show below: assign reviewers (click on redo or remove).
+
+http://demo.peerwater.org/en/organizations/154-oceanic-foundation/reviews/list_reviewers ",10/04/2012 11:53:51,10/04/2012 12:59:30,Open,vinita,,,Unresolved,"10/04/12 12:59:30; kristian; I need more info how to get there and what is missing. I tried to get
+a reviewers_list on qa and trigger one error page after the other.
+maybe there is something more went astray ?
+
+I used pwxadmin !"
+duplicate assignees for org review in qa,"adding @mkristian since it might be related in demo and @vcolaco for testing
+
+on qa as pwxadmin, added reviewers for org review. two were already there and was trying to test if bug in demo was also in qa. added a 3rd org - which got added twice.
+
+login as pwxadmin:
+http://qa.peerwater.org/en/organizations/160-Oceanic-foundation/reviews/list_reviewers
+
+
+note on www we have one org who just submitted and will need to be reviewed.
+
+",11/04/2012 10:08:45,30/04/2012 16:37:28,Closed,rajesh,vamsee,Rails 3,Fixed,"11/04/12 11:05:54; vamsee; Hmm, I can't imagine how this can happen - the reviewer creation is inside a transaction - is there any chance it was done from a second tab?","11/04/12 11:55:13; rajesh; no, the other tab was demo!
+
+i wanted to see if it was privacy code that broke reviews or if it did not work in qa also. checked my open tabs now, still only one on qa.
+
+first time i have ever seen it. its a rails3 feature?! :)","11/04/12 12:04:35; vamsee; Hmm, weird, I'm not sure what happened. Would be nice if we could reproduce the bug. Either way, I'm adding dupe-checking code so that this won't repeat. ","11/04/12 12:42:23; rajesh; do we need this fix? i mean we can get dups everywhere and anywhere. we have an issue open on dup proj_reports.
+","11/04/12 13:50:20; vamsee; Well, there's not much cost to it, and I like bug reports closed :). We can't catch dupes everywhere actually, say proj_reports, as there's no way to really check it's a dupe unless we're comparing the whole text with each report (which is pointless). But in this case, since we already have the reviewer list from the organization, we can easily check if the new reviewer already exists in our list and avoid that.",18/04/12 15:43:50; vamsee; close this plz
+pending sms data on admin dash,"this would be great to put on a new PM system.
+
+its on wishlist; hopefully we visit wishlist and move things to dev. @vcolaco lets make sure Vamsee and i go over this list monthly.
+
+------------
+
+next to message central on admin dash, it would be great to see:
+
+(12 SMS in inbox, last one received on Wed 7 April, 2012)
+
+",14/04/2012 04:38:41,14/04/2012 04:38:41,Open,rajesh,vamsee,Wish List,Unresolved
+enhance SMS subject line for QA,"
+on 3/4 we ( @vcolaco and i) got an SMS:
+
+Subject: [SMS] received
+
+Dear Admin
+A message has been received in PWX
+Message = p324 visited rope was mising
+Time = Tue Apr 03 04:43:43 -0700 2012
+>From number/hash = 
+
+-----------
+
+this was very dangerous because until i saw that the receipient was qa@, i freaked out.
+
+so, just like emails, can we change the email to:
+ Subject: [QA-SMS] received",14/04/2012 04:41:55,14/04/2012 04:41:55,Open,rajesh,vamsee,Wish List,Unresolved
+edits in member profile,"
+http://demo.peerwater.org/en/organizations/4
+
+Non-profit Status 	valid   (only visible to admin, should be editable by admin only (?confirm), status is verified by admin)
+Status Expiration 	2009-08-12 (remove, unused field)
+
+add
+
+Member Since:   
+
+----------
+
+adding @vamsee and @vcolaco just ...",14/04/2012 08:44:04,14/04/2012 08:44:04,Open,rajesh,rajesh,Wish List,Unresolved
+visibility icons and visibility of reports,"to clearly define how the visible / invisible proj_reports should behave. adding @vcolaco for testing
+
+1. current report buckets (Implementation & Operating) should remain unchanged. No new buckets needed
+
+2. current report order to be unchanged - LIFO includes visible & restricted proj_reports
+
+3. 
+````ruby
+if proj_report is public
+    then
+        no icon
+        show report data   #as today
+    else    #some privacy filter is on
+        if visible to current user
+            show eye
+            show report data   #as today, but with icon
+       else
+            show eye with slash  # closed eye
+            replace report title with: ""Report for internal use only"" #non-clickable
+        end
+    end
+````",16/04/2012 11:07:28,23/04/2012 05:04:04,Open,rajesh,kristian,Controlled Visibility / Privacy,Unresolved,"16/04/12 12:53:33; kristian; thanx for pseudo code but a simple sentence that you want to keep the order by visited_at and mix visible and invisible report, is sufficient. views usually have no ""logic"" and all logic is in models or if you use presenters that would be the right place to put.
+
+anyways if that is the only issue I can do that tonight and but it is more than your pseudo code.","16/04/12 15:28:08; rajesh; 
+    the pseudo code is to explain the logic only. the text was inside
+    the git issues, but they were old, and there appeared to be
+    mis-interpretation.
+    please implement - does not matter if it more complex or more simple
+    - as suggested by code.","16/04/12 16:01:37; kristian; what is actually wrong ?
+
+no more peer or visitor buckets ?
+
+first I there were two icons the open eye and the closed eye (name
+from glyphicons) - now there is only the closed eye ?","16/04/12 16:06:48; rajesh; now i can't get formatting to work! :(
+
+_what is actually wrong ?_
+the order of reports is now changed, private reports are grouped separately, so the timeline is hard to see.
+
+*no more peer or visitor buckets ?*
+yes, they remain. they are untouched by privacy.
+
+*first I there were two icons the open eye and the closed eye(name from glyphicons) - now there is only the closed eye ?*
+if you can't see the report, its the closed eye.
+if you can see the report, its the open eye.
+
+-
+
+can't believe that my psuedo code is not clear - i thought it was clear where the 2 icons are shown.","23/04/12 05:04:04; rajesh; Ok, we are almost there ... a few more tweaks needed (mainly with icon):
+
+1. when the report is visible to public (or is a peer report or a visitor report), please do not put any of the 2 eye icons
+
+2. when the report is visible to the user (e.g. privacy is 'peer' and a peer is viewing), then the icon should be open eye.
+
+3. when the report is not visible to the user (e.g. privacy is 'org' and a peer is viewing), then the icon should be closed eye.
+
+you can use on demo: projects/32 and see the changes between logging in as 'saferfuture' 'rajesh' and 'projectwell'
+"

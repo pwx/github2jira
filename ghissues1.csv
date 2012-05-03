@@ -1,0 +1,2404 @@
+Summary,Description,DateCreated,DateModified,Status,Reporter,Assignee,AffectsVersion,Resolution,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody
+Logout gave rails error,"
+http://dev.peerwater.org/home_page/logout
+
+clicked logout gave ""rails app failed to start properly ...""
+
+
+cannot reproduce, clicked back and logged out again and all worked fine.
+
+",10/10/2011 09:36:03,10/10/2011 10:18:12,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:09; ajaya; 
+Not reproducable. :(","10/10/11 10:18:12; rajesh; 
+duplicate"
+Apply now gives rails error,"
+
+logged in as rajesh
+and clicked on apply now.
+
+Rails error:
+http://dev.peerwater.org/app/display_app_step1?create_new_app_step1=true
+
+Application error
+Rails application failed to start properly""
+
+
+went back and tried again and it worked.
+",10/10/2011 09:36:09,10/10/2011 10:18:19,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:14; rajesh; 
+
+when i clicked ""Done"" on an application, got a rails error:
+
+http://dev.peerwater.org/app/upload_attachment/144?type=cost
+Application error
+Rails application failed to start properly""
+
+went back and no problem.
+
+repeated actions and got another rails error:
+http://dev.peerwater.org/dashboard/member_dashboard
+Application error
+Rails application failed to start properly""","10/10/11 10:18:16; ajaya; 
+We need to reproduce this.  ","10/10/11 10:18:18; rajesh; 
+http://qa.peerwater.org/list_application/list_application_main?no_of_results=10&search_application=2&search_order=1
+
+Application error
+Rails application failed to start properly""
+
+Looks like i had a few minutes off between action and got a rails error.
+
+Maybe we need to include Steve Chanin's suggestion:
+Quick thing with respect to Peer Water exchange.  A couple of days back, I went to check out the site and saw a page that was blank except for the error message “Rails Application (error)”.  Clicking refresh brought up the home page correctly.
+
+I had seen that same thing on some of my sites and discussions with people led me to understand that it is a side effect of the rails application server swapping out of memory due to low use (e.g. No one hitting it for a while) ... Then the first request to come in results in a longer than expected wait (between the web server and rails) which yields that error.  The second hit (e.g. the refresh) works correctly because a side effect of the timeout is a restart of the rails process.
+
+In any case, there is a simple solution ... Setup a background process that hits the rails app every 5 minutes (has to be a dynamic page ... Not a static page).  That will keep the app in memory.
+
+On linux, I just put an entry in the crontab:
+
+    */5 * * * *     curl http://wpp.sapient.com >/dev/null 2>&1
+
+And I haven’t seen the problem since.
+"
+3 bugs in application attachment,"1/ after you attach a document (not photo) on page 2 or page 3 and click 'Done' you return to the application draft (all 3 sections on 1 page and then you need to click 'edit'), not to the application page where you started.
+
+
+2/ after attaching a spreadsheet (.xls) it shows a word icon on page 3
+
+3/ i attached 2 docs (one .doc and .xls) on page 3 and when i clicked done, it went to application summary page.
+
+it showed the 2 docs on the implementer section.
+
+
+",10/10/2011 09:36:13,10/10/2011 10:18:20,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:20; ajaya; 
+Fixed. Waiting for migration to SVN to check in.
+
+Thanks
+
+ajay"
+Clicking attach file without filling in fields properly gives rails error,"
+in attach pictures, if:
+
+1/ no file is specified and ""Attach"" is clicked by mistake before clicking browse, we get a rails error.
+
+2/ an incorrect file is specified by just typing a file name that does not exist 
+
+http://dev.peerwater.org/app/display_attach/141?type=photo
+Application error (Rails)
+
+
+we should check to see if a file is specified or if something is specified then it should not crash if file is not found.
+
+
+3/ minor: tif files are not displayed, is this expected?",10/10/2011 09:36:17,10/10/2011 10:18:22,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:22; ajaya; 
+Fixed."
+email on app submission missing,"
+when an app is submitted an email used to go out to the submitter (bcc admin@).
+
+the email template exists still.
+
+however, email is not being sent.
+
+email should come from system@ and that account was removed somehow. account is restored and now can get password reset from that account, but this one is missing.
+
+",10/10/2011 09:36:22,10/10/2011 10:18:24,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:24; ajaya; 
+closing."
+remove cycle choosing dropdown on application,"for now it is too confusing and the functionality is not needed.
+
+it is up to admin to ensure that there will never be 2 submissions active at any given point.
+
+this drop down is in a couple of spots.
+
+
+-----
+
+also when the user clicks done, it should always go to the application summary page: ""view_application_detail""
+sometimes goes to dashboard and sometimes to summary.
+
+from all pages it should go to the same page.
+",10/10/2011 09:36:26,10/10/2011 09:36:29,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed
+Home page gives error,"opened a new browser window and went to qa.peerwater.org but got this error (had not logged in, may have some session left open from yesterday):
+
+http://qa.peerwater.org/dashboard/member_dashboard
+
+
+
+ActiveRecord::RecordNotFound in Dashboard#member_dashboard
+
+Showing app/views/layouts/standard-layout.rhtml where line #52 raised:
+Couldn't find Organization with ID=24
+
+Extracted source (around line #52):
+49: <%if @logged_in.to_s == 'Y'%> 50: <table> 51: <tr> 52: <td width=""387"" align=""right"" valign=""top"" class=""welcomeText pLeft30"">Welcome <%=Organization.find(session[:sessionobj].organization_id).name%></td> 53: </tr> 54: </table> 55: <%end%>
+
+RAILS_ROOT: ../config/..
+Application Trace | Framework Trace | Full Trace
+
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/base.rb:955:in `find_one'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/base.rb:941:in `find_from_ids'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/base.rb:382:in `find'
+#{RAILS_ROOT}/app/views/layouts/standard-layout.rhtml:52:in `_run_rhtml_layouts_standard_layout'
+
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/base.rb:955:in `find_one'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/base.rb:941:in `find_from_ids'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/base.rb:382:in `find'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:314:in `compile_and_render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:290:in `render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:249:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/layout.rb:249:in `render_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:911:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:381:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:150:in `process_request'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:54:in `process!'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.6.1/fcgi.rb:600:in `each_cgi'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.6.1/fcgi.rb:597:in `each_cgi'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:53:in `process!'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:23:in `process!'
+dispatch.fcgi:24
+
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/base.rb:955:in `find_one'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/base.rb:941:in `find_from_ids'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/base.rb:382:in `find'
+#{RAILS_ROOT}/app/views/layouts/standard-layout.rhtml:52:in `_run_rhtml_layouts_standard_layout'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:314:in `compile_and_render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:290:in `render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:249:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/layout.rb:249:in `render_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:911:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:381:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:150:in `process_request'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:54:in `process!'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.6.1/fcgi.rb:600:in `each_cgi'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.6.1/fcgi.rb:597:in `each_cgi'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:53:in `process!'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:23:in `process!'
+dispatch.fcgi:24
+
+Request
+
+Parameters: None
+
+Show session dump
+
+--- 
+:new_session: ""false""
+:sessionobj: !ruby/object:UserSessionMgmt::UserSession 
+  currently_logged_in: Y
+  first_name: Chetan
+  last_name: Kamdar
+  login_time: 2006-05-29 11:39:31.244423 -04:00
+  organization_id: 24
+  person_id: 30
+  user_name: chetan
+flash: !map:ActionController::Flash::FlashHash {}
+
+:return_to: /
+
+Response
+Headers: {""Status""=>""200 OK"", ""cookie""=>[], ""Cache-Control""=>""no-cache""}
+
+
+",10/10/2011 09:36:31,10/10/2011 10:18:26,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:26; ajaya; 
+Does it still happens?
+"
+user page gives errors,"logged in as admin and then clicked on list users:
+
+http://qa.peerwater.org/person/list
+
+ ArgumentError in PersonController#list
+
+comparison of String with 0 failed
+
+RAILS_ROOT: ../config/..
+Application Trace | Framework Trace | Full Trace
+
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/pagination.rb:216:in `<='
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/pagination.rb:216:in `initialize'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/pagination.rb:197:in `paginator_and_collection_for'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/pagination.rb:129:in `paginate'
+#{RAILS_ROOT}/app/controllers/person_controller.rb:22:in `list'
+
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/pagination.rb:216:in `<='
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/pagination.rb:216:in `initialize'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/pagination.rb:197:in `paginator_and_collection_for'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/pagination.rb:129:in `paginate'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:381:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:150:in `process_request'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:54:in `process!'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.6.1/fcgi.rb:600:in `each_cgi'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.6.1/fcgi.rb:597:in `each_cgi'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:53:in `process!'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:23:in `process!'
+dispatch.fcgi:24
+
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/pagination.rb:216:in `<='
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/pagination.rb:216:in `initialize'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/pagination.rb:197:in `paginator_and_collection_for'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/pagination.rb:129:in `paginate'
+#{RAILS_ROOT}/app/controllers/person_controller.rb:22:in `list'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:381:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:150:in `process_request'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:54:in `process!'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.6.1/fcgi.rb:600:in `each_cgi'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.6.1/fcgi.rb:597:in `each_cgi'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:53:in `process!'
+#{RAILS_ROOT}/vendor/rails/railties/lib/fcgi_handler.rb:23:in `process!'
+dispatch.fcgi:24
+
+Request
+
+Parameters: None
+
+Show session dump
+
+--- 
+:toggle1_type: 
+:new_session: ""false""
+:listings: 38
+:link: 
+:org_list: 
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""14""
+    org_name: Argentina Thirst
+    role_name: Implementer
+    country_name: Argentina
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""13""
+    org_name: Asha Water
+    role_name: Implementer
+    country_name: United States
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""18""
+    org_name: Austria Solar Water
+    role_name: Implementer
+    country_name: Austria
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""8""
+    org_name: BOTSWANA TIGER FUND
+    role_name: Funder
+    country_name: France
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""16""
+    org_name: Columbia Aqua
+    role_name: Implementer
+    country_name: United States
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""2""
+    org_name: CRY Inc
+    role_name: Implementer
+    country_name: NONE
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""4""
+    org_name: DC Herald
+    role_name: Funder
+    country_name: Antigua and Barbuda
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""17""
+    org_name: Japan Inc
+    role_name: Implementer
+    country_name: Japan
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""15""
+    org_name: Mexico Aqua
+    role_name: Implementer
+    country_name: Mexico
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""10""
+    org_name: NANA
+    role_name: Implementer
+    country_name: Antigua and Barbuda
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""6""
+    org_name: NASA
+    role_name: Implementer
+    country_name: United States
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""3""
+    org_name: New Life Cinema
+    role_name: Implementer
+    country_name: United States
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""9""
+    org_name: New NGO
+    role_name: Observer
+    country_name: Antigua and Barbuda
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""21""
+    org_name: New Organization - test
+    role_name: Implementer
+    country_name: India
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""22""
+    org_name: New Organization _ Test ABCD
+    role_name: Implementer
+    country_name: India
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""19""
+    org_name: Oakland MUD
+    role_name: Implementer
+    country_name: United States
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""1""
+    org_name: Peer Water Exchange
+    role_name: Observer
+    country_name: United States
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""20""
+    org_name: Safer Future
+    role_name: Implementer
+    country_name: Sierra Leone
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""7""
+    org_name: UN
+    role_name: Funder
+    country_name: France
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""12""
+    org_name: Westbridge Water
+    role_name: Implementer
+    country_name: United States
+- !ruby/object:Organization 
+  attributes: 
+    org_id: ""5""
+    org_name: Whatever
+    role_name: Funder
+    country_name: Afghanistan
+:sessionobj: !ruby/object:UserSessionMgmt::UserSession 
+  currently_logged_in: Y
+  first_name: Deepti
+  last_name: Goel
+  login_time: 2006-05-30 12:38:35.549631 -04:00
+  organization_id: 1
+  person_id: 1
+  user_name: admin
+:role: 
+:items_per_page: ALL
+:org_name: 
+:toggle1_country: 
+:country: 
+:toggle1_orgname: 
+flash: !map:ActionController::Flash::FlashHash {}
+
+:return_to: /
+
+Response
+Headers: {""cookie""=>[], ""Cache-Control""=>""no-cache""}
+",10/10/2011 09:36:36,10/10/2011 10:18:31,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:28; ajaya; 
+Does it happen again?","10/10/11 10:18:30; ajaya; 
+Can't replicate.  Reopen if happens again.
+
+ajay"
+Editing project leads to blank page,"Logged in as shah
+Edited an old application (clicked edit on section 1 of the form)
+
+Filled out page 1 and then hit Continue at bottom.
+
+Got blank page.
+
+http://qa.peerwater.org/app/save_app_step1/126
+
+Went back and then clicked Continue again, and got page 2.
+
+
+Same thing happened when logged in as shah
+http://qa.peerwater.org/app/save_app_step1/141
+
+
+
+Got blank page on home at www.peerwater.org
+http://www.peerwater.org/home_page/login
+
+Looks like http issue
+",10/10/2011 09:36:41,10/10/2011 10:18:33,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:33; ajaya; 
+closing."
+Space in nav bar removed,a space between | Home | and | Map | is gone and it needs to be reinserted,10/10/2011 09:36:47,10/10/2011 10:18:37,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:35; ajaya; 
+Removed the junk header.  Not done with this bug yet.
+aagrawal@sfAJAGRAs480linux ~/dev/src/pwx/app/views
+$ svn commit layouts navigation.rhtml
+Sending        layouts/layout.rhtml
+Sending        layouts/login_header.rhtml
+Sending        navigation.rhtml
+Transmitting file data ...
+Committed revision 1490.
+
+","10/10/11 10:18:37; ajaya; 
+Fixed.  Deployed in dev and qa"
+Attach modules taking too long,"When Attach file is clicked, it takes too long to get the page where you attach files.
+
+When files are attached system is too slow.
+
+Even got ""operating timed out, lost connection"" message from browser and had to reload page with postdata.",10/10/2011 09:36:52,10/10/2011 10:18:45,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:39; rajesh; 
+The connection was reset
+
+      
+
+      
+      
+      
+
+      
+        
+        
+
+          
+
+The connection to the server was reset while the page was loading.
+
+        
+
+
+        
+        
+
+
+    *   The site could be temporarily unavailable or too busy. Try again in a few
+          moments.
+
+    *   If you are unable to load any pages, check your computer's network
+          connection.
+
+    *   If your computer or network is protected by a firewall or proxy, make sure
+          that Firefox is permitted to access the Web.","10/10/11 10:18:41; rajesh; 
+3rd try got rails error:
+
+http://qa.peerwater.org/attachment/new?app_id=144&type=docs&to=app
+
+Application error
+Rails application failed to start properly""","10/10/11 10:18:43; ajaya; 
+Rails Error happened cause I was trying to reset the log file.  I have rolled back the changes.  Please check if this is a problem still.  Reopen the BUG if it is.","10/10/11 10:18:45; ajaya; 
+Closing for now. Can't reproduce./"
+attachment fixes/enhancments,"
+1/
+during review of application, when we click on photo attachment, a new screen with a bigger picture, the desrciption, etc. shows up.
+this needs a ""Back"" or ""Return to application"" button
+
+
+2/ 
+text files seem to create a problem. there is no icon associated with them. and when you click on the file name, a new blank browser screen comes up. do not even get the option to download a file.
+
+3/
+icons for word and excel sometimes don't show up.
+http://qa.peerwater.org/app/show/147
+there are problems with layout, sometimes files' titles don't show up
+
+
+
+",10/10/2011 09:36:57,10/10/2011 10:18:51,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:47; ajaya; 
+1, 2 Valid: Fix it.
+3: Validate and Fix if necessary
+
+New: Removed th Attach File... Button.  Replace with HTML Button with (Attach/Upload File)","10/10/11 10:18:49; ajaya; 
+working on it now.","10/10/11 10:18:51; ajaya; 
+1. Done
+2. Done.
+3. Done.  Titles won't show up if user doesn't provide them."
+Email info when reviewer submits rating for application,"
+When a reviewer rates an application and submits, an email should be sent to the administrator (admin@).
+
+The text should be default and editable by the admin from admin home page (like other emails).
+
+We need to find a way to summarize the number of reviewers assigned and how many have finished the review and how many are pending. This can be a report and possibly part of the email.",10/10/2011 09:37:03,10/10/2011 10:18:55,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:53; ajaya; 
+let's think this in terms of as a admin application dashboard","10/10/11 10:18:55; ajaya; 
+M      app/models/notifier.rb
+M      app/models/app.rb
+M      app/models/app_review.rb
+M      app/models/app_review_status.rb
+M      app/controllers/app_review_controller.rb
+?      app/views/notifier/review_submitted.rhtml
+M      app/views/app_review/display_review_rating.rhtml
+
+Done. Deployed to qa and dev
+
+AJ"
+Assign final status form needs to show all reviewers and amount,"
+The assign final status form should show all the reviewers names (including the ones that have not submitted a status).
+
+The final screen which assigns funding should show the amount requested. This can be combined with the previous screen with the amount next to the radio button that says (Approved and funded).
+
+",10/10/2011 09:37:07,10/10/2011 10:19:01,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:57; ajaya; 
+Next to Status Block:
+
+1. Amount Requested
+2. Amount Being Approved.
+","10/10/11 10:18:59; ajaya; 
+Complted Development.  Waiting to Deploy.","10/10/11 10:19:01; ajaya; 
+Done"
+Assign final status form error,"
+
+
+
+logged in as admin and assigning final app status.
+then went away for an hour, when i came back and clicked submit, i got this error:
+
+
+Error
+
+System Error. Please refresh your browser
+
+
+
+could that have been because of the long time away? 
+
+however, i got the same error again a few minutes later, while clicking submit on another application final rating:
+http://qa.peerwater.org/final_application_status/final_application_status?app_id=123
+
+the error came on this screen:
+http://qa.peerwater.org/final_application_status/update_final_application_status?app_id=123
+
+
+",10/10/2011 09:37:11,10/10/2011 10:19:07,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:02; rajesh; 
+Now it has happened 3 times.
+I went back to admin dashboard and started again.
+
+I logged out and still happens.","10/10/11 10:19:04; rajesh; 
+
+The error seems to occur when an application is approved but not funded or rejected. I get it consistently for those 2 status'.  However, things work for approved funded.","10/10/11 10:19:07; ajaya; 
+This used to happen when u reject an application.  Fixed and checked in.
+
+Fixed & Deployed
+
+aj
+
+peerwate@rhodope ~/ruby/pwx-dev/app/controllers
+$ svn commit final_application_status_controller.rb
+Sending        final_application_status_controller.rb
+Transmitting file data .
+Committed revision 1489.
+
+"
+Multiple emails generated on enter app final status,"
+Every time admin sets final status of an app, multiple emails are generated, instead of only one.
+",10/10/2011 09:37:16,10/10/2011 10:19:10,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:08; ajaya; 
+Need to validate.
+
+aj","10/10/11 10:19:10; ajaya; 
+Checked.  Shouldn't be an issue unless the application contact email is same as admin's.
+
+AJ"
+Smoothen flow of single project funding,"The flow for a single project needs to be simplified:
+
+1/ on the application, there needs to be a radio button with 2 options:
+
+Type of funding:  [ ] Single project    [ ] Multi-project / Program
+
+This should come after the first line on the first page of the application.
+
+
+2/ During edit/review, etc. this info should be clearly visible so needs to be on the forms to edit the app, on the forms to review the app
+
+3/ When funding is granted, the process for the Single project should be completely transparent.
+
+- when the funding is accepted, a project is created with the same data as the application
+- the project has status 'not started' and is placed in the active projects category and in the todo with due date as the start date on the application.
+
+
+
+TBD:
+1/ status that is meaningful to the user (like ""enter start date"" ""submit mid-term report"" ""final status"" ...)
+
+2/ multi-project flow, leave as is for now
+",10/10/2011 09:37:23,10/10/2011 10:19:14,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:12; ajaya; 
+1. Done
+
+2. Done
+
+3. Done.  I checked the Database. 
+   -- The curent status of ""Pending"" means ""Funded but started Yet"".  So Let's not create another status.
+   -- Done for Apps which are in Pending Status.
+
+
+4 ","10/10/11 10:19:14; ajaya; 
+Done"
+search functionality,"need to start putting in a knowledge base funcationality.
+
+start with simple text search. provide ability to search for keywords and the search will cover applications, projects, people, organizations, etc. all names and description fields.
+
+",10/10/2011 09:37:30,10/10/2011 10:19:20,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:19:16; rajesh; 
+there needs to be a text box on the left of the menu with the clickable link: Search
+
+so the user can type in searchable text from anywhere.
+
+the results page should have:
+
+1/ another text box with search again
+
+2/ results divided into:
+
+- projects
+   - project text
+   - attachments
+
+- orgs
+   - org text
+   - users
+
+- applications (except drafts)
+  - application text
+  - discussions
+  - app attachments ","10/10/11 10:19:18; ajaya; 
+Already covers app, attchments and QandA.
+
+Rest in progress.
+
+","10/10/11 10:19:20; ajaya; 
+completed.
+changeset:1723
+
+please open new individual ones for specific requests.
+"
+Website upgrade automation ,"
+There are a few tasks that require low level of technical skill.
+
+These include:
+
+- text edits on forms
+- adding to help subsystem
+- minor html
+
+Creating a process to checkout - checking files, migrate from dev->qa->www
+
+Basically, need a shell on top of the svn.
+Need the ability:
+- to check out a file
+- to check in a file
+- to update dev
+- to move from dev -> qa
+- to move from qa -> www
+
+Editing and testing should the the responsibility of the person, but simplifying the process is important.
+",10/10/2011 09:37:38,10/10/2011 10:19:22,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:22; ajaya; 
+Done"
+Help subsystem,"Need to create a help subsystem.
+This could be in the form of a wiki, or a help file associated with each form, or a combination.
+
+No need for user level editability currently, though that should be the ultimate goal.
+
+For now:
+
+- table of contents
+- forms that can be populated
+- linkages design from forms to help (context-sensitive)
+
+ ",10/10/2011 09:37:43,10/10/2011 10:19:27,Open,rajesh,ajaya,Wish List,Unresolved,"10/10/11 10:19:24; ajaya; 
+Assigning it to Future Release Milestone as not being worked on now.","10/10/11 10:19:26; ajaya; 
+Milestone Future Release deleted","10/10/11 10:19:27; rajesh; 
+am raising this tix priority as we need to put in help with the potential of lots of folks coming on to pwx.
+
+at minimum we need a help tree (main page has links to proj help, app help, member help, ...). 
+
+regardless of which path we choose, aj has to create the help system and assign it to rajesh to fill up with content."
+Rails error upon submitting application rating,"as a user, submitting rating on app with a value selected on radio button but comment field blank, got rails error:
+
+
+    http://qa.peerwater.org/app_review/save_app_review
+
+    Application error
+    Rails application failed to start properly""
+
+
+Hit the back button on browser and retried and no problems.",10/10/2011 09:37:45,10/10/2011 10:19:29,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:29; ajaya; 
+Don't see this problem no more. Reopen if necessary"
+Member info page to be simplified,"The member info page needs to be simplified and broken down into org info and user info. This should be on separate pages.
+
+The main page should just have org contact info.
+
+Personal info can be moved to a second page with some of the personal info removed (home data) for this release.
+
+Secondary office location should be similarly moved to a another page.
+
+Also okay to have the main page point to the other pages (use the bar on the right side):
+1/ primary org address
+2/ user info (remove home data and also having personal address/info separate)
+3/ secondary org info (restrict to 2 locations is okay)
+4/ secondary user info (restrict to 2 users is okay for this release)
+5/ change password
+6/ org info, data, history",10/10/2011 09:37:50,10/10/2011 10:19:31,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:31; ajaya; 
+Done and deployed on qa and dev."
+Status bar while uploading attachments,"Attachments can take significant time to upload. So a status bar would be very helpful for folks on dialup, so that they know that something is happening and they need to wait.
+
+This will be needed for attaching pictures/files during application and also for project status.",10/10/2011 09:37:55,10/10/2011 10:19:33,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:33; ajaya; 
+Done last night.  Deployed on qa.  Forgot to Close this.
+
+thx"
+Cancel does not work on attachments,"When files are attached and then ""Cancel"" is pressed, it still confirms the actions (attached or deleted). It is no different from ""Done""
+
+The page is: 
+http://qa.peerwater.org/attachment/new?to=app&type=photo&app_id=155",10/10/2011 09:38:01,10/10/2011 10:19:35,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:35; ajaya; 
+Done last night.  Removed cancel button."
+Search org may have problem,"on qa, search for aus
+i get 3 results for Austria:
+
+#1 and #3 seem the same with primary address
+#2 seems to be off the secondary address.
+
+",10/10/2011 09:38:06,10/10/2011 10:19:37,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:37; ajaya; 
+Fixed. No more a problem."
+need to able to add location to project for map,"when the project is created, we need 2 fields on the project status field for long and lat so that the project can be mapped.
+
+
+also on that form:
+http://qa.peerwater.org/project_status/final_status/1
+
+remove the 'All fields are required' text
+
+",10/10/2011 09:38:11,10/10/2011 10:19:39,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:39; ajaya; 
+M    app/models/project.rb
+M    app/controllers/project_status_controller.rb
+M    app/controllers/proj_location_controller.rb
+AM   app/views/project/_rightcolumn.rhtml
+M    app/views/project/_summary.rhtml
+M    app/views/project/show.rhtml
+M    app/views/project_status/final_status.rhtml
+M    app/views/proj_location/show.rhtml
+M    app/views/proj_location/_form.rhtml
+M    app/views/proj_location/edit.rhtml
+M    app/views/proj_location/new.rhtml
+M    public/stylesheets/common.css
+
+Version 1526
+
+Done.  I took this oppurtunity to migrate Project to standard layouting as organization.  Please check.  
+
+Deployed on qa and dev.
+
+AJ"
+Profile submit does not work,"I am trying to edit profile of PWX itself but cannot.
+
+http://www.peerwater.org/organization/update/1
+
+won't save and returns back to same page, tried all the options/roles
+maybe the review/evaluator is a radio box (tried one at a time and both).",10/10/2011 09:38:17,10/10/2011 10:19:41,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:41; rajesh; 
+Sending        app/controllers/organization_controller.rb
+Sending        app/views/organization/_form.rhtml
+
+Fixed and tested by rajesh"
+Comment field does not show up on map,"In bpr.peerwater if you click an icon, a short description of the org/project shows up.
+
+In www.peerwater (and qa), the comment field is not showing up.
+
+Comment field needs to show up.
+
+Also, can the comment field be in the 'my profile' of the org?
+
+It seems only the admin can enter it.",10/10/2011 09:38:22,10/10/2011 10:19:43,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:43; ajaya; 
+done. deployed everywhere."
+Org data fields are connected,"It seems that ""Organisation Background"" is a redundant field on my Edit Org Profile form. It is tied to ""Background History"".
+
+However, ""Background History"" is not visible on the profile when you view it - it only appears when the form is edited.
+
+So the behaviour is confusing as it looks like there are 3 fields but in reality only 2.
+
+
+
+One solution is to remove ""Background History"" from the Edit Org Profile form. Make sure the field is tied to the ""Organization Background"".",10/10/2011 09:38:29,10/10/2011 10:19:45,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:45; ajaya; 
+Done."
+App edit problems on page 2 and page 3,"Went into edit page 2 of app from the review page.
+
+If you press ""Continue"" or ""Step 3"" on page 2 of the app, it remains on page 2.
+
+If you press ""Step 1"" it goes to page 1.
+
+However, then if you press Step 2 or Step 3, it shows the error.
+
+
+If you go back to review the app and then enter stuff on page 3, it does not save anything. I just entered in data in the implementer background and then hit both done and continue in separate tries (the rest of the fields were blank) and it did not save the data.
+
+Have tried entering all different sets of data on page 3, but nothing gets saved.
+
+This is on wwww, with wfp as the account.
+
+",10/10/2011 09:38:34,10/10/2011 10:19:47,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:47; ajaya; 
+Done."
+Number handling is bad,"
+In the application and in the profile:
+
+1/ if decimal numbers are entered, the decimal is stripped out and the number becomes mulitplied by 100. 
+
+2/ in the profile, if a number has a comma, then validation fails and all data entered is lost.
+
+3/ numbers are displayed with decimal (currency)
+
+The behaviour should be:
+
+1/ round the number and then remove the decimal.
+
+2/ if commas are entered, ignore them.
+
+3/ display number with commas but no decimal amount
+
+4/ the $ before the number is optional (do not need to display as currency if you cannot remove the 2 numbers after the decimal)
+",10/10/2011 09:38:39,10/10/2011 10:19:49,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:49; ajaya; 
+all done and deployed on qa."
+New,New,10/10/2011 09:38:44,10/10/2011 09:38:47,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed
+Field name mismatch on application,"On the application there are 2 fields: State/Province and Region.
+
+On the app view the fields are named Region and City and are reversed.
+
+The app view needs to change to name the fields consistently as in the application and also order the fields correctly.",10/10/2011 09:38:49,10/10/2011 10:19:50,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:19:50; ajaya; 
+fixed
+changeset:1731"
+Increase number of significant places in latitude and longitude,"Current the field rounds to 4 places.
+Would be nice to go to 5 or 6 decimals (that's what the new gps systems produce).
+
+Should be %3d
+This is not a ruby/rails but apparently a mysql problem.
+",10/10/2011 09:38:53,10/10/2011 10:19:52,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:52; ajaya; 
+Done."
+Application results in bad email,"
+When an app is submitted an email is generated with a subject like:
+
+Application Palesa Water & Sanitation Extension for CARE received.
+
+
+However, on www, saferfuture as the account, a submission resulted in the following subject:
+
+?
+
+Maybe some bad unicode char in the name, but this should not happen: at least the rest of the text 
+     Application <%appname> for <%org> received.
+
+should come out normal.",10/10/2011 09:38:58,10/10/2011 10:19:56,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:54; rajesh; 
+okay the title for the project is very long:
+
+Well repairing at Ahmadiyya Primary School Malaisoko, Port Loko District – Sierra Leone
+
+could this be the problem?","10/10/11 10:19:56; ajaya; 
+Done"
+App withdraw does not work in Peer Review phase,"when an app is in peer review, it cannot be withdrawn.
+
+get the dialog box and when we click okay, it returns to the home page and the app is still in Peer Review.
+
+can withdraw several times and still remains in peer review.
+
+on qa, with all the new fixes.",10/10/2011 09:39:03,10/10/2011 10:19:58,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:58; ajaya; 
+Done.  Deploying to qa and dev now."
+Attachments symbol,"When you submit an html file, the title does not get accepted, it gets deleted after you upload the file. You have to reenter the title again.
+
+There is no logo for html files, need to put a firefox logo/icon for those type of files.
+
+",10/10/2011 09:39:08,10/10/2011 10:20:02,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:20:00; ajaya; 
+Fixed and checked in.
+
+changeset:1721","10/10/11 10:20:02; ajaya; 
+changeset:1722"
+Map link goes to My Profile not to org profile,"Logged in as rajesh (bpr) on www.
+
+On the map, any org link i click goes to BPR, not the profile page for the org.
+
+Logged in as PWX and all links go to PWX profile.
+
+When you click on the map icon for that org, it should go to that org's profile.
+
+Note that this is only for users logged in. Otherwise, they don't even get to see a clickable link on the name.
+",10/10/2011 09:39:13,10/10/2011 10:20:04,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:04; ajaya; 
+Fixed all over/"
+Cycle changes affect app distribution,"After distributing several apps, changed the cycle (extended app submission date and all other dates).
+
+Then all the app distribution data (# of apps assigned already) went blank.",10/10/2011 09:39:20,10/10/2011 10:20:06,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:06; ajaya; 
+Fixed and deployed."
+Edit button for page 1 on app review and continue and done buttons on app form,"
+
+http://qa.peerwater.org/app/display_app_step1/22
+
+leads to: The page you are looking for could not be found.
+
+its the edit button for page 1; the others work fine.
+
+
+on page 1 & 2 of the application form, the done button goes to the dashboard,
+
+on page 3, the done button goes to the app review page.
+
+all 3 done buttons should go to app review page.
+
+",10/10/2011 09:39:25,10/10/2011 10:20:08,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:08; ajaya; 
+Done."
+Application text should show field limits,"
+The fields for app name and short description should have a text limits and they should be mentioned on the form.
+
+Name: 50
+Short Desc: 255
+
+The other narrative fields, if they limits, should be explained.",10/10/2011 09:39:30,10/10/2011 10:20:10,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:10; rajesh; 
+Done (mainly by AJ)"
+App (and project) text formatting,"The white space is removed on saving.
+
+Should allow either of:
+
+Keep and display white space <cr>
+
+OR
+
+Allow wiki type html commands <br> and <p> and possibly <li>",10/10/2011 09:39:35,10/10/2011 10:20:13,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:13; ajaya; 
+Done for app.  Please put a new when u see something else.
+"
+Rearrange admin dashboard,The admin dashboard needs to be redesigned to make it more explanatory and also useful.,10/10/2011 09:39:39,10/10/2011 09:39:41,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed
+Sort on applications not working,"In the list all apps (from admin), the sort is not working properly.
+
+",10/10/2011 09:39:44,10/10/2011 10:20:16,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:15; ajaya; 
+done."
+Refactor all listing ,"
+From the dashboard you can search for apps, projects, orgs.
+Each page has a dropdown to allow the user to show a number of results per page.
+
+For apps: 1, 5, 10 
+For projects: 10, 25, 50, ALL
+For orgs: 10, 25, 50, ALL
+
+From admin dashboard:
+For users: All, 10, 25, 50
+For orgs: <nothing>
+For projects: All, 10, 25, 50
+For apps: 1, 5, 10
+
+
+They all should be the same: 10, 25, All  with default being 10
+The admin search pages should be the same as the members.
+
+
+For app search: columns should be: name, status, org, country. (remove id.
+Should not allow users to see drafts of other orgs. 
+If it is easy, show drafts of the self; if not, let drafts be from home page.
+
+For project search: columns should be: name, status, org, country. (remove id)
+
+For org search: columns should be: name, country, type, user names (may have 2)
+
+Can user preferences be remembered for a session? If so, we should track the choice of show number of items.
+
+Should we use cookies for across sessions? Need to think about long-term design for now. Do nothing for a year or until user demand. 
+",10/10/2011 09:39:48,10/10/2011 10:20:18,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:18; ajaya; 
+Done. Deployed on dev and qa. I didn't put the usernames in the organization list as this could be a security risk.  Let's talk abt it/
+"
+Add a bio field to the user profile,"It would be good to have a text field in the user profile which allows a user a chance to say something about themselves and their experience in water and with their organization.
+
+this should be editable by the user themselves only on the user profile page and visible on the org_contacts show page (eg. http://qa.peerwater.org/org_contacts/show/4)
+
+",10/10/2011 09:39:53,10/10/2011 10:20:26,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:20; rajesh; 
+this should be two additional fields:
+
+1/ ""Role/Title"": a text box of no more than 50 char
+
+2/ ""Short Biography/ Experience/ History with Organization"": a text box of the size of org history","10/10/11 10:20:22; ajaya; 
+Fixed.  Deployed on qa and dev
+
+Sending        app/helpers/app_helper.rb
+Sending        app/helpers/application_helper.rb
+Sending        app/views/org_contacts/_form.rhtml
+Sending        app/views/org_contacts/show.rhtml
+Adding         db/migrate/003_add_profile_info_people.rb
+Sending        public/stylesheets/text.css
+Transmitting file data ......
+Committed revision 1581.","10/10/11 10:20:24; rajesh; 
+The fields work, however, the title should be: ""Title/Role"" and the long text field should be ""Bio"" with the grey text saying: ""Short biography / Experience / History with Organization""","10/10/11 10:20:26; ajaya; 
+Done"
+Application enhancment - clickable applicant name + implementer name field,"
+1/ On page 3 of the application: add a new text field (Varchar 50): ""Implementer name (if different):""
+
+2/ Remove applicant user name.
+
+
+
+On the application view page:
+
+3/ Change title of field ""Implementer:"" -> ""Applicant:"" on top
+Make it clickable so it goes to profile page of the organization.
+
+
+4/ On page/block 1: edit button not working
+
+
+
+5/ On page/block 3: add the new ""Implementer name:"" field.",10/10/2011 09:39:58,10/10/2011 10:20:30,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:28; ajaya; 
+Done 3.
+","10/10/11 10:20:30; ajaya; 
+done"
+Funding acceptance statement needs rewriting,The 'legal' acceptance statement needs to be rewritten.,10/10/2011 09:40:02,10/10/2011 09:40:04,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed
+Enhancements to discussion forum,"
+to make the discussion part more friendly and also snazzy:
+
+1. remove the RE: or add only 1. we don't need to see RE: RE: RE: now that indentation is working well.
+
+
+2. the text entry box form for a reply needs to improve. the reply should work like post a new question (so at least you can see all the comments). basically, it should be good to see what you are responding to rather than having to remember it.
+
+
+2a. either ajaxify so that the entry box is below the question that you are responding to
+
+2b. make a reply like a new question at the bottom and not on its own page, without confusing them that they are putting in a new field.
+
+",10/10/2011 09:40:06,10/10/2011 10:20:36,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:32; rajesh; 
+one more enhancment:
+
+3. add ""%First %Last (%username)"" to system generated comment that currently has only the name of the org.","10/10/11 10:20:34; rajesh; 
+3b. Make the name clickable so it goes to the personal profile of that person","10/10/11 10:20:36; ajaya; 
+done"
+Simplify single project creation,"The steps in accepting a funding and creating a project for single-projects have one unnecessary (and ugly) screen.
+
+This screen can be skipped and the project created automatically from when the user clicks accept.",10/10/2011 09:40:10,10/10/2011 10:20:38,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:38; ajaya; 
+Done"
+Change the default display time zone,das,10/10/2011 09:40:15,10/10/2011 10:20:42,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:40; ajaya; 
+Rajesh,
+
+I just checked.  We are already using the PST.  I assigning it to you.  Close if you think we r ok for now.
+
+AJ","10/10/11 10:20:42; ajaya; 
+Fixed in file.
+/app/views/app_qandas/_topic.rhtml
+
+Please take a look now and tell me if you want it displayed in some other format instead.  
+
+Deployed to qa and dev
+
+AJ"
+Put PWX icon in url bar,"
+
+
+
+To put an icon in the URL space of one of your own pages, make a very small image. By very small, it should be 16 X 16 pixels and it should only use 16 or 8 colors. The image should be a gif and it should be very basic or it'll be too small to look like anything. Once you have your image the way you want it, rename it to have the extension .ico instead of .gif. It needs to have the .ico extension to be viewed as an icon, and it needs to be an icon for this to work.
+
+Then, use this code inbetween the HEAD tags of the page:
+
+< link REL=""shortcut icon"" type=""image/x-icon"" HREF=""/path_to_image/pwxdrop-tiny.ico"" >
+
+Check your page and you now have an icon. If you want the image to appear in someone's Internet Explorer Favorites links as an image, just name your image favicon.ico and it will work.
+",10/10/2011 09:40:19,10/10/2011 10:20:44,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:44; ajaya; 
+Already there.. Should be working ."
+system crashes on 'done' in step 3 of app in qa,"http://qa.peerwater.org/app/show/45  (clicked done on step 3)
+
+ NoMethodError in App#show
+
+Showing app/views/app/show.rhtml where line #272 raised:
+
+undefined method `index' for 0:Fixnum
+
+Extracted source (around line #272):
+
+269:             </tr>
+270:             <tr valign=""top"">
+271:               <td class=""pTop5 pBot5"">Community Contribution Amount</td>
+272:               <td class=""pTop5 pBot5 pLeft10""><%=cleanitup(@app.community_contribution_amount)%> </td>
+273:             </tr>
+274:             <tr valign=""top"">
+275:               <td class=""pTop5 pBot5"">Community Contribution Details</td>
+
+RAILS_ROOT: /var/www/virtual/peerwater.org/apps/qa/current/config/..
+Application Trace | Framework Trace | Full Trace
+
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/helpers/text_helper.rb:182:in `sanitize'
+#{RAILS_ROOT}/app/helpers/application_helper.rb:46:in `cleanitup'
+#{RAILS_ROOT}/app/views/app/show.rhtml:272:in `_run_rhtml_app_show'
+/usr/bin/mongrel_rails:18
+
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/helpers/text_helper.rb:182:in `sanitize'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:316:in `compile_and_render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:292:in `render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:251:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:726:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:648:in `render_with_no_layout'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/layout.rb:245:in `render_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:942:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:408:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/rails.rb:73:in `process'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:551:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:550:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:625:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:956:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:955:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:127:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/command.rb:199:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:235
+
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/helpers/text_helper.rb:182:in `sanitize'
+#{RAILS_ROOT}/app/helpers/application_helper.rb:46:in `cleanitup'
+#{RAILS_ROOT}/app/views/app/show.rhtml:272:in `_run_rhtml_app_show'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:316:in `compile_and_render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:292:in `render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:251:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:726:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:648:in `render_with_no_layout'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/layout.rb:245:in `render_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:942:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:408:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/rails.rb:73:in `process'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:551:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:550:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:625:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:956:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:955:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:127:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/command.rb:199:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:235
+/usr/bin/mongrel_rails:18
+
+Request
+
+Parameters: {""id""=>""45""}
+
+Show session dump
+
+--- 
+:new_session: ""false""
+:sessionobj: !ruby/object:UserSessionMgmt::UserSession 
+  currently_logged_in: Y
+  first_name: Marcella
+  last_name: D'Souza
+  login_time: 2006-11-01 09:47:46.452094 -08:00
+  organization_id: 4
+  person_id: 4
+  user_name: wotr
+flash: !map:ActionController::Flash::FlashHash {}
+
+:attachment_type_id: docs
+:pagenoinfo: """"
+
+Response
+Headers: {""cookie""=>[], ""Cache-Control""=>""no-cache""}
+",10/10/2011 09:40:25,10/10/2011 10:20:47,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:46; ajaya; 
+Done.  There was a leftover code which tried to call the format code for a number.  
+
+Done and deployed."
+Review cycle/phase ending should end app status,"
+if a review phase ends, the reviewer should not be able to review the app anymore.
+
+this works in normal situation.
+
+however, if a second cycle has started (no overlap in phases), the app stays on the dashboard if the reviewer has not finished reviewing.
+
+once the app is submitted it should be tied to the cycle in which it is submitted (assuming there is no overlap). so when the review phase ends, the app needs to move out of the todo in the dashboard.
+
+",10/10/2011 09:40:31,10/10/2011 10:20:51,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:49; ajaya; 
+Actually the current behaviour is this:
+1. If the app these review statuses
+ 1 | IN PROGRESS
+ 2 | NOT INITIALIZED
+ 3 | COMPLETE REVIEWER
+ 4 | COMPLETE ADMIN
+
+2. The app will still be available to  review even after cycle end date if admin has done review.  So basically the screen doesn't care for cycle.  It only checks for status.  If it is less then 3 ( means in not intialized or inj progress ) then reviewer is allowed to review.
+
+So. In my thought process. we need to document this proces better and after careful thought.  Why don't u try to pin your thoughts on the review process and then we can talk.","10/10/11 10:20:51; ajaya; 
+Done and deployed.  Test and Close."
+alignment problem on page 3 of app,"on ie in windows there is an alignment problem with the two boxes on page 3 of the app. 
+
+the text boxes for total cost and cost details are not aligned for the top edge and the attach files button is not left aligned with the cost details.
+
+this is fine on firefox but not on ie.",10/10/2011 09:40:36,10/10/2011 10:21:04,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:20:53; ajaya; 
+Fixed.. Please check and reopen if necessary.","10/10/11 10:20:55; rajesh; 
+tested 11/6/06 and its still not fixed","10/10/11 10:20:56; ajaya; 
+is it still an issue??
+
+AJ","10/10/11 10:20:58; rajesh; 
+Replying to [comment:1 ajay]:
+> is it still an issue??
+> 
+> AJ
+I don't know. Let me check.","10/10/11 10:21:02; rajesh; 
+in ie this is still a problem. text boxes not aligned.","10/10/11 10:21:04; ajaya; 
+This has been fixed.
+changeset:1727"
+Submit final rating should check,"
+
+You can click submit on a blank screen (no rating selected) and that should not be allowed.
+
+You can leave the comment blank, but have to make a choice the radio box.
+
+",10/10/2011 09:40:41,10/10/2011 10:21:13,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:06; ajaya; 
+This is done and deployed.Assigning it to you Rajesh.  Please verify and close.","10/10/11 10:21:08; rajesh; 
+just tested on qa; applications 48 and 56 always accept with a comment and no rating.  other applications (51, 52, 54) do not allow the applicant to omit a rating.","10/10/11 10:21:10; rajesh; 
+if you submit a comment and forget to put a rating, the comment's lost when the system catches no rating.  it should save the original comment.","10/10/11 10:21:12; ajaya; 
+fixed.","10/10/11 10:21:13; rajesh; 
+Replying to [comment:1 ajay]:
+> fixed.
+
+Tested end to end multiple times - this is fixed."
+Project status field is incorrect,"When you submit a project status there are 2 fields that are mixed up:
+
+www.peerwater.org/project_status/final_status/10
+
+1)
+""Annual Maintenance Costs"" should be changed to
+""Annual Maintenance Costs (in USD)""
+
+2)
+""Maintenance Cost Source ((in USD)"" should be changed to
+""Maintenance Revenue Model
+Enter details of maintenance plan""
+
+The field should be text, not a number.
+
+
+3) the button on the previous page: ""Edit Profile"" should just say ""Edit""
+www.peerwater.org/project/show/10
+
+
+4) There should be a way to edit the name (the user wants to remove the ""i"" in ""iVillage""
+
+",10/10/2011 09:40:47,10/10/2011 10:21:19,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:21:17; ajaya; 
+done","10/10/11 10:21:18; rajesh; 
+we checked, closing"
+no button for reviewer to submit review,"when reviewing an app on the review page 
+
+http://qa.peerwater.org/app_review/display_review_rating?app_id=56
+
+there's no button to review.  this page should have the review screen and only after the review is complete should the reviewers see this page.  currently we're seeing the wrong screen.
+
+on qa, logged in as Project Well.
+",10/10/2011 09:40:53,10/10/2011 10:21:23,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:21:21; rajesh; 
+1/ date check problem
+
+the problem was that it was the last day for peer review. when i changed the date to today+1, the review screen came up.
+
+2/ applicant unable to see
+ the applicant cannot see the rating page. the applicant should be able to see the ratings page, just like admin.
+
+3/ font on review
+please make the review score the comment black. the title ""rating"" and ""comment"" should be the regular gray.","10/10/11 10:21:23; ajaya; 
+Done"
+Put applications on the map,"
+We need to add 2 fields: longitude and latitude to the application.
+This should be on the step one, near the geography fields.
+
+For now, we can have a back door into entering the data.
+
+
+The map should display all active and approved applications (until they get converted to a project - what about program-funding?)) with a new icon (to be supplied later). Upon clicking: a bubble will pop up with:
+
+ 1 - Country
+ 2 - Name of project
+ 3 - Short description
+ 4 - Applicant name
+ 5 - Link to the application form.
+
+If you are logged in, you can control appropriate:
+  - edit/withdraw if you are applicant/admin, 
+  - ratings if you are reviewer/applicant/admin/other(works now!)
+
+For now, we will keep it open, so that non-logged in users can browse the application and the forum.
+
+We should keep the option of restricting them to the map (no clickable link) in case we decide that in the future.",10/10/2011 09:40:58,10/10/2011 10:21:27,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:25; ajaya; 
+done except for the adding of two fields on to the proj location on application.","10/10/11 10:21:27; ajaya; 
+done and it's already working."
+accept funding didn't go through,"accepted funding for application 50 and got routed to below web address:
+http://qa.peerwater.org/app/funding_action/50
+
+NoMethodError in AppController#funding_action 
+undefined method `annual_maint_cost' for #<Project:0x2ab68067c8b8>
+RAILS_ROOT: /var/www/virtual/peerwater.org/apps/qa/current/config/..
+
+Application Trace | Framework Trace | Full Trace 
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/base.rb:1792:in `method_missing'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:300:in `validates_each'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:299:in `validates_each'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:806:in `run_validations'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:800:in `run_validations'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:764:in `valid_without_callbacks'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/callbacks.rb:310:in `valid?'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:735:in `save_without_transactions'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:126:in `save'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:51:in `transaction'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:91:in `transaction'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:118:in `transaction'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:126:in `save'
+#{RAILS_ROOT}/app/controllers/app_controller.rb:284:in `funding_action'
+#{RAILS_ROOT}/app/controllers/app_controller.rb:282:in `funding_action'
+/usr/bin/mongrel_rails:18
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/base.rb:1792:in `method_missing'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:300:in `validates_each'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:299:in `validates_each'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:806:in `run_validations'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:800:in `run_validations'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:764:in `valid_without_callbacks'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/callbacks.rb:310:in `valid?'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:735:in `save_without_transactions'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:126:in `save'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:51:in `transaction'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:91:in `transaction'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:118:in `transaction'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:126:in `save'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:51:in `transaction'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:91:in `transaction'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:941:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:408:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/rails.rb:73:in `process'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:551:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:550:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:625:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:956:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:955:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:127:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/command.rb:199:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:235
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/base.rb:1792:in `method_missing'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:300:in `validates_each'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:299:in `validates_each'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:806:in `run_validations'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:800:in `run_validations'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:764:in `valid_without_callbacks'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/callbacks.rb:310:in `valid?'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/validations.rb:735:in `save_without_transactions'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:126:in `save'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:51:in `transaction'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:91:in `transaction'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:118:in `transaction'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:126:in `save'
+#{RAILS_ROOT}/app/controllers/app_controller.rb:284:in `funding_action'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:51:in `transaction'
+#{RAILS_ROOT}/vendor/rails/activerecord/lib/active_record/transactions.rb:91:in `transaction'
+#{RAILS_ROOT}/app/controllers/app_controller.rb:282:in `funding_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:941:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:408:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/rails.rb:73:in `process'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:551:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:550:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:625:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:956:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:955:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:127:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/command.rb:199:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:235
+/usr/bin/mongrel_rails:18
+Request
+Parameters: {""accept.x""=>""41"", ""accept.y""=>""8"", ""legal""=>""agree"", ""id""=>""50""}
+
+Show session dump
+
+--- 
+:new_session: ""false""
+:sessionobj: !ruby/object:UserSessionMgmt::UserSession 
+  currently_logged_in: Y
+  first_name: Laxman
+  last_name: Singh
+  login_time: 2006-11-07 10:17:11.827706 -08:00
+  organization_id: 5
+  person_id: 7
+  user_name: barefoot
+flash: !map:ActionController::Flash::FlashHash {}
+
+
+Response
+Headers: {""cookie""=>[], ""Cache-Control""=>""no-cache""}
+",10/10/2011 09:41:04,10/10/2011 10:21:31,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:29; ajaya; 
+Done.","10/10/11 10:21:31; rajesh; 
+cannot reproduce, have not seen it since"
+question/answer forum not working ie,"ajay-
+ on qa.peerwater.org, trying to access the question/answer forum goes to this: http://qa.peerwater.org/app_qandas/list?app_id=33
+
+NoMethodError in App_qandas#list 
+Showing app/views/app_qandas/_topic.rhtml where line #9 raised: 
+
+undefined method `autheticated?' for #<#<Class:0x2b6f3e77f748>:0x2b6f3e6fdd10>
+
+Extracted source (around line #9): 
+
+6:       <h3><%=child.subject%></h3>
+7:     <%end%>
+8:     <p class=""posted-by"">
+9:       Posted By <%if autheticated?%>
+10:                 <%=link_to ""#{child.person.first_name} #{child.person.last_name}"", 
+11:                       :controller => 'org_contacts', 
+12:                       :action => 'show', 
+
+
+Trace of template inclusion: /app/views/app_qandas/list.rhtml
+
+RAILS_ROOT: /var/www/virtual/peerwater.org/apps/qa/current/config/..
+
+Application Trace | Framework Trace | Full Trace 
+#{RAILS_ROOT}/app/views/app_qandas/_topic.rhtml:9:in `_run_rhtml_app_qandas__topic'
+#{RAILS_ROOT}/app/views/app_qandas/_topic.rhtml:1:in `_run_rhtml_app_qandas__topic'
+#{RAILS_ROOT}/app/views/app_qandas/list.rhtml:25:in `_run_rhtml_app_qandas_list'
+#{RAILS_ROOT}/app/views/app_qandas/list.rhtml:24:in `_run_rhtml_app_qandas_list'
+/usr/bin/mongrel_rails:18
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:316:in `compile_and_render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:292:in `render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:251:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:266:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/partials.rb:59:in `render_partial'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:33:in `benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/partials.rb:58:in `render_partial'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:278:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:316:in `compile_and_render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:292:in `render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:251:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:726:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:648:in `render_with_no_layout'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/layout.rb:245:in `render_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:942:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:408:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/rails.rb:73:in `process'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:551:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:550:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:625:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:956:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:955:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:127:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/command.rb:199:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:235
+#{RAILS_ROOT}/app/views/app_qandas/_topic.rhtml:9:in `_run_rhtml_app_qandas__topic'
+#{RAILS_ROOT}/app/views/app_qandas/_topic.rhtml:1:in `_run_rhtml_app_qandas__topic'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:316:in `compile_and_render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:292:in `render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:251:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:266:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/partials.rb:59:in `render_partial'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:33:in `benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/partials.rb:58:in `render_partial'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:278:in `render'
+#{RAILS_ROOT}/app/views/app_qandas/list.rhtml:25:in `_run_rhtml_app_qandas_list'
+#{RAILS_ROOT}/app/views/app_qandas/list.rhtml:24:in `_run_rhtml_app_qandas_list'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:316:in `compile_and_render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:292:in `render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:251:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:726:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:648:in `render_with_no_layout'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/layout.rb:245:in `render_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:942:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:408:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/rails.rb:73:in `process'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:551:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:550:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:625:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:956:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:955:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:127:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/command.rb:199:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:235
+/usr/bin/mongrel_rails:18
+Request
+Parameters: {""app_id""=>""33""}
+
+Show session dump
+
+--- 
+:new_session: ""false""
+:sessionobj: !ruby/object:UserSessionMgmt::UserSession 
+  currently_logged_in: Y
+  first_name: Patricia
+  last_name: Dandonoli
+  login_time: 2006-11-10 11:14:26.943365 -08:00
+  organization_id: 9
+  person_id: 12
+  user_name: wateraid
+flash: !map:ActionController::Flash::FlashHash {}
+
+
+Response
+Headers: {""cookie""=>[], ""Cache-Control""=>""no-cache""}
+",10/10/2011 09:41:10,10/10/2011 10:21:37,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:34; rajesh; 
+i got the same problem on firefox on map. the first time the forum worked but a new posting took forever. so i hit back and then clicked forum again.
+
+http://qa.peerwater.org/app_qandas/list?app_id=41
+
+ NoMethodError in App_qandas#list
+
+Showing app/views/app_qandas/_topic.rhtml where line #9 raised:
+
+undefined method `autheticated?' for #<#<Class:0x2b6f3e77f748>:0x2b6f3e5c99f8>
+
+Extracted source (around line #9):
+
+6:       <h3><%=child.subject%></h3>
+7:     <%end%>
+8:     <p class=""posted-by"">
+9:       Posted By <%if autheticated?%>
+10:                 <%=link_to ""#{child.person.first_name} #{child.person.last_name}"", 
+11:                       :controller => 'org_contacts', 
+12:                       :action => 'show', 
+
+Trace of template inclusion: /app/views/app_qandas/list.rhtml
+
+RAILS_ROOT: /var/www/virtual/peerwater.org/apps/qa/current/config/..
+Application Trace | Framework Trace | Full Trace
+
+#{RAILS_ROOT}/app/views/app_qandas/_topic.rhtml:9:in `_run_rhtml_app_qandas__topic'
+#{RAILS_ROOT}/app/views/app_qandas/_topic.rhtml:1:in `_run_rhtml_app_qandas__topic'
+#{RAILS_ROOT}/app/views/app_qandas/list.rhtml:25:in `_run_rhtml_app_qandas_list'
+#{RAILS_ROOT}/app/views/app_qandas/list.rhtml:24:in `_run_rhtml_app_qandas_list'
+/usr/bin/mongrel_rails:18
+
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:316:in `compile_and_render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:292:in `render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:251:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:266:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/partials.rb:59:in `render_partial'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:33:in `benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/partials.rb:58:in `render_partial'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:278:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:316:in `compile_and_render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:292:in `render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:251:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:726:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:648:in `render_with_no_layout'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/layout.rb:245:in `render_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:942:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:408:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/rails.rb:73:in `process'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:551:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:550:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:625:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:956:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:955:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:127:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/command.rb:199:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:235
+
+#{RAILS_ROOT}/app/views/app_qandas/_topic.rhtml:9:in `_run_rhtml_app_qandas__topic'
+#{RAILS_ROOT}/app/views/app_qandas/_topic.rhtml:1:in `_run_rhtml_app_qandas__topic'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:316:in `compile_and_render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:292:in `render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:251:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:266:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/partials.rb:59:in `render_partial'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:33:in `benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/partials.rb:58:in `render_partial'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:278:in `render'
+#{RAILS_ROOT}/app/views/app_qandas/list.rhtml:25:in `_run_rhtml_app_qandas_list'
+#{RAILS_ROOT}/app/views/app_qandas/list.rhtml:24:in `_run_rhtml_app_qandas_list'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:316:in `compile_and_render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:292:in `render_template'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_view/base.rb:251:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:726:in `render_file'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:648:in `render_with_no_layout'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/layout.rb:245:in `render_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:53:in `render'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:942:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:408:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/rails.rb:73:in `process'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:551:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:550:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:625:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:956:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:955:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:127:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/command.rb:199:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:235
+/usr/bin/mongrel_rails:18
+
+Request
+
+Parameters: {""app_id""=>""41""}
+
+Show session dump
+
+--- 
+:new_session: ""false""
+:sessionobj: !ruby/object:UserSessionMgmt::UserSession 
+  currently_logged_in: Y
+  first_name: Rajesh
+  last_name: Shah
+  login_time: 2006-11-10 11:26:53.949604 -08:00
+  organization_id: 2
+  person_id: 2
+  user_name: rajesh
+flash: !map:ActionController::Flash::FlashHash {}
+
+
+Response
+Headers: {""cookie""=>[], ""Cache-Control""=>""no-cache""}
+","10/10/11 10:21:37; ajaya; 
+Fixed... A typo.
+
+AJ"
+trouble using back in knowledge base,"Using internet explorer to play with knowledge base, got an error using ""back"" button.
+
+http://qa.peerwater.org/kb/search
+
+TypeError in KbController#search 
+wrong argument type nil (expected Data)
+RAILS_ROOT: /var/www/virtual/peerwater.org/apps/qa/current/config/..
+
+Application Trace | Framework Trace | Full Trace 
+/var/www/virtual/peerwater.org/ruby/rubygems/gems/ferret-0.10.9/lib/ferret/index.rb:363:in `search_each'
+/var/www/virtual/peerwater.org/ruby/rubygems/gems/ferret-0.10.9/lib/ferret/index.rb:363:in `search_each'
+/usr/lib/ruby/1.8/monitor.rb:229:in `synchronize'
+/var/www/virtual/peerwater.org/ruby/rubygems/gems/ferret-0.10.9/lib/ferret/index.rb:359:in `search_each'
+#{RAILS_ROOT}/vendor/plugins/acts_as_ferret/lib/class_methods.rb:384:in `find_id_by_contents'
+#{RAILS_ROOT}/vendor/plugins/acts_as_ferret/lib/class_methods.rb:248:in `find_by_contents'
+#{RAILS_ROOT}/app/controllers/kb_controller.rb:13:in `search'
+/usr/bin/mongrel_rails:18
+/var/www/virtual/peerwater.org/ruby/rubygems/gems/ferret-0.10.9/lib/ferret/index.rb:363:in `search_each'
+/var/www/virtual/peerwater.org/ruby/rubygems/gems/ferret-0.10.9/lib/ferret/index.rb:363:in `search_each'
+/usr/lib/ruby/1.8/monitor.rb:229:in `synchronize'
+/var/www/virtual/peerwater.org/ruby/rubygems/gems/ferret-0.10.9/lib/ferret/index.rb:359:in `search_each'
+#{RAILS_ROOT}/vendor/plugins/acts_as_ferret/lib/class_methods.rb:384:in `find_id_by_contents'
+#{RAILS_ROOT}/vendor/plugins/acts_as_ferret/lib/class_methods.rb:248:in `find_by_contents'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:941:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:408:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/rails.rb:73:in `process'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:551:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:550:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:625:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:956:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:955:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:127:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/command.rb:199:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:235
+/var/www/virtual/peerwater.org/ruby/rubygems/gems/ferret-0.10.9/lib/ferret/index.rb:363:in `search_each'
+/var/www/virtual/peerwater.org/ruby/rubygems/gems/ferret-0.10.9/lib/ferret/index.rb:363:in `search_each'
+/usr/lib/ruby/1.8/monitor.rb:229:in `synchronize'
+/var/www/virtual/peerwater.org/ruby/rubygems/gems/ferret-0.10.9/lib/ferret/index.rb:359:in `search_each'
+#{RAILS_ROOT}/vendor/plugins/acts_as_ferret/lib/class_methods.rb:384:in `find_id_by_contents'
+#{RAILS_ROOT}/vendor/plugins/acts_as_ferret/lib/class_methods.rb:248:in `find_by_contents'
+#{RAILS_ROOT}/app/controllers/kb_controller.rb:13:in `search'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:941:in `perform_action_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/rescue.rb:82:in `perform_action'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/base.rb:408:in `process_without_filters'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+#{RAILS_ROOT}/vendor/rails/actionpack/lib/action_controller/session_management.rb:117:in `process'
+#{RAILS_ROOT}/vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/rails.rb:73:in `process'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:551:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:550:in `process_client'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:636:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:625:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:956:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel.rb:955:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:127:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/lib/mongrel/command.rb:199:in `run'
+/usr/lib64/ruby/gems/1.8/gems/mongrel-0.3.13.3/bin/mongrel_rails:235
+/usr/bin/mongrel_rails:18
+Request
+Parameters: None
+
+Show session dump
+
+--- 
+:new_session: ""false""
+:sessionobj: !ruby/object:UserSessionMgmt::UserSession 
+  currently_logged_in: Y
+  first_name: Carole
+  last_name: Harper
+  login_time: 2006-11-13 13:53:12.660167 -08:00
+  organization_id: 3
+  person_id: 3
+  user_name: elporvenir
+flash: !map:ActionController::Flash::FlashHash {}
+
+
+Response
+Headers: {""cookie""=>[], ""Cache-Control""=>""no-cache""}
+",10/10/2011 09:41:18,10/10/2011 10:21:39,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:39; ajaya; 
+Fix BUG #6653. Trouble using back in Search.
+1. Remove the AJAX form search.  AJAX and back is not
+   very compatible.  Since search page would have lot
+   back and forth: wise to remove AJAX
+
+2. Replaced form_remote_tag with form_for buildr
+
+--This line, and those below, will be ignored--
+
+M    app/controllers/kb_controller.rb
+M    app/views/kb/search.rhtml
+M    app/views/kb/_attachment.rhtml
+M    app/views/search_box.rhtml"
+non logged in users should not be able to see review page,"aj-can you make it so that only logged in users are able to access the review page?
+ thanks
+
+http://qa.peerwater.org/app_review/display_review_rating?app_id=47",10/10/2011 09:41:24,10/10/2011 10:21:41,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:41; ajaya; 
+done"
+Excel file not accessible on App 46,"In App 46 the Excel Budget file does not open.  
+http://www.peerwater.org/attachment/show/111
+When you select a different version of Excel to open the file, it is empty.
+",10/10/2011 09:41:29,10/10/2011 10:21:43,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:21:43; ajaya; 
+I don't know whether this is a bug or not.  I can open this file now.  Please reopen if necessary.
+"
+"""New posting by reviewer"" emails sent in error","New posting by reviewer emails were sent when no review had been posted.   This happened with Apps 16, 47 and 13.
+
+",10/10/2011 09:41:35,10/10/2011 10:21:45,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:21:45; ajaya; 
+Check now..
+
+"
+date of questions changing,"The date of questions on the Q/A forum page are switching to the date of the response.
+
+Noticed on apps 41 and 40.
+
+
+Multiple Uses of Water
+
+Posted By Susan Davis of CARE at Fri Dec 15, 2006 09:17 AM US/California Time
+
+I note that the plan is to use the harvested rainwater only for drinking. However we know that people need water to cook, wash, do laundry, etc. There is a hygiene education component to this program as well. How will people in the community be able to maintain good hygiene without access to adequate quantities of water? Have you considered multiple needs/uses of water and including training on point of use treatment for water from alternative sources that could be used for purposes other than drinking?
+Multiple Uses of Water
+
+Posted By Idriss Kamara of Safer Future at Fri Dec 15, 2006 09:17 AM US/California Time
+
+The money collected can be used to refill the tank. The water supplied is coming from a water reservoir from the hilly and is drinking water too...
+
+http://www.peerwater.org/app_qandas/list?app_id=40",10/10/2011 09:41:40,10/10/2011 10:21:47,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:21:47; ajaya; 
+A lot of bug fixes into AppQanda.
+
+Fix BUG 7292.
+1. Manage Error in QandA
+2. Rollback posting if error occurs
+3. Comment out tiny_mce code for now
+4. Add column in app_qandas table 'posted_by' to capture post dates instead of updated_at.  Nice Catch Anette.
+
+This is deployed in QA now and needs to be tested well.  
+
+We need to move www to latest code base as these changes have been cherry picked and causing real pain.  Let's talk.
+"
+can't post questions in qa.peerwater.org,"trying to post questions in qa to test fix on dates switching once new is submitted.  qa not accepting questions in Q/A for test cycle ""12 17.""
+
+http://qa.peerwater.org/app_qandas/list?app_id=65
+
+Comment couldn't be saved. Please try again",10/10/2011 09:41:46,10/10/2011 10:21:49,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:21:49; ajaya; 
+Check now.
+app/views/app_qandas/_error.rhtml
+app/views/app_qandas/_post_new.rhtml
+app/views/app_qandas/_reply_new.rhtml
+app/views/app_qandas/_topic.rhtml
+app/views/app_qandas/post.rjs
+app/views/app_qandas/reply.rjs
+app/views/app_qandas/reply_new.rjs
+db/migrate/012_add_posted_date_app_qanda.rb
+db/schema.rb
+app/controllers/app_qandas_controller.rb
+app/models/notifier.rb
+app/views/notifier/question_submitted.rhtml
+app/views/notifier/question_submitted.text.html.rhtml
+app/views/notifier/question_submitted.text.plain.rhtml
+app/views/notifier/response_submitted.rhtml
+app/views/notifier/response_submitted.text.html.rhtml
+app/views/notifier/response_submitted.text.plain.rhtml"
+Finer control of icons on the map,"
+Each funding round should have icons that are distinct.
+When a cycle is created the icons residing in a folder will be available for the admin to select for each phase in the cycle:
+
+1/ submission phase
+2/ peer review phase
+3/ (Optional) limbo phase between application and project: granted/funded/accepted but projects not created
+   this might be tricky for multi-project funding where outstanding funds are still available but some projects have been started
+4/ project implementation phase
+5/ (Options) project completed
+
+Each phase, the icon can be selected from a list of all the icons in a special directory which can been updated easily (add new icon files).
+
+It will be the responsibility of the admin to add new icons to the appropriate folder on the server and ensure their size, format, etc. matches the requirements. We should also specify the maximum size for our application and whether we recommend shadows or not.",10/10/2011 09:41:52,10/10/2011 10:22:05,Closed,rajesh,rajesh,Wish List,Fixed,"10/10/11 10:21:50; ajaya; 
+What would be an extended funding phase.  We don't capture that in current cycle creation.","10/10/11 10:21:53; rajesh; 
+By ""extended funding phase"" i meant that we end the funding phase when the cycle ends. However, the projects are often in limbo for months, until they kick off (or the data on the kickoff is entered).
+
+There can be a large gap between the application and the project and our map will not show it. Once the app is funded, the application icon is off the map. But until the project is kicked off, the project icon does not appear.
+
+For multi-project this 'sitting funds' may last a long time; until they are all used up.
+
+My comment was not to change cycle creation as much as to capture the time in between funding of an app and the project creation.
+
+This is an optional request and also a discussion of any ideas to put pressure on the implementers to 'create' the project. Maybe use a '?' as an icon that reflects on the implementer (near their home icon).","10/10/11 10:21:55; ajaya; 
+
+Group => App -> Review
+                Completed (Funded/Not Funded)
+
+      => Project -> In Progress
+                    Completed
+","10/10/11 10:21:57; ajaya; 
+done
+changeset:1729","10/10/11 10:21:59; rajesh; 
+am not sure of the fix, it seems there are 2 icons for projects: we are using the same one. (i can test this on local)
+
+realize that we need a 2nd icon for a complete project.
+will have to redo the legend, etc.
+
+---
+can we have a project icon set for each funding round? 
+eg. a drop with c:w in it instead of the pwx logo?
+
+---
+
+for the applications we need 3 icons:
+1. app under review or needs funding (for now they are both combined)
+2. app funded (smaller icon, reducing clutter)
+3. app rejected (smaller icon, reducing clutter)","10/10/11 10:22:01; ajaya; 
+I am confused.  Lets talk.","10/10/11 10:22:02; ajaya; 
+Fixed bunch of map errors like maximize, links etc.
+changeset:2178
+","10/10/11 10:22:05; ajaya; 
+changeset:2180"
+Map enhancement - show links,"
+It would be nice if a shift-click on an application icon shows lines linking the application to the reviewers icons.
+
+This can show all the linkages we are creating.",10/10/2011 09:41:58,10/10/2011 10:22:07,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:22:07; ajaya; 
+Done."
+Customize showing apps on map,"in the map dropdown, add lines to show applications by year.
+
+any redesign of the interface drop down to make it easy to choose which combination of projects/apps/partners/year should be entertained.
+
+",10/10/2011 09:42:03,10/10/2011 10:22:13,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:22:09; ajaya; 
+Done with a prelimnary implementation.. Deployed in qa. pl check.
+
+aj","10/10/11 10:22:11; rajesh; 
+
+It works great! Just what i want.
+
+Changed needed:
+1/ have only one applications box (no years) 
+2/ add a 2004 projects box.
+3/ move the filter down, below the map.
+
+It looks much better on the side in the maximized map! But  our map page will widen only with the new layout.","10/10/11 10:22:13; ajaya; 
+This is already done."
+Bank/money xfer info in profile,"
+There should be a section for money transfer info.
+
+This should be only visible to pwxadmin and to the org.
+
+It should say:
+
+Funding (money transfer) information:
+US organizations will get a check mailed to the primary address on file. Others need to provide wiring instructions below
+
+<the 2nd sentence in light, the first in bold title format>",10/10/2011 09:42:11,10/10/2011 10:22:25,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:22:16; ajaya; 
+Fix RF # 7965
+Implemented showmethemoney
+
+--This line, and those below, will be ignored--
+
+M    app/views/organization_profile/detail.rhtml
+M    app/views/organization/_form.rhtml","10/10/11 10:22:18; rajesh; 
+more testing and soak time needed.
+can be deployed to www, but will leave it unannounced.","10/10/11 10:22:20; ajaya; 
+It has been deployed in www.","10/10/11 10:22:22; ajaya; 
+changeset: 1708","10/10/11 10:22:25; ajaya; 
+changeset:1708"
+link to upload photo files not working ,"Can't upload photo files on QA because the link's not working.
+
+http://qa.peerwater.org/attachment/new?to=app&type=photo&app_id=55
+
+Error
+
+System Error. Please refresh your browser",10/10/2011 09:42:16,10/10/2011 10:22:29,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:22:29; ajaya; 
+Fixed.
+
+1. Remove call to render_component to fix know rails bug
+   http://dev.rubyonrails.org/ticket/6199
+
+   This would fix Rubyforge BUG 8096
+
+2. Clean ferret action for app.  Don't do ferret if an app
+   is in draft status.  This means an application which is
+   in draft status is not searchable.
+
+
+
+Sending        app/models/app.rb
+Deleting       app/views/app/display_attach.rhtml
+Adding         app/views/attachment/_list.rhtml
+Deleting       app/views/attachment/list.rhtml
+Sending        app/views/attachment/new.rhtml
+Sending        config/environments/development.rb
+Sending        config/environments/production.rb
+Sending        config/environments/qa_peerwater_org.rb
+
+"
+lines not showing up on QA map on Internet Explorer,"excellent new feature showing the reviewers of apps on the QA map, but in Internet Explorer not working. 
+
+http://qa.peerwater.org/map",10/10/2011 09:42:22,10/10/2011 10:22:31,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:22:31; ajaya; 
+Done.. 
+app/views/layouts/map_header.rhtml
+app/views/layouts/minima-layout.rhtml
+"
+Funding round customization,"
+To allow funding rounds to be customized (to a subgroup or a geography), the message that appears on the dashboard needs (and possibly the home page) to be editable.
+
+It should be part of the cycle creation step: a textbox where the admin enters the text for the cycle.
+
+The number (funding round total) can be required to be part of the text and thus does not need to be displayed from the field in the cycle.",10/10/2011 09:42:27,10/10/2011 10:22:37,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:22:33; rajesh; 
+Further customization of the funding round:
+
+1/ should this be on the map?
+2/ what name on the check box to see apps?
+3/ or what other cycle should this be part of - a drop down containing list of all other cycles
+
+This functionality to replace the usage of the year as the last four digits of the funding cycle name for the map. Any other suggestions/ideas welcome","10/10/11 10:22:35; ajaya; 
+Rajesh:  We need to discuss this feature a bit more in detail considering cycle has effect on overall health of the application.","10/10/11 10:22:37; ajaya; 
+Done
+changeset:1728"
+new app not appearing on map in QA,"testing end to end; new application waterglass not appearing once submitted in QA.  OS: Windows XP, Explorer ver 7
+
+http://qa.peerwater.org/app/show/58",10/10/2011 09:42:32,10/10/2011 10:22:45,Closed,rajesh,ajaya,Features for External Funders,Fixed,"10/10/11 10:22:39; rajesh; 
+the problem is that the funding cycle did not end in a year (it was called test 125)
+
+after renaming the funding cycle to ""test 125 2007"" the icons appeared on the map.
+
+there should be a better way: how about a check box in the funding cycle? 2004 2005 2006 2007 and then the admin checks of the right box.","10/10/11 10:22:41; ajaya; 
+Update this bug:
+
+Shall we create an extra field for the cycle for the map?
+or shall we use the cycle name itself.","10/10/11 10:22:43; rajesh; 
+The funding cycle should have a dropdown (or checkboxes) to choose which map selection it should be part of. Right now the selection should be 2004, 2005, 2006 and 2007. 
+
+That way many cycles can be part of the same year and we will simplify putting all the cycle names on the map.","10/10/11 10:22:45; ajaya; 
+This is due to the cycle names were defined.  We are redoing the funding cycle thing.  So should be fixed in that one.
+
+Closing as duplicate of ticket:8128"
+can't advance page in new app on QA,"in a new application on QA, can't click done or continue to get from step 1 to step 2.  
+OS: Mozilla Firefox
+
+http://qa.peerwater.org/app/create",10/10/2011 09:42:36,10/10/2011 10:22:49,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:22:47; rajesh; 
+can't reproduce on Windows Mozilla
+
+http://qa.peerwater.org/app/display_app_step2/66","10/10/11 10:22:49; ajaya; 
+Can't reproduce."
+no word icon for docs in Applications,"the word icon is not being displayed when a word doc is uploaded on QA in a new application.
+
+both Mozilla and IE.
+
+http://qa.peerwater.org/app/display_app_step2/63",10/10/2011 09:42:42,10/10/2011 10:22:56,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:22:51; rajesh; 
+
+on mac osx using firefox, i could see the word icon, but not for excel or pdf","10/10/11 10:22:53; ajaya; 
+Fixed and Deployed.  Check and close please.","10/10/11 10:22:56; ajaya; 
+Changesets: 1719"
+Add link to Google Maps for Lat/Long Lookup on App Page 1,Add link to Google Maps for Lat/Long Lookup on App Page 1,10/10/2011 09:42:47,10/10/2011 10:23:04,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:22:58; ajaya; 
+Fixed.","10/10/11 10:23:00; ajaya; 
+I fixed it.
+
+changeset:1715
+
+","10/10/11 10:23:02; ajaya; 
+Fixed.
+
+Changeset:1720","10/10/11 10:23:04; ajaya; 
+changeset:1720"
+Icon appearing wrong place in application,"In ie, the icon for an uploaded file appears to the right of the ""Cost details"" box, in stead of below.
+
+http://dev.peerwater.org/app/display_app_step3/25",10/10/2011 09:42:55,10/10/2011 10:23:06,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:23:06; ajaya; 
+fixed 
+changeset:1727"
+new app can't be funded when app not distributed for review,summary says it all,10/10/2011 09:43:03,10/10/2011 10:23:08,Closed,rajesh,ajaya,Features for External Funders,Fixed,"10/10/11 10:23:08; ajaya; 
+Admin should be able to fund an application even if the app was not distributed for review.
+
+changeset:1725"
+Admin tab not accessible to users,"during accept funding users, can see the admin tab but shouldn't have access to it",10/10/2011 09:43:09,10/10/2011 10:23:09,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:23:09; ajaya; 
+done.
+changeset:1730"
+Admin tab not accessible to users,"during accept funding users, can see the admin tab but shouldn't have access to it",10/10/2011 09:43:19,10/10/2011 10:23:11,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:23:11; ajaya; 
+duplicate of ticket:8305"
+PDF icon not appearing in mozilla on QA,"On QA, second page of application, under Additional Project Documents, uploaded PDF icon not appearing in Mozilla Firefox.  Instead of a logo, it reads PDF logo trefoil.
+Should show logo.
+
+http://qa.peerwater.org/app/show/58",10/10/2011 09:43:29,10/10/2011 10:23:13,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:23:13; ajaya; 
+Forgot to run the database update script while setting up qa this morning.
+
+Fixed."
+Average size files rejected as too large in application,"On mozilla firefox, in QA, Average size files often rejected as too large in application.
+
+http://qa.peerwater.org/attachment/new?to=app&app_id=63&type=docs",10/10/2011 09:43:48,10/10/2011 10:23:15,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:23:15; ajaya; 
+Fixed.  The max size of the file that can be uploaded is 10M now.
+
+http://wiki.codemongers.com/NginxHttpCoreModule#client_max_body_size
+"
+Create a peer review process for referring new members to PWX,"I
+Members should be able to refer prospective members.
+
+1. be able submit info: person name, org name, email
+
+2. <optional> admin gets that and accepts referral <optional>
+
+3. system creates a new member of the type ""Prospective"" and sends login info
+
+4. org info enhanced to handle attachments, to allow a new type of org (they cannot participate in app reviews or org reviews other than their own)
+
+4. prospective fills out org info and submits
+
+5. admin is notified
+
+6. admin is able to send the org info out to review
+  - a 4 tab form: 
+    1. org info (similar to app info)
+    2. q&a
+    3. review (similar to app review, but different and will be described in new tix)
+    4. admin (for sending to review, setting deadline, etc.)
+
+7. unlike a funding cycle, there will be deadline associated with this
+
+8. at end of review admin can defer, accept, reject prospective
+ - accepted -> org status becomes one of regular (admin sets)
+ - rejected -> org status becomes disabled
+ - deferred -> org status becomes disabled
+
+9. historical info is retained: 
+ - org referral history
+ - org referee 
+",10/10/2011 09:43:57,10/10/2011 10:23:19,Closed,rajesh,rajesh,Org Referral System,Fixed,"10/10/11 10:23:17; ajaya; 
+Checking in the biggest checkin in PWX history.
+
+Deployed in dev.  Please play with it.  This checkin has potetial to have a lot of side effects.
+
+AJ
+
+changeset:1735
+changeset:1736
+","10/10/11 10:23:19; rajesh; 
+verified!"
+Change 'Rejected' to 'Not Funded',"
+the status of apps that are not funded should be ""Not Funded""
+everywhere the word ""rejected"" (map, form, etc.) needs to be removed.",10/10/2011 09:44:06,10/10/2011 10:23:28,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:23:23; ajaya; 
+Fixed
+changeset:1733","10/10/11 10:23:24; rajesh; 
+on the map still ""Rejected""","10/10/11 10:23:26; rajesh; 
+On both mozilla and ie, the map shows apps as 'not funded.' 
+
+when an org logs in to check on the status of their app at the end of a funding cycle, status appears as 'rejected.'  
+
+please switch to 'not funded.'  ","10/10/11 10:23:28; ajaya; 
+It has been fixed but not deployed in qa yet.  Keep it under you for now.  Please test and close when deployed on qa.
+
+AJ"
+Can't remove 2nd contact from Organization details,Should be able to remove the 2nd contact on the Organization page.,10/10/2011 09:44:11,10/10/2011 10:23:32,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:23:30; ajaya; 
+fixed. 
+changeset:1746","10/10/11 10:23:32; rajesh; 
+it looks great now!"
+application icon appearing different location QA versus www,"The application icon for Water for People's Boqueron K'asa project is correct on QA in mozilla.  It appears in Bolivia, as it should.  In www.peerwater.org, the same app is in western India.  I checked the latitude and longitude, and they're both set to -16.2, -68.1.  
+
+",10/10/2011 09:44:15,10/10/2011 10:23:34,Closed,rajesh,ajaya,Features for External Funders,Fixed,"10/10/11 10:23:34; ajaya; 
+This is due to the wrong lat and long.
+
+aj"
+Opt out of emails,"As a means of reducing the emails sent to organizations, allow the secondary user to opt out of getting emails.
+
+The long-term plan would be to categorize emails by:
+1/ application
+2/ project
+3/ organization
+4/ general
+
+A checkbox is provided for each category and the org should have each category checked under user 1 or user 2 (or more).
+
+For now we just need a checkbox that says please do not send application related emails.
+
+However, what is easiest to architect & code (short or long-term) is best.
+",10/10/2011 09:44:19,10/10/2011 10:24:03,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:23:51; ajaya; 
+This whole thing is tricky.
+
+I have been thinking in this line in addition what u have said.
+
+- Keep track of when user last visited. If new discussion has happened on the apps, orgs they review then show a box on member dashboard that new posting have been made.  This way if they have opted out of emails then atleast they have a way to know that something happened without going through each discussion.
+","10/10/11 10:23:53; ajaya; 
+Just commited 75% complete feature to SVN.
+
+changeset:1922","10/10/11 10:23:55; ajaya; 
+Done coding. Check in QA.  changeset:1923","10/10/11 10:23:57; ajaya; 
+Milestone Future Release deleted","10/10/11 10:23:59; rajesh; 
+have been testing it and its somewhat working.
+on qa:
+
+here is the setting for both org and app
+bunker - no emails
+barefoot - all
+care - only posts
+norbu - only replies
+
+while testing bunker got emails for response (new postings seem to work)
+
+this is a low priority feature, and it takes time to test. so am pushing it out.","10/10/11 10:24:01; ajaya; 
+I don't get your last comment.  Please elaborate?
+
+aj","10/10/11 10:24:03; rajesh; 
+feature is buggy and being tracked by another ticket. am closing this"
+Separate project and org focus list,"The current choices for projects (primary and secondary focus) are the same as the organization.
+
+There should be a different one for the organization. It should have all the projects ones currently with the additional ones below:
+
+- Funding
+- Fundraising
+- Observer
+- Consultant
+- Monitoring
+- Gov't agency
+- Policy
+- Marketing/PR
+
+Would be nice to have an easy way to edit the list.",10/10/2011 09:44:24,10/10/2011 10:24:14,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:24:05; ajaya; 
+Ok.  For now we would keep a fixed category list and I would implement a category admin menu for you.
+
+aj","10/10/11 10:24:06; ajaya; 
+fixed.
+
+changeset:1770","10/10/11 10:24:08; rajesh; 
+partially fixed.
+
+in a future release we need to give admin the ability to edit this list.","10/10/11 10:24:10; rajesh; 
+need ability to add new focus for projects (and orgs).
+e.g. sewage, recycling water, etc.
+
+so need to deal with the 2nd part of the ticket on giving admin some ability to add categories. if it is easier to do it in mysql, then a procedure is needed.","10/10/11 10:24:12; rajesh; 
+raising its priority as we need admin capability to add new focus groups for projects. 
+
+i understand to replace or delete old ones is hard as it makes database inconsistent.
+
+but just ability to edit words might be good.
+
+most important: need to add a few categories.","10/10/11 10:24:14; ajaya; 
+Added Active Scaffold
+
+changset:2080
+
+Check http://qa.peerwater.org/metadata/focu"
+Edit PWX homepage,"On PWX homepage, center Welcome to the Peer Water Exchange
+
+replace main text w/ rotating featured partner, under partner's name display picture.
+
+will supply pics soon",10/10/2011 09:44:28,10/10/2011 10:24:16,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:24:16; ajaya; 
+implemented.  Not fully I guess.  If we want the partner feature then please create a new ticket.
+
+changeset:1773"
+application page blanking out when switch windows IE,"the application pg is deleting everything you've entered in IE when you move from one url to another.
+
+for example, you've entered everything on pg 1 up to location and you click on the google maps link; when you go back all of your work's gone.
+
+",10/10/2011 09:44:32,10/10/2011 10:24:19,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:24:19; ajaya; 
+ticket:8319"
+application page blanking out when switch windows IE,"the application pg is deleting everything you've entered in IE when you move from one url to another.
+
+for example, you've entered everything on pg 1 up to location and you click on the google maps link; when you go back all of your work's gone.
+
+",10/10/2011 09:44:36,10/10/2011 10:24:26,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:24:21; ajaya; 
+fixed changetset:1887
+
+IE blanking out can't be fixed.  thats the default behavior in IE.  We would try to open the intstructions in a new window but popop blocker would prevent now-a-days.
+
+","10/10/11 10:24:22; ajaya; 
+changset:1887","10/10/11 10:24:24; ajaya; 
+Changeset:1887","10/10/11 10:24:26; ajaya; 
+changeset:1887"
+"On Q/A forum of Referral pg, no underline to link to Reply question","In IE, the link ""Reply"" is not underlined.  It works, you can click on it and respond to a previous questions, but it is not visibly underlined.",10/10/2011 09:44:41,10/10/2011 10:24:28,Closed,rajesh,ajaya,Org Referral System,Fixed,"10/10/11 10:24:28; ajaya; 
+I don't think we ever underline links.  They only show up as blue text."
+Rotating image on PWX home pg,"add image to PWX home page that changes every day/hour/... from a specific PWX directory which has images from projects
+
+directory will be sent to Ajay",10/10/2011 09:44:45,10/10/2011 10:24:31,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:24:31; ajaya; 
+fixed
+changeset:1774"
+change text PWX home pg,"the text on PWX home page should read: ""PWX - a project of the Blue Planet Run Foundation - is a transformative online community where funders, intermediaries, implementers, and observers work together to solve local water problems around the world. PWX scales local water solutions to the size of the global water problem. PWX is a participatory decision-making system enabling knowledge-sharing and collaboration between different approaches and needs around the world.""",10/10/2011 09:44:49,10/10/2011 10:24:33,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:24:33; ajaya; 
+ticket:8324"
+change text PWX home pg,"the text on PWX home page should read: ""PWX - a project of the Blue Planet Run Foundation - is a transformative online community where funders, intermediaries, implementers, and observers work together to solve local water problems around the world. PWX scales local water solutions to the size of the global water problem. PWX is a participatory decision-making system enabling knowledge-sharing and collaboration between different approaches and needs around the world.""",10/10/2011 09:44:53,10/10/2011 10:24:35,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:24:35; ajaya; 
+ticket:8324"
+change text PWX home pg and picture edits,"the text on PWX home page should read: ""PWX - a project of the Blue Planet Run Foundation - is a transformative online community where funders, intermediaries, implementers, and observers work together to solve local water problems around the world. PWX scales local water solutions to the size of the global water problem. PWX is a participatory decision-making system enabling knowledge-sharing and collaboration between different approaches and needs around the world.""",10/10/2011 09:44:58,10/10/2011 10:24:46,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:24:38; rajesh; 
+""File pictures"" should read ""Project Photos""
+
+""Pictures"" appears in upper right hand corner of the pics; please remove.
+
+the following photo is vertical instead of horizontal:
+
+http://qa.peerwater.org/projects/1/attachments/168
+
+","10/10/11 10:24:39; ajaya; 
+fixed
+changeset:1774","10/10/11 10:24:42; rajesh; 
+please use below text b/c what's currently on www has a verb error in the last sentence.  
+thanks!
+
+Replying to [ticket:8324 annette]:
+> the text on PWX home page should read: ""PWX - a project of the Blue Planet Run Foundation - is a transformative online community where funders, intermediaries, implementers, and observers work together to solve local water problems around the world. PWX scales local water solutions to the size of the global water problem. PWX is a participatory decision-making system enabling knowledge-sharing and collaboration between different approaches and needs around the world.""
+","10/10/11 10:24:46; ajaya; 
+fixed
+changeset:1776"
+Update text to left of BPR snapshot,"Here are the edits for the BPR Snapshot: 
+""Projects funded"" instead of initiated - 135    
+Projects in progress - 60    
+Projects completed - 75
+People impacted: 116,500   Schoolchildren impacted: 26,535   
+Countries Peers Working In: 13 ",10/10/2011 09:45:03,10/10/2011 10:24:54,Closed,rajesh,ajaya,Features for External Funders,Fixed,"10/10/11 10:24:48; ajaya; 
+fixed
+changeset:1774","10/10/11 10:24:50; rajesh; 
+the snapshot looks good now, but to the left of the snapshot (in orange), should read 
+""PWX members are currently implementing 60 water and sanitation projects around the world.""","10/10/11 10:24:52; ajaya; 
+fixed
+changeset:1776","10/10/11 10:24:54; rajesh; 
+snapshot is up to date; last change i would make:
+
+when it's not a funding/review cycle, let's only display 
+""PWX members are currently implementing 60 water and sanitation projects around the world.""
+
+In QA right now, there are 3 sentences above this which i would not display."
+Link edits on PWX homepage,"Under Join PWX, please change to: 
+""Our stakeholder matrix shows how PWX addresses stakeholder issues. Currently membership to PWX is by invitation or referral only.""
+
+Phone line: 415.259.5757 
+    
+Contribute should go to: http://www.blueplanetrun.org/movement/give.php 
+(currently linked to blueplanetrun.org)",10/10/2011 09:45:07,10/10/2011 10:24:59,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:24:55; ajaya; 
+fixed
+changeset:1774","10/10/11 10:24:57; rajesh; 
+Replying to [ticket:8326 annette]:
+> Under Join PWX, please change to: 
+> ""Our stakeholder matrix shows how PWX addresses stakeholder issues. Currently membership to PWX is by invitation or referral only.""
+> 
+> Phone line: 415.259.5757 
+>     
+> Contribute should go to: http://www.blueplanetrun.org/movement/give.php 
+> (currently linked to blueplanetrun.org)
+
+these edits look much better but the zip code should be 94941 (not 94911)","10/10/11 10:24:59; rajesh; 
+Replying to [comment:4 ajaya]:
+
+this looks great!"
