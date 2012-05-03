@@ -1,4 +1,4 @@
-Summary,Description,DateCreated,DateModified,Status,Reporter,Assignee,AffectsVersion,Resolution,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody
+Summary,Description,DateCreated,DateModified,Status,Reporter,Assignee,AffectsVersion,FixVersion,Resolution,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody
 Logout gave rails error,"
 http://dev.peerwater.org/home_page/logout
 
@@ -7,8 +7,8 @@ clicked logout gave ""rails app failed to start properly ...""
 
 cannot reproduce, clicked back and logged out again and all worked fine.
 
-",10/10/2011 09:36:03,10/10/2011 10:18:12,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:09; ajaya; 
-Not reproducable. :(","10/10/11 10:18:12; rajesh; 
+",10/10/2011 09:36:03,10/10/2011 10:18:12,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:09; ajaya; 
+Not reproducable. :(","10/10/11 10:18:12; rajesh; **Author: pwx**
 duplicate"
 Apply now gives rails error,"
 
@@ -23,7 +23,7 @@ Rails application failed to start properly""
 
 
 went back and tried again and it worked.
-",10/10/2011 09:36:09,10/10/2011 10:18:19,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:14; rajesh; 
+",10/10/2011 09:36:09,10/10/2011 10:18:19,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:14; rajesh; **Author: pwx**
 
 when i clicked ""Done"" on an application, got a rails error:
 
@@ -37,7 +37,7 @@ repeated actions and got another rails error:
 http://dev.peerwater.org/dashboard/member_dashboard
 Application error
 Rails application failed to start properly""","10/10/11 10:18:16; ajaya; 
-We need to reproduce this.  ","10/10/11 10:18:18; rajesh; 
+We need to reproduce this.  ","10/10/11 10:18:18; rajesh; **Author: pwx**
 http://qa.peerwater.org/list_application/list_application_main?no_of_results=10&search_application=2&search_order=1
 
 Application error
@@ -68,7 +68,7 @@ And I haven’t seen the problem since.
 it showed the 2 docs on the implementer section.
 
 
-",10/10/2011 09:36:13,10/10/2011 10:18:20,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:20; ajaya; 
+",10/10/2011 09:36:13,10/10/2011 10:18:20,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:20; ajaya; 
 Fixed. Waiting for migration to SVN to check in.
 
 Thanks
@@ -88,7 +88,7 @@ Application error (Rails)
 we should check to see if a file is specified or if something is specified then it should not crash if file is not found.
 
 
-3/ minor: tif files are not displayed, is this expected?",10/10/2011 09:36:17,10/10/2011 10:18:22,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:22; ajaya; 
+3/ minor: tif files are not displayed, is this expected?",10/10/2011 09:36:17,10/10/2011 10:18:22,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:22; ajaya; 
 Fixed."
 email on app submission missing,"
 when an app is submitted an email used to go out to the submitter (bcc admin@).
@@ -99,7 +99,7 @@ however, email is not being sent.
 
 email should come from system@ and that account was removed somehow. account is restored and now can get password reset from that account, but this one is missing.
 
-",10/10/2011 09:36:22,10/10/2011 10:18:24,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:24; ajaya; 
+",10/10/2011 09:36:22,10/10/2011 10:18:24,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:24; ajaya; 
 closing."
 remove cycle choosing dropdown on application,"for now it is too confusing and the functionality is not needed.
 
@@ -114,7 +114,7 @@ also when the user clicks done, it should always go to the application summary p
 sometimes goes to dashboard and sometimes to summary.
 
 from all pages it should go to the same page.
-",10/10/2011 09:36:26,10/10/2011 09:36:29,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed
+",10/10/2011 09:36:26,10/10/2011 09:36:29,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed
 Home page gives error,"opened a new browser window and went to qa.peerwater.org but got this error (had not logged in, may have some session left open from yesterday):
 
 http://qa.peerwater.org/dashboard/member_dashboard
@@ -218,7 +218,7 @@ Response
 Headers: {""Status""=>""200 OK"", ""cookie""=>[], ""Cache-Control""=>""no-cache""}
 
 
-",10/10/2011 09:36:31,10/10/2011 10:18:26,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:26; ajaya; 
+",10/10/2011 09:36:31,10/10/2011 10:18:26,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:26; ajaya; 
 Does it still happens?
 "
 user page gives errors,"logged in as admin and then clicked on list users:
@@ -441,7 +441,7 @@ flash: !map:ActionController::Flash::FlashHash {}
 
 Response
 Headers: {""cookie""=>[], ""Cache-Control""=>""no-cache""}
-",10/10/2011 09:36:36,10/10/2011 10:18:31,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:28; ajaya; 
+",10/10/2011 09:36:36,10/10/2011 10:18:31,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:28; ajaya; 
 Does it happen again?","10/10/11 10:18:30; ajaya; 
 Can't replicate.  Reopen if happens again.
 
@@ -467,9 +467,9 @@ Got blank page on home at www.peerwater.org
 http://www.peerwater.org/home_page/login
 
 Looks like http issue
-",10/10/2011 09:36:41,10/10/2011 10:18:33,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:33; ajaya; 
+",10/10/2011 09:36:41,10/10/2011 10:18:33,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:33; ajaya; 
 closing."
-Space in nav bar removed,a space between | Home | and | Map | is gone and it needs to be reinserted,10/10/2011 09:36:47,10/10/2011 10:18:37,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:35; ajaya; 
+Space in nav bar removed,a space between | Home | and | Map | is gone and it needs to be reinserted,10/10/2011 09:36:47,10/10/2011 10:18:37,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:35; ajaya; 
 Removed the junk header.  Not done with this bug yet.
 aagrawal@sfAJAGRAs480linux ~/dev/src/pwx/app/views
 $ svn commit layouts navigation.rhtml
@@ -485,7 +485,7 @@ Attach modules taking too long,"When Attach file is clicked, it takes too long t
 
 When files are attached system is too slow.
 
-Even got ""operating timed out, lost connection"" message from browser and had to reload page with postdata.",10/10/2011 09:36:52,10/10/2011 10:18:45,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:39; rajesh; 
+Even got ""operating timed out, lost connection"" message from browser and had to reload page with postdata.",10/10/2011 09:36:52,10/10/2011 10:18:45,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:39; rajesh; **Author: pwx**
 The connection was reset
 
       
@@ -516,7 +516,7 @@ The connection to the server was reset while the page was loading.
           connection.
 
     *   If your computer or network is protected by a firewall or proxy, make sure
-          that Firefox is permitted to access the Web.","10/10/11 10:18:41; rajesh; 
+          that Firefox is permitted to access the Web.","10/10/11 10:18:41; rajesh; **Author: pwx**
 3rd try got rails error:
 
 http://qa.peerwater.org/attachment/new?app_id=144&type=docs&to=app
@@ -541,7 +541,7 @@ there are problems with layout, sometimes files' titles don't show up
 
 
 
-",10/10/2011 09:36:57,10/10/2011 10:18:51,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:47; ajaya; 
+",10/10/2011 09:36:57,10/10/2011 10:18:51,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:47; ajaya; 
 1, 2 Valid: Fix it.
 3: Validate and Fix if necessary
 
@@ -555,7 +555,7 @@ When a reviewer rates an application and submits, an email should be sent to the
 
 The text should be default and editable by the admin from admin home page (like other emails).
 
-We need to find a way to summarize the number of reviewers assigned and how many have finished the review and how many are pending. This can be a report and possibly part of the email.",10/10/2011 09:37:03,10/10/2011 10:18:55,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:53; ajaya; 
+We need to find a way to summarize the number of reviewers assigned and how many have finished the review and how many are pending. This can be a report and possibly part of the email.",10/10/2011 09:37:03,10/10/2011 10:18:55,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:53; ajaya; 
 let's think this in terms of as a admin application dashboard","10/10/11 10:18:55; ajaya; 
 M      app/models/notifier.rb
 M      app/models/app.rb
@@ -573,7 +573,7 @@ The assign final status form should show all the reviewers names (including the 
 
 The final screen which assigns funding should show the amount requested. This can be combined with the previous screen with the amount next to the radio button that says (Approved and funded).
 
-",10/10/2011 09:37:07,10/10/2011 10:19:01,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:57; ajaya; 
+",10/10/2011 09:37:07,10/10/2011 10:19:01,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:18:57; ajaya; 
 Next to Status Block:
 
 1. Amount Requested
@@ -604,11 +604,11 @@ the error came on this screen:
 http://qa.peerwater.org/final_application_status/update_final_application_status?app_id=123
 
 
-",10/10/2011 09:37:11,10/10/2011 10:19:07,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:02; rajesh; 
+",10/10/2011 09:37:11,10/10/2011 10:19:07,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:02; rajesh; **Author: pwx**
 Now it has happened 3 times.
 I went back to admin dashboard and started again.
 
-I logged out and still happens.","10/10/11 10:19:04; rajesh; 
+I logged out and still happens.","10/10/11 10:19:04; rajesh; **Author: pwx**
 
 The error seems to occur when an application is approved but not funded or rejected. I get it consistently for those 2 status'.  However, things work for approved funded.","10/10/11 10:19:07; ajaya; 
 This used to happen when u reject an application.  Fixed and checked in.
@@ -626,7 +626,7 @@ Committed revision 1489.
 "
 Multiple emails generated on enter app final status,"
 Every time admin sets final status of an app, multiple emails are generated, instead of only one.
-",10/10/2011 09:37:16,10/10/2011 10:19:10,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:08; ajaya; 
+",10/10/2011 09:37:16,10/10/2011 10:19:10,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:08; ajaya; 
 Need to validate.
 
 aj","10/10/11 10:19:10; ajaya; 
@@ -655,7 +655,7 @@ TBD:
 1/ status that is meaningful to the user (like ""enter start date"" ""submit mid-term report"" ""final status"" ...)
 
 2/ multi-project flow, leave as is for now
-",10/10/2011 09:37:23,10/10/2011 10:19:14,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:12; ajaya; 
+",10/10/2011 09:37:23,10/10/2011 10:19:14,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:12; ajaya; 
 1. Done
 
 2. Done
@@ -671,7 +671,7 @@ search functionality,"need to start putting in a knowledge base funcationality.
 
 start with simple text search. provide ability to search for keywords and the search will cover applications, projects, people, organizations, etc. all names and description fields.
 
-",10/10/2011 09:37:30,10/10/2011 10:19:20,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:19:16; rajesh; 
+",10/10/2011 09:37:30,10/10/2011 10:19:20,Closed,rajesh,ajaya,Next release,Next release,Fixed,"10/10/11 10:19:16; rajesh; **Author: pwx**
 there needs to be a text box on the left of the menu with the clickable link: Search
 
 so the user can type in searchable text from anywhere.
@@ -724,7 +724,7 @@ Need the ability:
 - to move from qa -> www
 
 Editing and testing should the the responsibility of the person, but simplifying the process is important.
-",10/10/2011 09:37:38,10/10/2011 10:19:22,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:22; ajaya; 
+",10/10/2011 09:37:38,10/10/2011 10:19:22,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:22; ajaya; 
 Done"
 Help subsystem,"Need to create a help subsystem.
 This could be in the form of a wiki, or a help file associated with each form, or a combination.
@@ -737,9 +737,9 @@ For now:
 - forms that can be populated
 - linkages design from forms to help (context-sensitive)
 
- ",10/10/2011 09:37:43,10/10/2011 10:19:27,Open,rajesh,ajaya,Wish List,Unresolved,"10/10/11 10:19:24; ajaya; 
+ ",10/10/2011 09:37:43,10/10/2011 10:19:27,Open,rajesh,ajaya,Wish List,Wish List,Unresolved,"10/10/11 10:19:24; ajaya; 
 Assigning it to Future Release Milestone as not being worked on now.","10/10/11 10:19:26; ajaya; 
-Milestone Future Release deleted","10/10/11 10:19:27; rajesh; 
+Milestone Future Release deleted","10/10/11 10:19:27; rajesh; **Author: rajesh**
 am raising this tix priority as we need to put in help with the potential of lots of folks coming on to pwx.
 
 at minimum we need a help tree (main page has links to proj help, app help, member help, ...). 
@@ -754,7 +754,7 @@ Rails error upon submitting application rating,"as a user, submitting rating on 
     Rails application failed to start properly""
 
 
-Hit the back button on browser and retried and no problems.",10/10/2011 09:37:45,10/10/2011 10:19:29,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:29; ajaya; 
+Hit the back button on browser and retried and no problems.",10/10/2011 09:37:45,10/10/2011 10:19:29,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:29; ajaya; 
 Don't see this problem no more. Reopen if necessary"
 Member info page to be simplified,"The member info page needs to be simplified and broken down into org info and user info. This should be on separate pages.
 
@@ -770,18 +770,18 @@ Also okay to have the main page point to the other pages (use the bar on the rig
 3/ secondary org info (restrict to 2 locations is okay)
 4/ secondary user info (restrict to 2 users is okay for this release)
 5/ change password
-6/ org info, data, history",10/10/2011 09:37:50,10/10/2011 10:19:31,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:31; ajaya; 
+6/ org info, data, history",10/10/2011 09:37:50,10/10/2011 10:19:31,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:31; ajaya; 
 Done and deployed on qa and dev."
 Status bar while uploading attachments,"Attachments can take significant time to upload. So a status bar would be very helpful for folks on dialup, so that they know that something is happening and they need to wait.
 
-This will be needed for attaching pictures/files during application and also for project status.",10/10/2011 09:37:55,10/10/2011 10:19:33,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:33; ajaya; 
+This will be needed for attaching pictures/files during application and also for project status.",10/10/2011 09:37:55,10/10/2011 10:19:33,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:33; ajaya; 
 Done last night.  Deployed on qa.  Forgot to Close this.
 
 thx"
 Cancel does not work on attachments,"When files are attached and then ""Cancel"" is pressed, it still confirms the actions (attached or deleted). It is no different from ""Done""
 
 The page is: 
-http://qa.peerwater.org/attachment/new?to=app&type=photo&app_id=155",10/10/2011 09:38:01,10/10/2011 10:19:35,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:35; ajaya; 
+http://qa.peerwater.org/attachment/new?to=app&type=photo&app_id=155",10/10/2011 09:38:01,10/10/2011 10:19:35,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:35; ajaya; 
 Done last night.  Removed cancel button."
 Search org may have problem,"on qa, search for aus
 i get 3 results for Austria:
@@ -789,7 +789,7 @@ i get 3 results for Austria:
 #1 and #3 seem the same with primary address
 #2 seems to be off the secondary address.
 
-",10/10/2011 09:38:06,10/10/2011 10:19:37,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:37; ajaya; 
+",10/10/2011 09:38:06,10/10/2011 10:19:37,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:37; ajaya; 
 Fixed. No more a problem."
 need to able to add location to project for map,"when the project is created, we need 2 fields on the project status field for long and lat so that the project can be mapped.
 
@@ -799,7 +799,7 @@ http://qa.peerwater.org/project_status/final_status/1
 
 remove the 'All fields are required' text
 
-",10/10/2011 09:38:11,10/10/2011 10:19:39,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:39; ajaya; 
+",10/10/2011 09:38:11,10/10/2011 10:19:39,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:39; ajaya; 
 M    app/models/project.rb
 M    app/controllers/project_status_controller.rb
 M    app/controllers/proj_location_controller.rb
@@ -825,7 +825,7 @@ Profile submit does not work,"I am trying to edit profile of PWX itself but cann
 http://www.peerwater.org/organization/update/1
 
 won't save and returns back to same page, tried all the options/roles
-maybe the review/evaluator is a radio box (tried one at a time and both).",10/10/2011 09:38:17,10/10/2011 10:19:41,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:41; rajesh; 
+maybe the review/evaluator is a radio box (tried one at a time and both).",10/10/2011 09:38:17,10/10/2011 10:19:41,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:41; rajesh; **Author: pwx**
 Sending        app/controllers/organization_controller.rb
 Sending        app/views/organization/_form.rhtml
 
@@ -838,7 +838,7 @@ Comment field needs to show up.
 
 Also, can the comment field be in the 'my profile' of the org?
 
-It seems only the admin can enter it.",10/10/2011 09:38:22,10/10/2011 10:19:43,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:43; ajaya; 
+It seems only the admin can enter it.",10/10/2011 09:38:22,10/10/2011 10:19:43,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:43; ajaya; 
 done. deployed everywhere."
 Org data fields are connected,"It seems that ""Organisation Background"" is a redundant field on my Edit Org Profile form. It is tied to ""Background History"".
 
@@ -848,7 +848,7 @@ So the behaviour is confusing as it looks like there are 3 fields but in reality
 
 
 
-One solution is to remove ""Background History"" from the Edit Org Profile form. Make sure the field is tied to the ""Organization Background"".",10/10/2011 09:38:29,10/10/2011 10:19:45,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:45; ajaya; 
+One solution is to remove ""Background History"" from the Edit Org Profile form. Make sure the field is tied to the ""Organization Background"".",10/10/2011 09:38:29,10/10/2011 10:19:45,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:45; ajaya; 
 Done."
 App edit problems on page 2 and page 3,"Went into edit page 2 of app from the review page.
 
@@ -865,7 +865,7 @@ Have tried entering all different sets of data on page 3, but nothing gets saved
 
 This is on wwww, with wfp as the account.
 
-",10/10/2011 09:38:34,10/10/2011 10:19:47,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:47; ajaya; 
+",10/10/2011 09:38:34,10/10/2011 10:19:47,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:47; ajaya; 
 Done."
 Number handling is bad,"
 In the application and in the profile:
@@ -885,14 +885,14 @@ The behaviour should be:
 3/ display number with commas but no decimal amount
 
 4/ the $ before the number is optional (do not need to display as currency if you cannot remove the 2 numbers after the decimal)
-",10/10/2011 09:38:39,10/10/2011 10:19:49,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:49; ajaya; 
+",10/10/2011 09:38:39,10/10/2011 10:19:49,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:49; ajaya; 
 all done and deployed on qa."
-New,New,10/10/2011 09:38:44,10/10/2011 09:38:47,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed
+New,New,10/10/2011 09:38:44,10/10/2011 09:38:47,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed
 Field name mismatch on application,"On the application there are 2 fields: State/Province and Region.
 
 On the app view the fields are named Region and City and are reversed.
 
-The app view needs to change to name the fields consistently as in the application and also order the fields correctly.",10/10/2011 09:38:49,10/10/2011 10:19:50,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:19:50; ajaya; 
+The app view needs to change to name the fields consistently as in the application and also order the fields correctly.",10/10/2011 09:38:49,10/10/2011 10:19:50,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:19:50; ajaya; 
 fixed
 changeset:1731"
 Increase number of significant places in latitude and longitude,"Current the field rounds to 4 places.
@@ -900,7 +900,7 @@ Would be nice to go to 5 or 6 decimals (that's what the new gps systems produce)
 
 Should be %3d
 This is not a ruby/rails but apparently a mysql problem.
-",10/10/2011 09:38:53,10/10/2011 10:19:52,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:52; ajaya; 
+",10/10/2011 09:38:53,10/10/2011 10:19:52,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:52; ajaya; 
 Done."
 Application results in bad email,"
 When an app is submitted an email is generated with a subject like:
@@ -915,7 +915,7 @@ However, on www, saferfuture as the account, a submission resulted in the follow
 Maybe some bad unicode char in the name, but this should not happen: at least the rest of the text 
      Application <%appname> for <%org> received.
 
-should come out normal.",10/10/2011 09:38:58,10/10/2011 10:19:56,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:54; rajesh; 
+should come out normal.",10/10/2011 09:38:58,10/10/2011 10:19:56,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:54; rajesh; **Author: peerwater**
 okay the title for the project is very long:
 
 Well repairing at Ahmadiyya Primary School Malaisoko, Port Loko District – Sierra Leone
@@ -928,13 +928,13 @@ get the dialog box and when we click okay, it returns to the home page and the a
 
 can withdraw several times and still remains in peer review.
 
-on qa, with all the new fixes.",10/10/2011 09:39:03,10/10/2011 10:19:58,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:58; ajaya; 
+on qa, with all the new fixes.",10/10/2011 09:39:03,10/10/2011 10:19:58,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:19:58; ajaya; 
 Done.  Deploying to qa and dev now."
 Attachments symbol,"When you submit an html file, the title does not get accepted, it gets deleted after you upload the file. You have to reenter the title again.
 
 There is no logo for html files, need to put a firefox logo/icon for those type of files.
 
-",10/10/2011 09:39:08,10/10/2011 10:20:02,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:20:00; ajaya; 
+",10/10/2011 09:39:08,10/10/2011 10:20:02,Closed,rajesh,ajaya,Next release,Next release,Fixed,"10/10/11 10:20:00; ajaya; 
 Fixed and checked in.
 
 changeset:1721","10/10/11 10:20:02; ajaya; 
@@ -948,11 +948,11 @@ Logged in as PWX and all links go to PWX profile.
 When you click on the map icon for that org, it should go to that org's profile.
 
 Note that this is only for users logged in. Otherwise, they don't even get to see a clickable link on the name.
-",10/10/2011 09:39:13,10/10/2011 10:20:04,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:04; ajaya; 
+",10/10/2011 09:39:13,10/10/2011 10:20:04,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:04; ajaya; 
 Fixed all over/"
 Cycle changes affect app distribution,"After distributing several apps, changed the cycle (extended app submission date and all other dates).
 
-Then all the app distribution data (# of apps assigned already) went blank.",10/10/2011 09:39:20,10/10/2011 10:20:06,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:06; ajaya; 
+Then all the app distribution data (# of apps assigned already) went blank.",10/10/2011 09:39:20,10/10/2011 10:20:06,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:06; ajaya; 
 Fixed and deployed."
 Edit button for page 1 on app review and continue and done buttons on app form,"
 
@@ -969,7 +969,7 @@ on page 3, the done button goes to the app review page.
 
 all 3 done buttons should go to app review page.
 
-",10/10/2011 09:39:25,10/10/2011 10:20:08,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:08; ajaya; 
+",10/10/2011 09:39:25,10/10/2011 10:20:08,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:08; ajaya; 
 Done."
 Application text should show field limits,"
 The fields for app name and short description should have a text limits and they should be mentioned on the form.
@@ -977,7 +977,7 @@ The fields for app name and short description should have a text limits and they
 Name: 50
 Short Desc: 255
 
-The other narrative fields, if they limits, should be explained.",10/10/2011 09:39:30,10/10/2011 10:20:10,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:10; rajesh; 
+The other narrative fields, if they limits, should be explained.",10/10/2011 09:39:30,10/10/2011 10:20:10,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:10; rajesh; **Author: pwx**
 Done (mainly by AJ)"
 App (and project) text formatting,"The white space is removed on saving.
 
@@ -987,13 +987,13 @@ Keep and display white space <cr>
 
 OR
 
-Allow wiki type html commands <br> and <p> and possibly <li>",10/10/2011 09:39:35,10/10/2011 10:20:13,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:13; ajaya; 
+Allow wiki type html commands <br> and <p> and possibly <li>",10/10/2011 09:39:35,10/10/2011 10:20:13,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:13; ajaya; 
 Done for app.  Please put a new when u see something else.
 "
-Rearrange admin dashboard,The admin dashboard needs to be redesigned to make it more explanatory and also useful.,10/10/2011 09:39:39,10/10/2011 09:39:41,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed
+Rearrange admin dashboard,The admin dashboard needs to be redesigned to make it more explanatory and also useful.,10/10/2011 09:39:39,10/10/2011 09:39:41,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed
 Sort on applications not working,"In the list all apps (from admin), the sort is not working properly.
 
-",10/10/2011 09:39:44,10/10/2011 10:20:16,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:15; ajaya; 
+",10/10/2011 09:39:44,10/10/2011 10:20:16,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:15; ajaya; 
 done."
 Refactor all listing ,"
 From the dashboard you can search for apps, projects, orgs.
@@ -1025,14 +1025,14 @@ For org search: columns should be: name, country, type, user names (may have 2)
 Can user preferences be remembered for a session? If so, we should track the choice of show number of items.
 
 Should we use cookies for across sessions? Need to think about long-term design for now. Do nothing for a year or until user demand. 
-",10/10/2011 09:39:48,10/10/2011 10:20:18,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:18; ajaya; 
+",10/10/2011 09:39:48,10/10/2011 10:20:18,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:18; ajaya; 
 Done. Deployed on dev and qa. I didn't put the usernames in the organization list as this could be a security risk.  Let's talk abt it/
 "
 Add a bio field to the user profile,"It would be good to have a text field in the user profile which allows a user a chance to say something about themselves and their experience in water and with their organization.
 
 this should be editable by the user themselves only on the user profile page and visible on the org_contacts show page (eg. http://qa.peerwater.org/org_contacts/show/4)
 
-",10/10/2011 09:39:53,10/10/2011 10:20:26,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:20; rajesh; 
+",10/10/2011 09:39:53,10/10/2011 10:20:26,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:20; rajesh; **Author: pwx**
 this should be two additional fields:
 
 1/ ""Role/Title"": a text box of no more than 50 char
@@ -1047,7 +1047,7 @@ Sending        app/views/org_contacts/show.rhtml
 Adding         db/migrate/003_add_profile_info_people.rb
 Sending        public/stylesheets/text.css
 Transmitting file data ......
-Committed revision 1581.","10/10/11 10:20:24; rajesh; 
+Committed revision 1581.","10/10/11 10:20:24; rajesh; **Author: pwx**
 The fields work, however, the title should be: ""Title/Role"" and the long text field should be ""Bio"" with the grey text saying: ""Short biography / Experience / History with Organization""","10/10/11 10:20:26; ajaya; 
 Done"
 Application enhancment - clickable applicant name + implementer name field,"
@@ -1067,11 +1067,11 @@ Make it clickable so it goes to profile page of the organization.
 
 
 
-5/ On page/block 3: add the new ""Implementer name:"" field.",10/10/2011 09:39:58,10/10/2011 10:20:30,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:28; ajaya; 
+5/ On page/block 3: add the new ""Implementer name:"" field.",10/10/2011 09:39:58,10/10/2011 10:20:30,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:28; ajaya; 
 Done 3.
 ","10/10/11 10:20:30; ajaya; 
 done"
-Funding acceptance statement needs rewriting,The 'legal' acceptance statement needs to be rewritten.,10/10/2011 09:40:02,10/10/2011 09:40:04,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed
+Funding acceptance statement needs rewriting,The 'legal' acceptance statement needs to be rewritten.,10/10/2011 09:40:02,10/10/2011 09:40:04,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed
 Enhancements to discussion forum,"
 to make the discussion part more friendly and also snazzy:
 
@@ -1085,17 +1085,17 @@ to make the discussion part more friendly and also snazzy:
 
 2b. make a reply like a new question at the bottom and not on its own page, without confusing them that they are putting in a new field.
 
-",10/10/2011 09:40:06,10/10/2011 10:20:36,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:32; rajesh; 
+",10/10/2011 09:40:06,10/10/2011 10:20:36,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:32; rajesh; **Author: pwx**
 one more enhancment:
 
-3. add ""%First %Last (%username)"" to system generated comment that currently has only the name of the org.","10/10/11 10:20:34; rajesh; 
+3. add ""%First %Last (%username)"" to system generated comment that currently has only the name of the org.","10/10/11 10:20:34; rajesh; **Author: pwx**
 3b. Make the name clickable so it goes to the personal profile of that person","10/10/11 10:20:36; ajaya; 
 done"
 Simplify single project creation,"The steps in accepting a funding and creating a project for single-projects have one unnecessary (and ugly) screen.
 
-This screen can be skipped and the project created automatically from when the user clicks accept.",10/10/2011 09:40:10,10/10/2011 10:20:38,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:38; ajaya; 
+This screen can be skipped and the project created automatically from when the user clicks accept.",10/10/2011 09:40:10,10/10/2011 10:20:38,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:38; ajaya; 
 Done"
-Change the default display time zone,das,10/10/2011 09:40:15,10/10/2011 10:20:42,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:40; ajaya; 
+Change the default display time zone,das,10/10/2011 09:40:15,10/10/2011 10:20:42,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:40; ajaya; 
 Rajesh,
 
 I just checked.  We are already using the PST.  I assigning it to you.  Close if you think we r ok for now.
@@ -1120,7 +1120,7 @@ Then, use this code inbetween the HEAD tags of the page:
 < link REL=""shortcut icon"" type=""image/x-icon"" HREF=""/path_to_image/pwxdrop-tiny.ico"" >
 
 Check your page and you now have an icon. If you want the image to appear in someone's Internet Explorer Favorites links as an image, just name your image favicon.ico and it will work.
-",10/10/2011 09:40:19,10/10/2011 10:20:44,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:44; ajaya; 
+",10/10/2011 09:40:19,10/10/2011 10:20:44,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:44; ajaya; 
 Already there.. Should be working ."
 system crashes on 'done' in step 3 of app in qa,"http://qa.peerwater.org/app/show/45  (clicked done on step 3)
 
@@ -1238,7 +1238,7 @@ flash: !map:ActionController::Flash::FlashHash {}
 
 Response
 Headers: {""cookie""=>[], ""Cache-Control""=>""no-cache""}
-",10/10/2011 09:40:25,10/10/2011 10:20:47,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:46; ajaya; 
+",10/10/2011 09:40:25,10/10/2011 10:20:47,Closed,rajesh,ajaya,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:46; ajaya; 
 Done.  There was a leftover code which tried to call the format code for a number.  
 
 Done and deployed."
@@ -1251,7 +1251,7 @@ however, if a second cycle has started (no overlap in phases), the app stays on 
 
 once the app is submitted it should be tied to the cycle in which it is submitted (assuming there is no overlap). so when the review phase ends, the app needs to move out of the todo in the dashboard.
 
-",10/10/2011 09:40:31,10/10/2011 10:20:51,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:49; ajaya; 
+",10/10/2011 09:40:31,10/10/2011 10:20:51,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:20:49; ajaya; 
 Actually the current behaviour is this:
 1. If the app these review statuses
  1 | IN PROGRESS
@@ -1267,17 +1267,17 @@ alignment problem on page 3 of app,"on ie in windows there is an alignment probl
 
 the text boxes for total cost and cost details are not aligned for the top edge and the attach files button is not left aligned with the cost details.
 
-this is fine on firefox but not on ie.",10/10/2011 09:40:36,10/10/2011 10:21:04,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:20:53; ajaya; 
-Fixed.. Please check and reopen if necessary.","10/10/11 10:20:55; rajesh; 
+this is fine on firefox but not on ie.",10/10/2011 09:40:36,10/10/2011 10:21:04,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:20:53; ajaya; 
+Fixed.. Please check and reopen if necessary.","10/10/11 10:20:55; rajesh; **Author: annette**
 tested 11/6/06 and its still not fixed","10/10/11 10:20:56; ajaya; 
 is it still an issue??
 
-AJ","10/10/11 10:20:58; rajesh; 
+AJ","10/10/11 10:20:58; rajesh; **Author: annette**
 Replying to [comment:1 ajay]:
 > is it still an issue??
 > 
 > AJ
-I don't know. Let me check.","10/10/11 10:21:02; rajesh; 
+I don't know. Let me check.","10/10/11 10:21:02; rajesh; **Author: annette**
 in ie this is still a problem. text boxes not aligned.","10/10/11 10:21:04; ajaya; 
 This has been fixed.
 changeset:1727"
@@ -1287,11 +1287,11 @@ You can click submit on a blank screen (no rating selected) and that should not 
 
 You can leave the comment blank, but have to make a choice the radio box.
 
-",10/10/2011 09:40:41,10/10/2011 10:21:13,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:06; ajaya; 
-This is done and deployed.Assigning it to you Rajesh.  Please verify and close.","10/10/11 10:21:08; rajesh; 
-just tested on qa; applications 48 and 56 always accept with a comment and no rating.  other applications (51, 52, 54) do not allow the applicant to omit a rating.","10/10/11 10:21:10; rajesh; 
+",10/10/2011 09:40:41,10/10/2011 10:21:13,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:06; ajaya; 
+This is done and deployed.Assigning it to you Rajesh.  Please verify and close.","10/10/11 10:21:08; rajesh; **Author: annette**
+just tested on qa; applications 48 and 56 always accept with a comment and no rating.  other applications (51, 52, 54) do not allow the applicant to omit a rating.","10/10/11 10:21:10; rajesh; **Author: annette**
 if you submit a comment and forget to put a rating, the comment's lost when the system catches no rating.  it should save the original comment.","10/10/11 10:21:12; ajaya; 
-fixed.","10/10/11 10:21:13; rajesh; 
+fixed.","10/10/11 10:21:13; rajesh; **Author: annette**
 Replying to [comment:1 ajay]:
 > fixed.
 
@@ -1318,8 +1318,8 @@ www.peerwater.org/project/show/10
 
 4) There should be a way to edit the name (the user wants to remove the ""i"" in ""iVillage""
 
-",10/10/2011 09:40:47,10/10/2011 10:21:19,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:21:17; ajaya; 
-done","10/10/11 10:21:18; rajesh; 
+",10/10/2011 09:40:47,10/10/2011 10:21:19,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:21:17; ajaya; 
+done","10/10/11 10:21:18; rajesh; **Author: annette**
 we checked, closing"
 no button for reviewer to submit review,"when reviewing an app on the review page 
 
@@ -1328,7 +1328,7 @@ http://qa.peerwater.org/app_review/display_review_rating?app_id=56
 there's no button to review.  this page should have the review screen and only after the review is complete should the reviewers see this page.  currently we're seeing the wrong screen.
 
 on qa, logged in as Project Well.
-",10/10/2011 09:40:53,10/10/2011 10:21:23,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:21:21; rajesh; 
+",10/10/2011 09:40:53,10/10/2011 10:21:23,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:21:21; rajesh; **Author: pwx**
 1/ date check problem
 
 the problem was that it was the last day for peer review. when i changed the date to today+1, the review screen came up.
@@ -1360,7 +1360,7 @@ If you are logged in, you can control appropriate:
 
 For now, we will keep it open, so that non-logged in users can browse the application and the forum.
 
-We should keep the option of restricting them to the map (no clickable link) in case we decide that in the future.",10/10/2011 09:40:58,10/10/2011 10:21:27,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:25; ajaya; 
+We should keep the option of restricting them to the map (no clickable link) in case we decide that in the future.",10/10/2011 09:40:58,10/10/2011 10:21:27,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:25; ajaya; 
 done except for the adding of two fields on to the proj location on application.","10/10/11 10:21:27; ajaya; 
 done and it's already working."
 accept funding didn't go through,"accepted funding for application 50 and got routed to below web address:
@@ -1482,8 +1482,8 @@ flash: !map:ActionController::Flash::FlashHash {}
 
 Response
 Headers: {""cookie""=>[], ""Cache-Control""=>""no-cache""}
-",10/10/2011 09:41:04,10/10/2011 10:21:31,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:29; ajaya; 
-Done.","10/10/11 10:21:31; rajesh; 
+",10/10/2011 09:41:04,10/10/2011 10:21:31,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:29; ajaya; 
+Done.","10/10/11 10:21:31; rajesh; **Author: rajesh**
 cannot reproduce, have not seen it since"
 question/answer forum not working ie,"ajay-
  on qa.peerwater.org, trying to access the question/answer forum goes to this: http://qa.peerwater.org/app_qandas/list?app_id=33
@@ -1615,7 +1615,7 @@ flash: !map:ActionController::Flash::FlashHash {}
 
 Response
 Headers: {""cookie""=>[], ""Cache-Control""=>""no-cache""}
-",10/10/2011 09:41:10,10/10/2011 10:21:37,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:34; rajesh; 
+",10/10/2011 09:41:10,10/10/2011 10:21:37,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:34; rajesh; **Author: pwx**
 i got the same problem on firefox on map. the first time the forum worked but a new posting took forever. so i hit back and then clicked forum again.
 
 http://qa.peerwater.org/app_qandas/list?app_id=41
@@ -1848,7 +1848,7 @@ flash: !map:ActionController::Flash::FlashHash {}
 
 Response
 Headers: {""cookie""=>[], ""Cache-Control""=>""no-cache""}
-",10/10/2011 09:41:18,10/10/2011 10:21:39,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:39; ajaya; 
+",10/10/2011 09:41:18,10/10/2011 10:21:39,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:39; ajaya; 
 Fix BUG #6653. Trouble using back in Search.
 1. Remove the AJAX form search.  AJAX and back is not
    very compatible.  Since search page would have lot
@@ -1865,17 +1865,17 @@ M    app/views/search_box.rhtml"
 non logged in users should not be able to see review page,"aj-can you make it so that only logged in users are able to access the review page?
  thanks
 
-http://qa.peerwater.org/app_review/display_review_rating?app_id=47",10/10/2011 09:41:24,10/10/2011 10:21:41,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:41; ajaya; 
+http://qa.peerwater.org/app_review/display_review_rating?app_id=47",10/10/2011 09:41:24,10/10/2011 10:21:41,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:21:41; ajaya; 
 done"
 Excel file not accessible on App 46,"In App 46 the Excel Budget file does not open.  
 http://www.peerwater.org/attachment/show/111
 When you select a different version of Excel to open the file, it is empty.
-",10/10/2011 09:41:29,10/10/2011 10:21:43,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:21:43; ajaya; 
+",10/10/2011 09:41:29,10/10/2011 10:21:43,Closed,rajesh,ajaya,Next release,Next release,Fixed,"10/10/11 10:21:43; ajaya; 
 I don't know whether this is a bug or not.  I can open this file now.  Please reopen if necessary.
 "
 """New posting by reviewer"" emails sent in error","New posting by reviewer emails were sent when no review had been posted.   This happened with Apps 16, 47 and 13.
 
-",10/10/2011 09:41:35,10/10/2011 10:21:45,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:21:45; ajaya; 
+",10/10/2011 09:41:35,10/10/2011 10:21:45,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:21:45; ajaya; 
 Check now..
 
 "
@@ -1895,7 +1895,7 @@ Posted By Idriss Kamara of Safer Future at Fri Dec 15, 2006 09:17 AM US/Californ
 
 The money collected can be used to refill the tank. The water supplied is coming from a water reservoir from the hilly and is drinking water too...
 
-http://www.peerwater.org/app_qandas/list?app_id=40",10/10/2011 09:41:40,10/10/2011 10:21:47,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:21:47; ajaya; 
+http://www.peerwater.org/app_qandas/list?app_id=40",10/10/2011 09:41:40,10/10/2011 10:21:47,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:21:47; ajaya; 
 A lot of bug fixes into AppQanda.
 
 Fix BUG 7292.
@@ -1912,7 +1912,7 @@ can't post questions in qa.peerwater.org,"trying to post questions in qa to test
 
 http://qa.peerwater.org/app_qandas/list?app_id=65
 
-Comment couldn't be saved. Please try again",10/10/2011 09:41:46,10/10/2011 10:21:49,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:21:49; ajaya; 
+Comment couldn't be saved. Please try again",10/10/2011 09:41:46,10/10/2011 10:21:49,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:21:49; ajaya; 
 Check now.
 app/views/app_qandas/_error.rhtml
 app/views/app_qandas/_post_new.rhtml
@@ -1944,8 +1944,8 @@ When a cycle is created the icons residing in a folder will be available for the
 
 Each phase, the icon can be selected from a list of all the icons in a special directory which can been updated easily (add new icon files).
 
-It will be the responsibility of the admin to add new icons to the appropriate folder on the server and ensure their size, format, etc. matches the requirements. We should also specify the maximum size for our application and whether we recommend shadows or not.",10/10/2011 09:41:52,10/10/2011 10:22:05,Closed,rajesh,rajesh,Wish List,Fixed,"10/10/11 10:21:50; ajaya; 
-What would be an extended funding phase.  We don't capture that in current cycle creation.","10/10/11 10:21:53; rajesh; 
+It will be the responsibility of the admin to add new icons to the appropriate folder on the server and ensure their size, format, etc. matches the requirements. We should also specify the maximum size for our application and whether we recommend shadows or not.",10/10/2011 09:41:52,10/10/2011 10:22:05,Closed,rajesh,rajesh,Wish List,Wish List,Fixed,"10/10/11 10:21:50; ajaya; 
+What would be an extended funding phase.  We don't capture that in current cycle creation.","10/10/11 10:21:53; rajesh; **Author: rajesh**
 By ""extended funding phase"" i meant that we end the funding phase when the cycle ends. However, the projects are often in limbo for months, until they kick off (or the data on the kickoff is entered).
 
 There can be a large gap between the application and the project and our map will not show it. Once the app is funded, the application icon is off the map. But until the project is kicked off, the project icon does not appear.
@@ -1963,7 +1963,7 @@ Group => App -> Review
                     Completed
 ","10/10/11 10:21:57; ajaya; 
 done
-changeset:1729","10/10/11 10:21:59; rajesh; 
+changeset:1729","10/10/11 10:21:59; rajesh; **Author: rajesh**
 am not sure of the fix, it seems there are 2 icons for projects: we are using the same one. (i can test this on local)
 
 realize that we need a 2nd icon for a complete project.
@@ -1987,16 +1987,16 @@ changeset:2180"
 Map enhancement - show links,"
 It would be nice if a shift-click on an application icon shows lines linking the application to the reviewers icons.
 
-This can show all the linkages we are creating.",10/10/2011 09:41:58,10/10/2011 10:22:07,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:22:07; ajaya; 
+This can show all the linkages we are creating.",10/10/2011 09:41:58,10/10/2011 10:22:07,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:22:07; ajaya; 
 Done."
 Customize showing apps on map,"in the map dropdown, add lines to show applications by year.
 
 any redesign of the interface drop down to make it easy to choose which combination of projects/apps/partners/year should be entertained.
 
-",10/10/2011 09:42:03,10/10/2011 10:22:13,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:22:09; ajaya; 
+",10/10/2011 09:42:03,10/10/2011 10:22:13,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:22:09; ajaya; 
 Done with a prelimnary implementation.. Deployed in qa. pl check.
 
-aj","10/10/11 10:22:11; rajesh; 
+aj","10/10/11 10:22:11; rajesh; **Author: pwx**
 
 It works great! Just what i want.
 
@@ -2017,14 +2017,14 @@ It should say:
 Funding (money transfer) information:
 US organizations will get a check mailed to the primary address on file. Others need to provide wiring instructions below
 
-<the 2nd sentence in light, the first in bold title format>",10/10/2011 09:42:11,10/10/2011 10:22:25,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:22:16; ajaya; 
+<the 2nd sentence in light, the first in bold title format>",10/10/2011 09:42:11,10/10/2011 10:22:25,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:22:16; ajaya; 
 Fix RF # 7965
 Implemented showmethemoney
 
 --This line, and those below, will be ignored--
 
 M    app/views/organization_profile/detail.rhtml
-M    app/views/organization/_form.rhtml","10/10/11 10:22:18; rajesh; 
+M    app/views/organization/_form.rhtml","10/10/11 10:22:18; rajesh; **Author: rajesh**
 more testing and soak time needed.
 can be deployed to www, but will leave it unannounced.","10/10/11 10:22:20; ajaya; 
 It has been deployed in www.","10/10/11 10:22:22; ajaya; 
@@ -2036,7 +2036,7 @@ http://qa.peerwater.org/attachment/new?to=app&type=photo&app_id=55
 
 Error
 
-System Error. Please refresh your browser",10/10/2011 09:42:16,10/10/2011 10:22:29,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:22:29; ajaya; 
+System Error. Please refresh your browser",10/10/2011 09:42:16,10/10/2011 10:22:29,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:22:29; ajaya; 
 Fixed.
 
 1. Remove call to render_component to fix know rails bug
@@ -2062,7 +2062,7 @@ Sending        config/environments/qa_peerwater_org.rb
 "
 lines not showing up on QA map on Internet Explorer,"excellent new feature showing the reviewers of apps on the QA map, but in Internet Explorer not working. 
 
-http://qa.peerwater.org/map",10/10/2011 09:42:22,10/10/2011 10:22:31,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:22:31; ajaya; 
+http://qa.peerwater.org/map",10/10/2011 09:42:22,10/10/2011 10:22:31,Closed,rajesh,rajesh,Upgrade www to Latest Code Base,Upgrade www to Latest Code Base,Fixed,"10/10/11 10:22:31; ajaya; 
 Done.. 
 app/views/layouts/map_header.rhtml
 app/views/layouts/minima-layout.rhtml
@@ -2072,7 +2072,7 @@ To allow funding rounds to be customized (to a subgroup or a geography), the mes
 
 It should be part of the cycle creation step: a textbox where the admin enters the text for the cycle.
 
-The number (funding round total) can be required to be part of the text and thus does not need to be displayed from the field in the cycle.",10/10/2011 09:42:27,10/10/2011 10:22:37,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:22:33; rajesh; 
+The number (funding round total) can be required to be part of the text and thus does not need to be displayed from the field in the cycle.",10/10/2011 09:42:27,10/10/2011 10:22:37,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:22:33; rajesh; **Author: pwx**
 Further customization of the funding round:
 
 1/ should this be on the map?
@@ -2085,7 +2085,7 @@ Done
 changeset:1728"
 new app not appearing on map in QA,"testing end to end; new application waterglass not appearing once submitted in QA.  OS: Windows XP, Explorer ver 7
 
-http://qa.peerwater.org/app/show/58",10/10/2011 09:42:32,10/10/2011 10:22:45,Closed,rajesh,ajaya,Features for External Funders,Fixed,"10/10/11 10:22:39; rajesh; 
+http://qa.peerwater.org/app/show/58",10/10/2011 09:42:32,10/10/2011 10:22:45,Closed,rajesh,ajaya,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:22:39; rajesh; **Author: pwx**
 the problem is that the funding cycle did not end in a year (it was called test 125)
 
 after renaming the funding cycle to ""test 125 2007"" the icons appeared on the map.
@@ -2094,7 +2094,7 @@ there should be a better way: how about a check box in the funding cycle? 2004 2
 Update this bug:
 
 Shall we create an extra field for the cycle for the map?
-or shall we use the cycle name itself.","10/10/11 10:22:43; rajesh; 
+or shall we use the cycle name itself.","10/10/11 10:22:43; rajesh; **Author: rajesh**
 The funding cycle should have a dropdown (or checkboxes) to choose which map selection it should be part of. Right now the selection should be 2004, 2005, 2006 and 2007. 
 
 That way many cycles can be part of the same year and we will simplify putting all the cycle names on the map.","10/10/11 10:22:45; ajaya; 
@@ -2104,7 +2104,7 @@ Closing as duplicate of ticket:8128"
 can't advance page in new app on QA,"in a new application on QA, can't click done or continue to get from step 1 to step 2.  
 OS: Mozilla Firefox
 
-http://qa.peerwater.org/app/create",10/10/2011 09:42:36,10/10/2011 10:22:49,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:22:47; rajesh; 
+http://qa.peerwater.org/app/create",10/10/2011 09:42:36,10/10/2011 10:22:49,Closed,rajesh,ajaya,Next release,Next release,Fixed,"10/10/11 10:22:47; rajesh; **Author: annette**
 can't reproduce on Windows Mozilla
 
 http://qa.peerwater.org/app/display_app_step2/66","10/10/11 10:22:49; ajaya; 
@@ -2113,12 +2113,12 @@ no word icon for docs in Applications,"the word icon is not being displayed when
 
 both Mozilla and IE.
 
-http://qa.peerwater.org/app/display_app_step2/63",10/10/2011 09:42:42,10/10/2011 10:22:56,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:22:51; rajesh; 
+http://qa.peerwater.org/app/display_app_step2/63",10/10/2011 09:42:42,10/10/2011 10:22:56,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:22:51; rajesh; **Author: pwx**
 
 on mac osx using firefox, i could see the word icon, but not for excel or pdf","10/10/11 10:22:53; ajaya; 
 Fixed and Deployed.  Check and close please.","10/10/11 10:22:56; ajaya; 
 Changesets: 1719"
-Add link to Google Maps for Lat/Long Lookup on App Page 1,Add link to Google Maps for Lat/Long Lookup on App Page 1,10/10/2011 09:42:47,10/10/2011 10:23:04,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:22:58; ajaya; 
+Add link to Google Maps for Lat/Long Lookup on App Page 1,Add link to Google Maps for Lat/Long Lookup on App Page 1,10/10/2011 09:42:47,10/10/2011 10:23:04,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:22:58; ajaya; 
 Fixed.","10/10/11 10:23:00; ajaya; 
 I fixed it.
 
@@ -2131,28 +2131,28 @@ Changeset:1720","10/10/11 10:23:04; ajaya;
 changeset:1720"
 Icon appearing wrong place in application,"In ie, the icon for an uploaded file appears to the right of the ""Cost details"" box, in stead of below.
 
-http://dev.peerwater.org/app/display_app_step3/25",10/10/2011 09:42:55,10/10/2011 10:23:06,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:23:06; ajaya; 
+http://dev.peerwater.org/app/display_app_step3/25",10/10/2011 09:42:55,10/10/2011 10:23:06,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:23:06; ajaya; 
 fixed 
 changeset:1727"
-new app can't be funded when app not distributed for review,summary says it all,10/10/2011 09:43:03,10/10/2011 10:23:08,Closed,rajesh,ajaya,Features for External Funders,Fixed,"10/10/11 10:23:08; ajaya; 
+new app can't be funded when app not distributed for review,summary says it all,10/10/2011 09:43:03,10/10/2011 10:23:08,Closed,rajesh,ajaya,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:23:08; ajaya; 
 Admin should be able to fund an application even if the app was not distributed for review.
 
 changeset:1725"
-Admin tab not accessible to users,"during accept funding users, can see the admin tab but shouldn't have access to it",10/10/2011 09:43:09,10/10/2011 10:23:09,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:23:09; ajaya; 
+Admin tab not accessible to users,"during accept funding users, can see the admin tab but shouldn't have access to it",10/10/2011 09:43:09,10/10/2011 10:23:09,Closed,rajesh,ajaya,Next release,Next release,Fixed,"10/10/11 10:23:09; ajaya; 
 done.
 changeset:1730"
-Admin tab not accessible to users,"during accept funding users, can see the admin tab but shouldn't have access to it",10/10/2011 09:43:19,10/10/2011 10:23:11,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:23:11; ajaya; 
+Admin tab not accessible to users,"during accept funding users, can see the admin tab but shouldn't have access to it",10/10/2011 09:43:19,10/10/2011 10:23:11,Closed,rajesh,ajaya,Next release,Next release,Fixed,"10/10/11 10:23:11; ajaya; 
 duplicate of ticket:8305"
 PDF icon not appearing in mozilla on QA,"On QA, second page of application, under Additional Project Documents, uploaded PDF icon not appearing in Mozilla Firefox.  Instead of a logo, it reads PDF logo trefoil.
 Should show logo.
 
-http://qa.peerwater.org/app/show/58",10/10/2011 09:43:29,10/10/2011 10:23:13,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:23:13; ajaya; 
+http://qa.peerwater.org/app/show/58",10/10/2011 09:43:29,10/10/2011 10:23:13,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:23:13; ajaya; 
 Forgot to run the database update script while setting up qa this morning.
 
 Fixed."
 Average size files rejected as too large in application,"On mozilla firefox, in QA, Average size files often rejected as too large in application.
 
-http://qa.peerwater.org/attachment/new?to=app&app_id=63&type=docs",10/10/2011 09:43:48,10/10/2011 10:23:15,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:23:15; ajaya; 
+http://qa.peerwater.org/attachment/new?to=app&app_id=63&type=docs",10/10/2011 09:43:48,10/10/2011 10:23:15,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:23:15; ajaya; 
 Fixed.  The max size of the file that can be uploaded is 10M now.
 
 http://wiki.codemongers.com/NginxHttpCoreModule#client_max_body_size
@@ -2189,7 +2189,7 @@ Members should be able to refer prospective members.
 9. historical info is retained: 
  - org referral history
  - org referee 
-",10/10/2011 09:43:57,10/10/2011 10:23:19,Closed,rajesh,rajesh,Org Referral System,Fixed,"10/10/11 10:23:17; ajaya; 
+",10/10/2011 09:43:57,10/10/2011 10:23:19,Closed,rajesh,rajesh,Org Referral System,Org Referral System,Fixed,"10/10/11 10:23:17; ajaya; 
 Checking in the biggest checkin in PWX history.
 
 Deployed in dev.  Please play with it.  This checkin has potetial to have a lot of side effects.
@@ -2198,14 +2198,14 @@ AJ
 
 changeset:1735
 changeset:1736
-","10/10/11 10:23:19; rajesh; 
+","10/10/11 10:23:19; rajesh; **Author: rajesh**
 verified!"
 Change 'Rejected' to 'Not Funded',"
 the status of apps that are not funded should be ""Not Funded""
-everywhere the word ""rejected"" (map, form, etc.) needs to be removed.",10/10/2011 09:44:06,10/10/2011 10:23:28,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:23:23; ajaya; 
+everywhere the word ""rejected"" (map, form, etc.) needs to be removed.",10/10/2011 09:44:06,10/10/2011 10:23:28,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:23:23; ajaya; 
 Fixed
-changeset:1733","10/10/11 10:23:24; rajesh; 
-on the map still ""Rejected""","10/10/11 10:23:26; rajesh; 
+changeset:1733","10/10/11 10:23:24; rajesh; **Author: annette**
+on the map still ""Rejected""","10/10/11 10:23:26; rajesh; **Author: annette**
 On both mozilla and ie, the map shows apps as 'not funded.' 
 
 when an org logs in to check on the status of their app at the end of a funding cycle, status appears as 'rejected.'  
@@ -2214,13 +2214,13 @@ please switch to 'not funded.'  ","10/10/11 10:23:28; ajaya;
 It has been fixed but not deployed in qa yet.  Keep it under you for now.  Please test and close when deployed on qa.
 
 AJ"
-Can't remove 2nd contact from Organization details,Should be able to remove the 2nd contact on the Organization page.,10/10/2011 09:44:11,10/10/2011 10:23:32,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:23:30; ajaya; 
+Can't remove 2nd contact from Organization details,Should be able to remove the 2nd contact on the Organization page.,10/10/2011 09:44:11,10/10/2011 10:23:32,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:23:30; ajaya; 
 fixed. 
-changeset:1746","10/10/11 10:23:32; rajesh; 
+changeset:1746","10/10/11 10:23:32; rajesh; **Author: annette**
 it looks great now!"
 application icon appearing different location QA versus www,"The application icon for Water for People's Boqueron K'asa project is correct on QA in mozilla.  It appears in Bolivia, as it should.  In www.peerwater.org, the same app is in western India.  I checked the latitude and longitude, and they're both set to -16.2, -68.1.  
 
-",10/10/2011 09:44:15,10/10/2011 10:23:34,Closed,rajesh,ajaya,Features for External Funders,Fixed,"10/10/11 10:23:34; ajaya; 
+",10/10/2011 09:44:15,10/10/2011 10:23:34,Closed,rajesh,ajaya,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:23:34; ajaya; 
 This is due to the wrong lat and long.
 
 aj"
@@ -2237,7 +2237,7 @@ A checkbox is provided for each category and the org should have each category c
 For now we just need a checkbox that says please do not send application related emails.
 
 However, what is easiest to architect & code (short or long-term) is best.
-",10/10/2011 09:44:19,10/10/2011 10:24:03,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:23:51; ajaya; 
+",10/10/2011 09:44:19,10/10/2011 10:24:03,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:23:51; ajaya; 
 This whole thing is tricky.
 
 I have been thinking in this line in addition what u have said.
@@ -2248,7 +2248,7 @@ Just commited 75% complete feature to SVN.
 
 changeset:1922","10/10/11 10:23:55; ajaya; 
 Done coding. Check in QA.  changeset:1923","10/10/11 10:23:57; ajaya; 
-Milestone Future Release deleted","10/10/11 10:23:59; rajesh; 
+Milestone Future Release deleted","10/10/11 10:23:59; rajesh; **Author: rajesh**
 have been testing it and its somewhat working.
 on qa:
 
@@ -2263,7 +2263,7 @@ while testing bunker got emails for response (new postings seem to work)
 this is a low priority feature, and it takes time to test. so am pushing it out.","10/10/11 10:24:01; ajaya; 
 I don't get your last comment.  Please elaborate?
 
-aj","10/10/11 10:24:03; rajesh; 
+aj","10/10/11 10:24:03; rajesh; **Author: rajesh**
 feature is buggy and being tracked by another ticket. am closing this"
 Separate project and org focus list,"The current choices for projects (primary and secondary focus) are the same as the organization.
 
@@ -2278,20 +2278,20 @@ There should be a different one for the organization. It should have all the pro
 - Policy
 - Marketing/PR
 
-Would be nice to have an easy way to edit the list.",10/10/2011 09:44:24,10/10/2011 10:24:14,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:24:05; ajaya; 
+Would be nice to have an easy way to edit the list.",10/10/2011 09:44:24,10/10/2011 10:24:14,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:24:05; ajaya; 
 Ok.  For now we would keep a fixed category list and I would implement a category admin menu for you.
 
 aj","10/10/11 10:24:06; ajaya; 
 fixed.
 
-changeset:1770","10/10/11 10:24:08; rajesh; 
+changeset:1770","10/10/11 10:24:08; rajesh; **Author: rajesh**
 partially fixed.
 
-in a future release we need to give admin the ability to edit this list.","10/10/11 10:24:10; rajesh; 
+in a future release we need to give admin the ability to edit this list.","10/10/11 10:24:10; rajesh; **Author: rajesh**
 need ability to add new focus for projects (and orgs).
 e.g. sewage, recycling water, etc.
 
-so need to deal with the 2nd part of the ticket on giving admin some ability to add categories. if it is easier to do it in mysql, then a procedure is needed.","10/10/11 10:24:12; rajesh; 
+so need to deal with the 2nd part of the ticket on giving admin some ability to add categories. if it is easier to do it in mysql, then a procedure is needed.","10/10/11 10:24:12; rajesh; **Author: rajesh**
 raising its priority as we need admin capability to add new focus groups for projects. 
 
 i understand to replace or delete old ones is hard as it makes database inconsistent.
@@ -2308,7 +2308,7 @@ Edit PWX homepage,"On PWX homepage, center Welcome to the Peer Water Exchange
 
 replace main text w/ rotating featured partner, under partner's name display picture.
 
-will supply pics soon",10/10/2011 09:44:28,10/10/2011 10:24:16,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:24:16; ajaya; 
+will supply pics soon",10/10/2011 09:44:28,10/10/2011 10:24:16,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:24:16; ajaya; 
 implemented.  Not fully I guess.  If we want the partner feature then please create a new ticket.
 
 changeset:1773"
@@ -2316,13 +2316,13 @@ application page blanking out when switch windows IE,"the application pg is dele
 
 for example, you've entered everything on pg 1 up to location and you click on the google maps link; when you go back all of your work's gone.
 
-",10/10/2011 09:44:32,10/10/2011 10:24:19,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:24:19; ajaya; 
+",10/10/2011 09:44:32,10/10/2011 10:24:19,Closed,rajesh,ajaya,Next release,Next release,Fixed,"10/10/11 10:24:19; ajaya; 
 ticket:8319"
 application page blanking out when switch windows IE,"the application pg is deleting everything you've entered in IE when you move from one url to another.
 
 for example, you've entered everything on pg 1 up to location and you click on the google maps link; when you go back all of your work's gone.
 
-",10/10/2011 09:44:36,10/10/2011 10:24:26,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:24:21; ajaya; 
+",10/10/2011 09:44:36,10/10/2011 10:24:26,Closed,rajesh,ajaya,Next release,Next release,Fixed,"10/10/11 10:24:21; ajaya; 
 fixed changetset:1887
 
 IE blanking out can't be fixed.  thats the default behavior in IE.  We would try to open the intstructions in a new window but popop blocker would prevent now-a-days.
@@ -2331,18 +2331,18 @@ IE blanking out can't be fixed.  thats the default behavior in IE.  We would try
 changset:1887","10/10/11 10:24:24; ajaya; 
 Changeset:1887","10/10/11 10:24:26; ajaya; 
 changeset:1887"
-"On Q/A forum of Referral pg, no underline to link to Reply question","In IE, the link ""Reply"" is not underlined.  It works, you can click on it and respond to a previous questions, but it is not visibly underlined.",10/10/2011 09:44:41,10/10/2011 10:24:28,Closed,rajesh,ajaya,Org Referral System,Fixed,"10/10/11 10:24:28; ajaya; 
+"On Q/A forum of Referral pg, no underline to link to Reply question","In IE, the link ""Reply"" is not underlined.  It works, you can click on it and respond to a previous questions, but it is not visibly underlined.",10/10/2011 09:44:41,10/10/2011 10:24:28,Closed,rajesh,ajaya,Org Referral System,Org Referral System,Fixed,"10/10/11 10:24:28; ajaya; 
 I don't think we ever underline links.  They only show up as blue text."
 Rotating image on PWX home pg,"add image to PWX home page that changes every day/hour/... from a specific PWX directory which has images from projects
 
-directory will be sent to Ajay",10/10/2011 09:44:45,10/10/2011 10:24:31,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:24:31; ajaya; 
+directory will be sent to Ajay",10/10/2011 09:44:45,10/10/2011 10:24:31,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:24:31; ajaya; 
 fixed
 changeset:1774"
-change text PWX home pg,"the text on PWX home page should read: ""PWX - a project of the Blue Planet Run Foundation - is a transformative online community where funders, intermediaries, implementers, and observers work together to solve local water problems around the world. PWX scales local water solutions to the size of the global water problem. PWX is a participatory decision-making system enabling knowledge-sharing and collaboration between different approaches and needs around the world.""",10/10/2011 09:44:49,10/10/2011 10:24:33,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:24:33; ajaya; 
+change text PWX home pg,"the text on PWX home page should read: ""PWX - a project of the Blue Planet Run Foundation - is a transformative online community where funders, intermediaries, implementers, and observers work together to solve local water problems around the world. PWX scales local water solutions to the size of the global water problem. PWX is a participatory decision-making system enabling knowledge-sharing and collaboration between different approaches and needs around the world.""",10/10/2011 09:44:49,10/10/2011 10:24:33,Closed,rajesh,ajaya,Next release,Next release,Fixed,"10/10/11 10:24:33; ajaya; 
 ticket:8324"
-change text PWX home pg,"the text on PWX home page should read: ""PWX - a project of the Blue Planet Run Foundation - is a transformative online community where funders, intermediaries, implementers, and observers work together to solve local water problems around the world. PWX scales local water solutions to the size of the global water problem. PWX is a participatory decision-making system enabling knowledge-sharing and collaboration between different approaches and needs around the world.""",10/10/2011 09:44:53,10/10/2011 10:24:35,Closed,rajesh,ajaya,Next release,Fixed,"10/10/11 10:24:35; ajaya; 
+change text PWX home pg,"the text on PWX home page should read: ""PWX - a project of the Blue Planet Run Foundation - is a transformative online community where funders, intermediaries, implementers, and observers work together to solve local water problems around the world. PWX scales local water solutions to the size of the global water problem. PWX is a participatory decision-making system enabling knowledge-sharing and collaboration between different approaches and needs around the world.""",10/10/2011 09:44:53,10/10/2011 10:24:35,Closed,rajesh,ajaya,Next release,Next release,Fixed,"10/10/11 10:24:35; ajaya; 
 ticket:8324"
-change text PWX home pg and picture edits,"the text on PWX home page should read: ""PWX - a project of the Blue Planet Run Foundation - is a transformative online community where funders, intermediaries, implementers, and observers work together to solve local water problems around the world. PWX scales local water solutions to the size of the global water problem. PWX is a participatory decision-making system enabling knowledge-sharing and collaboration between different approaches and needs around the world.""",10/10/2011 09:44:58,10/10/2011 10:24:46,Closed,rajesh,rajesh,Next release,Fixed,"10/10/11 10:24:38; rajesh; 
+change text PWX home pg and picture edits,"the text on PWX home page should read: ""PWX - a project of the Blue Planet Run Foundation - is a transformative online community where funders, intermediaries, implementers, and observers work together to solve local water problems around the world. PWX scales local water solutions to the size of the global water problem. PWX is a participatory decision-making system enabling knowledge-sharing and collaboration between different approaches and needs around the world.""",10/10/2011 09:44:58,10/10/2011 10:24:46,Closed,rajesh,rajesh,Next release,Next release,Fixed,"10/10/11 10:24:38; rajesh; **Author: annette**
 ""File pictures"" should read ""Project Photos""
 
 ""Pictures"" appears in upper right hand corner of the pics; please remove.
@@ -2353,7 +2353,7 @@ http://qa.peerwater.org/projects/1/attachments/168
 
 ","10/10/11 10:24:39; ajaya; 
 fixed
-changeset:1774","10/10/11 10:24:42; rajesh; 
+changeset:1774","10/10/11 10:24:42; rajesh; **Author: annette**
 please use below text b/c what's currently on www has a verb error in the last sentence.  
 thanks!
 
@@ -2367,13 +2367,13 @@ Update text to left of BPR snapshot,"Here are the edits for the BPR Snapshot:
 Projects in progress - 60    
 Projects completed - 75
 People impacted: 116,500   Schoolchildren impacted: 26,535   
-Countries Peers Working In: 13 ",10/10/2011 09:45:03,10/10/2011 10:24:54,Closed,rajesh,ajaya,Features for External Funders,Fixed,"10/10/11 10:24:48; ajaya; 
+Countries Peers Working In: 13 ",10/10/2011 09:45:03,10/10/2011 10:24:54,Closed,rajesh,ajaya,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:24:48; ajaya; 
 fixed
-changeset:1774","10/10/11 10:24:50; rajesh; 
+changeset:1774","10/10/11 10:24:50; rajesh; **Author: annette**
 the snapshot looks good now, but to the left of the snapshot (in orange), should read 
 ""PWX members are currently implementing 60 water and sanitation projects around the world.""","10/10/11 10:24:52; ajaya; 
 fixed
-changeset:1776","10/10/11 10:24:54; rajesh; 
+changeset:1776","10/10/11 10:24:54; rajesh; **Author: annette**
 snapshot is up to date; last change i would make:
 
 when it's not a funding/review cycle, let's only display 
@@ -2386,9 +2386,9 @@ Link edits on PWX homepage,"Under Join PWX, please change to:
 Phone line: 415.259.5757 
     
 Contribute should go to: http://www.blueplanetrun.org/movement/give.php 
-(currently linked to blueplanetrun.org)",10/10/2011 09:45:07,10/10/2011 10:24:59,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:24:55; ajaya; 
+(currently linked to blueplanetrun.org)",10/10/2011 09:45:07,10/10/2011 10:24:59,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:24:55; ajaya; 
 fixed
-changeset:1774","10/10/11 10:24:57; rajesh; 
+changeset:1774","10/10/11 10:24:57; rajesh; **Author: annette**
 Replying to [ticket:8326 annette]:
 > Under Join PWX, please change to: 
 > ""Our stakeholder matrix shows how PWX addresses stakeholder issues. Currently membership to PWX is by invitation or referral only.""
@@ -2398,7 +2398,7 @@ Replying to [ticket:8326 annette]:
 > Contribute should go to: http://www.blueplanetrun.org/movement/give.php 
 > (currently linked to blueplanetrun.org)
 
-these edits look much better but the zip code should be 94941 (not 94911)","10/10/11 10:24:59; rajesh; 
+these edits look much better but the zip code should be 94941 (not 94911)","10/10/11 10:24:59; rajesh; **Author: annette**
 Replying to [comment:4 ajaya]:
 
 this looks great!"

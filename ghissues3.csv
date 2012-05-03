@@ -1,4 +1,4 @@
-Summary,Description,DateCreated,DateModified,Status,Reporter,Assignee,AffectsVersion,Resolution,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody
+Summary,Description,DateCreated,DateModified,Status,Reporter,Assignee,AffectsVersion,FixVersion,Resolution,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody
 enhance search to map results,"after a search is done, provide the ability to map the results.
 
 below the search summary on rhs, provide an 'exciting' button ""Map It!"" (maybe rs to get mark to create a nice icon)
@@ -7,9 +7,9 @@ this will bring up a map (peerwater.org/mapselect ?) and only projects, applicat
 
 not results of discussions, etc.
 
-the map will have 3 checkboxes: Applications Projects Organizations and they all will be checked by default. user can uncheck them to reduce icons on map",10/10/2011 09:52:32,10/10/2011 10:36:52,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:36:42; ajaya; 
+the map will have 3 checkboxes: Applications Projects Organizations and they all will be checked by default. user can uncheck them to reduce icons on map",10/10/2011 09:52:32,10/10/2011 10:36:52,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:36:42; ajaya; 
 done changeset:2065
-","10/10/11 10:36:44; rajesh; 
+","10/10/11 10:36:44; rajesh; **Author: rajesh**
 looks good.
 
 would like to restrict map as mentioned in the original text.
@@ -18,7 +18,7 @@ only direct applications, orgs, and projects.","10/10/11 10:36:47; ajaya;
 done.","10/10/11 10:36:48; ajaya; 
 done.  changeset:2070
 
-http://qa.peerwater.org/map/organizations/3","10/10/11 10:36:50; rajesh; 
+http://qa.peerwater.org/map/organizations/3","10/10/11 10:36:50; rajesh; **Author: rajesh**
 this look really good. the layout and text and org stuff really work well now.
 
 can we add the 3 checkboxes below?
@@ -33,7 +33,7 @@ link to org listing from home page (non-logged in),"we need to let visitors see 
 
 one way is to provide a link from the ""Number of Peers: 2"" on the home page PWX summary, to the list of orgs.
 
-if there are other ways, lets do that too (e.g. from the news or about or ...)",10/10/2011 09:52:37,10/10/2011 10:36:56,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:36:54; rajesh; 
+if there are other ways, lets do that too (e.g. from the news or about or ...)",10/10/2011 09:52:37,10/10/2011 10:36:56,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:36:54; rajesh; **Author: rajesh**
 i want something like this (this works when not logged in):
 
 http://qa.peerwater.org/organization_search/organization_search
@@ -43,12 +43,12 @@ but with a better name is possible
 fixed changeset:2056 & changeset:2057"
 org creation screen does not change the name of an org,"when the org is created, the name field can be filled up with anything, but it keeps the name in the referral.
 
-you need to login a second time to change it.",10/10/2011 09:52:42,10/10/2011 10:37:08,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:36:58; rajesh; 
+you need to login a second time to change it.",10/10/2011 09:52:42,10/10/2011 10:37:08,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:36:58; rajesh; **Author: rajesh**
 i want something like this (this works when not logged in):
 
 http://qa.peerwater.org/organization_search/organization_search
 
-but with a better name is possible","10/10/11 10:37:00; rajesh; 
+but with a better name is possible","10/10/11 10:37:00; rajesh; **Author: rajesh**
 Replying to [comment:1 rajesh]:
 > i want something like this (this works when not logged in):
 > 
@@ -56,10 +56,10 @@ Replying to [comment:1 rajesh]:
 > 
 > but with a better name is possible
 
-ignore this, put in wrong ticket","10/10/11 10:37:02; rajesh; 
+ignore this, put in wrong ticket","10/10/11 10:37:02; rajesh; **Author: rajesh**
 
 maybe the solution involves populating the fields (name of person and name of org) from the referral. then you can edit if you want or leave it alone.","10/10/11 10:37:04; ajaya; 
-fixed changeset:2081","10/10/11 10:37:06; rajesh; 
+fixed changeset:2081","10/10/11 10:37:06; rajesh; **Author: rajesh**
 as mentioned above, can we have the name field populated with what the referrer provided - just like the name of the person is populated?
 
 if its a problem, then its okay.
@@ -67,7 +67,7 @@ if its a problem, then its okay.
 we should deploy this part, regardless.","10/10/11 10:37:08; ajaya; 
 changeset:2083
 "
-home page font has become tiny,"home page is hard to read, we need to increase size of font",10/10/2011 09:52:47,10/10/2011 10:37:10,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:37:10; ajaya; 
+home page font has become tiny,"home page is hard to read, we need to increase size of font",10/10/2011 09:52:47,10/10/2011 10:37:10,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:37:10; ajaya; 
 fixed changeset:2045"
 reviewing water projects?,"home page:
 
@@ -76,11 +76,11 @@ reviewing water projects?,"home page:
 don't understand this.
 only in an application review cycle, this should show.
 
-project reviews (will) happen continuously.",10/10/2011 09:52:53,10/10/2011 10:37:18,Closed,rajesh,ajaya,Features for External Funders,Fixed,"10/10/11 10:37:12; ajaya; 
+project reviews (will) happen continuously.",10/10/2011 09:52:53,10/10/2011 10:37:18,Closed,rajesh,ajaya,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:37:12; ajaya; 
 I just had to delete cached page in rails. I have to code this to automatically clear cache when review cycle ends.
-","10/10/11 10:37:14; rajesh; 
-i see the cached page is deleted in qa, need to do it in www too","10/10/11 10:37:16; rajesh; 
-is the auto clearing of cache done?","10/10/11 10:37:18; rajesh; 
+","10/10/11 10:37:14; rajesh; **Author: rajesh**
+i see the cached page is deleted in qa, need to do it in www too","10/10/11 10:37:16; rajesh; **Author: rajesh**
+is the auto clearing of cache done?","10/10/11 10:37:18; rajesh; **Author: rajesh**
 removed that section only.
 now app review count is in pwx stat."
 project list is limited to 28,"when you click on project list it shows only 28 if you are not logged in.
@@ -89,7 +89,7 @@ if you are logged in, its 33
 
 very wierd behavior.
 
-apps don't have that",10/10/2011 09:52:58,10/10/2011 10:37:20,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:37:20; ajaya; 
+apps don't have that",10/10/2011 09:52:58,10/10/2011 10:37:20,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:37:20; ajaya; 
 should be fixed by one of the earlier fixes.
 "
 org list has problems,"the list of orgs has a few problems:
@@ -102,7 +102,7 @@ org list has problems,"the list of orgs has a few problems:
 
 4/ on home page, it says 31 orgs (?) and then in the list only 27
 
-5/ Norweigian Church Aid has a couple of projects but no org - what should be done?",10/10/2011 09:53:02,10/10/2011 10:37:34,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:37:22; rajesh; 
+5/ Norweigian Church Aid has a couple of projects but no org - what should be done?",10/10/2011 09:53:02,10/10/2011 10:37:34,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:37:22; rajesh; **Author: rajesh**
 one problem may be that when the referral expires we don't really kill the org.
 
 yesterday, i saw the following email sent to an org whose referral period had expired long ago:
@@ -130,19 +130,19 @@ Work done are
 ","10/10/11 10:37:30; ajaya; 
 changeset:1061 and changeset:1062
 
-","10/10/11 10:37:32; rajesh; 
+","10/10/11 10:37:32; rajesh; **Author: rajesh**
 things are fixed and tested and deployed to www.
 
 however, on www: Boda Boda still shows up twice (org #27)","10/10/11 10:37:34; ajaya; 
 should be fixed."
-blog does not show added categories (rajesh's essays),blog needs to be customizable!,10/10/2011 09:53:07,10/10/2011 10:37:36,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:37:36; ajaya; 
+blog does not show added categories (rajesh's essays),blog needs to be customizable!,10/10/2011 09:53:07,10/10/2011 10:37:36,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:37:36; ajaya; 
 Can u please elaborate?"
 org scaffold and ability to delete an org (for admin),"right now,the org list for admin is poor.
 
 could we create a scaffold?
 
-when you 'delete' an org - we get the dialog box ""are you sure?"" but then it goes to org profile page and never gets deleted.",10/10/2011 09:53:11,10/10/2011 10:37:42,Open,rajesh,rajesh,Wish List,Unresolved,"10/10/11 10:37:38; ajaya; 
-changeset:2249","10/10/11 10:37:40; rajesh; 
+when you 'delete' an org - we get the dialog box ""are you sure?"" but then it goes to org profile page and never gets deleted.",10/10/2011 09:53:11,10/10/2011 10:37:42,Open,rajesh,rajesh,Wish List,Wish List,Unresolved,"10/10/11 10:37:38; ajaya; 
+changeset:2249","10/10/11 10:37:40; rajesh; **Author: rajesh**
 should be able to delete org.
 
 e.g. org #20 has not done anything - invited to reviews, but ...
@@ -158,10 +158,10 @@ draft
 submitted
 peer review
 probation (for future)
-<current classification>",10/10/2011 09:53:13,10/10/2011 10:37:50,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:37:45; ajaya; 
+<current classification>",10/10/2011 09:53:13,10/10/2011 10:37:50,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:37:45; ajaya; 
 changeset:2231","10/10/11 10:37:47; ajaya; 
 check
-http://qa.peerwater.org/organizations/42","10/10/11 10:37:50; rajesh; 
+http://qa.peerwater.org/organizations/42","10/10/11 10:37:50; rajesh; **Author: rajesh**
 need to change graphic, sometime"
 org contact from search not found,"searched for meera and clicked on results in org contact.
 
@@ -173,7 +173,7 @@ nginx/0.6.31
 searched for others, it worked. 
 repeated search for meera it worked.
 
-just to understand what happened and record it.",10/10/2011 09:53:17,10/10/2011 10:37:52,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 10:37:52; ajaya; 
+just to understand what happened and record it.",10/10/2011 09:53:17,10/10/2011 10:37:52,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 10:37:52; ajaya; 
 can't reproduce.
 
 aj"
@@ -186,7 +186,7 @@ after secondary focus there is a lot of text. no idea which field it belongs to,
 how did it get there?
 how to remove it?
 
-i looked at 11 other orgs, no issues there.",10/10/2011 09:53:21,10/10/2011 10:37:54,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:37:54; ajaya; 
+i looked at 11 other orgs, no issues there.",10/10/2011 09:53:21,10/10/2011 10:37:54,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:37:54; ajaya; 
 fixed 
 
 changeset:2084"
@@ -197,16 +197,16 @@ To: Please rate this organization's application as you see the potential of the 
 'Please enter your comments here' bubble--change to: Please enter any additional comments you have about the organization under review here. 
 'Please rate here' bubble to: Please select a rating by clicking on the appropriate radio button. (If possible, I would move the Question bubble down in line with the radio buttons. It's too close to Excellent right now.)
 
-",10/10/2011 09:53:25,10/10/2011 10:37:56,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:37:56; rajesh; 
+",10/10/2011 09:53:25,10/10/2011 10:37:56,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:37:56; rajesh; **Author: rajesh**
 fixed, deployed to qa"
 org reviewer status on admin tab,"when a org is under review, the admin tab does not show the deadlines (that were entered) and if the reviewer has lapsed and did not complete review, it does not show that. it still shows that the org is currently reviewing.
 
 you have to go to the ratings page, to figure out if the reviewer has time or has failed to review.
 
 1/ the date assigned could be made visible to the admin
-2/ if the reviewer has missed completing (did not complete review), that can be shown on the admin tab too",10/10/2011 09:53:29,10/10/2011 10:38:00,Open,rajesh,ajaya,Wish List,Unresolved,"10/10/11 10:37:58; rajesh; 
+2/ if the reviewer has missed completing (did not complete review), that can be shown on the admin tab too",10/10/2011 09:53:29,10/10/2011 10:38:00,Open,rajesh,ajaya,Wish List,Wish List,Unresolved,"10/10/11 10:37:58; rajesh; **Author: rajesh**
 one way to solve it is by doing it the way application reviews are done.
-there is only one date field, not one for each reviewer.","10/10/11 10:38:00; rajesh; 
+there is only one date field, not one for each reviewer.","10/10/11 10:38:00; rajesh; **Author: abhishek**
 Done in [http://trac.peerwater.org/index.fcgi/changeset/2820/trunk 2820]"
 Typo: Membership Review,"When you're logged into PWX and reviewing a new org, the text in the red box in the Org Details page of the Profile reads: 
 
@@ -220,7 +220,7 @@ Review of referred organization for PWX membership.
 
 Thank you for participating in the review process for this organization. Please use the 'Question & Answer Forum' to discuss the application with peers and the applicant. Please click on 'Ratings & Comments' tab to submit your final review.
 
-",10/10/2011 09:53:31,10/10/2011 09:53:34,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed
+",10/10/2011 09:53:31,10/10/2011 09:53:34,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed
 links from emails lead to a screen with the inability to reply,"when you get an email about a comment or reply, you click on the link.
 
 unless you are logged in, you cannot see the word reply.
@@ -229,21 +229,21 @@ is there a way to force login when you click on the link in the email?
 
 also make the ""Reply"" a button, so its more visible.
 
-",10/10/2011 09:53:37,10/10/2011 10:38:14,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:38:02; rajesh; 
+",10/10/2011 09:53:37,10/10/2011 10:38:14,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:38:02; rajesh; **Author: rajesh**
 Have changed the email to tell the folks to login.
 
 Am keeping this alive and making it low priority in case we want to:
 
 1/ create a button for Reply
 
-2/ do the login thing","10/10/11 10:38:04; rajesh; 
+2/ do the login thing","10/10/11 10:38:04; rajesh; **Author: rajesh**
 maybe have a greyed out reply button with ""only logged in users can reply""
 
-its uglier but maybe more informative and useful and clear.","10/10/11 10:38:06; rajesh; 
+its uglier but maybe more informative and useful and clear.","10/10/11 10:38:06; rajesh; **Author: rajesh**
 i like how trac goes to login page when i click on any tix/code/... and then after login goes to the link.
 
 can we do something like that?","10/10/11 10:38:09; ajaya; 
-changeset:2340","10/10/11 10:38:11; rajesh; 
+changeset:2340","10/10/11 10:38:11; rajesh; **Author: rajesh**
 this fix does not work like trac, if you think it should work and its low effort, fix. otherwise just close it.
 
 at least the text shows inabliity to reply until logged in.
@@ -258,18 +258,18 @@ MOU when accepting membership,"just like when you accept funding, we should have
 3/ will report
 4/ will monitor ...
 
-need to get text right as well as estimate of tech.",10/10/2011 09:53:43,10/10/2011 10:38:25,Closed,rajesh,rajesh,Wish List,Fixed,"10/10/11 10:38:16; rajesh; 
-custom mou with funding round?","10/10/11 10:38:18; rajesh; 
+need to get text right as well as estimate of tech.",10/10/2011 09:53:43,10/10/2011 10:38:25,Closed,rajesh,rajesh,Wish List,Wish List,Fixed,"10/10/11 10:38:16; rajesh; **Author: rajesh**
+custom mou with funding round?","10/10/11 10:38:18; rajesh; **Author: rajesh**
 we need to have an MOU with each funding cycle, one that stays as part of the permanent record.
 
 can copy the text from the current file, but needs to be editable.
 
 then we can show what each grantee committed to in the future.
 
-in the future, the approved application will have a link to the MOU it is linked to, to show the applicant (only) what they had agreed to.","10/10/11 10:38:21; rajesh; 
+in the future, the approved application will have a link to the MOU it is linked to, to show the applicant (only) what they had agreed to.","10/10/11 10:38:21; rajesh; **Author: rajesh**
 since we have so many db changes, this should be folded in.
 
-need an MOU with each cycle, as part of multi-funder","10/10/11 10:38:23; rajesh; 
+need an MOU with each cycle, as part of multi-funder","10/10/11 10:38:23; rajesh; **Author: rajesh**
 if we can also store the email that we send for application approved, it will be good.","10/10/11 10:38:25; ajaya; 
 done for cycle.  Check.  and report. 
 
@@ -279,9 +279,9 @@ Reply button not working in old os (win98),"Mariah reports on behalf of several 
 She wrote specifically about an older HP7540, windows 98, ""but most of these desktop comps behave the same way, when you click on the reply the word actually disappears and no box drops down."" On both Mozilla and IE. 
 
 If you need more clarification of the problem, best to email her at mklingsmith@hotmail.com. 
-",10/10/2011 09:53:47,10/10/2011 10:38:34,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 10:38:28; ajaya; 
+",10/10/2011 09:53:47,10/10/2011 10:38:34,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 10:38:28; ajaya; 
 Junk issues may be.  Please close.
-","10/10/11 10:38:34; rajesh; 
+","10/10/11 10:38:34; rajesh; **Author: rajesh**
 
 
 from Mariah:
@@ -291,11 +291,11 @@ Change Organization Name,"In the AWWC Organization Review, one organization need
 
 I'd like this to happen before they submit their proposal, at the latest.
 
-Thanks for the help!",10/10/2011 09:53:52,10/10/2011 09:53:55,Closed,rajesh,ajaya,AWWC - support for new groups,Fixed
+Thanks for the help!",10/10/2011 09:53:52,10/10/2011 09:53:55,Closed,rajesh,ajaya,AWWC - support for new groups,AWWC - support for new groups,Fixed
 map icons not showing up,"map, map of search, map of org has no icons
 
 on firefox and safari on osx
-on ie on xp.",10/10/2011 09:53:57,10/10/2011 10:38:41,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:38:37; rajesh; 
+on ie on xp.",10/10/2011 09:53:57,10/10/2011 10:38:41,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:38:37; rajesh; **Author: rajesh**
 the zoom feature works, only icons do not show up.
 
 
@@ -303,30 +303,30 @@ problem also exists in qa and dev.
 
 need a fix asap.","10/10/11 10:38:38; ajaya; 
 should this be open anymore?
-","10/10/11 10:38:41; rajesh; 
+","10/10/11 10:38:41; rajesh; **Author: rajesh**
 problem appeared on its own and disappeared.
 
 a google interface issue.
 
 will open the tix or enter a new one when it happens again"
-Create Hindi and Spanish pages in about section,"'how it works' and 'stakeholder matrix' need to be also available in hindi and spanish. AJ to create the blank pages and provide links, and rs is in charge of providing the info.",10/10/2011 09:54:02,10/10/2011 10:38:43,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:38:43; rajesh; 
+Create Hindi and Spanish pages in about section,"'how it works' and 'stakeholder matrix' need to be also available in hindi and spanish. AJ to create the blank pages and provide links, and rs is in charge of providing the info.",10/10/2011 09:54:02,10/10/2011 10:38:43,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:38:43; rajesh; **Author: rajesh**
 spanish done.
 need to talk with hindi translator."
 Create Organization Profile Bubbles,"When you have time, it'd be great to have bubbles explaining each field, like the: Map, Addresses (Primary vs. Secondary Location), People (Primary vs. Secondary Contact), and Documents.
 
-Maybe in the white space, there could be an extra reminder that you have to ""submit"" or your application won't make it to the review.  ",10/10/2011 09:54:06,10/10/2011 10:38:45,Closed,rajesh,rajesh,Wish List,Fixed,"10/10/11 10:38:45; ajaya; 
+Maybe in the white space, there could be an extra reminder that you have to ""submit"" or your application won't make it to the review.  ",10/10/2011 09:54:06,10/10/2011 10:38:45,Closed,rajesh,rajesh,Wish List,Wish List,Fixed,"10/10/11 10:38:45; ajaya; 
 Bubble where?  Still relavant?
 "
 Proxy Contacts?,"For the very grassroots organizations, there is sometimes someone from a different organization inputting their information if no one in their org can do it. 
 
-What if, under People, after Secondary Contact, there's a Proxy Contact, so this person can receive emails directly and it's clear they're not part of the organization, but facilitating their participation in PWX. Also, having their contact info and something about their org will make the PWX circle bigger and might help advocate for whomever they're helping.",10/10/2011 09:54:10,10/10/2011 09:54:10,Open,rajesh,rajesh,Wish List,Unresolved
+What if, under People, after Secondary Contact, there's a Proxy Contact, so this person can receive emails directly and it's clear they're not part of the organization, but facilitating their participation in PWX. Also, having their contact info and something about their org will make the PWX circle bigger and might help advocate for whomever they're helping.",10/10/2011 09:54:10,10/10/2011 09:54:10,Open,rajesh,rajesh,Wish List,Wish List,Unresolved
 Common Issues AWWC to date,"Two major sources of confusion for the AWWC women have been: clicking submit so their organization enters review & the difference between Primary & Secondary contact.
 
 To address the importance of Clicking Submit, under ""Save"" let's add a line saying ""Don't forget to click ""Submit"" at the bottom of the red box so your application will be accepted!""
 
 I think the best strategy clarifying the differences in types of Contact, and that you don't put one person's name as the first name and a second person's name as the last name for the Primary Contact, would be bubbles next to these two fields. We need to clarify that in order for more than one person to receive emails from PWX, more than one Contact has to be created.  
 
-",10/10/2011 09:54:12,10/10/2011 10:38:54,Open,rajesh,rajesh,Wish List,Unresolved,"10/10/11 10:38:46; rajesh; 
+",10/10/2011 09:54:12,10/10/2011 10:38:54,Open,rajesh,rajesh,Wish List,Wish List,Unresolved,"10/10/11 10:38:46; rajesh; **Author: rajesh**
 things we can do about submit info:
 
 1/ add a line below the buttons, but it requires AJ to put code in to check if this is 
@@ -344,7 +344,7 @@ for membership referral
 --- 2nd part ---
 
 can we put bubbles in the RHS column? when it is truly org's own profile.
-again an AJ thing.","10/10/11 10:38:49; rajesh; 
+again an AJ thing.","10/10/11 10:38:49; rajesh; **Author: rajesh**
 Annette has clarified that this is a placeholder for observations from AWWC.
 
 So to recapture above comment which got messed up:
@@ -370,19 +370,19 @@ first note that the referrer made the mistake of putting 2 names into the name f
 so a very low priority solution: 
 put bubbles in the RHS column
 only shown when the org is viewing its own profile
-","10/10/11 10:38:53; rajesh; 
-Problem 3: The AWWC women seem to not understand the difference between replying to a question on the Q/A forum and posting a new Question. Their tendency has been to continue on the same stream instead of creating a new question.","10/10/11 10:38:54; rajesh; 
+","10/10/11 10:38:53; rajesh; **Author: annette**
+Problem 3: The AWWC women seem to not understand the difference between replying to a question on the Q/A forum and posting a new Question. Their tendency has been to continue on the same stream instead of creating a new question.","10/10/11 10:38:54; rajesh; **Author: annette**
 AWWC orgs should be instructed before they submit apps on PWX that they are applying for project funding so they don't select program funding. This will avoid problems when we get to the funding stage. "
 blog text needs to be in search engine robots path,"the blog articles do not appear in google search (and others).
 
-need to make the blog subdirectory friendlier for robots and be findable by search engines",10/10/2011 09:54:14,10/10/2011 10:38:56,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:38:56; ajaya; 
+need to make the blog subdirectory friendlier for robots and be findable by search engines",10/10/2011 09:54:14,10/10/2011 10:38:56,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:38:56; ajaya; 
 Hmm. Can't understand. I search for AIEMMA blog and blog article showed up second which is pretty good."
 financial report/status on home page plus inside,"where we say # of peers and projects, we need to put:
 #of dollars funded.
 
 inside some stats: total of apps per year, total funded per year and totals.
 
-",10/10/2011 09:54:20,10/10/2011 10:39:11,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:39:07; rajesh; 
+",10/10/2011 09:54:20,10/10/2011 10:39:11,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:39:07; rajesh; **Author: rajesh**
 first pass:
 
 on home page:
@@ -400,7 +400,7 @@ columns
 5. # of apps approved 
 6. $total funding
 7. # of projects created
-","10/10/11 10:39:09; rajesh; 
+","10/10/11 10:39:09; rajesh; **Author: rajesh**
 have put in total funded.
 
 need to put a query like: total managed: sum(project_cost where app_status is approved)","10/10/11 10:39:11; ajaya; 
@@ -411,17 +411,17 @@ Then I tried to upload a photo; after clicked on Attach Photo, disappeared. The 
 IE 7. Compaq notebook. 
 
 http://qa.peerwater.org/apps/132-Drinking-water-project-4-5-villages-/attachments?type=photo
-",10/10/2011 09:54:24,10/10/2011 10:39:19,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:39:14; rajesh; 
+",10/10/2011 09:54:24,10/10/2011 10:39:19,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:39:14; rajesh; **Author: annette**
 Same is true for other documents, under ""Attach Files""
-http://qa.peerwater.org/apps/132-Drinking-water-project-4-5-villages-/attachments?type=docs","10/10/11 10:39:17; rajesh; 
+http://qa.peerwater.org/apps/132-Drinking-water-project-4-5-villages-/attachments?type=docs","10/10/11 10:39:17; rajesh; **Author: rajesh**
 reproduced on firefox on osx
 
 however, functionality works on www.
 
 need to fix before deploying this release.","10/10/11 10:39:19; ajaya; 
 changeset:2110"
-no of peers on home page is diff from about,in the home page the total comes out different than on the rhs of about (which shows one less org than home page),10/10/2011 09:54:28,10/10/2011 10:39:27,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:39:22; ajaya; 
-fixed changeset:2122","10/10/11 10:39:24; rajesh; 
+no of peers on home page is diff from about,in the home page the total comes out different than on the rhs of about (which shows one less org than home page),10/10/2011 09:54:28,10/10/2011 10:39:27,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:39:22; ajaya; 
+fixed changeset:2122","10/10/11 10:39:24; rajesh; **Author: rajesh**
 the numbers show in the summary line (42) in both the home page and About do not match the total on the actual list: 45.
 
 the count of the list is different from the total count shown in the summary.","10/10/11 10:39:27; ajaya; 
@@ -433,7 +433,7 @@ Project App. Page 3 appearing in italics in QA,"Couldn't get this to replicate i
 Everything's in italics and the labels are not bold. This goes down all the way to the bottom of the page, including the copyright info for BPR and also the entire right hand column of the screen (all the Application Summary Info.)
 
 Here's an example when looking at another org's application as a reviewer.  Vista, IE7.
-http://qa.peerwater.org/apps/132",10/10/2011 09:54:32,10/10/2011 10:39:29,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:39:29; ajaya; 
+http://qa.peerwater.org/apps/132",10/10/2011 09:54:32,10/10/2011 10:39:29,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:39:29; ajaya; 
 fixed.  changeset:2123"
 error checking on app is broken,"error checking for all * fields does not work.
 many fields on page 2 with * can be empty and app can be submitted.
@@ -442,8 +442,8 @@ the app screen with errors is messed up, looks broken and ugly (maybe rajesh bro
 
 error text needs to be improved (rajesh can do that)
 
-<broken on both qa and www>",10/10/2011 09:54:36,10/10/2011 10:39:35,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:39:31; ajaya; 
-fixed changeset:2138","10/10/11 10:39:33; rajesh; 
+<broken on both qa and www>",10/10/2011 09:54:36,10/10/2011 10:39:35,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:39:31; ajaya; 
+fixed changeset:2138","10/10/11 10:39:33; rajesh; **Author: rajesh**
 error screen look and feel is fixed.
 
 but error checking itself is broken:
@@ -453,7 +453,7 @@ the other '*' fields are not checked.","10/10/11 10:39:35; ajaya;
 fixed. changeset:2148"
 email to be sent to admin when an app is withdrawn,"when an app is submitted, admin is sent an email.
 
-similarly, when an app is withdrawn an email should be sent.",10/10/2011 09:54:40,10/10/2011 10:39:38,Open,rajesh,ajaya,Wish List,Unresolved,"10/10/11 10:39:37; rajesh; 
+similarly, when an app is withdrawn an email should be sent.",10/10/2011 09:54:40,10/10/2011 10:39:38,Open,rajesh,ajaya,Wish List,Wish List,Unresolved,"10/10/11 10:39:37; rajesh; **Author: rajesh**
 it would be nice.
 
 but its less likely to happen now that we have edit buttons on the app under review."
@@ -464,14 +464,14 @@ they can withdraw and submit or just edit as is.
 
 a great feature would be to make a posting on the Q&A everytime the app is edited - so that the reviewers know that something changed (including attachments).
 
-the first part is needed asap.",10/10/2011 09:54:43,10/10/2011 10:39:44,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:39:39; ajaya; 
+the first part is needed asap.",10/10/2011 09:54:43,10/10/2011 10:39:44,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:39:39; ajaya; 
 changetset:2141","10/10/11 10:39:42; ajaya; 
 changset:2141","10/10/11 10:39:44; ajaya; 
 changeset:2141"
 draft apps show up in map,"
 draft apps show up the map (logged in and not logged in and admin):
 
-http://www.peerwater.org/map/organizations/25",10/10/2011 09:54:47,10/10/2011 10:39:46,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:39:46; ajaya; 
+http://www.peerwater.org/map/organizations/25",10/10/2011 09:54:47,10/10/2011 10:39:46,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:39:46; ajaya; 
 fixed changeset:2149"
 adjusting num of results in project search changes search,"choose any org, look for all projects by that org.
 
@@ -485,7 +485,7 @@ i.e.: http://www.peerwater.org/project_info/project_search?items_per_page=ALL
 
 change # of results to show per page should not change the list being viewed.
 
-this mg",10/10/2011 09:54:53,02/05/2012 08:11:09,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:39:51; rajesh; 
+this mg",10/10/2011 09:54:53,02/05/2012 08:11:09,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:39:51; rajesh; **Author: rajesh**
 now its broken even more.  two problema:
 
 1 -----
@@ -514,18 +514,18 @@ http://www.peerwater.org/list_application/list_apps?org_id=3
 
 and changing the results to view per page ...
 
-ends up on the dashboard.",10/10/2011 09:54:57,02/05/2012 03:14:15,Closed,rajesh,rajesh,Features for External Funders,Fixed
+ends up on the dashboard.",10/10/2011 09:54:57,02/05/2012 03:14:15,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed
 project report has lost document attachments,"there used to be a place to attached documents (financials, audits, word reports, ...) to the project report.
 
 now, its lost in the status reports and photos.
-need to bring it back.",10/10/2011 09:55:01,10/10/2011 10:40:06,Open,rajesh,ajaya,Wish List,Unresolved,"10/10/11 10:40:00; ajaya; 
-No.  You can still attach photos and docs after u create the proj report.  May be it's the confusion.","10/10/11 10:40:02; rajesh; 
+need to bring it back.",10/10/2011 09:55:01,10/10/2011 10:40:06,Open,rajesh,ajaya,Wish List,Wish List,Unresolved,"10/10/11 10:40:00; ajaya; 
+No.  You can still attach photos and docs after u create the proj report.  May be it's the confusion.","10/10/11 10:40:02; rajesh; **Author: rajesh**
 you can only attach photos.
 
 need to attach documents - something that i believe used to happen.
 
 have put in all the placeholder code and text in the right location.
-the files have ""AJ fix this"" comments where things need to be put in place.","10/10/11 10:40:04; rajesh; 
+the files have ""AJ fix this"" comments where things need to be put in place.","10/10/11 10:40:04; rajesh; **Author: rajesh**
 examples of document attachments ending up in the wrong section (under photos):
 
 http://www.peerwater.org/projects/3
@@ -537,14 +537,14 @@ http://www.peerwater.org/projects/62
 http://www.peerwater.org/projects/66
 http://www.peerwater.org/projects/85
 http://www.peerwater.org/projects/89
-","10/10/11 10:40:06; rajesh; 
+","10/10/11 10:40:06; rajesh; **Author: rajesh**
 for now, combine photos and attachments into one section (renamed from photos to Attachments).
 
 keeping ticket alive to separate sections like in the application."
 project report has lost document attachments,"there used to be a place to attached documents (financials, audits, word reports, ...) to the project report.
 
 now, its lost in the status reports and photos.
-need to bring it back.",10/10/2011 09:55:03,10/10/2011 09:55:05,Closed,rajesh,ajaya,Features for External Funders,Fixed
+need to bring it back.",10/10/2011 09:55:03,10/10/2011 09:55:05,Closed,rajesh,ajaya,Features for External Funders,Features for External Funders,Fixed
 back while creating a new cycle causes crash,"creating a new cycle, but instead of filling in clicked on the 'back' button at the bottom.
 
  ActiveRecord::RecordNotFound in Admin/cyclesController#show
@@ -666,7 +666,7 @@ Request
 
 Parameters:
 
-{""id""=>""list""}",10/10/2011 09:55:08,10/10/2011 10:40:08,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 10:40:08; ajaya; 
+{""id""=>""list""}",10/10/2011 09:55:08,10/10/2011 10:40:08,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 10:40:08; ajaya; 
 changeset:2248"
 search in 'cycle' view causes crash,"logged in as admin (on local, www, qa)
 
@@ -678,7 +678,7 @@ search for 'padi'
 
 Routing Error
 
-No route matches ""/admin/kb/search"" with {:method=>:get}",10/10/2011 09:55:12,10/10/2011 10:40:10,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 10:40:10; ajaya; 
+No route matches ""/admin/kb/search"" with {:method=>:get}",10/10/2011 09:55:12,10/10/2011 10:40:10,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 10:40:10; ajaya; 
 changeset:2250"
 application process broken,"2 bugs on qa:
 
@@ -873,7 +873,7 @@ Request
 
 Parameters:
 
-{""id""=>""157-map-test""}",10/10/2011 09:55:17,10/10/2011 10:40:16,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:40:13; rajesh; 
+{""id""=>""157-map-test""}",10/10/2011 09:55:17,10/10/2011 10:40:16,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:40:13; rajesh; **Author: rajesh**
 
 you can click to go to page 3 from page 2, but then 'Done' on page 3 also causes crash:
 
@@ -1065,11 +1065,11 @@ Parameters:
 
 {""id""=>""157-map-test""}","10/10/11 10:40:16; ajaya; 
 fixed. changeset:2189"
-can't attach in app,"on page 2 or page 3 of app, click on attach and get an error.",10/10/2011 09:55:22,10/10/2011 10:40:30,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:40:18; ajaya; 
+can't attach in app,"on page 2 or page 3 of app, click on attach and get an error.",10/10/2011 09:55:22,10/10/2011 10:40:30,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:40:18; ajaya; 
 fixed.  changeset:2193.
 
 run db:migrate after getting this.
-","10/10/11 10:40:21; rajesh; 
+","10/10/11 10:40:21; rajesh; **Author: rajesh**
 on qa
 on page 3 of app, click attach and then attach a spreadsheet, get error:
 
@@ -1083,7 +1083,7 @@ There were problems with the following fields:
     * Attachment invalid image","10/10/11 10:40:23; ajaya; 
 I just did. can re-check. however something wrong in the show app for that app.  check something wrong in the subsection code.
 
-aj","10/10/11 10:40:27; rajesh; 
+aj","10/10/11 10:40:27; rajesh; **Author: rajesh**
 on page 2 when i attach images, no problem (well, had a problem with .png).
 
 but for additional files, same error, when trying to attach a ppt:
@@ -1124,23 +1124,23 @@ Errors
 
 Following problems occured. Please review and correct of necessary
 
-    * Invalid Attachment Type",10/10/2011 09:55:26,10/10/2011 10:40:42,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:40:33; rajesh; 
+    * Invalid Attachment Type",10/10/2011 09:55:26,10/10/2011 10:40:42,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:40:33; rajesh; **Author: annette**
 Same, in QA, on Mozilla 5.0|Microsoft Vista, created an app without submitting. while looking at the app, clicked on attachment/photo. To remove the photo, clicked on edit - got ""invalid attachment type.""
 
 Hope that's enough explanation.
-http://qa.peerwater.org/apps/160-tango-week","10/10/11 10:40:35; rajesh; 
+http://qa.peerwater.org/apps/160-tango-week","10/10/11 10:40:35; rajesh; **Author: rajesh**
 
-logged in as admin and clicked edit on a photo page. works fine.","10/10/11 10:40:37; rajesh; 
+logged in as admin and clicked edit on a photo page. works fine.","10/10/11 10:40:37; rajesh; **Author: rajesh**
 sorry, i logged in on www (not on qa) so it works on www.
-but there is no cancel button on the edit screen.","10/10/11 10:40:39; rajesh; 
+but there is no cancel button on the edit screen.","10/10/11 10:40:39; rajesh; **Author: rajesh**
 same problem on qa - logged in as admin and tried to edit photo on app/160","10/10/11 10:40:42; ajaya; 
 changeset:2202"
 final status list broken,"on qa, apps are not showing up on the list for final status.
 
 on local, its working but not on qa.
 
-",10/10/2011 09:55:30,10/10/2011 10:40:48,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:40:44; ajaya; 
-changeset:2203","10/10/11 10:40:46; rajesh; 
+",10/10/2011 09:55:30,10/10/2011 10:40:48,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:40:44; ajaya; 
+changeset:2203","10/10/11 10:40:46; rajesh; **Author: rajesh**
 
 http://qa.peerwater.org/apps/75-test-as-always/fstatus
 
@@ -1153,23 +1153,23 @@ clicking Post on new question in qanda makes scary popup come up,"on qa, using i
 clicked post on new question:
 http://qa.peerwater.org/apps/161-attach-test/qandas
 
-got a scary pop up about download file from pwx",10/10/2011 09:55:34,10/10/2011 10:41:00,Closed,rajesh,ajaya,AWWC - support for new groups,Fixed,"10/10/11 10:40:50; rajesh; 
+got a scary pop up about download file from pwx",10/10/2011 09:55:34,10/10/2011 10:41:00,Closed,rajesh,ajaya,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:40:50; rajesh; **Author: rajesh**
 when i clicked 'Find' a new tab opened up with:
 
 http://go.microsoft.com/fwlink/?LinkId=57426&Mime=text/javascript
 
-and on the original screen showed no update. however, the question was posted and if i refreshed the screen, it showed the post.","10/10/11 10:40:53; rajesh; 
-might explain why in the past few months, lots of duplicate postings have been made.","10/10/11 10:40:55; rajesh; 
+and on the original screen showed no update. however, the question was posted and if i refreshed the screen, it showed the post.","10/10/11 10:40:53; rajesh; **Author: rajesh**
+might explain why in the past few months, lots of duplicate postings have been made.","10/10/11 10:40:55; rajesh; **Author: rajesh**
 same thing happens when you hit cancel instead of post.
 the screen pops up and ... the original screen stays in the same - can't get out of qanda without using tabs or menu on top. (post or cancel don't work)
 
 if you click 'Find' on the dialog box you get something slightly different
-http://shell.windows.com/fileassoc/fileassoc.asp?Mime=text%2fjavascript","10/10/11 10:40:57; rajesh; 
-when i hit cancel, it still posted the response.","10/10/11 10:41:00; rajesh; 
+http://shell.windows.com/fileassoc/fileassoc.asp?Mime=text%2fjavascript","10/10/11 10:40:57; rajesh; **Author: rajesh**
+when i hit cancel, it still posted the response.","10/10/11 10:41:00; rajesh; **Author: rajesh**
 text posted in qanda when 'cancel' but no email sent out"
 orgs who are in apply status (not members) show up on review list,"when you assign apps for review, orgs in draft, or peer review also show up.
 
-its only annoying to admin.",10/10/2011 09:55:38,10/10/2011 10:41:03,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:41:03; ajaya; 
+its only annoying to admin.",10/10/2011 09:55:38,10/10/2011 10:41:03,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:41:03; ajaya; 
 changeset:2214"
 office attachments don't show  icons and error does not go away,"
 
@@ -1177,13 +1177,13 @@ office attachments don't show  icons and error does not go away,"
 
 if you try to upload an empty file or some error occurs, the red box shows up. it does not go away if you later upload some other file successfully.
 
-png files do show!",10/10/2011 09:55:42,10/10/2011 10:41:05,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:41:05; ajaya; 
+png files do show!",10/10/2011 09:55:42,10/10/2011 10:41:05,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:41:05; ajaya; 
 changeset:2217"
 Doc icon appearing to the right of cost detail text box,"Not sure if this is an error, but on page 3 of the app, the excel icon appears in the very small margin between the cost detail box and the right hand column. I thought it usually appears below this.
 
 http://qa.peerwater.org/apps/162-Pacific-rower-falls-short-of-goal/display_app_step3
 
-",10/10/2011 09:55:45,10/10/2011 10:41:09,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 10:41:09; ajaya; 
+",10/10/2011 09:55:45,10/10/2011 10:41:09,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 10:41:09; ajaya; 
 changeset:2229"
 project search from quick list crashes,"on local, logged in as pwxadmin & care (pwx rev 2226).
 
@@ -1303,7 +1303,7 @@ Request
 Parameters:
 
 {""filter""=>""1"",
- ""page""=>1}",10/10/2011 09:55:51,10/10/2011 10:41:11,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:41:11; ajaya; 
+ ""page""=>1}",10/10/2011 09:55:51,10/10/2011 10:41:11,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:41:11; ajaya; 
 changeset:2227"
 map of org causes crash,"on local (rel 2226) search for 'blue planet' and then click on org. then 'map of org...'
 
@@ -1492,19 +1492,19 @@ Request
 
 Parameters:
 
-{""id""=>""2-Blue-Planet-Run-Foundation""}",10/10/2011 09:55:56,10/10/2011 10:41:14,Closed,rajesh,rajesh,AWWC - support for new groups,Fixed,"10/10/11 10:41:13; ajaya; 
+{""id""=>""2-Blue-Planet-Run-Foundation""}",10/10/2011 09:55:56,10/10/2011 10:41:14,Closed,rajesh,rajesh,AWWC - support for new groups,AWWC - support for new groups,Fixed,"10/10/11 10:41:13; ajaya; 
 changeset:2228"
-Can't fill in Final Project Report,"As an org logged in to PWX and updating one of their projects, if you want to click on ""Final Project Report"" to fill it in, there's a hyperlink but it just says ""online incrementally."" Why do we have this as an option if it doesn't work? ",10/10/2011 09:56:01,10/10/2011 10:41:17,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:41:17; rajesh; 
+Can't fill in Final Project Report,"As an org logged in to PWX and updating one of their projects, if you want to click on ""Final Project Report"" to fill it in, there's a hyperlink but it just says ""online incrementally."" Why do we have this as an option if it doesn't work? ",10/10/2011 09:56:01,10/10/2011 10:41:17,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:41:17; rajesh; **Author: rajesh**
 its not an option - that page is the form we were referring to.
 
 have changed the text so it says only incrementally if project is not completed. changeset #2282.
 
 test it and close the ticket or let me know if i should close it"
-Typo: Question & Answar in top bar,"In the bar on the top of the page when you're using Mozilla Firefox, ""PWX|App|.....|Question & Answar - Mozilla Firefox"" is displayed. I found this first when I clicked on the link on your latest AWWC question then also on older QA pages in PWX.",10/10/2011 09:56:06,10/10/2011 10:41:20,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:41:20; rajesh; 
+Typo: Question & Answar in top bar,"In the bar on the top of the page when you're using Mozilla Firefox, ""PWX|App|.....|Question & Answar - Mozilla Firefox"" is displayed. I found this first when I clicked on the link on your latest AWWC question then also on older QA pages in PWX.",10/10/2011 09:56:06,10/10/2011 10:41:20,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:41:20; rajesh; **Author: rajesh**
 changeset 2258"
 Typo when an org deletes Secondary Contact,"Please change the text in the warning window that pops up when you go to delete the secondary contact from an org profile to:
 
-Are you sure you want to delete this contact?  The contact will be removed from the organization's profile and you will not be able to log in with this contact's username anymore.  However, all past activities of this contact will still be available for viewing.",10/10/2011 09:56:10,10/10/2011 10:41:27,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:41:27; rajesh; 
+Are you sure you want to delete this contact?  The contact will be removed from the organization's profile and you will not be able to log in with this contact's username anymore.  However, all past activities of this contact will still be available for viewing.",10/10/2011 09:56:10,10/10/2011 10:41:27,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:41:27; rajesh; **Author: rajesh**
 done #2292"
 enterprise ruby missing page 502 needs to be nice,"when nginx is restarting due to deployment of code, the error is cryptic.
 
@@ -1514,7 +1514,7 @@ nginx/0.6.31
 needs to be nicer and informative.
 
 also, since qa and dev share the same server, if code is deployed on one, the restart can affect the other. no problem.
-however, when we move this to www, then we better have something more independent and robust.",10/10/2011 09:56:15,10/10/2011 10:41:29,Open,rajesh,rajesh,Wish List,Unresolved,"10/10/11 10:41:29; ajaya; 
+however, when we move this to www, then we better have something more independent and robust.",10/10/2011 09:56:15,10/10/2011 10:41:29,Open,rajesh,rajesh,Wish List,Wish List,Unresolved,"10/10/11 10:41:29; ajaya; 
 fixed
 
 changeset:2413
@@ -1527,7 +1527,7 @@ code should be put in to provide the ability to also inform the funder in the fu
 
 the flexibility of editing the email to make it nicer should also exist (similar to application emails).
 
-these triggers should also generate a log for the project (similar to the app log)",10/10/2011 09:56:17,10/10/2011 10:41:39,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:41:31; rajesh; 
+these triggers should also generate a log for the project (similar to the app log)",10/10/2011 09:56:17,10/10/2011 10:41:39,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:41:31; rajesh; **Author: rajesh**
 list of emails sent to admin:
 - funding acceptance
 - project creation
@@ -1540,7 +1540,7 @@ emails should contain project id, name, project org, user name, user org, date, 
 done
 
 changeset:2297
-","10/10/11 10:41:36; rajesh; 
+","10/10/11 10:41:36; rajesh; **Author: rajesh**
 not working well (or there is another problem). a visitor report was created on www and the email alert was good. 7 photos were attached and 7 alerts were generated.
 
 it seems that Annette may have been having problems uploading, but the alerts should not be sent until the upload is successful.
@@ -1750,9 +1750,9 @@ project: !ruby/object:Project
 ------- Please do not reply to this automatically generated email -------","10/10/11 10:41:39; ajaya; 
 what's the issue. U wanted alerts when somebody updates a photo.  No way to know when all attachments are uploaded.  7 photos were uploaded to this one.
 http://peerwater.org/projects/61/proj_reports/97"
-send funding emails to both primary and secondary contact,"funding emails only go to primary contact, need to go all contact emails",10/10/2011 09:56:23,10/10/2011 10:41:50,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:41:41; ajaya; 
-changeset:2339","10/10/11 10:41:43; rajesh; 
-more changesets #2385 #2386 #2387","10/10/11 10:41:45; rajesh; 
+send funding emails to both primary and secondary contact,"funding emails only go to primary contact, need to go all contact emails",10/10/2011 09:56:23,10/10/2011 10:41:50,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:41:41; ajaya; 
+changeset:2339","10/10/11 10:41:43; rajesh; **Author: rajesh**
+more changesets #2385 #2386 #2387","10/10/11 10:41:45; rajesh; **Author: rajesh**
 sorry, i broke something. on dev i got the following email and there is no person like that.
 
 ------------
@@ -1796,7 +1796,7 @@ Sincerely,
 The Peer Water Exchange Team
 
 ------- Please do not reply to this system generated email -------
-","10/10/11 10:41:48; rajesh; 
+","10/10/11 10:41:48; rajesh; **Author: rajesh**
 don't know if the primary contact got an email (Annette), but the secondary did get one (shahrv).
 
 however, one more (rshah) got an email with a name ""Moray ..."" that i can't find thru search.
@@ -1808,20 +1808,20 @@ my code in going thru all the people (not just primary and secondary) has caused
 changeset:2389"
 "In QA, org dashboard right column mess up","In QA, the right column (that begins Profile and Logo) is laying the ""Map"" over hyperlinked ""Upload Logo.""
 
-http://qa.peerwater.org/organizations/40-EarthCare-Africa-Policy-Monitoring-Institute",10/10/2011 09:56:28,10/10/2011 10:41:52,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 10:41:52; rajesh; 
+http://qa.peerwater.org/organizations/40-EarthCare-Africa-Policy-Monitoring-Institute",10/10/2011 09:56:28,10/10/2011 10:41:52,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 10:41:52; rajesh; **Author: annette**
 This is actually happening for several organizations, where the logo box pushes out the ""Upload Logo"" and layers on top of the Map box underneath it."
 "Created test cyle, routing error when trying to log out","In QA, trying to log out as PWXAdmin after creating a test cycle. 
-http://qa.peerwater.org/admin/home_page/logout",10/10/2011 09:56:33,10/10/2011 10:41:56,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 10:41:54; rajesh; 
+http://qa.peerwater.org/admin/home_page/logout",10/10/2011 09:56:33,10/10/2011 10:41:56,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 10:41:54; rajesh; **Author: annette**
 Now trying to log in as PWXAdmin and getting a ""ZeroDivisionError in Dashboard#admin"" page. Can't proceed. 
 
-http://qa.peerwater.org/dashboard/admin","10/10/11 10:41:56; rajesh; 
+http://qa.peerwater.org/dashboard/admin","10/10/11 10:41:56; rajesh; **Author: rajesh**
 fixed zero divide error
 
 routing error needs to be a different ticket (also see if it happens on www)"
 Routing error when PWXadmin logs out from QA,"Only happening in Mozilla, routing error when logged in as pwxadmin & try to  log out. 
 http://qa.peerwater.org/admin/home_page/logout
 
-I can't test this in www because I don't have the pwxadmin password.",10/10/2011 09:56:37,10/10/2011 10:41:58,Closed,rajesh,ajaya,Bug Fix,Fixed,"10/10/11 10:41:58; rajesh; 
+I can't test this in www because I don't have the pwxadmin password.",10/10/2011 09:56:37,10/10/2011 10:41:58,Closed,rajesh,ajaya,Bug Fix,Bug Fix,Fixed,"10/10/11 10:41:58; rajesh; **Author: rajesh**
 from cycles page and others cannot log out. controller is home_page instead of dashboard?"
 Typos: New project report intro,"Please fill up the project report incrementally starting by entering correct name and short description, estimated dates and ""Current Status"" fields. Click on 'Project Location' in the right column and enter GIS info (latitude and longitude) to put project on '''PWX''' map. As time passes and you gather more information, update '''to''' correct project status, '''(and)''' enter updated dates and numbers of beneficiaries.
 
@@ -1829,37 +1829,37 @@ Use ""Status/Progress Reports"" to submit ongoing status reports on project prog
 
 
 
-When the project is complete, fill up this online report completely and use the ""Attachments"" section to upload formatted reports, financials, audits, scanned receipts, and photos for final report(''', etc.''')",10/10/2011 09:56:41,10/10/2011 09:56:43,Closed,rajesh,rajesh,Features for External Funders,Fixed
+When the project is complete, fill up this online report completely and use the ""Attachments"" section to upload formatted reports, financials, audits, scanned receipts, and photos for final report(''', etc.''')",10/10/2011 09:56:41,10/10/2011 09:56:43,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed
 Typo: Edit Project Report Into,"This page needs to be updated at the start of the project upon receiving the grant. (Anyway this can only appear when project is created?) The fields can be updated incrementally as data comes in. '''This''' will eventually become your final report for your project.
 All fields are required for the final report; you can attach documents and photos using the right-hand column of the main report page. Financial and audit statements will need to be attached and documents (rece''''''ipts, etc.) can be scanned in and attached.
-You can use status reports to share updates, events, photos, videos during project execution. ",10/10/2011 09:56:45,10/10/2011 09:56:47,Closed,rajesh,rajesh,Features for External Funders,Fixed
+You can use status reports to share updates, events, photos, videos during project execution. ",10/10/2011 09:56:45,10/10/2011 09:56:47,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed
 logo or photo on map box,"it would be good to put the logo of the org (if present and instead of the name) on the box that pops up in the map.
 
 and a thumbnail from the project or the application (if present) when we click on the app or the project.
 
-",10/10/2011 09:56:49,10/10/2011 10:42:02,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:42:00; ajaya; 
+",10/10/2011 09:56:49,10/10/2011 10:42:02,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:42:00; ajaya; 
 changeset:2441","10/10/11 10:42:02; ajaya; 
 changeset:2442
 "
-App/Proj title should be 64 char,50 char seems too short for what is happening in PWX. We need to increase size of title - there is enough space in the text box.,10/10/2011 09:56:53,10/10/2011 10:42:08,Closed,rajesh,rajesh,Wish List,Fixed,"10/10/11 10:42:04; rajesh; 
+App/Proj title should be 64 char,50 char seems too short for what is happening in PWX. We need to increase size of title - there is enough space in the text box.,10/10/2011 09:56:53,10/10/2011 10:42:08,Closed,rajesh,rajesh,Wish List,Wish List,Fixed,"10/10/11 10:42:04; rajesh; **Author: rajesh**
 i think projects seem to allow a much longer string than 50.","10/10/11 10:42:06; ajaya; 
-changeset:2335","10/10/11 10:42:08; rajesh; 
+changeset:2335","10/10/11 10:42:08; rajesh; **Author: rajesh**
 its now set to 150 and thats too long.
 
 rajesh needs to edit those apps/proj and reduce string length.
     ... sometime "
-Search Results not picking up Project,"Logged in as BPR, I ran a search for ""Bodaboda"" to check if they created a project. In the search result summary, Projects:0 but they do have a project. (http://www.peerwater.org/projects/114) Something goofy with the summary then. ",10/10/2011 09:56:57,10/10/2011 10:42:10,Closed,rajesh,ajaya,Features for External Funders,Fixed,"10/10/11 10:42:10; rajesh; 
+Search Results not picking up Project,"Logged in as BPR, I ran a search for ""Bodaboda"" to check if they created a project. In the search result summary, Projects:0 but they do have a project. (http://www.peerwater.org/projects/114) Something goofy with the summary then. ",10/10/2011 09:56:57,10/10/2011 10:42:10,Closed,rajesh,ajaya,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:42:10; rajesh; **Author: rajesh**
 duplicate of 8470"
 Typo: New Progress/Status Report,"Please enter in any information about the project to show its progress or post-completion impact.
 Progress reports are very useful to share updates, events, photos, videos during project execution. Status reports on post-completion impacts, activities, and changes can help peers, funders, and the public see the long-term results. If the project changes or does not work in the expected manner, the learnings will help future projects and also may '''help gain'''attract external assistance to fix problems, if any.
-Interviews, stories, and information about workshops and events will make the project come to life for readers'''.''' ",10/10/2011 09:57:01,10/10/2011 10:42:12,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:42:12; rajesh; 
+Interviews, stories, and information about workshops and events will make the project come to life for readers'''.''' ",10/10/2011 09:57:01,10/10/2011 10:42:12,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:42:12; rajesh; **Author: rajesh**
 dont think this is needed, some of it is done."
 video for org,"add a video link for organizations on their profile page (same as that on application or project).
 
 many orgs have a promo video that they can link to.
 
-want to demo this for gram vikas asap!",10/10/2011 09:57:05,10/10/2011 10:42:18,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:42:14; rajesh; 
-while we are changing the database, we should add facebook/linked-in profiles for people and orgs (does that make sense?)","10/10/11 10:42:16; rajesh; 
+want to demo this for gram vikas asap!",10/10/2011 09:57:05,10/10/2011 10:42:18,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:42:14; rajesh; **Author: rajesh**
+while we are changing the database, we should add facebook/linked-in profiles for people and orgs (does that make sense?)","10/10/11 10:42:16; rajesh; **Author: rajesh**
 and #3 a photo (thumbnail or ...) for each contact if they so wish to put it up.
 lets make the db changes now, worry about the forms later.","10/10/11 10:42:18; ajaya; 
 changeset:2317
@@ -1870,7 +1870,7 @@ changeset:2317
 "
 Project Report sections overlapping,"When editing a report, the Amounts Allocated section pushes the quantity below and behind the following field, which is Project Cost.
 
-http://qa.peerwater.org/projects/18/edit",10/10/2011 09:57:09,10/10/2011 10:42:20,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:42:20; rajesh; 
+http://qa.peerwater.org/projects/18/edit",10/10/2011 09:57:09,10/10/2011 10:42:20,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:42:20; rajesh; **Author: rajesh**
 have fixed it so that they are their own fields.
 
 please verify and close the ticket."
@@ -1878,7 +1878,7 @@ Typo: Edit Project Report Intro,"Please edit bolded fields. Regarding the explan
 
 This page will eventually become '''your'''the final report for your project. The fields can be updated incrementally '''as'''your data comes in.
 All fields are required for the final report; you can attach documents and photos using the right-hand column of the main report page. Financial and audit statements will need to be attached and documents (receipts, etc.) can be scanned in and attached.
-You can use '''the''' progress/status reports to share events, updates, events, photos, videos during project execution. ",10/10/2011 09:57:13,10/10/2011 10:42:22,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:42:22; rajesh; 
+You can use '''the''' progress/status reports to share events, updates, events, photos, videos during project execution. ",10/10/2011 09:57:13,10/10/2011 10:42:22,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:42:22; rajesh; **Author: rajesh**
 the changes are not compelling or are wrong: ""your the""
 
 not going to fix. the periods are a problem when there are 2 sentences it seems better.
@@ -1889,11 +1889,11 @@ Please fill up this project report page incrementally starting by entering corre
 
 Use ""Progress/Status"" to submit details about ongoing events as the project '''progresses'''. This includes events such as finalizing location of pump, arrival of materials, completion of workshops, formation of committees''','''... Here you can add narrative'''s''', interviews, videos, and photos (note that photos for status reports are added on 2nd screen that appears after status report is submitted).
 
-When the project is complete, fill up this online report completely and use the ""Attachments"" section to upload formatted reports, financials, audits, scanned receipts, photos, etc. ",10/10/2011 09:57:17,10/10/2011 10:42:26,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:42:26; rajesh; 
+When the project is complete, fill up this online report completely and use the ""Attachments"" section to upload formatted reports, financials, audits, scanned receipts, photos, etc. ",10/10/2011 09:57:17,10/10/2011 10:42:26,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:42:26; rajesh; **Author: rajesh**
 fixed - changeset 2309
 
 verify and close."
-Peer & Visitor Report intro box,There's an extra line in the intro box on the Peer & Visitor Reports. ,10/10/2011 09:57:22,10/10/2011 10:42:30,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:42:30; ajaya; 
+Peer & Visitor Report intro box,There's an extra line in the intro box on the Peer & Visitor Reports. ,10/10/2011 09:57:22,10/10/2011 10:42:30,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:42:30; ajaya; 
 fixed changeset:2310"
 ability to delete primary contact,"we need to delete primary contact.
 
@@ -1905,9 +1905,9 @@ if there is a secondary contact, then allow primary to be deleted (show delete b
 warning box will show that primary will be deleted and secondary will become primary.
 
 
-i have a feeling admin will need a way to restore a deleted contact into the secondary! :)",10/10/2011 09:57:27,10/10/2011 10:42:32,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:42:32; ajaya; 
+i have a feeling admin will need a way to restore a deleted contact into the secondary! :)",10/10/2011 09:57:27,10/10/2011 10:42:32,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:42:32; ajaya; 
 changeset:2337"
-clicking on project in dashboard should go to project page not to edit page,"on the dashboard, clicking on the project link in ""Submit Project Status"" takes you to the edit page. it should go to the project page where you can edit the report, the address or a status report.",10/10/2011 09:57:31,10/10/2011 10:42:36,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:42:36; ajaya; 
+clicking on project in dashboard should go to project page not to edit page,"on the dashboard, clicking on the project link in ""Submit Project Status"" takes you to the edit page. it should go to the project page where you can edit the report, the address or a status report.",10/10/2011 09:57:31,10/10/2011 10:42:36,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:42:36; ajaya; 
 changeset:2332
 "
 projects should also have primary and secondary focus,"projects can have foci that are different from the app.
@@ -1916,10 +1916,10 @@ so projects need to have focus and inherit those of the app, but are editable.
 
 this is surely a db change, so do it now along with the rest.
 
-will affect all project views.",10/10/2011 09:57:35,10/10/2011 10:42:38,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:42:38; ajaya; 
+will affect all project views.",10/10/2011 09:57:35,10/10/2011 10:42:38,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:42:38; ajaya; 
 changeset:2338"
-somehow the map keeps showing app away,"the bpr app http://www.peerwater.org/apps/100-Laughing-Waters-Water-and-Sewage-projects shows up on the map a bit away, even though i keep editing it's coords and trying to have it show up on the right spot.",10/10/2011 09:57:39,10/10/2011 10:42:46,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:42:40; ajaya; 
-I can't replicate this.","10/10/11 10:42:42; rajesh; 
+somehow the map keeps showing app away,"the bpr app http://www.peerwater.org/apps/100-Laughing-Waters-Water-and-Sewage-projects shows up on the map a bit away, even though i keep editing it's coords and trying to have it show up on the right spot.",10/10/2011 09:57:39,10/10/2011 10:42:46,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:42:40; ajaya; 
+I can't replicate this.","10/10/11 10:42:42; rajesh; **Author: rajesh**
 one more app showing away:
 
 
@@ -1934,7 +1934,7 @@ more near:
 
 so clearly not the rounding, but something else is a problem.
 
-","10/10/11 10:42:44; rajesh; 
+","10/10/11 10:42:44; rajesh; **Author: rajesh**
 looking at the original data:
 
 app: http://peerwater.org/apps/100
@@ -1948,14 +1948,14 @@ project: http://peerwater.org/projects/120
 
 but you can see that the app is very far away from all the projects, which are all together","10/10/11 10:42:46; ajaya; 
 changeset:2762"
-last update date shown on project report,No description given,10/10/2011 09:57:43,14/04/2012 05:06:53,Open,rajesh,rajesh,Ruby 1.9.3 Rails 3.2,Unresolved,"10/10/11 10:42:48; ajaya; 
-changeset:2333","10/10/11 10:42:50; rajesh; 
+last update date shown on project report,No description given,10/10/2011 09:57:43,14/04/2012 05:06:53,Open,rajesh,rajesh,Ruby 1.9.3 Rails 3.2,Ruby 1.9.3 Rails 3.2,Unresolved,"10/10/11 10:42:48; ajaya; 
+changeset:2333","10/10/11 10:42:50; rajesh; **Author: rajesh**
 need this date at the top of the project report page.
 below Current Status or better Application Id
 
 ""Last Update On:""
 and the date for any update by anybody (Self/Main report, Status report, Peer Report, Visitor Report)","10/10/11 10:42:53; ajaya; 
-duplicate","10/10/11 10:42:55; rajesh; 
+duplicate","10/10/11 10:42:55; rajesh; **Author: rajesh**
 now we have the last update date to be jun02,2009
 
 its clear that so many last updates happened years ago.
@@ -1966,21 +1966,21 @@ maybe replace with last login.
 or with project completion date
 or leave it blank ...
 
-but lets avoid misleading or giving credit where none is due ...","10/10/11 10:42:57; rajesh; 
+but lets avoid misleading or giving credit where none is due ...","10/10/11 10:42:57; rajesh; **Author: rajesh**
 lets make the date nil if it is equal to jun02,09
 then it will not appear
 
 (no longer a duplicate, have closed the other one)","10/10/11 10:42:59; ajaya; 
 this is wierd. putting exception for this specific case in the code sucks. I can probably update the data. for what projects? etc I do though?
-","10/10/11 10:43:01; rajesh; 
+","10/10/11 10:43:01; rajesh; **Author: rajesh**
 good idea.
 
 change the database so that if ANY project (project report, etc.) has jun02,09 as the last date, make it nil.
 
-","10/10/11 10:43:03; rajesh; 
+","10/10/11 10:43:03; rajesh; **Author: rajesh**
 make sure that a nil date does not cause problems.","10/10/11 10:43:05; ajaya; 
 we can't make it nil.  Lets leave it as it is now.  Those projects were updated in Jun 02 for real in PWX.  So let it be what it is.
-","10/10/11 10:43:07; rajesh; 
+","10/10/11 10:43:07; rajesh; **Author: rajesh**
 why can't we make it nil?
 
 am explaining to funders how we are not funding some this year due to lack of project reports and lack of updates, even if the application peer review was good.
@@ -1992,7 +1992,7 @@ so:
 - date of 1/1/year of funding
 - date of app (lets check)
 - etc.","10/10/11 10:43:09; ajaya; 
-what u want done on this?","10/10/11 10:43:11; rajesh; 
+what u want done on this?","10/10/11 10:43:11; rajesh; **Author: rajesh**
 can we make the date nil, if date == jun/02/09 ?
 
 
@@ -2000,7 +2000,7 @@ if not, then set date = start date on app
 ","10/10/11 10:43:13; ajaya; 
 rajesh
 
-i am not sure how relevant this is anymore.  please look at the current data and summarize the work needs to be done here plz.","10/10/11 10:43:15; rajesh; 
+i am not sure how relevant this is anymore.  please look at the current data and summarize the work needs to be done here plz.","10/10/11 10:43:15; rajesh; **Author: rajesh**
 make the date nil, if date == jun/02/09 or == start date on app (whatever is easier or makes more sense)
 
 this will be a one time act, so you can do it however you want.
@@ -2017,27 +2017,27 @@ This will not work.  We calculate last_updated by project and a lot of dependent
     updates.sort.last
 }}}
 
-Very hard to go in mess with each.","10/10/11 10:43:19; rajesh; 
+Very hard to go in mess with each.","10/10/11 10:43:19; rajesh; **Author: rajesh**
 there must be the == one field ==
  which got populated when we released the project update date code. lets clear that, where value is June 2, 09
 
-i don't want to have a report in May 10 that all projects had been updated in the past year.","10/10/11 10:43:22; rajesh; 
+i don't want to have a report in May 10 that all projects had been updated in the past year.","10/10/11 10:43:22; rajesh; **Author: abhishek**
  * I dont see any thing with ""June 2 ,09"" issue.
  * I guess its old ticket and data has been updated.
  * http://screencast.com/t/NTU1MmY2MTYt
  * Ready to close",13/01/12 12:09:15; rajesh; @vamsee lets close this and others - sit together for a couple of hours and go thru a bunch of issues
 ability to change application type from project -> program,"and affecting all the projects in the right way if at all.
 
-we need to change two applications for project well to program",10/10/2011 09:57:45,10/10/2011 10:43:24,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:43:24; ajaya; 
+we need to change two applications for project well to program",10/10/2011 09:57:45,10/10/2011 10:43:24,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:43:24; ajaya; 
 changeset:2331
 "
 admin cannot save edits to project report - published date,"when admin tries to edit a visitor project report, you can change the publish date, but it automatically changes upon save.
 
-the date displayed in the rhs column should be reported date (what is shown in the top of the report).",10/10/2011 09:57:49,10/10/2011 10:43:37,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 10:43:27; rajesh; 
-workaround: change display date in rhs column to reported date which admin can edit","10/10/11 10:43:30; rajesh; 
+the date displayed in the rhs column should be reported date (what is shown in the top of the report).",10/10/2011 09:57:49,10/10/2011 10:43:37,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 10:43:27; rajesh; **Author: rajesh**
+workaround: change display date in rhs column to reported date which admin can edit","10/10/11 10:43:30; rajesh; **Author: abhishek**
 It saves whats supplied , I dont see any problem any where http://screencast.com/t/ZWUzZTAzM","10/10/11 10:43:32; ajaya; 
-changeset:2857 ","10/10/11 10:43:35; rajesh; 
-please test on qa","10/10/11 10:43:37; rajesh; 
+changeset:2857 ","10/10/11 10:43:35; rajesh; **Author: rajesh**
+please test on qa","10/10/11 10:43:37; rajesh; **Author: vinita**
 Tested, comments below:
 
 When admin tries to edit a visitor project report, you can change the publish date - Yes, published date can be changed/ updated.
@@ -2051,11 +2051,11 @@ edit of a project report send you to the dashboard,"create a progress/status rep
 
 submit and then click edit.
 
-goes to dashboard, not to editing the report",10/10/2011 09:57:51,10/10/2011 10:43:52,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:43:39; ajaya; 
-changeset:2327","10/10/11 10:43:41; rajesh; 
+goes to dashboard, not to editing the report",10/10/2011 09:57:51,10/10/2011 10:43:52,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:43:39; ajaya; 
+changeset:2327","10/10/11 10:43:41; rajesh; **Author: rajesh**
 
 when i edit, the click ""Update"" it goes to the dashboard without saving the changes.","10/10/11 10:43:43; ajaya; 
-can't replicate. e.g.?","10/10/11 10:43:45; rajesh; 
+can't replicate. e.g.?","10/10/11 10:43:45; rajesh; **Author: rajesh**
 
 from #8567
 
@@ -2064,19 +2064,19 @@ Logged in to QA/PWX, after creating a report, redirected to homepage. Try to cli
 http://qa.peerwater.org/dashboard/member Shortcut should be: http://qa.peerwater.org/projects/97-ice-cities/proj_reports/113 
 
 i still see it on local","10/10/11 10:43:48; ajaya; 
-changeset:2358","10/10/11 10:43:50; rajesh; 
+changeset:2358","10/10/11 10:43:50; rajesh; **Author: annette**
 I don't understand the changeset, but I'm getting the same error: after creating a peer report, submitting it and finding it again, if you try to click the link you're redirected to dashboard. 
 
 http://qa.peerwater.org/projects/60-Rooftop-Rainwater-Harvesting-in-Afghanistan/proj_reports/114","10/10/11 10:43:52; ajaya; 
 no.. i just checked after deploying latest"
 org q&a not visible if not logged in,"if you are not logged in, cannot see org q&a anymore.
 
-maybe something to do with the changes to disable q&a for those who did not go thru it?",10/10/2011 09:57:55,10/10/2011 10:43:54,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:43:54; ajaya; 
+maybe something to do with the changes to disable q&a for those who did not go thru it?",10/10/2011 09:57:55,10/10/2011 10:43:54,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:43:54; ajaya; 
 changeset:2328"
 "upgrade to geocode 1.2.1, put reverse geocode","http://geokit.rubyforge.org/index.html
 
 the new version, just released, has reverse lookup for google maps.
-and also new features like getting geocodes based on ip (useful for reports, blogs, office locations) and finding places within distance of each other.",10/10/2011 09:57:59,10/10/2011 10:43:59,Closed,rajesh,ajaya,Features for External Funders,Fixed,"10/10/11 10:43:56; rajesh; 
+and also new features like getting geocodes based on ip (useful for reports, blogs, office locations) and finding places within distance of each other.",10/10/2011 09:57:59,10/10/2011 10:43:59,Closed,rajesh,ajaya,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:43:56; rajesh; **Author: rajesh**
 this looks really even better now.
 
 ip based geo coding is a great feature for office locations.
@@ -2088,10 +2088,10 @@ map legend: years to be fixed properly,"currently the map uses part of the name 
 the cycle year should be a field by itself, selected on the cycle page.
 maybe a dropdown list with years (that later can be enhanced to have ...)
 
-and we need to add Pre-2005 as a field as we are going to put lots of old projects from our partners onto the website.",10/10/2011 09:58:04,10/10/2011 10:44:05,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:44:01; ajaya; 
+and we need to add Pre-2005 as a field as we are going to put lots of old projects from our partners onto the website.",10/10/2011 09:58:04,10/10/2011 10:44:05,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:44:01; ajaya; 
 changeset:2334
 
-run db:migrate","10/10/11 10:44:03; rajesh; 
+run db:migrate","10/10/11 10:44:03; rajesh; **Author: rajesh**
 map filter does not work. projects/apps cannot be chosen by year
 
 did db:migrate
@@ -2101,7 +2101,7 @@ fixed.  u had changed the project checkbox legend.
 changeset:2336"
 update wiki on trac for deployment,"can you please update the wiki so i know clearly how to deploy the new source to qa including: db: migrate and db: refresh.
 
-thanks, i want to deploy the latest to qa, refresh, and do a round of testing with lisa, mark, etc.",10/10/2011 09:58:08,10/10/2011 10:44:07,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:44:07; ajaya; 
+thanks, i want to deploy the latest to qa, refresh, and do a round of testing with lisa, mark, etc.",10/10/2011 09:58:08,10/10/2011 10:44:07,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:44:07; ajaya; 
 wiki:WikiStart"
 accept funding causes crash and more errors,"on local machine, funded a project (with 2 funders in the cycle).
 logged in as user and accepted funding. clicking agree/accept caused crash.
@@ -2311,16 +2311,16 @@ http://localhost:3000/apps/94-Creation-of-a-rain-fed-lake-at-Inventure/manage
 
 
 
-",10/10/2011 09:58:13,10/10/2011 10:44:09,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:44:09; ajaya; 
+",10/10/2011 09:58:13,10/10/2011 10:44:09,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:44:09; ajaya; 
 changeset:2344"
 help fix PADI's project report,"http://www.peerwater.org/projects/111-Safe-water-for-Kalembo-Secondary-School-in-Songea-1-3-
 
 Instead of creating 3 projects, PADI created 1 project and put the other 2 as progress/status reports.
 
-PADI has uploaded tons of pictures so if we can fix the situation ourselves, it would be good. Please work with Rajesh on back the scenes manipulation",10/10/2011 09:58:18,10/10/2011 10:44:16,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:44:12; ajaya; 
+PADI has uploaded tons of pictures so if we can fix the situation ourselves, it would be good. Please work with Rajesh on back the scenes manipulation",10/10/2011 09:58:18,10/10/2011 10:44:16,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:44:12; ajaya; 
 changeset:2350
 
-changeset:2351","10/10/11 10:44:14; rajesh; 
+changeset:2351","10/10/11 10:44:14; rajesh; **Author: rajesh**
 this is great, works fine.
 
 before i close it: how do i move progress/status reports from one project to another?","10/10/11 10:44:16; ajaya; 
@@ -2340,7 +2340,7 @@ i want:
 #2 is used to show total value of projects managed and needs to match / correlate with the total value of applications (shown on home page)
 
 for AJ: #2 should not be used anywhere in internal calc
-for RS: appropriate help and text is needed",10/10/2011 09:58:22,10/10/2011 10:44:25,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:44:18; rajesh; 
+for RS: appropriate help and text is needed",10/10/2011 09:58:22,10/10/2011 10:44:25,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:44:18; rajesh; **Author: rajesh**
 maybe i was not clear:
 
 with all projects there should be an amount allocated (from the funding) - #1.
@@ -2350,14 +2350,14 @@ IDEAL Scene: you have an option to 'return' it and account for all the money.
 With a single project, for now, it should show up as a difference between what was funded and what was used.
 
 For program funding, it is used (currently) as a way to create another project, until it becomes zero.
-","10/10/11 10:44:20; rajesh; 
+","10/10/11 10:44:20; rajesh; **Author: rajesh**
 i have made the changes to the labels and the help text message #2348. want to keep this open for the IDEAL scene. ","10/10/11 10:44:25; ajaya; 
 changeset:2365"
 ability to delete a project,"need to be able to delete a project.
 
 currently we have 2 protos projects for the same thing - one needs to go.
 
-project id 127",10/10/2011 09:58:26,10/10/2011 10:44:27,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:44:27; ajaya; 
+project id 127",10/10/2011 09:58:26,10/10/2011 10:44:27,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:44:27; ajaya; 
 changeset:2346"
 "logout page -> ""Home"" causes error","happened twice: on local, when i logout i get the logout screen.
 
@@ -2407,7 +2407,7 @@ app/controllers/home_page_controller.rb:27:in `index'
 /usr/bin/thin:19:in `load'
 /usr/bin/thin:19
 
-",10/10/2011 09:58:31,10/10/2011 10:44:29,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:44:29; ajaya; 
+",10/10/2011 09:58:31,10/10/2011 10:44:29,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:44:29; ajaya; 
 changeset:2345"
 """My Profile"" causes error","on local logged in as 'rajesh' (bpr) and clicked MyProfile:
 http://localhost:3000/organizations/2
@@ -2463,7 +2463,7 @@ app/controllers/organizations_controller.rb:56:in `show'
 /usr/bin/thin:19:in `load'
 /usr/bin/thin:19
 
-",10/10/2011 09:58:36,10/10/2011 10:44:31,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:44:31; ajaya; 
+",10/10/2011 09:58:36,10/10/2011 10:44:31,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:44:31; ajaya; 
 changeset:2342"
 project list causes crashe,"
 http://localhost:3000/project_info/project_search?items_per_page=ALL&filter=2&orderby=id&order=ASC&org_id=
@@ -2627,10 +2627,10 @@ Parameters:
  ""org_id""=>"""",
  ""filter""=>""2"",
  ""items_per_page""=>""ALL"",
- ""orderby""=>""id""}",10/10/2011 09:58:43,10/10/2011 10:44:46,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:44:33; ajaya; 
+ ""orderby""=>""id""}",10/10/2011 09:58:43,10/10/2011 10:44:46,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:44:33; ajaya; 
 org_id is null somehow.. How do u replicate this? how u got  to here?
-","10/10/11 10:44:39; rajesh; 
-keep it around in case it can be reproduced","10/10/11 10:44:42; rajesh; 
+","10/10/11 10:44:39; rajesh; **Author: rajesh**
+keep it around in case it can be reproduced","10/10/11 10:44:42; rajesh; **Author: rajesh**
 on qa, logged in as care.
 click on List All My Apps in the main dashboard, in the list of active aaps.
 
@@ -2669,12 +2669,12 @@ help admin move photos and project reports from one project to another,"padi has
 
 need to move project reports from one project to another and move photos from one project to another.
 
-might be a problem in the future, so a script would be useful",10/10/2011 09:58:49,10/10/2011 10:44:55,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:44:48; ajaya; 
+might be a problem in the future, so a script would be useful",10/10/2011 09:58:49,10/10/2011 10:44:55,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:44:48; ajaya; 
 changeset:2350
 ","10/10/11 10:44:50; ajaya; 
 check 
 http://dev.peerwater.org/projects/111-Safe-water-for-Kalembo-Secondary-School-in-Songea-1-3-/attachments/album
-","10/10/11 10:44:52; rajesh; 
+","10/10/11 10:44:52; rajesh; **Author: rajesh**
 this is great, works fine.
 
 before i close it: how do i move progress/status reports from one project to another?
@@ -2688,19 +2688,19 @@ show the title, the text also.
 
 also from Jackie:
 
-Thanks for updating us! PADI came through with flying colors concerning the photography. They look great.  I just had a user-interface thought regarding the photo organization. It would be nice to arrow throw all the photos if possible, versus having to click on each photo. I'm aware you and AJ are constantly updating the site so maybe this is something you can consider. If not, it's perfectly good as is too.",10/10/2011 09:58:53,15/03/2012 05:55:57,Open,rajesh,vamsee,Wish List,Unresolved,"10/10/11 10:44:58; ajaya; 
+Thanks for updating us! PADI came through with flying colors concerning the photography. They look great.  I just had a user-interface thought regarding the photo organization. It would be nice to arrow throw all the photos if possible, versus having to click on each photo. I'm aware you and AJ are constantly updating the site so maybe this is something you can consider. If not, it's perfectly good as is too.",10/10/2011 09:58:53,15/03/2012 05:55:57,Open,rajesh,vamsee,Wish List,Wish List,Unresolved,"10/10/11 10:44:58; ajaya; 
 changeset:2350
-changeset:2351","10/10/11 10:45:01; rajesh; 
+changeset:2351","10/10/11 10:45:01; rajesh; **Author: rajesh**
 list of attachments shows ""Delete"" even if user is not logged in.
 should only show for admin and project owner.
 
 maybe not needed if we are combining the album view and the list view.
 list view is useful for admin, album view is good for users.","10/10/11 10:45:03; ajaya; 
-changeset:2359","10/10/11 10:45:05; rajesh; 
-would be nice to have a slide show as per my earlier request and description","10/10/11 10:45:07; rajesh; 
+changeset:2359","10/10/11 10:45:05; rajesh; **Author: rajesh**
+would be nice to have a slide show as per my earlier request and description","10/10/11 10:45:07; rajesh; **Author: abhishek**
 Slide show included as per the request
 
-[http://trac.peerwater.org/index.fcgi/changeset/2819/trunk Changeset 2819]","10/10/11 10:45:09; rajesh; 
+[http://trac.peerwater.org/index.fcgi/changeset/2819/trunk Changeset 2819]","10/10/11 10:45:09; rajesh; **Author: rajesh**
 Abhishek restored the code from the analytix branch.
 
 Here is the link he gave me: http://qa.peerwater.org/organizations/25-Tanzania-Mission-to-the-Poor-and-Disabled-PADI-/attachments/album
@@ -2721,10 +2721,10 @@ but we need:
 
 it would be good to explore new add-ons (doesn't wordpress have something or so many others) that allow for a lightbox floating. something slick.
 
-who wants to take this ? (ajaya or abhishek)","10/10/11 10:45:12; rajesh; 
+who wants to take this ? (ajaya or abhishek)","10/10/11 10:45:12; rajesh; **Author: rajesh**
 check out: http://www.samridhdhi.org/gallery#image;close [[BR]]       [[BR]]       you can click on a thumbnail and get a slide show too.[[BR]]       [[BR]]       am sure there are many neat examples.
 
-(make sure you read the whole ticket)[[BR]]","10/10/11 10:45:15; rajesh; 
+(make sure you read the whole ticket)[[BR]]","10/10/11 10:45:15; rajesh; **Author: rajesh**
 it's called a 'lightbox' effect and plenty of foss options","15/03/12 05:55:57; rajesh; moving it out of R3, but hopefully we don't lose it in Z Future"
 New cycle broken links,"Add Funders:
 When creating new cycle, click on Add Funder and link's broken. 
@@ -2732,9 +2732,9 @@ http://qa.peerwater.org/admin/cycles/new
 
 Creating cycle, once you click create it goes to a page that reads ""ActiveRecord::StatementInvalid in Admin/cyclesController#create.""
 
-Using Vista and IE.",10/10/2011 09:58:55,10/10/2011 10:45:24,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:45:17; ajaya; 
+Using Vista and IE.",10/10/2011 09:58:55,10/10/2011 10:45:24,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:45:17; ajaya; 
 changeset:2352","10/10/11 10:45:19; ajaya; 
-changeset:2353","10/10/11 10:45:22; rajesh; 
+changeset:2353","10/10/11 10:45:22; rajesh; **Author: rajesh**
 now something else is broken in create new cycle.
 
 http://localhost:3000/admin/cycles/new
@@ -2952,46 +2952,46 @@ Parameters:
 changeset:2357"
 Admin can't log out after editing cycles,"Trying to log out as PWXAdmin after editing/creating/tampering with cycles and not able to. Vista and IE. Get: No route matches ""/admin/home_page/logout"" with {:method=>:get}
 
-",10/10/2011 09:59:00,10/10/2011 10:45:27,Closed,rajesh,ajaya,Features for External Funders,Fixed,"10/10/11 10:45:27; rajesh; 
+",10/10/2011 09:59:00,10/10/2011 10:45:27,Closed,rajesh,ajaya,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:45:27; rajesh; **Author: rajesh**
 duplicate of #8412"
 Project Report error,"When you're creating a report, if you click on the YouTube video instructions and then go back to your report, the fields are all erased. Vista and IE. 
 
-(I think there may be another ticket like this but have not found it.)",10/10/2011 09:59:04,10/10/2011 10:45:33,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:45:29; rajesh; 
+(I think there may be another ticket like this but have not found it.)",10/10/2011 09:59:04,10/10/2011 10:45:33,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:45:29; rajesh; **Author: rajesh**
 youtube instructions open in new window, leaves current data intact.
 
-reassigned for testing","10/10/11 10:45:33; rajesh; 
+reassigned for testing","10/10/11 10:45:33; rajesh; **Author: annette**
 Correct, instructions did open in new window when tested.  Maybe I goofed that other time?"
 Project link broken,"Logged in to QA/PWX, after creating a report, redirected to homepage. Try to click on link for report, also redirected to homepage. Vista and IE. 
 
 http://qa.peerwater.org/dashboard/member
 Shortcut should be: http://qa.peerwater.org/projects/97-ice-cities/proj_reports/113
 
-",10/10/2011 09:59:08,10/10/2011 10:45:41,Closed,rajesh,ajaya,Features for External Funders,Fixed,"10/10/11 10:45:38; rajesh; 
-happens on local for rajesh too","10/10/11 10:45:41; rajesh; 
+",10/10/2011 09:59:08,10/10/2011 10:45:41,Closed,rajesh,ajaya,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:45:38; rajesh; **Author: rajesh**
+happens on local for rajesh too","10/10/11 10:45:41; rajesh; **Author: rajesh**
 same as #8550"
 logout help screen will not let you login,"when you type in a incorrect login, you go to a login help screen.
 
 whatever you do there, you end up at the previous page, you cannot login from that screen anymore.
 
 /home_page/login_help
-",10/10/2011 09:59:12,10/10/2011 10:45:43,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 10:45:43; ajaya; 
+",10/10/2011 09:59:12,10/10/2011 10:45:43,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 10:45:43; ajaya; 
 changeset:2365"
 Can't edit an uploaded doc in app,"On page 3 of the project app, if you want to edit something you've just uploaded, after clicking edit and editing the item the ""submit"" button doesn't work. Vista and IE. 
 
 http://qa.peerwater.org/apps/166-Blue-skies-greywater-system/attachments/new?type=cost
 
-If you click cancel, it goes to a download the file option. From there you can either delete (it entirely) or click on edit and you go back.",10/10/2011 09:59:16,10/10/2011 10:45:58,Open,rajesh,rajesh,Wish List,Unresolved,"10/10/11 10:45:46; ajaya; 
+If you click cancel, it goes to a download the file option. From there you can either delete (it entirely) or click on edit and you go back.",10/10/2011 09:59:16,10/10/2011 10:45:58,Open,rajesh,rajesh,Wish List,Wish List,Unresolved,"10/10/11 10:45:46; ajaya; 
 changeset:2367
 
-Deployed to QA.","10/10/11 10:45:49; rajesh; 
-Fixed - but think there need to be instructions saying to just click done once you've edited, this is not obvious.  Otherwise, great feature!","10/10/11 10:45:51; rajesh; 
+Deployed to QA.","10/10/11 10:45:49; rajesh; **Author: annette**
+Fixed - but think there need to be instructions saying to just click done once you've edited, this is not obvious.  Otherwise, great feature!","10/10/11 10:45:51; rajesh; **Author: annette**
 Notice that if you edit something that you've uploaded, once you click submit the page doesn't refresh or update everything. So you'll have edited what you have in the edit field on the right of the page, but in the original list the item will remain unedited.
 
 But once you hit done and go back to the app, the changes have taken effect.  ","10/10/11 10:45:52; ajaya; 
-changeset:2396","10/10/11 10:45:56; rajesh; 
+changeset:2396","10/10/11 10:45:56; rajesh; **Author: annette**
 While this has been fixed, related is while creating an app, if you edit an uploaded doc when you've already clicked on done. After you edit the uploaded doc (say a photo), you are taken out of creating the app and have to click back on 'edit' the app to get to where you originally were.
 
-Vista, IE. http://dev.peerwater.org/apps/171-Ethiopian-dam-project","10/10/11 10:45:58; rajesh; 
+Vista, IE. http://dev.peerwater.org/apps/171-Ethiopian-dam-project","10/10/11 10:45:58; rajesh; **Author: rajesh**
 see if you understand and can test and close this"
 add gov't field to app,"we need one more text box in the app on page 2.
 
@@ -3001,7 +3001,7 @@ rajesh will put the correct text and help field on the form.
 
 
 ----
-later we will need to add some gov't financial stuff to page 3",10/10/2011 09:59:19,10/10/2011 10:46:00,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:46:00; ajaya; 
+later we will need to add some gov't financial stuff to page 3",10/10/2011 09:59:19,10/10/2011 10:46:00,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:46:00; ajaya; 
 changeset:2382"
 "last modified date on org profile, app, project","we need to have a last modified date on the org profile and the app (since we can now edit while peer review is going on) and also on the project.
 
@@ -3011,11 +3011,11 @@ on app, put on status summary a read-only field updated when app is saved
 
 on proj, put on summary a read-only field updated when proj is saved/updated/attached or when proj report
 
-need to make all db changes now",10/10/2011 09:59:23,10/10/2011 10:46:08,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:46:03; ajaya; 
+need to make all db changes now",10/10/2011 09:59:23,10/10/2011 10:46:08,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:46:03; ajaya; 
 changeset:2392
 
 Look for updated at : on right column on top.  I have kept it as un-obtrusive as possible.  People who need this data will find it anyway.
-","10/10/11 10:46:05; rajesh; 
+","10/10/11 10:46:05; rajesh; **Author: rajesh**
 the date works for org.
 
 but does not work for project.
@@ -3031,10 +3031,10 @@ have disabled the code in project, but left it in app and in org.
 ","10/10/11 10:46:07; ajaya; 
 changset:2409"
 allow selection of earlier year,"currently we cannot choose a date earlier than 2004.
-need to choose till 1980, but the current year should be highlighted - if possible - for new selections",10/10/2011 09:59:28,10/10/2011 10:46:17,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:46:10; ajaya; 
+need to choose till 1980, but the current year should be highlighted - if possible - for new selections",10/10/2011 09:59:28,10/10/2011 10:46:17,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:46:10; ajaya; 
 changeset:2394
 
-changeset:2395","10/10/11 10:46:13; rajesh; 
+changeset:2395","10/10/11 10:46:13; rajesh; **Author: rajesh**
 now for org valid dates, you cannot go beyond 2010 (status experiation).
 
 we should go at least till 2020 or 2015.
@@ -3081,7 +3081,7 @@ Blockedbyearthlink@abuse.earthlink.net does not block any mail sent to it; so, i
 Thank you for your cooperation,
 EarthLink Abuse
 
-",10/10/2011 09:59:33,10/10/2011 10:46:25,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 10:46:20; rajesh; 
+",10/10/2011 09:59:33,10/10/2011 10:46:25,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 10:46:20; rajesh; **Author: rajesh**
 now yahoo seems to be block pwx:
 
 The original message was received at Sat, 4 Apr 2009 08:06:52 -0400
@@ -3152,7 +3152,7 @@ The Peer Water Exchange Team
 
 ---------- Please do not reply to this system generated email ----------- ","10/10/11 10:46:22; ajaya; 
 this should fix
-changeset:2416","10/10/11 10:46:25; rajesh; 
+changeset:2416","10/10/11 10:46:25; rajesh; **Author: rajesh**
 this just happened with lifewater review.
 so keeping this alive with lower priority.
 ----

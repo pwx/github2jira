@@ -1,17 +1,17 @@
-Summary,Description,DateCreated,DateModified,Status,Reporter,Assignee,AffectsVersion,Resolution,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody
+Summary,Description,DateCreated,DateModified,Status,Reporter,Assignee,AffectsVersion,FixVersion,Resolution,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody
 blog admin is not working (need to add Megan),"An error occurred with Mephisto. If you're the administrator, check your production error logs for more info.
 
 Need help?
 
     * The Official Mephisto Site
     * The Mephisto Community Wiki
-",10/10/2011 10:07:29,10/10/2011 10:55:29,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:55:29; ajaya; 
+",10/10/2011 10:07:29,10/10/2011 10:55:29,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:55:29; ajaya; 
 Fixed.  The stupid Mephisto doesn't work with Ruby 1.8.7.  Setup a whole new setup for blog purpose only in http, monit, and passenger.  Using out of the box Rbu 1.8.6
 
 Need to move to Wordpress.
 
 "
-Format and spacing on Project Reports,When typing project reports the spacing and formatting I enter in the text fields is not kept when publishing the page to the site.  Example of problems:  http://peerwater.org/projects/159-Water-Towers-funded-by-Charity-Water-Phase-1  In that instance you will see the bullets not spaced properly and large chunks of text when I had used paragraph spacing about every 3-4 lines.  In status reports you can see the spacing has been kept as it was entered: http://peerwater.org/projects/159-Water-Towers-funded-by-Charity-Water-Phase-1/proj_reports/118.   ,10/10/2011 10:07:33,10/10/2011 10:55:31,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:55:31; ajaya; 
+Format and spacing on Project Reports,When typing project reports the spacing and formatting I enter in the text fields is not kept when publishing the page to the site.  Example of problems:  http://peerwater.org/projects/159-Water-Towers-funded-by-Charity-Water-Phase-1  In that instance you will see the bullets not spaced properly and large chunks of text when I had used paragraph spacing about every 3-4 lines.  In status reports you can see the spacing has been kept as it was entered: http://peerwater.org/projects/159-Water-Towers-funded-by-Charity-Water-Phase-1/proj_reports/118.   ,10/10/2011 10:07:33,10/10/2011 10:55:31,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:55:31; ajaya; 
 changeset:2713
 
 Check qa,"
@@ -27,7 +27,7 @@ If you search for EOTO|eoto|each the results are blank.
 The interesting thing is that if you search on the organization search page: http://peerwater.org/organization_search/organization_search then ""Each One Teach One"" shows up in the prompt (so the system knows its there), but not in the results.
 
 Also, the org is clearly on the map in Mumbai.
-",10/10/2011 10:07:40,10/10/2011 10:55:38,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 10:55:34; ajaya; 
+",10/10/2011 10:07:40,10/10/2011 10:55:38,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 10:55:34; ajaya; 
 This is all working as designed.
 
 We only show Referrals in valid organization list, search etc when they are referred and either in Peer Review OR Approved.  
@@ -53,7 +53,7 @@ I think what we had decided that draft/submitted etc are crude organization with
 The COUNT in the search is a BUG.  
 
 
-Let's decide how we want this.","10/10/11 10:55:36; rajesh; 
+Let's decide how we want this.","10/10/11 10:55:36; rajesh; **Author: rajesh**
 Thanks, i realize now that the other 'Prospect' is under Peer Review which is why they are showing up.
 
 I think it works fine the way it is, when i put the new org in for Peer Review, it will show up as 'Prospect'.
@@ -99,7 +99,7 @@ this is needed soon:
 - WOTR needs to own the application and the grant.
 - The other orgs can do the project.
 
-Also true for more as Project Well has Aqua Welfare Society do its project for them.",10/10/2011 10:07:42,10/10/2011 10:07:42,Open,rajesh,ajaya,Wish List,Unresolved
+Also true for more as Project Well has Aqua Welfare Society do its project for them.",10/10/2011 10:07:42,10/10/2011 10:07:42,Open,rajesh,ajaya,Wish List,Wish List,Unresolved
 qandas broken in qa,"the new code deployed to qandas has broken it. no org reviews can happen.
 
 http://qa.peerwater.org/organizations/93-International-Water-Fountain-Organization/qandas
@@ -271,9 +271,9 @@ Response
 Headers:
 
 {""Content-Type""=>""text/html; charset=utf-8"",
- ""Cache-Control""=>""no-cache""}",10/10/2011 10:07:45,10/10/2011 10:55:41,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:55:40; ajaya; 
+ ""Cache-Control""=>""no-cache""}",10/10/2011 10:07:45,10/10/2011 10:55:41,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:55:40; ajaya; 
 changeset:2726"
-Word Counter in,"In the ""Short Project Description"" field there is a word limit of, I believe, 250 words for entries.  There really needs to be a word counter that tells you how many words you have typed or stops you before typing in too many.  There are so many reports on the site whose project descriptions suffer from the unfortunate ""cliff hanger"" where the reporter never looked to see that they were out of space and so the description is ended abruptly right in the middle of a word or sentence.  There has to be a fix right? Since it is the first and easiest way for people to find out the details of a project in a short description...Please help!",10/10/2011 10:07:51,10/10/2011 10:55:43,Open,rajesh,rajesh,Wish List,Unresolved,"10/10/11 10:55:42; ajaya; 
+Word Counter in,"In the ""Short Project Description"" field there is a word limit of, I believe, 250 words for entries.  There really needs to be a word counter that tells you how many words you have typed or stops you before typing in too many.  There are so many reports on the site whose project descriptions suffer from the unfortunate ""cliff hanger"" where the reporter never looked to see that they were out of space and so the description is ended abruptly right in the middle of a word or sentence.  There has to be a fix right? Since it is the first and easiest way for people to find out the details of a project in a short description...Please help!",10/10/2011 10:07:51,10/10/2011 10:55:43,Open,rajesh,rajesh,Wish List,Wish List,Unresolved,"10/10/11 10:55:42; ajaya; 
 changeset:2861
 
 please find other cases we need to implement this and assign it to me. The css might need to be updated for specific forms.
@@ -282,18 +282,18 @@ buttons on page 1 of application not working,"the 2 buttons for 'Step 2' and 'St
 
 all buttons on page 2 and page 3 work.
 
-while its fixed, maybe we can have the greyed (white) out button on Page 1, saying ""Step 1"". the other 2 pages have the greyed out button pointing to their own page",10/10/2011 10:07:53,10/10/2011 10:56:11,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:55:44; ajaya; 
+while its fixed, maybe we can have the greyed (white) out button on Page 1, saying ""Step 1"". the other 2 pages have the greyed out button pointing to their own page",10/10/2011 10:07:53,10/10/2011 10:56:11,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:55:44; ajaya; 
 changeset:2732","10/10/11 10:55:46; ajaya; 
-Still not working? I thought it's fixed.","10/10/11 10:55:48; rajesh; 
+Still not working? I thought it's fixed.","10/10/11 10:55:48; rajesh; **Author: rajesh**
 its not working on a new application.
 works all other times.","10/10/11 10:55:51; ajaya; 
 Hmm. Does work for me..  I can see some part of the button might not work. Like the edges.. But thats a bigger issue.  Check again.
 
-","10/10/11 10:55:55; rajesh; 
+","10/10/11 10:55:55; rajesh; **Author: rajesh**
 http:/demo.peerwater.org/apps/new
 
 the 2 buttons Step 2, Step 3 do not work. They have the clickable pointer when you hover over them, but nothing happens.","10/10/11 10:56:03; ajaya; 
-changeset:2765","10/10/11 10:56:08; rajesh; 
+changeset:2765","10/10/11 10:56:08; rajesh; **Author: rajesh**
 almost fixed.
 
 if you have end date blank, the buttons don't work (this is for new or edit existing apps) nor does an error message come up.
@@ -301,9 +301,9 @@ if you have end date blank, the buttons don't work (this is for new or edit exis
 it should be fine to have end date blank on draft application and allow user to navigate to next page.
 ","10/10/11 10:56:11; ajaya; 
 changeset:2766"
-"show $ and , in project report fields",project report page show numerical fields with formatting,10/10/2011 10:07:58,10/10/2011 10:56:14,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:56:14; rajesh; 
+"show $ and , in project report fields",project report page show numerical fields with formatting,10/10/2011 10:07:58,10/10/2011 10:56:14,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:56:14; rajesh; **Author: rajesh**
 changeset:@2733"
-TEST,TEST,10/10/2011 10:08:07,10/10/2011 10:08:10,Closed,rajesh,rajesh,Bug Fix,Fixed
+TEST,TEST,10/10/2011 10:08:07,10/10/2011 10:08:10,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed
 new db field: community contribution,"each project needs to have a community contribution field to be placed near (rajesh will decide) the total cost field in the project report.
 
 this can be taken from the application data for initial seeding (only for the first migration).
@@ -316,7 +316,7 @@ the total cost & the community contribution fields need to be put on the project
 
 the home page needs to have a ""Total Community Contribution:"" in the PWX Summary
 
-which for now is calculated from the application (approved) data.",10/10/2011 10:08:12,10/10/2011 10:56:27,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:56:27; ajaya; 
+which for now is calculated from the application (approved) data.",10/10/2011 10:08:12,10/10/2011 10:56:27,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:56:27; ajaya; 
 changeset:2757
 "
 more precision in lat & long fields,"the lat long fields need higher precision.
@@ -326,16 +326,16 @@ but after saving it rounds off to:
 12.894739, 77.745652
 
 http://peerwater.org/apps/94
-while we have db changes, it seems a good time to add this one.",10/10/2011 10:08:16,10/10/2011 10:56:30,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:56:30; ajaya; 
+while we have db changes, it seems a good time to add this one.",10/10/2011 10:08:16,10/10/2011 10:56:30,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:56:30; ajaya; 
 changeset:2763"
 logo for facebook and all not showing,"just the text, need logos/icons on the persons page.
 
-the logos are there in the images directory, but are not showing like the yahoo, skype, etc.",10/10/2011 10:08:20,10/10/2011 10:56:42,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:56:36; rajesh; 
+the logos are there in the images directory, but are not showing like the yahoo, skype, etc.",10/10/2011 10:08:20,10/10/2011 10:56:42,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:56:36; rajesh; **Author: rajesh**
 logos work on local, so i am pretty sure its a case problem, capital v lower case. code is looking for Logo-facebook.png while file is logo-facebook.png","10/10/11 10:56:42; ajaya; 
 changeset:2761"
 cannot accept funding for apps that are 'project funding',"when an app that is project funding is approved, the applicant cannot accept/manage the funding.
 
-with program funding, things are okay.",10/10/2011 10:08:24,10/10/2011 10:56:44,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:56:44; ajaya; 
+with program funding, things are okay.",10/10/2011 10:08:24,10/10/2011 10:56:44,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:56:44; ajaya; 
 changeset:2770"
 funding info for 'Approved but not funded' Apps,"
 To help Rotary to find apps for funding:
@@ -353,7 +353,7 @@ Funding: $xx,xxx | Project
 i have also changed the search results to show app and project status instead of cycle and name in the search results.
 though i cheated and use the app country in project results
 
-",10/10/2011 10:08:29,10/10/2011 10:56:48,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:56:48; rajesh; 
+",10/10/2011 10:08:29,10/10/2011 10:56:48,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:56:48; rajesh; **Author: rajesh**
 changeset:2773
 changeset:2774
 changeset:2775
@@ -367,7 +367,7 @@ something to do with the lat-long precision changes?
 
 bangalore orgs look ok.
 
-others - check out the map and tell me what else looks fishy.",10/10/2011 10:08:35,10/10/2011 10:56:56,Closed,rajesh,rajesh,Features for External Funders,Fixed,"10/10/11 10:56:52; ajaya; 
+others - check out the map and tell me what else looks fishy.",10/10/2011 10:08:35,10/10/2011 10:56:56,Closed,rajesh,rajesh,Features for External Funders,Features for External Funders,Fixed,"10/10/11 10:56:52; ajaya; 
 fixed in www.
 
 changeset:2777
@@ -375,7 +375,7 @@ changeset:2777
 This was caused by precision problem and only affected stuff in US as someof the longitude is less then 99.999999.. so anyting -100.0000 got screwed.  I have carefully restored the original values from backup.
 
 1.30hr wasted on this.  :(
-","10/10/11 10:56:54; rajesh; 
+","10/10/11 10:56:54; rajesh; **Author: rajesh**
 icons for philippines and vietnam were also messed up and still off. they have all moved to thailand.
 
 please fix them too.","10/10/11 10:56:56; ajaya; 
@@ -406,16 +406,16 @@ help level changes: (for rajesh)
 
 - help for email preferences (all of them)
 
-- document operation of reports/notification",10/10/2011 10:08:42,10/04/2012 04:07:35,Open,rajesh,ajaya,Ruby 1.9.3 Rails 3.2,Unresolved,"10/10/11 10:57:00; rajesh; 
+- document operation of reports/notification",10/10/2011 10:08:42,10/04/2012 04:07:35,Open,rajesh,ajaya,Ruby 1.9.3 Rails 3.2,Ruby 1.9.3 Rails 3.2,Unresolved,"10/10/11 10:57:00; rajesh; **Author: rajesh**
 Abhishek changed notifier.rb and we have a special case for EMW where the user #136 gets a copy of the (improved) email sent to admin.
 
 want to develop this further as an option to the primary contact of every org.
 
-and in future, to the funder too?","10/10/11 10:57:02; rajesh; 
-Is this functionality being used by EMV , is this useful? Only if it is being used we should make an effort to built it as feature else remove the hardcoding. ","10/10/11 10:57:04; rajesh; 
+and in future, to the funder too?","10/10/11 10:57:02; rajesh; **Author: abhishek**
+Is this functionality being used by EMV , is this useful? Only if it is being used we should make an effort to built it as feature else remove the hardcoding. ","10/10/11 10:57:04; rajesh; **Author: rajesh**
 need to make this feature more general purpose and have the notification be able to go out to primary contact. the user permission stuff is coming up and we need to have notifier ready.
 
-for now, sms messages should generate a notification as soon as the sms gets convereted to report.","10/10/11 10:57:06; rajesh; 
+for now, sms messages should generate a notification as soon as the sms gets convereted to report.","10/10/11 10:57:06; rajesh; **Author: rajesh**
 as stated above: 
 
 ""for now, sms messages should generate a notification as soon as the sms gets convereted to report."" 
@@ -425,7 +425,7 @@ improve admin scaffolds,"admin scaffolds for cycles, users, orgs are basic.
 
 it would help if they were at least sorted differently (not by id).
 
-and if they could be made sortable/clickable like project|app scaffolds, it would be great.",10/10/2011 10:08:47,10/10/2011 10:08:47,Open,rajesh,rajesh,Wish List,Unresolved
+and if they could be made sortable/clickable like project|app scaffolds, it would be great.",10/10/2011 10:08:47,10/10/2011 10:08:47,Open,rajesh,rajesh,Wish List,Wish List,Unresolved
 project lists (2 bugs),"the projects lists have 2 problems:
 
 1. the rhs is missing
@@ -437,7 +437,7 @@ and choose ""Projects Funded By ...""
 ------ FIX -------
 before fixing it research the report and see if we are planning to rewrite it. then no need to fix
 
-even the rhs may not need to be fixed if we change it for filtering or use the space for widening the screen.",10/10/2011 10:08:49,10/10/2011 10:57:34,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 10:57:22; rajesh; 
+even the rhs may not need to be fixed if we change it for filtering or use the space for widening the screen.",10/10/2011 10:08:49,10/10/2011 10:57:34,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 10:57:22; rajesh; **Author: rajesh**
 looking at:
 http://peerwater.org/project_info/project_search?filter=2&org_id=12
 
@@ -450,17 +450,17 @@ some dates will make the list more useful:
 
 A bigger question is the ""Organization"" column. Do we need it if we are doing it by Org?
 Do we need different columns for the various list filters?
-","10/10/11 10:57:24; rajesh; 
+","10/10/11 10:57:24; rajesh; **Author: abhishek**
 I have renabled the right RHS,
 
 The rest of issues may not be needed to fix because our new console will provide this info.
-","10/10/11 10:57:27; rajesh; 
+","10/10/11 10:57:27; rajesh; **Author: abhishek**
 Fixed in commit #2968
 
 It was small change but took a while to figureout.
-","10/10/11 10:57:30; rajesh; 
-actually, am keeping it open because i don't know how the lists from the console will replace the lists off the home page.","10/10/11 10:57:32; rajesh; 
-Assigned to Vinita for testing","10/10/11 10:57:34; rajesh; 
+","10/10/11 10:57:30; rajesh; **Author: rajesh**
+actually, am keeping it open because i don't know how the lists from the console will replace the lists off the home page.","10/10/11 10:57:32; rajesh; **Author: larrie**
+Assigned to Vinita for testing","10/10/11 10:57:34; rajesh; **Author: vinita**
 Replying to [comment:7 rajesh]:
 
 Tested and i am able to select the 'Org' by clicking on ""Funded by"""
@@ -468,17 +468,17 @@ cannot make changes to an org profile,"on www, the new org PALMYRA
 http://peerwater.org/organizations/102-PALMYRA
 
 i want to edit their profile as admin (change their status expiry date, etc).
-however, everytime i 'Save' the profile, it goes back to the edit page. only 'Cancel' works.",10/10/2011 10:08:53,10/10/2011 10:57:46,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 10:57:36; rajesh; 
+however, everytime i 'Save' the profile, it goes back to the edit page. only 'Cancel' works.",10/10/2011 10:08:53,10/10/2011 10:57:46,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 10:57:36; rajesh; **Author: rajesh**
 also there is a 'none' section at the bottom of the page; which i can't figure out where its coming from and why its there.
 
-can't see it in any other org.","10/10/11 10:57:38; rajesh; 
+can't see it in any other org.","10/10/11 10:57:38; rajesh; **Author: abhishek**
 Replying to [comment:1 rajesh]:
 > also there is a 'none' section at the bottom of the page; which i can't figure out where its coming from and why its there.
 > 
 > can't see it in any other org.
 
 
-The 'none' is because of http://screencast.com/t/NWQ3YzY5M","10/10/11 10:57:40; rajesh; 
+The 'none' is because of http://screencast.com/t/NWQ3YzY5M","10/10/11 10:57:40; rajesh; **Author: rajesh**
 trying on local: if i edit the video field and delete what's there i cannot save.
 
 on local, i put in 'none' in the video field.
@@ -488,13 +488,13 @@ then i put in a proper embed video and saved it and everything worked.
 then i deleted the video text and could not save.
 
 ","10/10/11 10:57:42; ajaya; 
-changeset:2798","10/10/11 10:57:44; rajesh; 
+changeset:2798","10/10/11 10:57:44; rajesh; **Author: rajesh**
 one problem is fixed - the org can be edited.
 
 the second, minor problem is that text in the video field shows up at the bottom, if it is not a valid video link.
 
 it should still show up as: Video Link: None
-not the way it is now.","10/10/11 10:57:46; rajesh; 
+not the way it is now.","10/10/11 10:57:46; rajesh; **Author: abhishek**
  Changeset:2816
  "
 Create a Resources and Tools section,"Be nice to create a Tools and Resources section.
@@ -530,21 +530,21 @@ Gilles Corcos wrote:
 >
 > So if you think this is appropriate I would be glad to send you those tools which we have created and repeatedly tested in the field together with their manuals.
 >
-> Cordially, Gilles ",10/10/2011 10:08:56,10/10/2011 10:08:56,Open,rajesh,rajesh,Wish List,Unresolved
+> Cordially, Gilles ",10/10/2011 10:08:56,10/10/2011 10:08:56,Open,rajesh,rajesh,Wish List,Wish List,Unresolved
 map of country,"would like to put a button next to search results in the country section that allows for map of country.
 
 this way, search for 'india' and then map all ' + Applications: 53  | + Projects: 779  | + Organizations: 18 ' in India.
 
 would like to see a nice button too (rollover gif at the least)
 
-",10/10/2011 10:08:58,10/10/2011 10:57:56,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 10:57:48; rajesh; 
-Design for button (including over state) is required : http://screencast.com/t/ZTg5ZTVmNGM","10/10/11 10:57:50; rajesh; 
+",10/10/2011 10:08:58,10/10/2011 10:57:56,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 10:57:48; rajesh; **Author: abhishek**
+Design for button (including over state) is required : http://screencast.com/t/ZTg5ZTVmNGM","10/10/11 10:57:50; rajesh; **Author: abhishek**
 
  * POST request to /map/results_for_country works perfect
- * GET request results in crashing browser http://screencast.com/t/YTk4OTQ5NGEt","10/10/11 10:57:52; rajesh; 
+ * GET request results in crashing browser http://screencast.com/t/YTk4OTQ5NGEt","10/10/11 10:57:52; rajesh; **Author: abhishek**
  * http://qa.peerwater.org/kb/search?query[keywords]=India&x=0&y=0
- * map icon required","10/10/11 10:57:54; rajesh; 
-Vinita, please test; ask for help if you don't understand it.","10/10/11 10:57:56; rajesh; 
+ * map icon required","10/10/11 10:57:54; rajesh; **Author: rajesh**
+Vinita, please test; ask for help if you don't understand it.","10/10/11 10:57:56; rajesh; **Author: vinita**
 Tested and it works."
 widget for india water portal and more,"need a WADGET (>> widget) for putting up on the India Water Portal.
 
@@ -552,11 +552,11 @@ this should be very strongly branded PWX but with colors that blend in the IWP.
 
 the widget can be the size of the large main frame and contain the map of India live connection).
 
-they may choose to not accept this widget and ask for a smaller widget on the left column; we have to be prepared to be disappointed but only after 'wowing' them first.",10/10/2011 10:09:03,10/10/2011 10:58:10,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 10:57:58; rajesh; 
+they may choose to not accept this widget and ask for a smaller widget on the left column; we have to be prepared to be disappointed but only after 'wowing' them first.",10/10/2011 10:09:03,10/10/2011 10:58:10,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 10:57:58; rajesh; **Author: abhishek**
 Notes
  * Widget will be loaded as IFRAME
  * Every link inside widget will open new tab (Not closing or navigating away from IWP)
-[[Image(WidgetLayout1.png)]] ","10/10/11 10:58:00; rajesh; 
+[[Image(WidgetLayout1.png)]] ","10/10/11 10:58:00; rajesh; **Author: abhishek**
  * Generalized Widget url on QA (this will be loaded in iframe)
    * http://qa.peerwater.org/widget/iwp_small?for=India
    * http://qa.peerwater.org/widget/iwp_large?for=India
@@ -564,24 +564,24 @@ Notes
    * http://qa.peerwater.org/widget/iwp_large?for=United+States
 
 ...Waiting for graphics
-","10/10/11 10:58:02; rajesh; 
+","10/10/11 10:58:02; rajesh; **Author: rajesh**
 need # of communities (since its much larger than # of projects) for the small widget.
 this is count of # of sites from all the projects.
 
-if we can create ""# of active communities"" from # of active projects, that would be good too.","10/10/11 10:58:04; rajesh; 
-What is # of sites, I do not see any attribute relating to that in project http://screencast.com/t/NTFhMzQxYTM","10/10/11 10:58:06; rajesh; 
-look at pwx stats, there is one stat for communities; need to use that for only india projects.","10/10/11 10:58:08; rajesh; 
+if we can create ""# of active communities"" from # of active projects, that would be good too.","10/10/11 10:58:04; rajesh; **Author: abhishek**
+What is # of sites, I do not see any attribute relating to that in project http://screencast.com/t/NTFhMzQxYTM","10/10/11 10:58:06; rajesh; **Author: rajesh**
+look at pwx stats, there is one stat for communities; need to use that for only india projects.","10/10/11 10:58:08; rajesh; **Author: abhishek**
  * Communites Assisted added : [http://trac.peerwater.org/index.fcgi/changeset/2834/trunk 2834]
  * Fonts are same : http://screencast.com/t/ODFjODhhZ
-","10/10/11 10:58:10; rajesh; 
+","10/10/11 10:58:10; rajesh; **Author: rajesh**
 i don't see the fonts as same. i want the grey ""Location"" font for us and use the regular for the data (not bold), but i also see for me that the size on Akvo is smaller.
 "
-Update deploy.rb | Capistrano to deploy either trunk OR branch.,Please update our deploy scripts to read a environment variable OR command line switch to deploy trunk OR branch. We already do something similar with DEPLOY_TYPE,10/10/2011 10:09:07,10/10/2011 10:09:07,Open,rajesh,rajesh,Wish List,Unresolved
+Update deploy.rb | Capistrano to deploy either trunk OR branch.,Please update our deploy scripts to read a environment variable OR command line switch to deploy trunk OR branch. We already do something similar with DEPLOY_TYPE,10/10/2011 10:09:07,10/10/2011 10:09:07,Open,rajesh,rajesh,Wish List,Wish List,Unresolved
 Remove public/images/video folder and move to shared folder,"We need to move the public/images/video to the shared folder out of the release tree and create a symlink.  
 
 Similar to what we do for index folder.  Move and update capistrano.  See inspiration from index folder.
 
-",10/10/2011 10:09:09,10/10/2011 10:58:14,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 10:58:12; ajaya; 
+",10/10/2011 10:09:09,10/10/2011 10:58:14,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 10:58:12; ajaya; 
 changeset:2864
 
 Work with me to deploy to production.","10/10/11 10:58:14; ajaya; 
@@ -596,11 +596,11 @@ the advantage of this is it makes it easier to find projects (a type of status l
 
 yes, it is increasing bureaucracy and work for admin, but long-term it should be done via peer-review.
 
-this could incorporate KPI concept and create a minimum uniform standard of project report quality.",10/10/2011 10:09:13,10/10/2011 10:09:13,Open,rajesh,rajesh,Wish List,Unresolved
+this could incorporate KPI concept and create a minimum uniform standard of project report quality.",10/10/2011 10:09:13,10/10/2011 10:09:13,Open,rajesh,rajesh,Wish List,Wish List,Unresolved
 search summary has one link not work (project status reports),"all links the search summary on RHS work except:
 ""Status/Visitor Reports""
 
-the link there goes nowhere",10/10/2011 10:09:15,10/10/2011 10:09:15,Open,rajesh,vamsee,Bug Fix,Unresolved
+the link there goes nowhere",10/10/2011 10:09:15,10/10/2011 10:09:15,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved
 project update date field(s) needs to be properly updated,"have put in some new code in the project summary field.
 while testing, found that the project update code produces funny results (as seen on the attachment).
 
@@ -608,7 +608,7 @@ need:
 1. date of last update of project report (main/final report)
 2. date of last progress/status report
 
-(please check code too, i use the 'first' report)",10/10/2011 10:09:17,10/10/2011 10:58:20,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 10:58:16; rajesh; 
+(please check code too, i use the 'first' report)",10/10/2011 10:09:17,10/10/2011 10:58:20,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 10:58:16; rajesh; **Author: rajesh**
 the main/final report is what is the report screen.
 it is the main report page, which has details on narratives, ...
 
@@ -621,8 +621,8 @@ http://qa.peerwater.org/projects/1-Well-repairing-at-Ahmadiyya-Primary-School-Ma
 the last update of the main report is when the main report is last edited.
 same with the progress/status report (not the date it is created or published).
 
-","10/10/11 10:58:18; rajesh; 
-changeset:2844","10/10/11 10:58:20; rajesh; 
+","10/10/11 10:58:18; rajesh; **Author: abhishek**
+changeset:2844","10/10/11 10:58:20; rajesh; **Author: rajesh**
 use these links to see what formating was changed and unchange it:
 
 http://trac.peerwater.org/index.fcgi/changeset?new=2861%40trunk&old=2849%40trunk
@@ -632,13 +632,13 @@ search needs to also search name of reporter/visitor field,"we have now reporter
 one pwx member is called ""Field Photographer"" and they have just visited several sites in Guatemala and are filing reports. search for 'Field Photographer' should results in highlighting these peer/visitor reports, but it does not.
 
 http://peerwater.org/projects/182-Kalampatzom-Water-Distribution-System
-",10/10/2011 10:09:20,10/10/2011 10:58:24,Open,rajesh,ajaya,Bug Fix,Unresolved,"10/10/11 10:58:22; ajaya; 
+",10/10/2011 10:09:20,10/10/2011 10:58:24,Open,rajesh,ajaya,Bug Fix,Bug Fix,Unresolved,"10/10/11 10:58:22; ajaya; 
 changeset:2915
 
  - Not sure if this is the right solution
  - search by Filed Photographer is Ok.
  - But search by Barefoot????  Person returns all results that has the word barefoot and we show all reports by that.  
- - we have similar issues other places.","10/10/11 10:58:24; rajesh; 
+ - we have similar issues other places.","10/10/11 10:58:24; rajesh; **Author: rajesh**
 you are right; this is not the right solution.
 
 need to just search 'name' of person AND 'name' of org in visitor/status reports.
@@ -654,12 +654,12 @@ if you press submit without a captcha no error is reported. the same screen is d
 if the user has an error (no title, no body, ...) then the error page is not displayed until the captcha is filled. if the captcha is filled, the errors are highlighted.
 
 on the error page there is no captcha - by design?
-and if you fill out 2 reports, there is no captcha on the second report - again by design",10/10/2011 10:09:22,10/10/2011 10:58:26,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 10:58:26; ajaya; 
+and if you fill out 2 reports, there is no captcha on the second report - again by design",10/10/2011 10:09:22,10/10/2011 10:58:26,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 10:58:26; ajaya; 
 changeset:2857"
-Remove unapproved proj reports from search results,None,10/10/2011 10:09:24,10/10/2011 10:58:28,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 10:58:28; ajaya; 
+Remove unapproved proj reports from search results,None,10/10/2011 10:09:24,10/10/2011 10:58:28,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 10:58:28; ajaya; 
 ticket:2862"
-Accept old dates while creating a project,http://screencast.com/t/MGJhYzQx,10/10/2011 10:09:27,10/10/2011 10:58:32,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 10:58:30; ajaya; 
-This is a expected behavior.  Your subject didn't make sense. . ""Accept old dates while creating a project"".. it already accepts.  Seems like u don't it to accept.","10/10/11 10:58:32; rajesh; 
+Accept old dates while creating a project,http://screencast.com/t/MGJhYzQx,10/10/2011 10:09:27,10/10/2011 10:58:32,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 10:58:30; ajaya; 
+This is a expected behavior.  Your subject didn't make sense. . ""Accept old dates while creating a project"".. it already accepts.  Seems like u don't it to accept.","10/10/11 10:58:32; rajesh; **Author: abhishek**
 Ah Ok..
 "
 social networking requires pictures,"we need to be able to add an image of every user, since we are now a social networking site.
@@ -670,8 +670,8 @@ social networking requires pictures,"we need to be able to add an image of every
 4. pwx team page needs include the photos too
 
 AA and AP, one you can take ownership of this in the near future. after main AnalytiX code deployed
-",10/10/2011 10:09:32,10/10/2011 10:58:46,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 10:58:34; ajaya; 
-changeset:2867","10/10/11 10:58:36; rajesh; 
+",10/10/2011 10:09:32,10/10/2011 10:58:46,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 10:58:34; ajaya; 
+changeset:2867","10/10/11 10:58:36; rajesh; **Author: rajesh**
 have put in a few code changes, so first sync up!
 
 
@@ -688,7 +688,7 @@ Following problems occured. Please review and correct of necessary
 
 
 ","10/10/11 10:58:38; ajaya; 
-changeset:2871","10/10/11 10:58:40; rajesh; 
+changeset:2871","10/10/11 10:58:40; rajesh; **Author: rajesh**
 still does not work.
 
 logged in as care on qa; can't upload a photo.
@@ -701,7 +701,7 @@ Following problems occured. Please review and correct of necessary
     * You don't have access to attach to this.
 
 ","10/10/11 10:58:42; ajaya; 
-changeset:2873","10/10/11 10:58:44; rajesh; 
+changeset:2873","10/10/11 10:58:44; rajesh; **Author: rajesh**
 can't upload a picture for a colleague
 
 you can edit the profile a colleague, but can't upload a picture.
@@ -713,7 +713,7 @@ changeset:2874
 "
 fix video security holes,"now that proj_report videos are sanitized, lets fix the app, org, and proj video fields too.
 
-also, minor adjustment on the proj_report video, it still needs to move a few pixels to the left. the org video is 100% visible, while proj_report is 97%.",10/10/2011 10:09:36,04/02/2012 17:05:03,Closed,rajesh,kristian,Cisco | import,Fixed,"10/10/11 10:58:48; ajaya; 
+also, minor adjustment on the proj_report video, it still needs to move a few pixels to the left. the org video is 100% visible, while proj_report is 97%.",10/10/2011 10:09:36,04/02/2012 17:05:03,Closed,rajesh,kristian,Cisco | import,Cisco | import,Fixed,"10/10/11 10:58:48; ajaya; 
 changeset:2872","06/01/12 13:34:15; rajesh; anything left on this or will #546 cover what's missing ?
 
 adding @vcolaco @vamsee 
@@ -729,7 +729,7 @@ we need a project report approval process.
 
 initially it can be a simple one, similar to the 'publish' checkbox for proj_reports. two checkboxes.
 
-long-term we need to explore having criteria and key performance metrics (KPI) and funder customization.",10/10/2011 10:09:38,10/10/2011 10:58:50,Open,rajesh,rajesh,Wish List,Unresolved,"10/10/11 10:58:50; ajaya; 
+long-term we need to explore having criteria and key performance metrics (KPI) and funder customization.",10/10/2011 10:09:38,10/10/2011 10:58:50,Open,rajesh,rajesh,Wish List,Wish List,Unresolved,"10/10/11 10:58:50; ajaya; 
 What I still don't understand is what you call a project report?   Is the main project info is the report? Or is the Org Report that upload?
 
 Please clarify.."
@@ -767,7 +767,7 @@ from #8823 with some enhancement:
 
 4. implementer primary
 
-5. implementer team member",10/10/2011 10:09:41,09/04/2012 18:21:48,Open,rajesh,kristian,Wish List,Unresolved,"10/10/11 10:58:53; rajesh; 
+5. implementer team member",10/10/2011 10:09:41,09/04/2012 18:21:48,Open,rajesh,kristian,Wish List,Wish List,Unresolved,"10/10/11 10:58:53; rajesh; **Author: rajesh**
 we need a clear definition for each data entity.
 
 here is draft for user:
@@ -790,7 +790,7 @@ here is draft list for org:
  * pwx team: RW
  * pwx admin: RW
  * peer: R
- * public: R","10/10/11 10:58:57; rajesh; 
+ * public: R","10/10/11 10:58:57; rajesh; **Author: rajesh**
 v2 (typos corrected) of draft list of permissions for staff progress/status report; need ability  to set default actions for each source (sms or web or ...):
 
 
@@ -867,17 +867,17 @@ http://qa.peerwater.org/project_info/project_search?filter=2&org_id=11
 
 it does not work either, none of the filters work.
 
-if these lists are going to be fixed soon its okay, otherwise please fix.",10/10/2011 10:09:43,10/10/2011 10:59:07,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 10:59:07; ajaya; 
+if these lists are going to be fixed soon its okay, otherwise please fix.",10/10/2011 10:09:43,10/10/2011 10:59:07,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 10:59:07; ajaya; 
 changeset:2887"
 Attachment | File uploaded missing.  Investigate & Update views to deal with conditon,"http://peerwater.org/projects/184-Chajul-School-Hygiene-Project-Vatzuchil-and-Vipecbalam-schools-/attachments/1830
 
 In this, the uploaded file is not there.  Need to investigate if this is a unknown error that never get caught before.
-",10/10/2011 10:09:48,10/10/2011 10:09:48,Open,rajesh,ajaya,Bug Fix,Unresolved
+",10/10/2011 10:09:48,10/10/2011 10:09:48,Open,rajesh,ajaya,Bug Fix,Bug Fix,Unresolved
 promoting funders to actual org,"our first case of a funder becoming an org has happened and i would like to improve that process.
 
 a funder should be promoted to prospect (status submitted) and then follow the same steps of peer review as a referral who submits.
 
-it will be admins responsibility to create a contact for the org and the login, etc.",10/10/2011 10:09:51,10/10/2011 10:09:51,Open,rajesh,ajaya,Wish List,Unresolved
+it will be admins responsibility to create a contact for the org and the login, etc.",10/10/2011 10:09:51,10/10/2011 10:09:51,Open,rajesh,ajaya,Wish List,Wish List,Unresolved
 error on qa,"
 CalendarDateSelect Error: Prototype could not be found. Please make sure that your application's layout includes prototype.js (.g. <%= javascript_include_tag :defaults %>) *before* it includes calendar_date_select.js (.g. <%= calendar_date_select_includes %>).
 
@@ -886,15 +886,15 @@ trying to load: http://qa.peerwater.org/home_page/analytix_survey#implementation
 
 logged in as admin, but system crashed and restarted the OS. when i reloaded firefox got the error
 
-",10/10/2011 10:09:55,10/10/2011 10:59:08,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 10:59:08; ajaya; 
+",10/10/2011 10:09:55,10/10/2011 10:59:08,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 10:59:08; ajaya; 
 I don't see this error."
 self-report is filed as peer report,"
 we had a person from LifeWater file a status reports in Mar and April.
 
 do not recall 100% but i think at that time it was filed correctly under progress/status reports.
 
-But now when reading a new status report that was filed last night, i noticed that the earlier reports are under peer reports, instead of showing up as 'self' reports (under Progress/Status Reports).",10/10/2011 10:09:59,10/10/2011 10:59:12,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 10:59:10; ajaya; 
-changeset:2919","10/10/11 10:59:12; rajesh; 
+But now when reading a new status report that was filed last night, i noticed that the earlier reports are under peer reports, instead of showing up as 'self' reports (under Progress/Status Reports).",10/10/2011 10:09:59,10/10/2011 10:59:12,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 10:59:10; ajaya; 
+changeset:2919","10/10/11 10:59:12; rajesh; **Author: rajesh**
 the lifewater project is fixed."
 "ability to move an ""Approved, Not Funded"" app from one cycle to another","please see the email request and response below.
 if El Porvenir changes their funding request, their app from last year (Approved, Needs Funding) needs to go into this years funding round.
@@ -925,7 +925,7 @@ Rob Bell wrote:
 > 2. Can we re-submit the 2 projects that are currently approved and need funding? Both have received some funding and I would like to adjust the budget needs for each to around $10-15K I think (I need to work that out with the staff exactly how much we still need). Can I simply update the application? Do we need to go through the application process again? Will I mess it up if I start editing things? The San Juan project would be exactly the same, except the budget. The Payacuca project, I would like to change the single pit latrines to doubles and ask for just a portion of that need.
 >
 > Thanks,
->    Rob",10/10/2011 10:10:04,10/10/2011 10:59:16,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 10:59:14; ajaya; 
+>    Rob",10/10/2011 10:10:04,10/10/2011 10:59:16,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 10:59:14; ajaya; 
 changeset:2933
 
 Go to App-> Admin -> Move Cycle to do.
@@ -937,7 +937,7 @@ App gets moved and sets to Peer Review to follow the normal pattern.  It can be 
 changeset:2954
 
 Please read comments in the changeset"
-db limit causing problems in app,No description given,10/10/2011 10:10:10,10/10/2011 10:10:10,Open,rajesh,kristian,Bug Fix,Unresolved
+db limit causing problems in app,No description given,10/10/2011 10:10:10,10/10/2011 10:10:10,Open,rajesh,kristian,Bug Fix,Bug Fix,Unresolved
 password security improvement,"when we create a login, we assign the pw to be the same as the login name.
 that is not secure.
 
@@ -945,13 +945,13 @@ the randomly generated one (reset pw) is a secure solution but not a good one. o
 
 is this a good strategy: to have 3 passwords (water20 peer99 xchange11) that randomly get assigned to all new logins?
 
-other ideas? please discuss and get consensus before any coding.",10/10/2011 10:10:13,10/10/2011 10:59:20,Open,rajesh,rajesh,Wish List,Unresolved,"10/10/11 10:59:20; rajesh; 
+other ideas? please discuss and get consensus before any coding.",10/10/2011 10:10:13,10/10/2011 10:59:20,Open,rajesh,rajesh,Wish List,Wish List,Unresolved,"10/10/11 10:59:20; rajesh; **Author: rajesh**
 only admin can see login names"
 app resolution comment,"we need a comment field for admin to fill when putting final status of app (approved, denied, not funded) to show the reason why for putting the status.
 
 just a text box.
 
-need to figure out where to display it ... thoughts?",10/10/2011 10:10:15,10/10/2011 10:59:40,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 10:59:22; ajaya; 
+need to figure out where to display it ... thoughts?",10/10/2011 10:10:15,10/10/2011 10:59:40,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 10:59:22; ajaya; 
 One more text field in the app? :(
 
 Well. the comment could be for any status change but most relevant for those final statuses.  But could be also for moving from a cycle to another cycle(which also results in a status change)..
@@ -961,7 +961,7 @@ I would implement something a quick comment screen basically when a status chang
 We can show this in right column of app as app history cause it's app workflow history actually.  We can add more to this later.
 ","10/10/11 10:59:24; ajaya; 
 !changeset:2957","10/10/11 10:59:26; ajaya; 
-changeset:2957","10/10/11 10:59:28; rajesh; 
+changeset:2957","10/10/11 10:59:28; rajesh; **Author: rajesh**
 After testing and looking at the results on qa
 http://qa.peerwater.org/apps/168-Batzuchil-School-Hygiene-Project#
 
@@ -969,7 +969,7 @@ http://qa.peerwater.org/apps/168-Batzuchil-School-Hygiene-Project#
 
 2. Don't want to see the app activity for now. its loaded with history of the org's activity and the public should definitely not see it. maybe only self/admin
 
-3. Figured out the best place to put final comment: on top of ratings in the ratings tab - its where it belongs. Its Admin/Funder's decision on what to do and summarizes the ratings of all the reviewers. If ratings is disabled to public then its also invisible to public.","10/10/11 10:59:30; rajesh; 
+3. Figured out the best place to put final comment: on top of ratings in the ratings tab - its where it belongs. Its Admin/Funder's decision on what to do and summarizes the ratings of all the reviewers. If ratings is disabled to public then its also invisible to public.","10/10/11 10:59:30; rajesh; **Author: rajesh**
 code change: #2959
 - made right column only visible to owner of the app
 - put the comment on the Ratings tab
@@ -1076,30 +1076,30 @@ Response
 Headers:
 
 {""Content-Type""=>""text/html; charset=utf-8"",
- ""Cache-Control""=>""no-cache""}",10/10/2011 10:10:25,10/10/2011 10:59:55,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 10:59:46; rajesh; 
+ ""Cache-Control""=>""no-cache""}",10/10/2011 10:10:25,10/10/2011 10:59:55,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 10:59:46; rajesh; **Author: abhishek**
 Some clues are here http://screencast.com/t/ZmQzOGU4M","10/10/11 10:59:48; ajaya; 
 abhishek
 
 take it away..
-","10/10/11 10:59:51; rajesh; 
+","10/10/11 10:59:51; rajesh; **Author: abhishek**
 Figured out that , when form helper(help_check_box('app_proj_location', 'approximate',...)) tries to call approximate method, rather than receiving boolean value, it receives an array of AppProjLocation objs.  
 
 
 As seen here : http://screencast.com/t/OGU5ZTc0N
-","10/10/11 10:59:53; rajesh; 
-Temporarily fixed in commit #2953","10/10/11 10:59:55; rajesh; 
+","10/10/11 10:59:53; rajesh; **Author: abhishek**
+Temporarily fixed in commit #2953","10/10/11 10:59:55; rajesh; **Author: abhishek**
 There is no better solution for now other than what is committed in #2953, We should close this ticket."
 $$ on home page,"why are there 2 $$ instead of $ on the PWX Summary currency numbers?
 
 This happened when the PWX_CONFIG code was added, but basic testing did not see the 2 $$.
 
-Finally, after weeks, i am requesting this to be removed.",10/10/2011 10:10:30,10/10/2011 11:00:03,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 10:59:57; rajesh; 
+Finally, after weeks, i am requesting this to be removed.",10/10/2011 10:10:30,10/10/2011 11:00:03,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 10:59:57; rajesh; **Author: abhishek**
 Fixed.
 
-Precision value is set to 0 , but still its showing .00 and the end.","10/10/11 10:59:59; rajesh; 
+Precision value is set to 0 , but still its showing .00 and the end.","10/10/11 10:59:59; rajesh; **Author: rajesh**
 did you change owner to ask me to fix the .00 problem?
 
-no way - its your headache!  :)","10/10/11 11:00:01; rajesh; 
+no way - its your headache!  :)","10/10/11 11:00:01; rajesh; **Author: rajesh**
 Precision was '''NOT''' set!
 
 Have set it and now no decimal points on home page
@@ -1108,16 +1108,16 @@ Have set it and now no decimal points on home page
 
 changeset:3060
 
-assigning to Vinita for testing and closgin","10/10/11 11:00:03; rajesh; 
+assigning to Vinita for testing and closgin","10/10/11 11:00:03; rajesh; **Author: vinita**
 Looks fine"
-"""Change Cycle"" for applications doesnt work for PWX Admin User",Show here http://screencast.com/t/YzA3MDJmZ,10/10/2011 10:10:35,10/10/2011 11:00:07,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 11:00:05; ajaya; 
+"""Change Cycle"" for applications doesnt work for PWX Admin User",Show here http://screencast.com/t/YzA3MDJmZ,10/10/2011 10:10:35,10/10/2011 11:00:07,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:00:05; ajaya; 
 ok. will look.","10/10/11 11:00:07; ajaya; 
 changeset:2954
 
 Please read comments in the changeset"
 Cleanup all JS & CSS Included,"http://trac.peerwater.org/index.fcgi/changeset/2955
 
-please clean up the rest of jquesy, console related stuff in trunk.",10/10/2011 10:10:37,10/10/2011 11:00:13,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:00:09; ajaya; 
+please clean up the rest of jquesy, console related stuff in trunk.",10/10/2011 10:10:37,10/10/2011 11:00:13,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:00:09; ajaya; 
 Make sure all includes properly accounted and included in asset_packager config and test it end to end.","10/10/11 11:00:11; ajaya; 
 I upgraded asset packager.
 
@@ -1125,7 +1125,7 @@ Check changeset:2966
 
 Uploadify has issues when I add to config.  rake asset:packager:build_all  errors out. 
 
-Check and fix.","10/10/11 11:00:13; rajesh; 
+Check and fix.","10/10/11 11:00:13; rajesh; **Author: abhishek**
 Fixed in Commit #3109"
 can no longer use email to have password reset,"Martin Strele found this bug in our system
 
@@ -1135,22 +1135,22 @@ after all these months I keep forgetting my password.
 trying to get a new one with my email-address (ms@kairos.or.at) was not successfull. The system keeps telling me that there is no such email.... although I'm getting the invitations to this email - address.
 
 -------
-on qa, i entered an email to reset password and got the error. attached.",10/10/2011 10:10:51,10/10/2011 11:00:51,Closed,rajesh,rajesh,SMS,Fixed,"10/10/11 11:00:14; rajesh; 
-Verified that user is found by email address http://screencast.com/t/NTAxM2ZmOT","10/10/11 11:00:17; rajesh; 
+on qa, i entered an email to reset password and got the error. attached.",10/10/2011 10:10:51,10/10/2011 11:00:51,Closed,rajesh,rajesh,SMS,SMS,Fixed,"10/10/11 11:00:14; rajesh; **Author: abhishek**
+Verified that user is found by email address http://screencast.com/t/NTAxM2ZmOT","10/10/11 11:00:17; rajesh; **Author: abhishek**
 Supplied username (kairos) in reset password, That worked.
 
-Hence the problem might only be with trying to retrieve from email address.","10/10/11 11:00:19; rajesh; 
+Hence the problem might only be with trying to retrieve from email address.","10/10/11 11:00:19; rajesh; **Author: rajesh**
 one minor nuisance, logging in from the retry screen on www, i ended up on the home page (logged in) and clicked 'Home' to get to the dashboard.
 
 was using safari.
 
-could not reproduce this on qa.","10/10/11 11:00:21; rajesh; 
-the reason that is important is that Martin Strele managed to login, but he was on the home page and not the dashboard and so did not feel logged in, and complained again.","10/10/11 11:00:23; rajesh; 
+could not reproduce this on qa.","10/10/11 11:00:21; rajesh; **Author: rajesh**
+the reason that is important is that Martin Strele managed to login, but he was on the home page and not the dashboard and so did not feel logged in, and complained again.","10/10/11 11:00:23; rajesh; **Author: rajesh**
 if people enter a valid email, we should send them the user id too.
 otherwise don't accept email (and remove that from the screen).","10/10/11 11:00:25; ajaya; 
 assigning this to kristian to let him familirize himself with the PWX dev & deployment process.
 
-kristian: Please review the bug and see if u can do this.  This is one of our old code base.   But should be easy to fix.  Also will give u a chance to review the email stull also.  Also please check if we allow unique email per person in the PWX system.  Otherwise password recovery by email won't work.","10/10/11 11:00:26; rajesh; 
+kristian: Please review the bug and see if u can do this.  This is one of our old code base.   But should be easy to fix.  Also will give u a chance to review the email stull also.  Also please check if we allow unique email per person in the PWX system.  Otherwise password recovery by email won't work.","10/10/11 11:00:26; rajesh; **Author: kristian**
 there are 12 duplicate email addresses in the database
 
 select distinct p1.email from people p1, people p2 where p1.id !=
@@ -1173,7 +1173,7 @@ p2.id and p1.email = p2.email;
 +---------------------------+
 12 rows in set (0.01 sec)
 
-how shall we deal with those ?","10/10/11 11:00:34; rajesh; 
+how shall we deal with those ?","10/10/11 11:00:34; rajesh; **Author: rajesh**
 the duplicates you see need to be checked against DELETED users. we keep them around to track their Q&A participation, etc. but then they need an email so i put DELETED@peerwater.org
 
 that is the only duplicate.
@@ -1182,13 +1182,13 @@ i am in 3 orgs and can use 3 emails (right now use 2).
 
 'Lisa T' is a funder who does not want her email to be in the system nor does she want to participate so i have her as 'info@' and maybe other funders will want that.
 
-i think we fix the 'bug' and keep rest of the discussion in a new ticket for 'Z Future'.","10/10/11 11:00:36; rajesh; 
-what i forgot to add was that we have to examine our process for deleted users too, one more complication.","10/10/11 11:00:42; rajesh; 
+i think we fix the 'bug' and keep rest of the discussion in a new ticket for 'Z Future'.","10/10/11 11:00:36; rajesh; **Author: rajesh**
+what i forgot to add was that we have to examine our process for deleted users too, one more complication.","10/10/11 11:00:42; rajesh; **Author: kristian**
 the password can only be retrieved by username as per code. so actually only the wording on the page is wrong.
 
 the issue (maybe a new ticket) it is not a temporary password instead it is a new password. it should be a temporary second password and once used upgraded to the actual one and only password or when used the primary password the temporary shall be discarded. 
 
-otherwise I can bug people by asking password resets all the time - which I can do anyways but with a temporary password I at least keep my actual password as is.","10/10/11 11:00:44; rajesh; 
+otherwise I can bug people by asking password resets all the time - which I can do anyways but with a temporary password I at least keep my actual password as is.","10/10/11 11:00:44; rajesh; **Author: rajesh**
 i think creating temp password is not a good idea. we can create a new password and they can reset it to their primary once they login. we should not keep 2 passwords.
 
 ------
@@ -1199,16 +1199,16 @@ now it looks like two options:
 
 2. add in the code to allow people to input email and then email them both their username and their new password.
 
-i prefer #2 as people also may forget their username and start involving us. but don't know how much effort it will take.","10/10/11 11:00:46; rajesh; 
+i prefer #2 as people also may forget their username and start involving us. but don't know how much effort it will take.","10/10/11 11:00:46; rajesh; **Author: kristian**
 that is my third comment the other two do not show up.
 
 anyways I fixed ad 1) and pushed onto git
 
 the email thingy and improve the overall password handling system or actually user authorization. I am not writing the whole lot from my last comment - it might not show up :-(
-","10/10/11 11:00:49; rajesh; 
+","10/10/11 11:00:49; rajesh; **Author: rajesh**
 the process is to fix the code and assign the ticket to Vinita or me.
 
-when it gets deployed to qa, we test it and close it or if we find a problem, send it back.","10/10/11 11:00:51; rajesh; 
+when it gets deployed to qa, we test it and close it or if we find a problem, send it back.","10/10/11 11:00:51; rajesh; **Author: vinita**
 Works fine and got this confirmation : A message containing your new password has been sent to your email address. Please check your email. "
 project lists sorting not working,"create a list of MSSCT funded projects
 
@@ -1231,7 +1231,7 @@ earlier we use to be also able to click on a column name twice and sort reverse 
 
 the app lists appear to be working fine and are sortable (forwards and reverse) on all fields.
 
-",10/10/2011 10:10:58,10/10/2011 11:00:54,Open,rajesh,vamsee,Bug Fix,Unresolved,"10/10/11 11:00:54; rajesh; 
+",10/10/2011 10:10:58,10/10/2011 11:00:54,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:00:54; rajesh; **Author: rajesh**
 since the lists are not directly accessed from dashboard, but can be accessed from ""About"" and are public, they still are a high priority."
 assigning reviews causes error,"as pwxadmin, tried to add Palymra as a reviewer.
 
@@ -1242,7 +1242,7 @@ when i selected them and clicked submit, i got an error:
 
 Page Not Found!
 Sorry. We couldn't find the page you have requested.
-",10/10/2011 10:11:01,10/10/2011 11:00:55,Open,rajesh,vamsee,Bug Fix,Unresolved,"10/10/11 11:00:55; rajesh; 
+",10/10/2011 10:11:01,10/10/2011 11:00:55,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:00:55; rajesh; **Author: rajesh**
 may be related to #8748"
 another error in trying to assign reviewers,"
 clicked on app/assign reviewers to add palmyra:
@@ -1260,7 +1260,7 @@ Following problems occured. Please review and correct of necessary
 
 Integrated Water Resources Management in the Inner Delta of the Niger (IDN) and peripheral areas in Mali
 Applicant 	Protos 	Application ID: 	296
-Status: 	Peer Review 	Review Cycle end date: 	2010-08-16",10/10/2011 10:11:03,10/10/2011 11:00:57,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 11:00:57; rajesh; 
+Status: 	Peer Review 	Review Cycle end date: 	2010-08-16",10/10/2011 10:11:03,10/10/2011 11:00:57,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:00:57; rajesh; **Author: rajesh**
 Found the error. There is a max number of reviewers system parameter.
 
 I changed it and it works. However, the error statement shows the minimum number of reviews (which is 0). So that is a very minor fix - not needed now."
@@ -1574,19 +1574,19 @@ Response
 Headers:
 
 {""Content-Type""=>""text/html; charset=utf-8"",
- ""Cache-Control""=>""no-cache""}",10/10/2011 10:11:10,10/10/2011 11:01:15,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 11:00:59; rajesh; 
-happens on all apps from admin dashboard. i logged out and logged back in, still happens.","10/10/11 11:01:04; rajesh; 
+ ""Cache-Control""=>""no-cache""}",10/10/2011 10:11:10,10/10/2011 11:01:15,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 11:00:59; rajesh; **Author: rajesh**
+happens on all apps from admin dashboard. i logged out and logged back in, still happens.","10/10/11 11:01:04; rajesh; **Author: rajesh**
 does NOT happen when i log in as bpr and click on the app to review.
 
 DOES happen to Vinita when trying to submit an app as 2 different orgs.
 
-so something related to admin stuff.","10/10/11 11:01:07; rajesh; 
+so something related to admin stuff.","10/10/11 11:01:07; rajesh; **Author: abhishek**
 
 
 Culprit for this error is Data Refresh from WWW.
 
 Issue: Ajaya introduced change in app_traces table as new migration(  http://bit.ly/dpJ1Nv ) , When rake db:migrate was executed QA had the latest db schema, so everything worked fine. Production db (www) does not have the db schema migrated to latest migration and data refresh deleted the columns that Ajaya's code requires.
-","10/10/11 11:01:14; rajesh; 
+","10/10/11 11:01:14; rajesh; **Author: abhishek**
 Fixed the error , by backdating the schema file on QA and running the migrations http://screencast.com/t/ZmNlODA2Zjk 
 
 
@@ -1595,7 +1595,7 @@ map widget,"provide a map widget so an org can embed it into their website.
 
 for an implementer: all their projects (no apps or locations)
 
-for a funder: all their funded projects (no apps or locations)",10/10/2011 10:11:20,23/01/2012 12:57:23,Closed,rajesh,rajesh,Wish List,Fixed,23/01/12 12:57:23; rajesh; closed due to dup of #553
+for a funder: all their funded projects (no apps or locations)",10/10/2011 10:11:20,23/01/2012 12:57:23,Closed,rajesh,rajesh,Wish List,Wish List,Fixed,23/01/12 12:57:23; rajesh; closed due to dup of #553
 Program funding can create projects across implementers,"see: http://peerwater.org/apps/238
 
 this one project is done across several implementers in different regions. 3 of the implementers are members of PWX.
@@ -1603,13 +1603,13 @@ this one project is done across several implementers in different regions. 3 of 
 allowing the primary implementer to create projects that get assigned to other implementers would be a useful enhancement that would also apply to several other projects.
 
 reporting (project status) would be easy.
-ownership and analytix would be challenging.",10/10/2011 10:11:22,10/10/2011 10:11:22,Open,rajesh,ajaya,Wish List,Unresolved
-change 'apply now' to 'create application' on dashboard when no cycle is present,change text of button,10/10/2011 10:11:25,10/10/2011 10:11:27,Closed,rajesh,rajesh,AnalytiX,Fixed
+ownership and analytix would be challenging.",10/10/2011 10:11:22,10/10/2011 10:11:22,Open,rajesh,ajaya,Wish List,Wish List,Unresolved
+change 'apply now' to 'create application' on dashboard when no cycle is present,change text of button,10/10/2011 10:11:25,10/10/2011 10:11:27,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed
 colors for the impact graph,"first allow colors to be fixed (Ajaya)
 
 then 
 
-fix the colors (Rajesh)",10/10/2011 10:11:29,10/10/2011 11:01:21,Closed,rajesh,ajaya,AnalytiX,Fixed,"10/10/11 11:01:21; rajesh; 
+fix the colors (Rajesh)",10/10/2011 10:11:29,10/10/2011 11:01:21,Closed,rajesh,ajaya,AnalytiX,AnalytiX,Fixed,"10/10/11 11:01:21; rajesh; **Author: rajesh**
 abhishek fixed the file and rajesh has fixed the colours"
 2 folks have problems uploading attachments,"Protos could not upload a document (no details).
 
@@ -1630,7 +1630,7 @@ URI: http://peerwater.org/javascripts/base_packaged.js?1281206698
  
 Is it the problem in the website?
  
-we tried uploading from different computers but encountered the same problem.",10/10/2011 10:11:33,10/10/2011 11:01:29,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 11:01:22; ajaya; 
+we tried uploading from different computers but encountered the same problem.",10/10/2011 10:11:33,10/10/2011 11:01:29,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:01:22; ajaya; 
 Ok. here is my dig.
 
 Javascript error is in IE8 only.  This is somehow thrown by prototip.js code.  We need to look at this at a later date and see where is the offending code.
@@ -1639,7 +1639,7 @@ As far as upload is concerned, I can't replicate this in IE8 (that's the browser
 
 Anyway.. Please work with one of them to understand if it is a usability thing.  If not will look.
 
-Ajay","10/10/11 11:01:25; rajesh; 
+Ajay","10/10/11 11:01:25; rajesh; **Author: rajesh**
 very strange and inconsistent behaviour. i had no problems uploading files, but Vinita did:
 
 Rajesh,
@@ -1862,7 +1862,7 @@ copy_of_changes:
     ""@marshal_with_utc_coercion"": false
 new_record_before_save: false
 unsaved: false
-","10/10/11 11:01:28; rajesh; 
+","10/10/11 11:01:28; rajesh; **Author: rajesh**
 here is the news from Protos:
 
 Rajesh,
@@ -1891,7 +1891,7 @@ Kind regards
 
 Groet,
 
-Marc","10/10/11 11:01:29; rajesh; 
+Marc","10/10/11 11:01:29; rajesh; **Author: rajesh**
 Vinita,
 
 Don't make changes to this ticket. It is not for you to solve, but to hold only.
@@ -1939,9 +1939,9 @@ at least 1 peer or visitor report date >> completion date
 visited by anyone:
 at least 1 report date >> completion date
 
-",10/10/2011 10:11:35,10/10/2011 11:02:06,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 11:01:31; ajaya; 
+",10/10/2011 10:11:35,10/10/2011 11:02:06,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 11:01:31; ajaya; 
 changeset:3014
-","10/10/11 11:01:33; rajesh; 
+","10/10/11 11:01:33; rajesh; **Author: rajesh**
 the complete/visited logic needs to be corrected. only project reports after completion date count.
   any progress/status report date > completion date
 
@@ -1958,7 +1958,7 @@ What does that mean? what happens to filter in that case? will the project list 
 
 Please go through small map, gaps AND lasrge map & gaps.  and also it would be helpful if u give me example for each case/bug.
 
-ajay","10/10/11 11:01:37; rajesh; 
+ajay","10/10/11 11:01:37; rajesh; **Author: rajesh**
 on small&big maps on qa: select ""Any"" ""Any"" ""Visited by -> Anybody""
 
 no green icons should show up (plain green or with clock, not with camera).
@@ -1966,7 +1966,7 @@ no green icons should show up (plain green or with clock, not with camera).
 visits to in-progress projects don't count.
 
 only blue projects (completed) can be visited.
-","10/10/11 11:01:39; rajesh; 
+","10/10/11 11:01:39; rajesh; **Author: rajesh**
 '''BUG#2'''
 
 on small&large map on qa: select ""Any"" ""Any"" ""Any""
@@ -1979,7 +1979,7 @@ same is true for Philippines:
 http://qa.peerwater.org/projects/195-Barangay-Indatauan-Artesian-Well-Development-for-Community-Water-Service
 
 and many others
-","10/10/11 11:01:42; rajesh; 
+","10/10/11 11:01:42; rajesh; **Author: rajesh**
 BUG#3
 on the large map in qa: select ""Any"" ""Done by El Porvenir"" ""Any"" you see 22 entries in the table. and on the map you see blue icons and blue-camera icons.
 
@@ -1987,7 +1987,7 @@ http://qa.peerwater.org/projects/168-3-Double-Pit-Latrines-Cooperativa-Ismael-Ca
 is correctly shown with camera because visit (June 9) is after completion (May 26).
 
 However select: ""Any"" ""Done by El Porvenir"" ""Visited by -> Anybody"" nothing shows up. Proj168 should show up in both ""Visited by -> Anybody"" and ""Visited by -> Implementer"" 
-","10/10/11 11:01:46; rajesh; 
+","10/10/11 11:01:46; rajesh; **Author: rajesh**
 '''Valid Icons'''
 completed-late.png
 completed-latevisited.png
@@ -2041,7 +2041,7 @@ end","10/10/11 11:01:48; ajaya;
 changeset:3047","10/10/11 11:01:50; ajaya; 
 I am not sure the filters are all working proper.  Make sure u understand the data being fetched.  Wierd that we have completely stopped looking at the Project Status field in your logic right now other then to know if a project is active or not.
 
-","10/10/11 11:01:52; rajesh; 
+","10/10/11 11:01:52; rajesh; **Author: rajesh**
 lot more things working (could release) but this scenario is not working:
 
 Date: Any
@@ -2061,7 +2061,7 @@ They should not show up on this filter criteria.
 Important but not blocker for release.","10/10/11 11:01:54; ajaya; 
 changeset::3054","10/10/11 11:01:56; ajaya; 
 changeset:3054
-","10/10/11 11:01:58; rajesh; 
+","10/10/11 11:01:58; rajesh; **Author: rajesh**
 this scenario is still not working:
 
 Date: Any Org: Any Status: Visited by 3rd party
@@ -2071,7 +2071,7 @@ Seems all projects with some reports show up. e.g:  http://qa.peerwater.org/proj
 These have project/status reports but have not been visited by a 3rd party. They should not show up on this filter criteria.
 
 Important but not blocker for release. Too much effort? Move to 2.0","10/10/11 11:02:00; ajaya; 
-changeset:3063","10/10/11 11:02:02; rajesh; 
+changeset:3063","10/10/11 11:02:02; rajesh; **Author: rajesh**
 
 
 this scenario is working though on second try:
@@ -2090,13 +2090,13 @@ This time the above icons do NOT show up (which is correct).
 Some problem in the initial load?
 
 Important but not blocker for release.
-","10/10/11 11:02:04; rajesh; 
-same thing happens in dev (starting with logged in as saferfuture, but going to big map and ""any"" ""any"" ""any"")","10/10/11 11:02:06; rajesh; 
+","10/10/11 11:02:04; rajesh; **Author: rajesh**
+same thing happens in dev (starting with logged in as saferfuture, but going to big map and ""any"" ""any"" ""any"")","10/10/11 11:02:06; rajesh; **Author: vinita**
 Tested and correct icons on the map show up."
 need legend on maximized analytix,"need legend on right side in a collapsible format.
 
-i can fill up icons and text with a bit of help.",10/10/2011 10:11:40,10/10/2011 11:02:11,Open,rajesh,vamsee,Wish List,Unresolved,"10/10/11 11:02:09; ajaya; 
-changeset:3016","10/10/11 11:02:11; rajesh; 
+i can fill up icons and text with a bit of help.",10/10/2011 10:11:40,10/10/2011 11:02:11,Open,rajesh,vamsee,Wish List,Wish List,Unresolved,"10/10/11 11:02:09; ajaya; 
+changeset:3016","10/10/11 11:02:11; rajesh; **Author: rajesh**
 now, can only have one icon on the left of radio button.
 want to return to the original filter design with icons to right of radio button so you can have more.
 
@@ -2178,7 +2178,7 @@ Thank you,
 The Peer Water Exchange Team
 
 ------- Please do not reply to this automatically generated email -------
-",10/10/2011 10:11:42,10/10/2011 10:11:42,Open,rajesh,ajaya,Bug Fix,Unresolved
+",10/10/2011 10:11:42,10/10/2011 10:11:42,Open,rajesh,ajaya,Bug Fix,Bug Fix,Unresolved
 "clicking on ""Users"" on admin dash gives error","logged in as admin; clicked on ""Users""
 
 http://peerwater.org/person
@@ -2195,12 +2195,12 @@ does not happen on qa; so low priority but just to keep track
 
 
 
-",10/10/2011 10:11:44,10/10/2011 10:11:44,Open,rajesh,ajaya,Bug Fix,Unresolved
+",10/10/2011 10:11:44,10/10/2011 10:11:44,Open,rajesh,ajaya,Bug Fix,Bug Fix,Unresolved
 Change background on the Blog page on the main site WWW & QA is,"Menu bar is missing and the background is white on the Blog page. 
 
 Sent an email to Ajay on this regard last week, ticket created to keep track.
  
-",10/10/2011 10:11:47,10/04/2012 03:47:26,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Unresolved,"30/12/11 05:51:32; rajesh; need to work with me to make logo location as similar as possible 
+",10/10/2011 10:11:47,10/04/2012 03:47:26,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Ruby 1.9.3 Rails 3.2,Unresolved,"30/12/11 05:51:32; rajesh; need to work with me to make logo location as similar as possible 
 
 to provide link to PWX site
 
@@ -2208,7 +2208,7 @@ and whether we can put menu bar back",04/02/12 17:20:55; rajesh; need to put lin
 12 sites are primary on a project,"bug and/or data corruption:
 http://peerwater.org/projects/217
 
-all 12 sites are primary, instead of only 1.",10/10/2011 10:11:48,10/10/2011 11:02:18,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 11:02:13; rajesh; 
+all 12 sites are primary, instead of only 1.",10/10/2011 10:11:48,10/10/2011 11:02:18,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:02:13; rajesh; **Author: larrie**
 attached file high lights the projects with multiple primary locations.  discovered that if one goes to a location of project, edits, set primary location, then all other locations are set to not primary.  Discovered via sql:
 
 SELECT project_id, count(project_id), sum(primary_location)
@@ -2218,21 +2218,21 @@ having count(project_id) > 1 and sum(primary_location) > 1
 order by count(project_id) desc","10/10/11 11:02:16; ajaya; 
 Right.  Thats how the primary location thing works.  Not sure why we had 12 of them set like that.  
 
-Did we import this?","10/10/11 11:02:18; rajesh; 
+Did we import this?","10/10/11 11:02:18; rajesh; **Author: rajesh**
 if its not created due to a bug, then audit should fix this"
 Broken links,"Member dashboard, RH column, Projects & Applications, at the bottom of these two lists are links to expand the view, all links are broken.  Get Routing Error
 
 No route matches ""/analytix/project_info/project_search"" with {:method=>:get}
 
-error",10/10/2011 10:11:50,10/10/2011 11:02:21,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 11:02:19; ajaya; 
+error",10/10/2011 10:11:50,10/10/2011 11:02:21,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 11:02:19; ajaya; 
 Hmm.. . I don't see this. What page you on?  Can you replicate?
-","10/10/11 11:02:21; rajesh; 
+","10/10/11 11:02:21; rajesh; **Author: larrie**
 Retested, and functionality seems to be working correctly"
-"Total Impact Graph Maximized - show all years data, do not limit to 5 years","When showing the max view of the TIG, include all years of data available; do not limit to the most recent 5 years",10/10/2011 10:11:55,10/10/2011 11:02:39,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:02:23; ajaya; 
+"Total Impact Graph Maximized - show all years data, do not limit to 5 years","When showing the max view of the TIG, include all years of data available; do not limit to the most recent 5 years",10/10/2011 10:11:55,10/10/2011 11:02:39,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:02:23; ajaya; 
 changeset:3020
 changeset:3021
 ","10/10/11 11:02:25; ajaya; 
-changeset:3022","10/10/11 11:02:31; rajesh; 
+changeset:3022","10/10/11 11:02:31; rajesh; **Author: rajesh**
 http://qa.peerwater.org/analytix/impact
 ""All Projects""
 
@@ -2241,16 +2241,16 @@ dates go out to 2013 and data bars are there on 2012.
 need to only count completed projects.","10/10/11 11:02:33; ajaya; 
 changset:3029
 ","10/10/11 11:02:35; ajaya; 
-changeset:3029","10/10/11 11:02:37; rajesh; 
-looks fine, but really need to check into GV and WOTR project history to see if all years are showing up.","10/10/11 11:02:39; rajesh; 
+changeset:3029","10/10/11 11:02:37; rajesh; **Author: rajesh**
+looks fine, but really need to check into GV and WOTR project history to see if all years are showing up.","10/10/11 11:02:39; rajesh; **Author: vinita**
 Tested :
 
 GV - bar chart shows all projects from 2000 to 2009.
 
 WOTR - bar chart shows all projects from 2001 to 2009."
 Total Impact Graph Maximized - Public View,"Public view: set filter = all projects, and set the filter change ability to greyed out (the public cannot change the filter settings)
-",10/10/2011 10:11:59,10/10/2011 11:02:45,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 11:02:41; ajaya; 
-Public can't view maximized impact page. right? Then?","10/10/11 11:02:43; rajesh; 
+",10/10/2011 10:11:59,10/10/2011 11:02:45,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 11:02:41; ajaya; 
+Public can't view maximized impact page. right? Then?","10/10/11 11:02:43; rajesh; **Author: rajesh**
 Public can only see maximized views (of data-map and of the impact graph). They will not have a dashboard.
 
 What is being asked for is if the filter items can be greyed out (esp. the first ""My Projects""). What will ""My projects"" mean for the public?
@@ -2260,8 +2260,8 @@ There is a debate on whether we let the public use the other filter items. This 
 changeset:3026
 
 "
-Total Impact Graph Maximized - Member / Funder - What does My Projects mean,No description given,10/10/2011 10:12:03,10/10/2011 10:12:03,Open,rajesh,ajaya,Bug Fix,Unresolved
-funded by ddl,No description given,10/10/2011 10:12:05,10/10/2011 10:12:05,Open,rajesh,ajaya,Wish List,Unresolved
+Total Impact Graph Maximized - Member / Funder - What does My Projects mean,No description given,10/10/2011 10:12:03,10/10/2011 10:12:03,Open,rajesh,ajaya,Bug Fix,Bug Fix,Unresolved
+funded by ddl,No description given,10/10/2011 10:12:05,10/10/2011 10:12:05,Open,rajesh,ajaya,Wish List,Wish List,Unresolved
 Funder Dashboard Cleanup,"1. Default on dashboard should by My funded projects for small map and impact graph.
 
 2. For larger impact graph, funded + implemented
@@ -2270,72 +2270,72 @@ Funder Dashboard Cleanup,"1. Default on dashboard should by My funded projects f
 
 If its easier to replicate #2 & #3 on the dashboard, then change #1 to show the same.
 
-Rajesh will try to take care of look & feel (e.g. ToDos on RHS)",10/10/2011 10:12:08,10/10/2011 11:02:50,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 11:02:47; ajaya; 
+Rajesh will try to take care of look & feel (e.g. ToDos on RHS)",10/10/2011 10:12:08,10/10/2011 11:02:50,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 11:02:47; ajaya; 
 How do we define a funder?
 
 Org has a type called Funder/  Is that?
-we also have funders for PWX ( can see in admin dashboard ) . they are funders and not members of PWX.  I assume you are saying The first one cause in the second case they can't even login.","10/10/11 11:02:48; rajesh; 
+we also have funders for PWX ( can see in admin dashboard ) . they are funders and not members of PWX.  I assume you are saying The first one cause in the second case they can't even login.","10/10/11 11:02:48; rajesh; **Author: rajesh**
 you are right, its if the org is type funder.
 
 the other non-member funders need to show up on the ""Funded by:"" lists","10/10/11 11:02:50; ajaya; 
 changeset:3068"
-Public Home Page integrate public view of Analytix,"Currently, public home page has big button pointing to survey results.  Replace that button with three buttons (leave room for four).  The three buttons will be for: 1. AnalytiX Total Impact Graph, maximized view; 2. Analytix Map maximized view; 3. survey results",10/10/2011 10:12:15,10/10/2011 10:12:17,Closed,rajesh,rajesh,AnalytiX,Fixed
-Public Home Page integrate AnalytiX definitions,Add a fourth button to the page pointing to a new content page explaining the BI levels context of AnalytiX - rajesh is mindful of the content,10/10/2011 10:12:19,10/10/2011 10:12:21,Closed,rajesh,rajesh,AnalytiX,Fixed
+Public Home Page integrate public view of Analytix,"Currently, public home page has big button pointing to survey results.  Replace that button with three buttons (leave room for four).  The three buttons will be for: 1. AnalytiX Total Impact Graph, maximized view; 2. Analytix Map maximized view; 3. survey results",10/10/2011 10:12:15,10/10/2011 10:12:17,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed
+Public Home Page integrate AnalytiX definitions,Add a fourth button to the page pointing to a new content page explaining the BI levels context of AnalytiX - rajesh is mindful of the content,10/10/2011 10:12:19,10/10/2011 10:12:21,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed
 Apply button not working,"1. Logged in as implementer, to dashboard, in todo section, when funding showing the ""apply now"" button not working.
 
-2. In the dashboard todo section, in the apply for funding subsection, show ""my"" draft and submitted applications",10/10/2011 10:12:23,10/10/2011 11:02:55,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 11:02:52; ajaya; 
+2. In the dashboard todo section, in the apply for funding subsection, show ""my"" draft and submitted applications",10/10/2011 10:12:23,10/10/2011 11:02:55,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 11:02:52; ajaya; 
 changeset:3039
 
 Please see commit comment.","10/10/11 11:02:55; ajaya; 
 One day we remove the list, other day we want it back in."
 AnalytiX map - filter not rendering same in IE 7,"On the dashboard, the filter shows the ANY at the bottom of the list.  When in the maximized view, the any is not shown, creating the need for a scroll bar, which I think Vinita noted in another ticket.
 
-Desired behavior is to analyze the differences in the specification of these two containers and discover why it works well on DB but not in max view",10/10/2011 10:12:29,10/10/2011 11:03:01,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 11:02:57; rajesh; 
-This is related to 8759 - resolve both with one solution","10/10/11 11:02:59; rajesh; 
+Desired behavior is to analyze the differences in the specification of these two containers and discover why it works well on DB but not in max view",10/10/2011 10:12:29,10/10/2011 11:03:01,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 11:02:57; rajesh; **Author: larrie**
+This is related to 8759 - resolve both with one solution","10/10/11 11:02:59; rajesh; **Author: rajesh**
 See Vinita's screen, the filter is spilling over the legend.
 
 Legend was supposed to be for Analytix2.0.
 And maybe not necessary since Rajesh put icons in the filter.","10/10/11 11:03:01; ajaya; 
 should be fixed.. "
-AnalytiX Map Data Grid - add column for Implementer,Add column to data grid for implementer name,10/10/2011 10:12:33,10/10/2011 11:03:05,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 11:03:03; rajesh; 
+AnalytiX Map Data Grid - add column for Implementer,Add column to data grid for implementer name,10/10/2011 10:12:33,10/10/2011 11:03:05,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 11:03:03; rajesh; **Author: rajesh**
 columns added, need ""org_name""","10/10/11 11:03:05; ajaya; 
 changeset:3051"
-"Analytix Total Impact Graph, maximized view - make funded by / implemented by independent",to enable a graph of project funded by an funder and only those projects implemented by the selection,10/10/2011 10:12:37,10/10/2011 10:12:39,Closed,rajesh,ajaya,Analytix 1.1,Fixed
+"Analytix Total Impact Graph, maximized view - make funded by / implemented by independent",to enable a graph of project funded by an funder and only those projects implemented by the selection,10/10/2011 10:12:37,10/10/2011 10:12:39,Closed,rajesh,ajaya,Analytix 1.1,Analytix 1.1,Fixed
 Impact graph filter enhancement (funded by && done by),"request from our friend Rob Bell of El Porvenir.
 
 add one more filter in the impact graph:
-Funded by && Done by",10/10/2011 10:12:41,10/10/2011 11:03:12,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:03:07; rajesh; 
+Funded by && Done by",10/10/2011 10:12:41,10/10/2011 11:03:12,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:03:07; rajesh; **Author: rajesh**
 i have put a lot of ""TODOs"" in the code, but maybe its not the place to put it.
 
 this should be a very easy enhancement to add to our impact graph.
 
-ALSO, while doing it, please add ""By Country"" with a drop down of all the countries we have projects in.","10/10/11 11:03:09; rajesh; 
+ALSO, while doing it, please add ""By Country"" with a drop down of all the countries we have projects in.","10/10/11 11:03:09; rajesh; **Author: abhishek**
 How is it captured that the Project is funded by by the implementer itself? In the system we have org types ( https://skitch.com/abpa/ry7mp/pwx-organization-info-el-porvenir ). Done_by and Funded_by is retrieved based on org's type.
 
 In case of the filter ""Funded by && Done by"" will the set of options consist of all implementers who self-funded atleast once.
 
 Please give example of the project which falls under this category.
 
-","10/10/11 11:03:12; rajesh; 
+","10/10/11 11:03:12; rajesh; **Author: abhishek**
 Done in commit [http://trac.peerwater.org/index.fcgi/changeset/3110 3110]"
 analytix table should show results count also on top,"when we open up the maximized or small map/table, the count of results is all the way at the bottom.
 
-need it on top (only on top or also on top)",10/10/2011 10:12:45,10/10/2011 11:03:18,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:03:14; rajesh; 
-and controls can be mirrored on top and bottom too.","10/10/11 11:03:16; rajesh; 
+need it on top (only on top or also on top)",10/10/2011 10:12:45,10/10/2011 11:03:18,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:03:14; rajesh; **Author: rajesh**
+and controls can be mirrored on top and bottom too.","10/10/11 11:03:16; rajesh; **Author: abhishek**
 
 1.) count is moved at the top
 2.) mirroring the controls is tricky, there is already a official big on this ( http://datatables.net/forums/comments.php?DiscussionID=37 )
 
-Commit #3108","10/10/11 11:03:18; rajesh; 
+Commit #3108","10/10/11 11:03:18; rajesh; **Author: vinita**
 tested and the count is viewed at the top of the table"
 AnalytiX Dashboard - Icons hidden when the map is maximized,"On the maximized map - select 'Show Legends':
 
 1) '''Not Visited''' under Project status filter is hidden.
 2) '''Any''' is listed below the ""Show legends"" button.
 
-",10/10/2011 10:12:50,10/10/2011 11:03:20,Closed,rajesh,ajaya,AnalytiX,Fixed,"10/10/11 11:03:20; rajesh; 
+",10/10/2011 10:12:50,10/10/2011 11:03:20,Closed,rajesh,ajaya,AnalytiX,AnalytiX,Fixed,"10/10/11 11:03:20; rajesh; **Author: rajesh**
 same as ticket:8774"
-public maximized (project) view not working,"the public view of analytix/project (the maximized screen), nothing loads. just the ""Loading"" sign",10/10/2011 10:12:54,10/10/2011 11:03:22,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 11:03:22; ajaya; 
+public maximized (project) view not working,"the public view of analytix/project (the maximized screen), nothing loads. just the ""Loading"" sign",10/10/2011 10:12:54,10/10/2011 11:03:22,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 11:03:22; ajaya; 
 changeset:3048"
 restore 2 withdrawn apps,"
 238 and 295 are the app ids by A single Drop
@@ -2344,13 +2344,13 @@ Want them reestablished to their last state with all qanda & reviews complete. t
 
 
 Q: do we need to re-submit them first to keep it clean?
-",10/10/2011 10:12:58,10/10/2011 11:03:26,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 11:03:24; rajesh; 
+",10/10/2011 10:12:58,10/10/2011 11:03:26,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 11:03:24; rajesh; **Author: rajesh**
 i resubmitted the apps and the qandas are restored.
 the review assignments and ratings need to be restored.","10/10/11 11:03:26; ajaya; 
 Done."
 new icons need css tweak,"new icons from mark.
-need new h2 css definitions. have already put the code (changeset:3052) in dashboard/_todos but text.css needs to be modified.",10/10/2011 10:13:02,10/10/2011 11:03:32,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 11:03:28; ajaya; 
-changeset:3055","10/10/11 11:03:30; rajesh; 
+need new h2 css definitions. have already put the code (changeset:3052) in dashboard/_todos but text.css needs to be modified.",10/10/2011 10:13:02,10/10/2011 11:03:32,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 11:03:28; ajaya; 
+changeset:3055","10/10/11 11:03:30; rajesh; **Author: rajesh**
 sorry, was not clear:
 
 Mark supplied new icons:
@@ -2360,28 +2360,28 @@ The <h2 ...> needs to be adjusted to show the new icons. i have tried to put the
 changeset:3064"
 date selection on filter just a bit off,"the ""from to"" filter does not find any dates if the years selected are the same.
 
-i tried ""2006"" -> ""2006"" and it did not pick up any Safer Future projects. But if i do ""2005"" -> ""2006"" it picks up /proj/1 which started and finished in 2006.",10/10/2011 10:13:06,10/10/2011 11:03:46,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:03:34; rajesh; 
+i tried ""2006"" -> ""2006"" and it did not pick up any Safer Future projects. But if i do ""2005"" -> ""2006"" it picks up /proj/1 which started and finished in 2006.",10/10/2011 10:13:06,10/10/2011 11:03:46,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:03:34; rajesh; **Author: rajesh**
 to clarify further:
 
 date should be from 1/1 of ""from"" to Dec31 of ""to""
 ","10/10/11 11:03:36; ajaya; 
-changeset:3065","10/10/11 11:03:38; rajesh; 
+changeset:3065","10/10/11 11:03:38; rajesh; **Author: rajesh**
 still some issues with date filter.
 
 on dev: on large map, choose done by safer future (i logged in as saferfuture)
 2008->2010, you see 2 icons
 2005->2010, you see none!
 
-similar on qa, you should see the same or more.","10/10/11 11:03:40; rajesh; 
+similar on qa, you should see the same or more.","10/10/11 11:03:40; rajesh; **Author: rajesh**
 on dev playing with 'saferfuture' only and the date stuff is not working.
 
 2005-2005 - 1 icon
 2005-2006 - 1 icon
 2006-2006 - 2 icons (not including above)
 2007-2008 - none
-2008-2008 - 2","10/10/11 11:03:42; rajesh; 
-fixed changeset:3070","10/10/11 11:03:44; rajesh; 
-assigning to Vinita to test (will work out test sequence with her).","10/10/11 11:03:46; rajesh; 
+2008-2008 - 2","10/10/11 11:03:42; rajesh; **Author: rajesh**
+fixed changeset:3070","10/10/11 11:03:44; rajesh; **Author: rajesh**
+assigning to Vinita to test (will work out test sequence with her).","10/10/11 11:03:46; rajesh; **Author: vinita**
 Tested and the date filters seem to be working."
 updating proj report date on qa causes crash,"on firefox/osx on qa, saferfuture, editing proj report attached to proj/1.
 entered np; but when i edited to change date ...
@@ -2689,7 +2689,7 @@ Headers:
 {""Content-Type""=>""text/html; charset=utf-8"",
  ""Cache-Control""=>""no-cache""}
 
-",10/10/2011 10:13:13,10/10/2011 11:03:48,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 11:03:48; ajaya; 
+",10/10/2011 10:13:13,10/10/2011 11:03:48,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:03:48; ajaya; 
 this is just a ferret error.. see if it happens again!!"
 zoom on map not being readjusted after filter change,"when the filters get changed the zoom level needs to be adjusted appropriately. noticed by AJ too.
 
@@ -2703,21 +2703,21 @@ i have moved one project of Safer Future way south and it can't keep the same zo
 
 nice to fix, but not important enough to delay release. can move to 2.0 if it is going to take too much effort.
 
-we should readjust zoom level every time a filter changes.",10/10/2011 10:13:16,10/10/2011 11:03:50,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 11:03:50; ajaya; 
+we should readjust zoom level every time a filter changes.",10/10/2011 10:13:16,10/10/2011 11:03:50,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 11:03:50; ajaya; 
 changeset:3066"
 large data table needs column size adjustment,"i have put the column widths in the _console_data_table but the display is not following those widths.
 
 please fix.
 
-again if this is too much effort can move to AnalytiX 2",10/10/2011 10:13:20,10/10/2011 11:03:52,Open,rajesh,ajaya,Bug Fix,Unresolved,"10/10/11 11:03:52; ajaya; 
+again if this is too much effort can move to AnalytiX 2",10/10/2011 10:13:20,10/10/2011 11:03:52,Open,rajesh,ajaya,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:03:52; ajaya; 
 too much work... we need to be able to calulate the table width properly, adjust the column width, and then trim the data as per the column width.."
 square bullets in filter of impact graph,"the filter on the impact graph is a list (ul) but should not have the square bullets.
 
-visual annoyance, low priority",10/10/2011 10:13:22,10/10/2011 11:03:54,Closed,rajesh,rajesh,AnalytiX,Fixed,"10/10/11 11:03:54; ajaya; 
+visual annoyance, low priority",10/10/2011 10:13:22,10/10/2011 11:03:54,Closed,rajesh,rajesh,AnalytiX,AnalytiX,Fixed,"10/10/11 11:03:54; ajaya; 
 changeset:3067"
 need more contol of mini-graph,"need help either splitting impact_data.xml.builder into 2 files one for the mini or creating a second function within.
 
-this is to allow changing legend, titles, etc. for each graph separately.",10/10/2011 10:13:26,10/10/2011 11:03:56,Open,rajesh,ajaya,Wish List,Unresolved,"10/10/11 11:03:56; rajesh; 
+this is to allow changing legend, titles, etc. for each graph separately.",10/10/2011 10:13:26,10/10/2011 11:03:56,Open,rajesh,ajaya,Wish List,Wish List,Unresolved,"10/10/11 11:03:56; rajesh; **Author: larrie**
 Per discussion on 20/09/10 - Rajesh clarified this to be:
 1.  In the dashboard TIG, do not display the legend at the bottom of the graph, and enable the descriptor at the top of the graph to be different that the full TIG.
 2.  Idea is to either generate two files as was noted in the original comments, or to add a new parameter and make the existing file smarter.  (Rajesh wants to control the descriptions without making a coding change)
@@ -2761,13 +2761,13 @@ Application Trace | Framework Trace | Full Trace
 
 
 
-",10/10/2011 10:13:28,10/10/2011 10:13:29,Open,rajesh,vamsee,Bug Fix,Unresolved
+",10/10/2011 10:13:28,10/10/2011 10:13:29,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved
 update PWX blog,"the blog version (Wordpress) needs to be updated.
 and somehow the look & feel has gone.
 
 if the BPN theme looks good for PWX, lets copy it.
 
-otherwise lets at least get a nice theme and fix the background",10/10/2011 10:13:31,10/04/2012 03:48:00,Closed,rajesh,rajesh,Rails 3,Fixed,"10/10/11 11:03:58; rajesh; 
+otherwise lets at least get a nice theme and fix the background",10/10/2011 10:13:31,10/04/2012 03:48:00,Closed,rajesh,rajesh,Rails 3,Rails 3,Fixed,"10/10/11 11:03:58; rajesh; **Author: abhishek**
 Copying the BPN theme (called Arras Theme) is tricky, It requires mark to play with PWX blog content and create thumbnail and featured image for blog posts. It requires modification to header.
  
 
@@ -2782,20 +2782,20 @@ need to test on qa.
 
 change ""Rejected"" -> ""Declined""
 
-",10/10/2011 10:13:33,10/10/2011 11:04:08,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:04:00; rajesh; 
-Tested on QA i does not show up, please check once again.","10/10/11 11:04:02; rajesh; 
+",10/10/2011 10:13:33,10/10/2011 11:04:08,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:04:00; rajesh; **Author: vinita**
+Tested on QA i does not show up, please check once again.","10/10/11 11:04:02; rajesh; **Author: rajesh**
 am not sure what Vinita tested, on QA the rejected org in South Africa clearly is visible on the map.
 
-this needs to be fixed sooner than later ...","10/10/11 11:04:04; rajesh; 
+this needs to be fixed sooner than later ...","10/10/11 11:04:04; rajesh; **Author: abhishek**
 Just to confirm, Are you talking about this listing? https://skitch.com/abpa/rb2kb/pwx-continuing-to-lead-innovation-in-maps-to-serve-the-wash-sector
 
-","10/10/11 11:04:06; rajesh; 
+","10/10/11 11:04:06; rajesh; **Author: abhishek**
 Fixed in Commit #3113
-","10/10/11 11:04:08; rajesh; 
+","10/10/11 11:04:08; rajesh; **Author: vinita**
 Rejected org does not show up on the map - checked in QA"
 need intro marketing AnalytiX video for home page,"short 30-60 sec max.
 
-alternate video & text with current home page video.",10/10/2011 10:13:37,10/10/2011 11:04:10,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:04:10; rajesh; 
+alternate video & text with current home page video.",10/10/2011 10:13:37,10/10/2011 11:04:10,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:04:10; rajesh; **Author: abhishek**
 Done.
 
 
@@ -2809,16 +2809,16 @@ having TOC would be good to have help pointers for specific features:
 dashboard,
 maximized,
 filter,
-impact & options",10/10/2011 10:13:41,10/10/2011 11:04:17,Closed,rajesh,rajesh,Wish List,Fixed,"10/10/11 11:04:12; rajesh; 
+impact & options",10/10/2011 10:13:41,10/10/2011 11:04:17,Closed,rajesh,rajesh,Wish List,Wish List,Fixed,"10/10/11 11:04:12; rajesh; **Author: abhishek**
 Done .
 
 http://qa.peerwater.org/analytix/help/video?introduction
-","10/10/11 11:04:15; rajesh; 
-need one more video on what next, what to do, what is expected.","10/10/11 11:04:17; rajesh; 
+","10/10/11 11:04:15; rajesh; **Author: rajesh**
+need one more video on what next, what to do, what is expected.","10/10/11 11:04:17; rajesh; **Author: rajesh**
 Vinita can create new ticket on ""need one more video on what next, what to do, what is expected"""
 optimization of sql queries and caching (server-side),"need to dramatically improve speed.
 
-",10/10/2011 10:13:45,10/10/2011 11:04:19,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:04:19; rajesh; 
+",10/10/2011 10:13:45,10/10/2011 11:04:19,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:04:19; rajesh; **Author: abhishek**
 
 
 On Server-side
@@ -2843,7 +2843,7 @@ there is too much white space and the bottom section can be invisible and never 
 
 OR
 
-introduce a scroll bar when the display is too small for the summary.",10/10/2011 10:13:51,10/10/2011 11:04:23,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:04:23; rajesh; 
+introduce a scroll bar when the display is too small for the summary.",10/10/2011 10:13:51,10/10/2011 11:04:23,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:04:23; rajesh; **Author: vinita**
 font is smaller and moves when one scrolls through the page"
 initial sort order of projects,"request from Lisa:
 
@@ -2853,23 +2853,23 @@ this should be true for not logged in, for sure.
 
 so that public sees projects with data first.
 
-and logged in people see projects without data first! :)",10/10/2011 10:13:56,10/10/2011 11:04:31,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:04:25; rajesh; 
-Vinita, Can you check this and close","10/10/11 11:04:27; rajesh; 
+and logged in people see projects without data first! :)",10/10/2011 10:13:56,10/10/2011 11:04:31,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:04:25; rajesh; **Author: abhishek**
+Vinita, Can you check this and close","10/10/11 11:04:27; rajesh; **Author: vinita**
 Tested in QA:
 
 When not logged in the table shows projects with start date and end date (most recent being first).
 
 Logged in and noticed projects are listed only with end date on the smaller map, the maximized map shows the start and end dates.
 
-Include the start date column on the smaller map.","10/10/11 11:04:29; rajesh; 
+Include the start date column on the smaller map.","10/10/11 11:04:29; rajesh; **Author: abhishek**
 we will not be doing it for smaller map..
-","10/10/11 11:04:31; rajesh; 
+","10/10/11 11:04:31; rajesh; **Author: vinita**
 Data is in order"
 qa refresh with new email and passwords,"1. create a mailing list on google apps ""qa"" vinita & rajesh
 
 2. change rake script so that qa refresh changes email to qa@peerwater.org
 
-3. change pw to analytix for all logins and qa website",10/10/2011 10:14:00,10/10/2011 11:04:33,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:04:33; rajesh; 
+3. change pw to analytix for all logins and qa website",10/10/2011 10:14:00,10/10/2011 11:04:33,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:04:33; rajesh; **Author: abhishek**
 Done.
 
 Revision:#3076
@@ -2880,17 +2880,17 @@ Date Filter: Projects Started This Year,"Using WWW, not logged in, using public 
 select id, name, date(start_date)
   from projects
  where start_date between '2010-01-01' and '2010-12-31'
- order by start_date;",10/10/2011 10:14:05,10/10/2011 11:04:37,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:04:35; rajesh; 
+ order by start_date;",10/10/2011 10:14:05,10/10/2011 11:04:37,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:04:35; rajesh; **Author: abhishek**
 As of right now, the dataset for current year considers last one year from current date. If you are using Analytix on 27 Sept 2010 ... It fetches data from 28 sept 2009 to 27 Sept 2010.
 This makes sense, because we want people to know , Project started during last 1 year. 
 
 Should we just change the label of radio button from ""Projects started this year"" to "" started during last one year"" 
 
 This way the 1 year range will be relative to current month. If people want to find projects started after recent January, they can do so with table filters.
-","10/10/11 11:04:37; rajesh; 
+","10/10/11 11:04:37; rajesh; **Author: abhishek**
 Done in Revision:3073
 Test it on QA"
-impact graph calculations need to be checked,No description given,10/10/2011 10:14:09,10/10/2011 11:04:39,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 11:04:39; rajesh; 
+impact graph calculations need to be checked,No description given,10/10/2011 10:14:09,10/10/2011 11:04:39,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:04:39; rajesh; **Author: abhishek**
 Here is a query that gets executed for one of the label
 
 SELECT sum(`projects`.no_people_affected_drinking) AS sum_no_people_affected_drinking FROM `projects` INNER JOIN `apps` ON `apps`.id = `projects`.app_id WHERE ((projects.completion_date <= '2009-12-31') AND (((apps.organization_id > 0) AND (projects.status_id IN (1, 5, 6, 7))) AND (projects.completion_date >= '2009-01-01'))) 
@@ -2903,4 +2903,4 @@ It covers all the projects which fall under the status
 
 
 "
-Add Altitude to database,"Add altitude to the database; collate with Lat Lon.  Gram Vikas has collected altitude and want to track it.  Only add to DB, future release to figure out the UI components.",10/10/2011 10:14:11,10/10/2011 10:14:11,Open,rajesh,ajaya,Wish List,Unresolved
+Add Altitude to database,"Add altitude to the database; collate with Lat Lon.  Gram Vikas has collected altitude and want to track it.  Only add to DB, future release to figure out the UI components.",10/10/2011 10:14:11,10/10/2011 10:14:11,Open,rajesh,ajaya,Wish List,Wish List,Unresolved

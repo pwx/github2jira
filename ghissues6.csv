@@ -1,4 +1,4 @@
-Summary,Description,DateCreated,DateModified,Status,Reporter,Assignee,AffectsVersion,Resolution,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody
+Summary,Description,DateCreated,DateModified,Status,Reporter,Assignee,AffectsVersion,FixVersion,Resolution,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody,CommentBody
 clicking on project in table shifts focus to map,"- from parthiv -
 
 - Whenever a project link is clicked on the bottom of the page, you automatically go back to the top of the page.
@@ -8,10 +8,10 @@ clicking on project in table shifts focus to map,"- from parthiv -
 - The filters at the bottom of the page should have a default name instead of being blank, such as Sort by Date for the date column. (repeat the names and also repeat the count of results at the top in addition to the bottom (separate ticket i believe))
 
  
-",10/10/2011 10:14:13,10/10/2011 11:04:45,Open,rajesh,ajaya,Wish List,Unresolved,"10/10/11 11:04:41; rajesh; 
+",10/10/2011 10:14:13,10/10/2011 11:04:45,Open,rajesh,ajaya,Wish List,Wish List,Unresolved,"10/10/11 11:04:41; rajesh; **Author: abhishek**
 
-point #1 & #2 done in commit 3082","10/10/11 11:04:43; rajesh; 
-point #3 : Changing the controls and repeating them on top and bottom is not possible at this time as per the documentation","10/10/11 11:04:45; rajesh; 
+point #1 & #2 done in commit 3082","10/10/11 11:04:43; rajesh; **Author: abhishek**
+point #3 : Changing the controls and repeating them on top and bottom is not possible at this time as per the documentation","10/10/11 11:04:45; rajesh; **Author: rajesh**
 there are a couple of ways to fix:
 
 - freeze the column heading so scrolling down still shows them
@@ -25,28 +25,28 @@ however, the spacing is large and on so many screens (netbooks, old monitors, an
 
 so, we need to tighten the spacing.
 
-a bonus would be to also create a nested list behavior (different bullet, etc.)",10/10/2011 10:14:15,10/10/2011 11:04:51,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:04:47; rajesh; 
+a bonus would be to also create a nested list behavior (different bullet, etc.)",10/10/2011 10:14:15,10/10/2011 11:04:51,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:04:47; rajesh; **Author: rajesh**
 have compressed the list by reducing lines 
 
-creatively use titles ","10/10/11 11:04:49; rajesh; 
-@3144 changed 3144","10/10/11 11:04:51; rajesh; 
+creatively use titles ","10/10/11 11:04:49; rajesh; **Author: rajesh**
+@3144 changed 3144","10/10/11 11:04:51; rajesh; **Author: vinita**
 space is reduced and is working fine."
 Migrating to Latest Google Map API,"
 1.) Try to get the look n feel of the map like latest maps.google.com maps
-",10/10/2011 10:14:20,10/10/2011 11:04:55,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:04:53; rajesh; 
+",10/10/2011 10:14:20,10/10/2011 11:04:55,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:04:53; rajesh; **Author: abhishek**
 Done in Commit #3115
 
 1.) Migrated only Analytix code to Google Maps v3
 2.) Most of the old code to work with Maps is written in ruby using wrapper library. Either the wrapper library (Cartographer) needs to update itself or we should re-build with another liberary or best solution would be to re-write in plain JS api as compared to server side Ruby.
 
-","10/10/11 11:04:55; rajesh; 
+","10/10/11 11:04:55; rajesh; **Author: vinita**
 Looks fine"
 analytix date filter not working,"on both qa and www, choose date 2009 to 2009 in project analytix, not logged in. the results do not match the dates.
 
 see attached picture from qa, showing the date filter clearly and the fact that there are 126 entries.
 
-",10/10/2011 10:14:25,10/10/2011 11:05:16,Open,rajesh,vamsee,Bug Fix,Unresolved,"10/10/11 11:04:57; rajesh; 
-Fixed in Commit : [http://trac.peerwater.org/index.fcgi/changeset/3112/trunk 3112]","10/10/11 11:04:59; rajesh; 
+",10/10/2011 10:14:25,10/10/2011 11:05:16,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:04:57; rajesh; **Author: abhishek**
+Fixed in Commit : [http://trac.peerwater.org/index.fcgi/changeset/3112/trunk 3112]","10/10/11 11:04:59; rajesh; **Author: vinita**
 on both qa and www, choose date 2009 to 2009 in project analytix, not logged in. the results still do not match the dates.
 
 see attached picture from qa & www, there are 127 entries showing up in QA and 143 entries showing in WWW. 
@@ -60,7 +60,7 @@ I need some clarifications on this ticket:
 
 * So if you want 'From' to mean projects started on or later, and 'To' to mean projects ended on or before, then I'll change the code. 
 
-Please let me know if I'm not clear. ","10/10/11 11:05:03; rajesh; 
+Please let me know if I'm not clear. ","10/10/11 11:05:03; rajesh; **Author: rajesh**
 Which search results? we are talking about AnalytiX and the table is the same (includes Start Date).
 
 The date filter is only for projects starting (current meaning). That did not seem to be working, Vinita needs to clarify.","10/10/11 11:05:05; vamsee; 
@@ -68,14 +68,14 @@ Oops sorry, I was looking in Project Analytix (in Dashboard).
 
 The start date is indeed visible in PWX Analytix. But the code behaves the same way here - it's finding projects only with starting date between the From and To selections. If you look at all the selected ones, the start dates indeed fall between the selected range only.
 
-If you need it to mean something else, let me know. ","10/10/11 11:05:07; rajesh; 
+If you need it to mean something else, let me know. ","10/10/11 11:05:07; rajesh; **Author: rajesh**
 i forgot about the mini-analytix on dashboard, sorry.
 
-assigning it to Vinita who can test to see if it is working (all projects started in 2009 showing up or not). otherwise she can close it as fixed.","10/10/11 11:05:09; rajesh; 
+assigning it to Vinita who can test to see if it is working (all projects started in 2009 showing up or not). otherwise she can close it as fixed.","10/10/11 11:05:09; rajesh; **Author: vinita**
 Project analytix - filter project from 2009 to 2009 the results do not match the dates. Filter should show projects only for 2009 right?","10/10/11 11:05:11; vamsee; 
-@vinita currently in the screenshot example the filter is showing all the projects *started* in 2009. The end dates are not being taken into consideration. So the end dates can be anything as long as the projects are started in 2009 (this seems to be logical, because the radio button above year selection says ""Projects started this year""). If this not what you're expecting, you should discuss with Rajesh and let me know.","10/10/11 11:05:13; rajesh; 
+@vinita currently in the screenshot example the filter is showing all the projects *started* in 2009. The end dates are not being taken into consideration. So the end dates can be anything as long as the projects are started in 2009 (this seems to be logical, because the radio button above year selection says ""Projects started this year""). If this not what you're expecting, you should discuss with Rajesh and let me know.","10/10/11 11:05:13; rajesh; **Author: vinita**
 Ok if thats the case the results match both in QA and WWW (results show 145 projects started in 2009).
-","10/10/11 11:05:16; rajesh; 
+","10/10/11 11:05:16; rajesh; **Author: vinita**
 With regard to the testing I did the following:
 
 Changed the end date (09) for this project http://qa.peerwater.org/projects/134-Water-well-for-Makambie-community-funded-by-SisterSunshine and it shows up when I filter projects for 2009.
@@ -91,24 +91,24 @@ Also in the ticket can you have a list of things that needs to be tested (recoll
 
 Reopenin the ticket for further testing."
 Map URL for all projects needing funds,"Create a URL /map/index?<someoption>=true  which can show all projects needing funds, This is going to be used on contribute(Donation) page.
-",10/10/2011 10:14:29,10/10/2011 11:05:20,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:05:17; rajesh; 
+",10/10/2011 10:14:29,10/10/2011 11:05:20,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:05:17; rajesh; **Author: abhishek**
 Done in Ticket #8807
 
 /map/index?options[proj_needs_funds]=1
 
-It Works!","10/10/11 11:05:20; rajesh; 
+It Works!","10/10/11 11:05:20; rajesh; **Author: abhishek**
 Commit #3120"
 "Project Analytix : Error for ""funded by anonymous""","For the funded by filter set to ""Anonymous"" , resultant set is empty and leaves the gif loader rotating/waiting infinitely.
 
 https://skitch.com/abpa/rdy7s/pwx-continuing-to-lead-innovation-in-maps-to-serve-the-wash-sector
-",10/10/2011 10:14:33,10/10/2011 11:05:26,Closed,rajesh,rajesh,Analytix 1.1,Fixed,"10/10/11 11:05:22; rajesh; 
-Fixed in  commit 3126","10/10/11 11:05:24; rajesh; 
+",10/10/2011 10:14:33,10/10/2011 11:05:26,Closed,rajesh,rajesh,Analytix 1.1,Analytix 1.1,Fixed,"10/10/11 11:05:22; rajesh; **Author: abhishek**
+Fixed in  commit 3126","10/10/11 11:05:24; rajesh; **Author: rajesh**
 this was a problem afflicting many radio button choices too. as i had shown a week ago, choosing funded by BPN was a problem.
 visited by and then choosing one of the 3 options was the same.
 
 i should have put in a ticket immediately.
 
-please don't close tickets - that's for me and vinita to verify.","10/10/11 11:05:25; rajesh; 
+please don't close tickets - that's for me and vinita to verify.","10/10/11 11:05:25; rajesh; **Author: rajesh**
 Vinita, please check (or if you have already checked then close) many filter combos (and dropdown options) to see if AnalytiX hangs on www.
 
 i have checked a few and its working."
@@ -119,12 +119,12 @@ note that there are 2 parts (each should be sorted independently).
 need to add a funder 'Self'. this will be for self-funded community projects (e.g. laughing waters).
 
 now i know i can add that, but i want to understand how to treat it specially like ""Anonymous"" and ""Other"" which i believe get some special treatment (sorry, i should know, but i have forgotten and can't figure out)
-",10/10/2011 10:14:47,10/10/2011 11:05:35,Open,rajesh,ajaya,Bug Fix,Unresolved,"10/10/11 11:05:33; rajesh; 
+",10/10/2011 10:14:47,10/10/2011 11:05:35,Open,rajesh,ajaya,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:05:33; rajesh; **Author: abhishek**
 Sorting is done in Commit #3137
 
 I am not clear about 'Self' funder feature please explain with example.
 
-","10/10/11 11:05:35; rajesh; 
+","10/10/11 11:05:35; rajesh; **Author: rajesh**
 please also sort the funder list on the admin dashboard.
 
 have renamed 'other' to 'self' for now. no need to do anything for that part."
@@ -132,7 +132,7 @@ mark which photo from a project shows up on the map bubble,"right now i think th
 
 would like the ability to show the best one and increase its size.
 
-see charity water, for example.",10/10/2011 10:14:49,23/01/2012 12:54:32,Open,rajesh,ajaya,Wish List,Unresolved,"23/01/12 12:54:31; rajesh; as part of Cisco2 integration, we want to provide another widget or xml string to get project name, primary project photo, some number (total count, funding), etc.
+see charity water, for example.",10/10/2011 10:14:49,23/01/2012 12:54:32,Open,rajesh,ajaya,Wish List,Wish List,Unresolved,"23/01/12 12:54:31; rajesh; as part of Cisco2 integration, we want to provide another widget or xml string to get project name, primary project photo, some number (total count, funding), etc.
 
 see for example: http://blueplanetnetwork.org/projects/vietnam and we could automate this so that they don't have to copy the photo or text, but can just run it off the pwx site without going to the pwx site.
 
@@ -143,8 +143,8 @@ links on map do not get cleared,"on the new map, you can click on an app icon an
 
 this way you can click on as many apps and add to the lines. new unintended behavior.
 
-'Clear Links' on both the normal map and maximized does not work. Only the last app icon links are cleared.",10/10/2011 10:14:54,10/10/2011 11:05:41,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 11:05:39; rajesh; 
-also, double-click on the icon is supposed to bring up both the bubble and the links (the text on top of maximized map clearly states that). double click only brings up the bubble.","10/10/11 11:05:41; rajesh; 
+'Clear Links' on both the normal map and maximized does not work. Only the last app icon links are cleared.",10/10/2011 10:14:54,10/10/2011 11:05:41,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:05:39; rajesh; **Author: rajesh**
+also, double-click on the icon is supposed to bring up both the bubble and the links (the text on top of maximized map clearly states that). double click only brings up the bubble.","10/10/11 11:05:41; rajesh; **Author: abhishek**
 1.) Clearing of links is fixed
 2.) There is some unknown issue with double click. When I attach click and dbl click event handler to marker, double click will end up generating two clicks (This is weird but normal behavior as per browser api). In PWX map, if the click handler has ajax (which fires infowindow) then dblclick is not being fired. As this is not a very important priority, I have transferred double click functionality to right click.
 3.) I have changed small note (in bottom of page) asking users to Right-click rather than dblclick
@@ -333,7 +333,7 @@ Response
 Headers:
 
 {""Content-Type""=>""text/html; charset=utf-8"",
- ""Cache-Control""=>""no-cache""}",10/10/2011 10:14:57,10/10/2011 11:05:47,Closed,rajesh,rajesh,Bug Fix,Fixed,"10/10/11 11:05:44; rajesh; 
+ ""Cache-Control""=>""no-cache""}",10/10/2011 10:14:57,10/10/2011 11:05:47,Closed,rajesh,rajesh,Bug Fix,Bug Fix,Fixed,"10/10/11 11:05:44; rajesh; **Author: rajesh**
 still get an error. on qa, the thing does not crash. but on local (refreshed, svn update, ...) and refreshed with data from www (see both screen and console errors):
 
 '''on the screen''': RuntimeError in MapController#results_for_country
@@ -374,10 +374,10 @@ RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wa
 
   app/controllers/map_controller.rb:279:in  `results_for_country' app/controllers/map_controller.rb:279:in  `each' app/controllers/map_controller.rb:279:in  `results_for_country' /Library/Ruby/Gems/1.8/gems/newrelic_rpm-2.12.3/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:253:in  `perform_action' /Library/Ruby/Gems/1.8/gems/newrelic_rpm-2.12.3/lib/new_relic/agent/method_tracer.rb:141:in  `trace_execution_scoped' /Library/Ruby/Gems/1.8/gems/newrelic_rpm-2.12.3/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:246:in  `perform_action' app/middleware/flash_session_cookie_middleware.rb:23:in  `call' /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in  `service' /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in  `run' /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in  `start_thread' /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in  `start' /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in  `start_thread' /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in  `start' /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in  `each' /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in  `start' /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in  `start' /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in  `start'
 
-Rendered rescues/_trace (40.2ms) Rendered rescues/_request_and_response (34.3ms) Rendering rescues/layout (internal_server_error)","10/10/11 11:05:47; rajesh; 
+Rendered rescues/_trace (40.2ms) Rendered rescues/_request_and_response (34.3ms) Rendering rescues/layout (internal_server_error)","10/10/11 11:05:47; rajesh; **Author: abhishek**
 I checked it just now, It works : https://skitch.com/abpa/rxb7e/search-for-i
 "
-2 scroll bars are seen when an app. is looked up in the map in IE,None,10/10/2011 10:15:03,10/10/2011 10:15:03,Open,rajesh,vamsee,Bug Fix,Unresolved
+2 scroll bars are seen when an app. is looked up in the map in IE,None,10/10/2011 10:15:03,10/10/2011 10:15:03,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved
 map of country from search results not working well,"when you search for 'india' and click on 'map of country' it seems okay.
 
 if you search for 'kenya' then the map shows office of The Samburu Project in US (it has two office locations, one in Kenya and one in US). The map should only show the Kenya office.
@@ -386,7 +386,7 @@ if you search for 'mali' you get the 3 projects in Mali that is the correct.
 
 however, if you search for '*l*' and Mali is one of the results, then the map of Mali shows all the results of the search, not just the Mali ones.
 
-i think the problem is when more than one country ends up the search results, then instead of getting results per country, its all of them.",10/10/2011 10:15:05,10/10/2011 10:15:05,Open,rajesh,vamsee,Bug Fix,Unresolved
+i think the problem is when more than one country ends up the search results, then instead of getting results per country, its all of them.",10/10/2011 10:15:05,10/10/2011 10:15:05,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved
 new text for approving applications that are not peer reviewed,"today, we approved an app that was not peer reviewed.
 
 the email was the standard (below) so we need a new text.
@@ -399,24 +399,24 @@ the email was the standard (below) so we need a new text.
 || Reply-To: || system@peerwater.org ||
 || To: || rshah@blueplanetrun.org ||
 
-[[BR]] [[BR]] Dear Rajesh Shah,Your application has been reviewed by your PWX peers and has been approved for funding - Congratulations!",10/10/2011 10:15:07,10/10/2011 10:15:08,Open,rajesh,ajaya,Wish List,Unresolved
+[[BR]] [[BR]] Dear Rajesh Shah,Your application has been reviewed by your PWX peers and has been approved for funding - Congratulations!",10/10/2011 10:15:07,10/10/2011 10:15:08,Open,rajesh,ajaya,Wish List,Wish List,Unresolved
 peer and visitor reports should not be editable by project owner,"peer reports and visitor reports are editable today by the project owner.
 
 disallow that.
 
-as part of SMS feature, we will put a report problem to admin button that will tell whether the report needs to be moved to another project.",10/10/2011 10:15:10,10/10/2011 11:05:49,Open,rajesh,vamsee,Bug Fix,Unresolved,"10/10/11 11:05:49; rajesh; 
+as part of SMS feature, we will put a report problem to admin button that will tell whether the report needs to be moved to another project.",10/10/2011 10:15:10,10/10/2011 11:05:49,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:05:49; rajesh; **Author: rajesh**
 see if there is linkage between this and !#8714"
 new icons on the map,"need to put two of the icons created by Mark on our map.
 
 partial success, and failed.
 
-there is a meeting on tue 15 in california.",10/10/2011 10:15:12,10/10/2011 11:05:53,Closed,rajesh,rajesh,SMS,Fixed,"10/10/11 11:05:51; rajesh; 
+there is a meeting on tue 15 in california.",10/10/2011 10:15:12,10/10/2011 11:05:53,Closed,rajesh,rajesh,SMS,SMS,Fixed,"10/10/11 11:05:51; rajesh; **Author: abhishek**
 Commited in #3189
 
 Looks like this : https://skitch.com/abpa/rqhye/map-icons","10/10/11 11:05:53; ajaya; 
 I looked at the code.  Looks good."
-Rick McGowan proposed enhancements to application,No description given,10/10/2011 10:15:16,10/10/2011 10:15:16,Open,rajesh,ajaya,Wish List,Unresolved
-create user hierarchy (within pwx and within org) for features,No description given,10/10/2011 10:15:18,10/10/2011 11:05:59,Closed,rajesh,ajaya,SMS,Fixed,"10/10/11 11:05:55; rajesh; 
+Rick McGowan proposed enhancements to application,No description given,10/10/2011 10:15:16,10/10/2011 10:15:16,Open,rajesh,ajaya,Wish List,Wish List,Unresolved
+create user hierarchy (within pwx and within org) for features,No description given,10/10/2011 10:15:18,10/10/2011 11:05:59,Closed,rajesh,ajaya,SMS,SMS,Fixed,"10/10/11 11:05:55; rajesh; **Author: rajesh**
 longer term, we likely will need the following hierarchy:
 
 0. pwx admin
@@ -432,10 +432,10 @@ longer term, we likely will need the following hierarchy:
 5. implementer team member","10/10/11 11:05:57; ajaya; 
 Accepting the ticket.  We got a long term things to think about.  This might be a good time to look at devise also for the user side of things..
 
-Will keep u guys posted.","10/10/11 11:05:59; rajesh; 
+Will keep u guys posted.","10/10/11 11:05:59; rajesh; **Author: rajesh**
 combining with !#8714"
 Write Wiki entry for server config...,"Document whats on the server and delete the redundant files..
-",10/10/2011 10:15:22,10/04/2012 04:01:45,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Unresolved,"10/10/11 11:06:01; vamsee; 
+",10/10/2011 10:15:22,10/04/2012 04:01:45,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Ruby 1.9.3 Rails 3.2,Unresolved,"10/10/11 11:06:01; vamsee; 
 Can I assign this to Ajaya?",04/02/12 17:06:01; rajesh; this is now with R3 and solr
 multiple owners of projects & funds,"we have CSPC ready to join.
 
@@ -453,8 +453,8 @@ how can we structure the following relationship:
 
 We want to track SRTT funding but CSPC has to be in the middle somehow. We have this ""implemented by"" field at the end of the project. Can we use it to allow sharing of the project data and also analytix?
 
-This is new and semi-urgent, CSPC called me today (mar 17) and wants in and to bring in all their implementers and upload their projects.",10/10/2011 10:15:24,10/04/2012 04:08:35,Open,rajesh,ajaya,Wish List,Unresolved,"10/10/11 11:06:03; ajaya; 
-Ok.","10/10/11 11:06:06; rajesh; 
+This is new and semi-urgent, CSPC called me today (mar 17) and wants in and to bring in all their implementers and upload their projects.",10/10/2011 10:15:24,10/04/2012 04:08:35,Open,rajesh,ajaya,Wish List,Wish List,Unresolved,"10/10/11 11:06:03; ajaya; 
+Ok.","10/10/11 11:06:06; rajesh; **Author: rajesh**
 one more important conversation happened today with Bunker Roy of Barefoot and Global Rainwater Harvesting Collective (www.rainwaterharvesting.org). they have 1300 projects in 7 countries, through a range of implementers and a bunch of funders.
 
 i can propose a way of us hosting all their data if we can have the projects be 'owned' by implementer, funder and GRHC for management and analytix.","10/10/11 11:06:07; ajaya; 
@@ -483,31 +483,31 @@ You will work on an innovative platform and collaborative process       with a s
 ----
 so clearly, we need to be sure that we can get personalization/preferences for language and some set of pages (project pages to start with) up in time for her.
 
-this is clearly a major differentiator in the water sector and would ensure our continued lead.",10/10/2011 10:15:27,22/03/2012 17:13:51,Open,rajesh,rajesh,Internationalization | Spanish,Unresolved,"10/10/11 11:06:09; rajesh; 
+this is clearly a major differentiator in the water sector and would ensure our continued lead.",10/10/2011 10:15:27,22/03/2012 17:13:51,Open,rajesh,rajesh,Internationalization | Spanish,Internationalization | Spanish,Unresolved,"10/10/11 11:06:09; rajesh; **Author: rajesh**
 talked with Rob Bell, ED of El Porvenir. they are in if we implement the Spanish pages. happy to have one of his field offices try it.
 
 will get us their project data.
 
-and of course, wants privacy!","10/10/11 11:06:11; rajesh; 
+and of course, wants privacy!","10/10/11 11:06:11; rajesh; **Author: rajesh**
 summer intern not happening and maybe this is part of Rails 3 migration","01/03/12 07:56:58; rajesh; no part of R3 migration but could be part of Cisco (increased use)
 
 this requires creating spreadsheets with all the text and labels in English that need to be translated."
 download photos in one shot,"for the BPN site, Mark needs to be able to download photos from a project report in one shot.
 
-Compared to deploying our slideshow code and to arranging all the icons on the right nicely, this is lower priority.",10/10/2011 10:15:29,10/10/2011 10:15:29,Open,rajesh,ajaya,Wish List,Unresolved
+Compared to deploying our slideshow code and to arranging all the icons on the right nicely, this is lower priority.",10/10/2011 10:15:29,10/10/2011 10:15:29,Open,rajesh,ajaya,Wish List,Wish List,Unresolved
 separate implementation progress reports from post-implementation status reports,"feedback from EMW.
 
 lets us divide the Progress/Status reports into 2 sections that clearly delineate reports by implementer filed during project implementation phase and post-implementation.
 
 the dividing line will be the date of the project completion.
 
-once the code is in, rajesh will adjust final labels/text",10/10/2011 10:15:31,10/10/2011 11:06:22,Closed,rajesh,rajesh,SMS,Fixed,"10/10/11 11:06:13; rajesh; 
+once the code is in, rajesh will adjust final labels/text",10/10/2011 10:15:31,10/10/2011 11:06:22,Closed,rajesh,rajesh,SMS,SMS,Fixed,"10/10/11 11:06:13; rajesh; **Author: rajesh**
 i think this can go out with the sms stuff. anyone disagree please add notes below asap.
 
-rajesh will put in final label text and also put in help section.","10/10/11 11:06:16; rajesh; 
+rajesh will put in final label text and also put in help section.","10/10/11 11:06:16; rajesh; **Author: abhishek**
 Done in commit # 3295
 
-Please test","10/10/11 11:06:18; rajesh; 
+Please test","10/10/11 11:06:18; rajesh; **Author: abhishek**
 There is some issue with version of my query and its incompatibility with server's mysql version
 
 
@@ -516,8 +516,8 @@ ActiveRecord::StatementInvalid in Projects#show
 
 Showing app/views/projects/_rightcolumn.html.erb where line #127 raised:
 
-Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and visited_at <= '2011-07-01'))  ORDER BY visited_at DESC' at line 1: SELECT * FROM `proj_reports` WHERE (`proj_reports`.project_id = 322 AND ( and visited_at <= '2011-07-01'))  ORDER BY visited_at DESC","10/10/11 11:06:20; rajesh; 
-Fixed in Commit #3297","10/10/11 11:06:22; rajesh; 
+Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and visited_at <= '2011-07-01'))  ORDER BY visited_at DESC' at line 1: SELECT * FROM `proj_reports` WHERE (`proj_reports`.project_id = 322 AND ( and visited_at <= '2011-07-01'))  ORDER BY visited_at DESC","10/10/11 11:06:20; rajesh; **Author: abhishek**
+Fixed in Commit #3297","10/10/11 11:06:22; rajesh; **Author: rajesh**
 changed labels to fit"
 circles of visibility for project reports,"we need to create different levels of visibility for project reports (only the progress/status reports filed by staff):
 
@@ -533,7 +533,7 @@ nice to have defaults for the various types of reports (sms, web, ...)
 
 pwx_admin and the primary contact for the org can change the visibility of each report
 
-this feature is really required for our implementers. have talked to 5 (including Nicaragua) and they want to jump on this",10/10/2011 10:15:36,06/03/2012 08:11:57,Open,rajesh,kristian,Controlled Visibility / Privacy,Unresolved,"10/10/11 11:06:24; ajaya; 
+this feature is really required for our implementers. have talked to 5 (including Nicaragua) and they want to jump on this",10/10/2011 10:15:36,06/03/2012 08:11:57,Open,rajesh,kristian,Controlled Visibility / Privacy,Controlled Visibility / Privacy,Unresolved,"10/10/11 11:06:24; ajaya; 
 See if that attachment makes sense.   I am trying to clarify visibility accross org data ( which we already have now) and project data.
 
 See if the rules makes sense.","12/11/11 05:40:40; kristian; the meaning of private, funder and public is clear
@@ -666,30 +666,30 @@ I would like an estimate of effort to put the basic permissions feature in (plus
 Thanks in advance.
 
 @ajaya, can you clarify what code you submitted for cancan and where is it now? ",21/11/11 19:13:53; kristian; I guess I am the wrong person for this,22/11/11 04:28:30; rajesh; A person who knows the issues and has created a gem is arguably the best person for this!
-clean up user profile / people stuff,It all looks fine on the user profile page. ,10/10/2011 10:15:39,10/10/2011 11:06:26,Closed,rajesh,rajesh,SMS,Fixed,"10/10/11 11:06:26; rajesh; 
+clean up user profile / people stuff,It all looks fine on the user profile page. ,10/10/2011 10:15:39,10/10/2011 11:06:26,Closed,rajesh,rajesh,SMS,SMS,Fixed,"10/10/11 11:06:26; rajesh; **Author: abhishek**
 Commit #3253"
 allow each site to have status/icons,"currently if a project is visited, all sites in the project are considered visited.
 
 can we create a visited status for each site? this would be reflected in the icons on the map/analytix.
 
-(am creating it in the current milestone to start the discussion in terms of code/testing impact; we can choose the real timing/milestone later)",10/10/2011 10:15:46,10/10/2011 10:15:46,Open,rajesh,ajaya,Wish List,Unresolved
+(am creating it in the current milestone to start the discussion in terms of code/testing impact; we can choose the real timing/milestone later)",10/10/2011 10:15:46,10/10/2011 10:15:46,Open,rajesh,ajaya,Wish List,Wish List,Unresolved
 structured reports inside project reports,"need to include structured reports in PWX.
 
 these will most be numerical and will involve future enhancements such as graphing and tracking and analytix.
 
 everyone has seen the FLOW demo and so we start by architect the report structure and the engine (limesurvey type rails plugin, anyone?)
 
-Larrie and i have done some brainstorming and i will hand it to him to take it forward.",10/10/2011 10:15:48,06/03/2012 04:37:37,Open,rajesh,rajesh,Structured Reporting,Unresolved,"06/03/12 04:37:37; rajesh; adding @thornedev @madanvk @vamsee @ajaya @mkristian 
+Larrie and i have done some brainstorming and i will hand it to him to take it forward.",10/10/2011 10:15:48,06/03/2012 04:37:37,Open,rajesh,rajesh,Structured Reporting,Structured Reporting,Unresolved,"06/03/12 04:37:37; rajesh; adding @thornedev @madanvk @vamsee @ajaya @mkristian 
 we can't add attachments, but next week (don't want to distract Vamsee from releasing R3) will send the ppt that Larrie created last year."
-Blank SMS should not be saved in MSG central,"Sent a blank msg (@pwxqa) on txtweb received a notification 'Sorry, PWX could not process SMS because: message is blank'. ",10/10/2011 10:15:50,10/10/2011 11:06:29,Closed,rajesh,rajesh,SMS,Fixed,"10/10/11 11:06:29; rajesh; 
+Blank SMS should not be saved in MSG central,"Sent a blank msg (@pwxqa) on txtweb received a notification 'Sorry, PWX could not process SMS because: message is blank'. ",10/10/2011 10:15:50,10/10/2011 11:06:29,Closed,rajesh,rajesh,SMS,SMS,Fixed,"10/10/11 11:06:29; rajesh; **Author: abhishek**
 Fixed.
 
 Now if you try sending message via phone or txtweb emulator and send just @pwxqa , you should receive ""Message is Blank"" error "
 Create a customized system message system,"Too often we build stuff, roll out stuff without anybody knowing how to use.   We need a way to let users know in context what's new and and let them dismiss the message.  Something a cross between https://github.com/jstewart/system_messages and https://github.com/heavysixer/acts_as_dismissible
 
-We need to release this as part of SMS.   We don't get to broadcast and get attention too often.",10/10/2011 10:15:56,13/01/2012 12:04:39,Open,rajesh,vamsee,Wish List,Unresolved
+We need to release this as part of SMS.   We don't get to broadcast and get attention too often.",10/10/2011 10:15:56,13/01/2012 12:04:39,Open,rajesh,vamsee,Wish List,Wish List,Unresolved
 Sms messages should generate a notification as soon as the sms  gets convereted to report,"sms messages should generate a notification as soon as the sms
- gets convereted to report",10/10/2011 10:16:00,10/10/2011 11:06:57,Closed,rajesh,rajesh,SMS,Fixed,"10/10/11 11:06:57; rajesh; 
+ gets convereted to report",10/10/2011 10:16:00,10/10/2011 11:06:57,Closed,rajesh,rajesh,SMS,SMS,Fixed,"10/10/11 11:06:57; rajesh; **Author: abhishek**
 Done.
 
 Commit : #3291"
@@ -697,11 +697,11 @@ time of SMS not being stored,"the date is being stored correctly, but the time i
 
 so multiple messages on a day are shown in the wrong order (not lifo)
 
-see !http://qa.peerwater.org/projects/32",10/10/2011 10:16:04,10/10/2011 11:07:03,Closed,rajesh,rajesh,SMS,Fixed,"10/10/11 11:06:59; rajesh; 
+see !http://qa.peerwater.org/projects/32",10/10/2011 10:16:04,10/10/2011 11:07:03,Closed,rajesh,rajesh,SMS,SMS,Fixed,"10/10/11 11:06:59; rajesh; **Author: abhishek**
 Commit #3298
 
-This change will affect all the report which gets created now onwards, previous data is missing the timestamp","10/10/11 11:07:01; rajesh; 
-tested and works. the last report sent appears on the top of the list.","10/10/11 11:07:03; rajesh; 
+This change will affect all the report which gets created now onwards, previous data is missing the timestamp","10/10/11 11:07:01; rajesh; **Author: vinita**
+tested and works. the last report sent appears on the top of the list.","10/10/11 11:07:03; rajesh; **Author: vinita**
 sent sms as member and peer - http://qa.peerwater.org/projects/344-Water-and-Sanitation-in-4-villages-of-Porbandar-Gujarat
 
 "
@@ -722,7 +722,7 @@ SELECT p.value AS __color__,
   ORDER BY owner, p.value, t.type, time
 
 
-",10/10/2011 10:16:13,10/10/2011 11:07:08,Closed,rajesh,rajesh,SMS,Fixed,"10/10/11 11:07:08; rajesh; 
+",10/10/2011 10:16:13,10/10/2011 11:07:08,Closed,rajesh,rajesh,SMS,SMS,Fixed,"10/10/11 11:07:08; rajesh; **Author: abhishek**
 Its Fixed.
 
 
@@ -763,15 +763,15 @@ can we grey out ""register via sms"" or change the next screen until we have a m
 if we move away from txtweb we would need the mobile numbers of members (to identify incoming) and here is one way to get them.
 
 thoughts?
-rajesh",10/10/2011 10:16:19,10/10/2011 11:07:14,Open,rajesh,rajesh,Wish List,Unresolved,"10/10/11 11:07:10; rajesh; 
+rajesh",10/10/2011 10:16:19,10/10/2011 11:07:14,Open,rajesh,rajesh,Wish List,Wish List,Unresolved,"10/10/11 11:07:10; rajesh; **Author: abhishek**
 Done in Commit #3299
 
 Changes to test
 1.) If user has not supplied mobile number previously, clicking on ""register for sms"" will prompt user to update mobile number first
 2.) When user edits profile , Mobile number is made mandatory.
 3.) The accepted format is : numeric mobile number with '+' in beginning (international format)
-4.) Its mandatory even while new profile is being created.  ","10/10/11 11:07:12; rajesh; 
-move validation of mobile number at time of registration; its been removed from the edit profile code.","10/10/11 11:07:14; rajesh; 
+4.) Its mandatory even while new profile is being created.  ","10/10/11 11:07:12; rajesh; **Author: rajesh**
+move validation of mobile number at time of registration; its been removed from the edit profile code.","10/10/11 11:07:14; rajesh; **Author: vinita**
 1.) If user has not supplied mobile number previously, clicking on ""register for sms"" will prompt user to update mobile number first - WORKS
 
 2.) When user edits profile , Mobile number is made mandatory - Yes, WORKS
@@ -782,17 +782,17 @@ move validation of mobile number at time of registration; its been removed from 
 Integrate Mobile Version Changes,"Commited in #[http://trac.peerwater.org/index.fcgi/changeset/3301 3301]
 
 
-Please test the mobile version using a GPRS/3g enabled phone",10/10/2011 10:16:21,22/03/2012 17:23:49,Open,rajesh,rajesh,Wish List,Unresolved,"10/10/11 11:07:16; rajesh; 
+Please test the mobile version using a GPRS/3g enabled phone",10/10/2011 10:16:21,22/03/2012 17:23:49,Open,rajesh,rajesh,Wish List,Wish List,Unresolved,"10/10/11 11:07:16; rajesh; **Author: vinita**
 Rajesh please test coz i dont have GPRS/ 3G in my phone"
 SMS - message central not showing the registered sender's number in the 'From' column??,"Registered my mobile number 9880842261 as the contact no. for Idriss of Saferfuture. Sent an sms and the sender's name and number is registered in message central.
-",10/10/2011 10:16:24,10/10/2011 11:07:18,Closed,rajesh,rajesh,SMS,Fixed,"10/10/11 11:07:18; rajesh; 
+",10/10/2011 10:16:24,10/10/2011 11:07:18,Closed,rajesh,rajesh,SMS,SMS,Fixed,"10/10/11 11:07:18; rajesh; **Author: abhishek**
 Fixed in commit #3304"
-Profile - add photo error,No description given,10/10/2011 10:16:30,10/10/2011 10:16:30,Open,rajesh,ajaya,Bug Fix,Unresolved
+Profile - add photo error,No description given,10/10/2011 10:16:30,10/10/2011 10:16:30,Open,rajesh,ajaya,Bug Fix,Bug Fix,Unresolved
 sort orgs alphabetically in admin review pages,"when selecting for reviews (app and org), the list of orgs should be sorted alphabetically.
 
 the current sort order is by id. 
 
-keep the assigned orgs at the bottom (primary sort, i guess)",10/10/2011 10:16:32,10/10/2011 11:07:34,Closed,rajesh,rajesh,SMS,Fixed,"10/10/11 11:07:29; rajesh; 
+keep the assigned orgs at the bottom (primary sort, i guess)",10/10/2011 10:16:32,10/10/2011 11:07:34,Closed,rajesh,rajesh,SMS,SMS,Fixed,"10/10/11 11:07:29; rajesh; **Author: rajesh**
 login as admin on qa and assign reviews to any org for membership
 
 example: !http://qa.peerwater.org/organizations/145-GreenBlueWhite/reviews/list_reviewers","10/10/11 11:07:32; ajaya; 
@@ -859,15 +859,15 @@ RAILS_ROOT: /mnt/apps/qa/releases/20110522170720
  ""password""=>""analytix""},
  ""x""=>""0"",
  ""y""=>""0""}
-}}}",10/10/2011 10:16:36,10/10/2011 11:07:38,Closed,rajesh,ajaya,SMS,Fixed,"10/10/11 11:07:35; rajesh; 
+}}}",10/10/2011 10:16:36,10/10/2011 11:07:38,Closed,rajesh,ajaya,SMS,SMS,Fixed,"10/10/11 11:07:35; rajesh; **Author: rajesh**
 repeatable, refreshing page gives error:
 
 Sorry - incorrect username/password combination. 
 
 but after that all seems to be fine.","10/10/11 11:07:38; ajaya; 
 Ferret issues.  Ignore for now. I rebuilt the indexes."
-New application page - date format not working,None,10/10/2011 10:16:41,10/10/2011 11:07:41,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 11:07:40; rajesh; 
-Unable to input date, noticed the error while creating applications for Palmyra. Create new application and click on date you will see the error (pic attached).","10/10/11 11:07:41; rajesh; 
+New application page - date format not working,None,10/10/2011 10:16:41,10/10/2011 11:07:41,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:07:40; rajesh; **Author: vinita**
+Unable to input date, noticed the error while creating applications for Palmyra. Create new application and click on date you will see the error (pic attached).","10/10/11 11:07:41; rajesh; **Author: rajesh**
 date picker is odd on qa.
 
 works fine on local and on www.
@@ -885,18 +885,18 @@ not replicated on FF on OSX. not replicated on local.
 
 repeated 5 times.
 
-finally logged in as bunker and got Welcome Barefoot and can't log out as that.",10/10/2011 10:16:43,10/10/2011 11:07:43,Open,rajesh,rajesh,Bug Fix,Unresolved,"10/10/11 11:07:43; rajesh; 
+finally logged in as bunker and got Welcome Barefoot and can't log out as that.",10/10/2011 10:16:43,10/10/2011 11:07:43,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:07:43; rajesh; **Author: rajesh**
 need to test again ..."
-Analytix Graph - software configuration issue,No description given,10/10/2011 10:16:45,10/10/2011 11:07:45,Open,rajesh,vamsee,Bug Fix,Unresolved,"10/10/11 11:07:45; rajesh; 
+Analytix Graph - software configuration issue,No description given,10/10/2011 10:16:45,10/10/2011 11:07:45,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:07:45; rajesh; **Author: rajesh**
 need to change formatting to 2 decimal"
 Map of search results not showing all sites,"http://peerwater.org/kb/search?query[keywords]=samburu&x=0&y=0 shows 30 sites and 31 projects. 'Map it' shows only 9 of them.
 
 even though the text results show 30
 
-Map of org shows all: http://peerwater.org/map/organizations/103-The-Samburu-Project",10/10/2011 10:16:47,10/10/2011 11:07:47,Open,rajesh,ajaya,Bug Fix,Unresolved,"10/10/11 11:07:47; rajesh; 
+Map of org shows all: http://peerwater.org/map/organizations/103-The-Samburu-Project",10/10/2011 10:16:47,10/10/2011 11:07:47,Open,rajesh,ajaya,Bug Fix,Bug Fix,Unresolved,"10/10/11 11:07:47; rajesh; **Author: kristian**
 with firefox5 on ubuntu I see all 31 locations on the map - see attachment
 "
-Update User/People/ Module to have Unique email as account identifier instead of username,"",10/10/2011 10:16:50,02/05/2012 08:08:44,Open,rajesh,ajaya,Wish List,Unresolved,"10/10/11 11:07:49; rajesh; 
+Update User/People/ Module to have Unique email as account identifier instead of username,"",10/10/2011 10:16:50,02/05/2012 08:08:44,Open,rajesh,ajaya,Wish List,Wish List,Unresolved,"10/10/11 11:07:49; rajesh; **Author: kristian**
 deleted user
 ------------
   give a fancy random username so you can reuse the old one again. email can become something like 'old_username_random@deleted' and still be unique.
@@ -938,13 +938,13 @@ this is using FF5 on OSX
 
 2 pictures attached (one with buttons visible and one without)
 
-the spacing has to be increased or css fixed so buttons are always visible.",10/10/2011 10:16:52,10/10/2011 11:07:57,Closed,rajesh,vamsee,SMS,Fixed,"10/10/11 11:07:51; vamsee; 
-Fixed in [d1b28016bc6a0f7968667329bf8397ec5032d287]. Right now I did a quick fix by increasing the height of the container, and it should work in most cases. But we should tweak the design a bit so it will allow flexible box height. Will take a crack at it when there is a similar design issue on the same page again (by then I'll have a better understanding of overall css structure). Until then, this can be pushed if it works in most cases.","10/10/11 11:07:53; rajesh; 
+the spacing has to be increased or css fixed so buttons are always visible.",10/10/2011 10:16:52,10/10/2011 11:07:57,Closed,rajesh,vamsee,SMS,SMS,Fixed,"10/10/11 11:07:51; vamsee; 
+Fixed in [d1b28016bc6a0f7968667329bf8397ec5032d287]. Right now I did a quick fix by increasing the height of the container, and it should work in most cases. But we should tweak the design a bit so it will allow flexible box height. Will take a crack at it when there is a similar design issue on the same page again (by then I'll have a better understanding of overall css structure). Until then, this can be pushed if it works in most cases.","10/10/11 11:07:53; rajesh; **Author: rajesh**
 Quick fix is fine for this.
 
 Only admin uses this for now - so don't waste time on the flexible box.
 
-When we move msg_central inside orgs ...","10/10/11 11:07:55; rajesh; 
+When we move msg_central inside orgs ...","10/10/11 11:07:55; rajesh; **Author: rajesh**
 please login on qa as admin and see the 160 char sms i sent.
 
 format is still a problem.","10/10/11 11:07:57; vamsee; 
@@ -955,9 +955,9 @@ the comparison always fails (apparently) and so we can never recognize the sende
 
 for intro to the feature, see the help on SMS reporting.
 
-used to think that the hash from Intuit's txtWeb was changing, but after examining the hashes, i suspect it our code that is doing faulty comparision.",10/10/2011 10:16:56,05/02/2012 05:29:41,Closed,rajesh,vamsee,SMS,Fixed,"10/10/11 11:08:00; vamsee; 
+used to think that the hash from Intuit's txtWeb was changing, but after examining the hashes, i suspect it our code that is doing faulty comparision.",10/10/2011 10:16:56,05/02/2012 05:29:41,Closed,rajesh,vamsee,SMS,SMS,Fixed,"10/10/11 11:08:00; vamsee; 
 I have a feeling we're not getting new registration requests from TxtWeb. I tried to register my mobile in both qa and www, no go. Can't be the system's problem, because I'm not seeing a request from TxtWeb in our QA logs. Investigating. Should the mobile number in my profile match the incoming request fully, or how does it work? (I mean, do I need to add +91 to my mobile number entered in the profile?).","10/10/11 11:08:02; vamsee; 
-Ok, I take that back. Production is indeed getting requests from TxtWeb, and I was able to register just now. My guess is that it's not working on qa because we have setup basic auth for it, and seems like the usual trick of putting username and password in the url for bypassing the auth prompt didn't work either. My guess is I'll have to disable basic auth for qa for testing this (or at least dev). Is this ok?","10/10/11 11:08:04; rajesh; 
+Ok, I take that back. Production is indeed getting requests from TxtWeb, and I was able to register just now. My guess is that it's not working on qa because we have setup basic auth for it, and seems like the usual trick of putting username and password in the url for bypassing the auth prompt didn't work either. My guess is I'll have to disable basic auth for qa for testing this (or at least dev). Is this ok?","10/10/11 11:08:04; rajesh; **Author: rajesh**
 Yes, disabling during testing is fine (make sure no robots are allowed).
 
 Also, it would be good to document how to enable/disable/change pwx for web auth.","10/10/11 11:08:07; vamsee; 
@@ -998,7 +998,7 @@ As for sms hashes not working, I think I ironed out all the bugs in the process,
 
 Vinita, I would suggest you start testing from registration etc and do the full cycle, so you can test just the new registration part only when I solve #8882. Also, try to test in the morning - I observed that txtWeb responses get slower in the evening.
 
-I still have one doubt - are the registration messages supposed to show up on message central? ","10/10/11 11:08:26; rajesh; 
+I still have one doubt - are the registration messages supposed to show up on message central? ","10/10/11 11:08:26; rajesh; **Author: rajesh**
 the automated reg messages did not show up, but now the new ones will show up.
 
 i would suggest that we add more of the fixes in the SMS release before testing.","25/12/11 22:58:57; rajesh; regarding the question of the registration messages showing up in MSG_CTL :
@@ -1023,9 +1023,9 @@ now we see the need to:
 
 For now, we need #1 and #2 done - provide admin a way to move app thru cycles and also change status to peer review.
 
-Admin can have individual orgs redo their rating, so keep the code simple and keep Q&A and existing ratings.",10/10/2011 10:16:58,10/10/2011 11:08:29,Closed,rajesh,ajaya,SMS,Fixed,"10/10/11 11:08:29; rajesh; 
+Admin can have individual orgs redo their rating, so keep the code simple and keep Q&A and existing ratings.",10/10/2011 10:16:58,10/10/2011 11:08:29,Closed,rajesh,ajaya,SMS,SMS,Fixed,"10/10/11 11:08:29; rajesh; **Author: rajesh**
 forgot that AJ had already provided this functionality in 2008!"
-Embedding video not working on proposals,None,10/10/2011 10:17:02,04/02/2012 17:04:31,Closed,rajesh,kristian,Cisco | import,Fixed,"10/10/11 11:08:31; rajesh; 
+Embedding video not working on proposals,None,10/10/2011 10:17:02,04/02/2012 17:04:31,Closed,rajesh,kristian,Cisco | import,Cisco | import,Fixed,"10/10/11 11:08:31; rajesh; **Author: kristian**
 if I look around than I see people just putting the youtube link there or only text and that does not work.
 
 anyways a concrete profile or url where things are not working would be great.
@@ -1038,7 +1038,7 @@ proposal:
 * if the whole text is just the url from youtube or vimeo just create the embed url for it.
 * create the iframe for either vimeo or youtube with some sensible defaults (width, height, etc)
 
-with that we do not store html in the database and the XSS hole is gone.","10/10/11 11:08:33; rajesh; 
+with that we do not store html in the database and the XSS hole is gone.","10/10/11 11:08:33; rajesh; **Author: rajesh**
 looks like Kristian has fixed the videos for the app. and rajesh fixed the text.
 
 need to fix all places we have embedded video to links:
@@ -1119,10 +1119,10 @@ map of org not working,"from any org profile, click on 'map of office, applicati
 
 !http://qa.peerwater.org/map/organizations?id=26-Agua-Para-La-Salud-APLS-
 
-!http://dev.peerwater.org/map/organizations?id=26-Agua-Para-La-Salud-APLS-",10/10/2011 10:17:04,10/10/2011 11:08:55,Closed,rajesh,rajesh,SMS,Fixed,"10/10/11 11:08:38; rajesh; 
+!http://dev.peerwater.org/map/organizations?id=26-Agua-Para-La-Salud-APLS-",10/10/2011 10:17:04,10/10/2011 11:08:55,Closed,rajesh,rajesh,SMS,SMS,Fixed,"10/10/11 11:08:38; rajesh; **Author: kristian**
 commit 905bc11f432d7bbe228df6d8341e2f2135d4b928
-","10/10/11 11:08:46; rajesh; 
-Vinita please test all the maps: map of search results, regular map, analytix map, etc.","10/10/11 11:08:54; rajesh; 
+","10/10/11 11:08:46; rajesh; **Author: rajesh**
+Vinita please test all the maps: map of search results, regular map, analytix map, etc.","10/10/11 11:08:54; rajesh; **Author: vinita**
 Clicked on 'map of office, applications, and projects' for Samburu, Ekoventure, APLS, Saferfuture - the icons show up on the map - works fine.
 
 Search results - map it all - works.
@@ -1136,15 +1136,15 @@ Ajaya also researched Amazon options and Rajesh sent a feeler out to VMWare (cle
 
 Ajaya was going to monitor and see how urgent our memory issues are.[[BR]]How soon we need to decide?
 
-Do we want to look at linode or intovps?",10/10/2011 10:17:09,13/01/2012 17:38:57,Open,rajesh,ajaya,Bug Fix,Unresolved,13/01/12 12:03:18; rajesh; @vamsee and @ajaya are we redoing our server architecture as part of rails 3? or separately?,"13/01/12 13:06:22; vamsee; As of now, separately. As discussed in #586, it's better if we don't bunch up these tasks as they are each quite effort intensive on their own. We'll tackle this once Rails 3 upgrade is stabilized, once there is consensus on what is the best time to do this."
+Do we want to look at linode or intovps?",10/10/2011 10:17:09,13/01/2012 17:38:57,Open,rajesh,ajaya,Bug Fix,Bug Fix,Unresolved,13/01/12 12:03:18; rajesh; @vamsee and @ajaya are we redoing our server architecture as part of rails 3? or separately?,"13/01/12 13:06:22; vamsee; As of now, separately. As discussed in #586, it's better if we don't bunch up these tasks as they are each quite effort intensive on their own. We'll tackle this once Rails 3 upgrade is stabilized, once there is consensus on what is the best time to do this."
 "when SMS gets attached, send SMS to sender","using the hash number, send an SMS back to the sender stating SMS was attached to project id.
 
-i had talked with the Intuit guys and we can send a message back any time (not just immediately)",10/10/2011 10:17:11,05/02/2012 05:27:27,Open,rajesh,vamsee,Wish List,Unresolved
+i had talked with the Intuit guys and we can send a message back any time (not just immediately)",10/10/2011 10:17:11,05/02/2012 05:27:27,Open,rajesh,vamsee,Wish List,Wish List,Unresolved
 document how to set password on qa and remove,"for testing sms features, we need to be able to remove the web password that is current present on qa.
 
 and restore it when done testing.
 
-please document on wiki and train rajesh to do this.",10/10/2011 10:17:13,10/04/2012 03:48:36,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Unresolved,"22/03/12 15:29:17; rajesh; can we get this done in this release?
+please document on wiki and train rajesh to do this.",10/10/2011 10:17:13,10/04/2012 03:48:36,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Ruby 1.9.3 Rails 3.2,Unresolved,"22/03/12 15:29:17; rajesh; can we get this done in this release?
 we are testing SMS while @vamsee is in Ruby Conf and on his travels; would be good to be able to lock down and open the website."
 functionality to import project data from an org,"we have imported data from WOTR and Gram Vikas through a semi-manual process. we entered in all the cycles and applications manually and AJ wrote a script to import the spreadsheet:
 
@@ -1154,7 +1154,7 @@ Vinita and i have imported data for Samburu using a 100% manual process.
 
 We would like to take AJ's script and make it robust. We have data from El Porvenir, Palmyra, APLS, EMW, etc. to import. It can remain semi-automatic - that is cycle and project data are manually created and then projects are imported against that. Or it can be more automated.
 
-Lets start by putting script in the repository with whatever enhancements need to happen. And some documentation on how to use it, etc.",10/10/2011 10:17:15,01/03/2012 07:58:44,Closed,rajesh,vamsee,Cisco | import,Fixed,"10/10/11 11:08:59; rajesh; 
+Lets start by putting script in the repository with whatever enhancements need to happen. And some documentation on how to use it, etc.",10/10/2011 10:17:15,01/03/2012 07:58:44,Closed,rajesh,vamsee,Cisco | import,Cisco | import,Fixed,"10/10/11 11:08:59; rajesh; **Author: rajesh**
 talked with Ajaya, who says there is a script he put in for GV and WOTR imports 2009. 
 
 please work with Vamsee who will find it and then figure out next steps in using it / robustifying it / enhancing it / ...","14/10/11 11:45:43; rajesh; this is from Larrie to make it a real service:
@@ -1366,7 +1366,7 @@ anything easily documentable, verifiable, editable is fine","26/12/11 06:12:42; 
 
 - village name has to be there, district / state is optional","27/12/11 05:47:47; vamsee; I just pushed multi-location support to demo. Please test it. I've added a test file called palmyra_import2.xls to Dropbox if you want to test multi-project, multi-location stuff. The village data takes up a lot of space in the verify page (since there are 23 locations), let me know if this is an issue, we'll try to re-arrange the the listing in a different orientation.",27/12/11 05:51:28; vamsee; Forgot to add - this release includes Rails 2.3.14 support from issue no.585 - please keep an eye out for any weirdness and let me know if you see any probs. ,"01/03/12 07:58:44; rajesh; closing this for now, since we have released feature to www.
 keeping the full import of all org data till R3 is released on qa and then www"
-Spanish phone number not allowed,the mobile validation does not allow numbers from Spain: +34,10/10/2011 10:17:17,10/10/2011 10:17:19,Closed,rajesh,rajesh,SMS,Fixed
+Spanish phone number not allowed,the mobile validation does not allow numbers from Spain: +34,10/10/2011 10:17:17,10/10/2011 10:17:19,Closed,rajesh,rajesh,SMS,SMS,Fixed
 map of org's projects only,"would like to create a map of an org's projects only.
 
 e.g. using a link:
@@ -1375,7 +1375,7 @@ e.g. using a link:
 http://peerwater.org/map/organizations?id=26-Agua-Para-La-Salud-APLS-?show=projects
 
 so only projects, not applications and offices show. this is so that we can send this link around or the orgs can use it in an iframe on their site to showcase their projects.
-}}}",10/10/2011 10:17:21,01/03/2012 08:41:52,Open,rajesh,vamsee,Website integration and linking,Unresolved,"23/01/12 12:47:26; rajesh; @ajaya @vamsee - this would be good to do for Cisco2 as a way to share data / integrate with other websites
+}}}",10/10/2011 10:17:21,01/03/2012 08:41:52,Open,rajesh,vamsee,Website integration and linking,Website integration and linking,Unresolved,"23/01/12 12:47:26; rajesh; @ajaya @vamsee - this would be good to do for Cisco2 as a way to share data / integrate with other websites
 
 so its another widget
 
@@ -1387,30 +1387,30 @@ for an implementer: all their projects (no apps or locations)
 
 for a funder: all their funded projects (no apps or locations)
 "
-webinar before next funding cycle,No description given,10/10/2011 10:17:23,10/10/2011 11:09:06,Open,rajesh,rajesh,Wish List,Unresolved,"10/10/11 11:09:06; rajesh; 
+webinar before next funding cycle,No description given,10/10/2011 10:17:23,10/10/2011 11:09:06,Open,rajesh,rajesh,Wish List,Wish List,Unresolved,"10/10/11 11:09:06; rajesh; **Author: rajesh**
 this is suggestion from Kristen of TSP"
-"division by 0 on ""projects"" page",http://peerwater.org/projects/ without any parameters will create an error page. just use that url for testing.,10/10/2011 10:17:25,13/01/2012 12:02:01,Open,rajesh,rajesh,Bug Fix,Unresolved
+"division by 0 on ""projects"" page",http://peerwater.org/projects/ without any parameters will create an error page. just use that url for testing.,10/10/2011 10:17:25,13/01/2012 12:02:01,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved
 security hole,"the design is to not be able to see 'Draft' applications.
 
 but if you type in the entire url, you can view any application.
 
 eg. !http://peerwater.org/apps/389
 
-not a problem unless you type in the url with the number.",10/10/2011 10:17:29,10/10/2011 10:17:29,Open,rajesh,rajesh,Bug Fix,Unresolved
-Project AnalytiX filters,No description given,10/10/2011 10:17:32,13/01/2012 12:01:26,Open,rajesh,vamsee,,Unresolved,"13/01/12 12:01:26; rajesh; i assume this is for some enhancements rather than filters not working ...
+not a problem unless you type in the url with the number.",10/10/2011 10:17:29,10/10/2011 10:17:29,Open,rajesh,rajesh,Bug Fix,Bug Fix,Unresolved
+Project AnalytiX filters,No description given,10/10/2011 10:17:32,13/01/2012 12:01:26,Open,rajesh,vamsee,,,Unresolved,"13/01/12 12:01:26; rajesh; i assume this is for some enhancements rather than filters not working ...
 
 or we lost the data from trac in the transfer
 
 am closing this and we can reopen it if something is found on track ( @vcolaco can you please check trac and if you find something put it here or else close it)"
-Org AnalytiX - show total amount funded to date for projects for a particular organisation,Show totals in AnaytiX for org,10/10/2011 10:17:34,01/03/2012 08:50:04,Open,rajesh,vamsee,AnalytiX 2.0,Unresolved
+Org AnalytiX - show total amount funded to date for projects for a particular organisation,Show totals in AnaytiX for org,10/10/2011 10:17:34,01/03/2012 08:50:04,Open,rajesh,vamsee,AnalytiX 2.0,AnalytiX 2.0,Unresolved
 optimize database queries and load,"solution may help decide whether to move to 3 amazon servers or 2
 
-also may be tied to rails 3 performance improvements",10/10/2011 10:17:36,23/04/2012 03:22:55,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Unresolved,"22/03/12 17:23:17; rajesh; is this likely to be fixed in this R3? or will it be in the next one (like to migrate to R3.2).
+also may be tied to rails 3 performance improvements",10/10/2011 10:17:36,23/04/2012 03:22:55,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Ruby 1.9.3 Rails 3.2,Unresolved,"22/03/12 17:23:17; rajesh; is this likely to be fixed in this R3? or will it be in the next one (like to migrate to R3.2).
 
 before moving issue, @ajaya @vamsee need to have a chat and decide what servers do we move to on Amazon","18/04/12 15:50:25; vamsee; I think this is something we can close - I optimize db queries all the time, whenever I get the chance. Maybe open with something more specific, like a page that needs to be speeded up, etc.","23/04/12 03:22:55; ajaya; Agree with Vamsee that we should look at specific pages we have issue and try to fix those by memcache, better db query, eagre loading etc.. 
 
 For the separate DB server, I am out of loop.  Not sure if the load on the current server justify it unless we are trying to build a cleaner infrastructure."
-Move the 'Loading' image on to the map in AnalytiX,Overlay the loading image onto the map instead of top left and map moves up after this. Also check out the gap on the right side of the map when there is zoom in/ zoom out.,10/10/2011 10:17:38,10/10/2011 10:17:38,Open,rajesh,vamsee,Bug Fix,Unresolved
+Move the 'Loading' image on to the map in AnalytiX,Overlay the loading image onto the map instead of top left and map moves up after this. Also check out the gap on the right side of the map when there is zoom in/ zoom out.,10/10/2011 10:17:38,10/10/2011 10:17:38,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved
 Improve Trac Versions reporting with Git,"Before we changed to git, on the admin dashboard we had under the version info:
 
 - version (more readable than the new long string under git)
@@ -1419,7 +1419,7 @@ Improve Trac Versions reporting with Git,"Before we changed to git, on the admin
 
 - who
 
-It helped me see which was the last release (across www, qa, ...) and which features to test, etc. Can we get some of that info back?",10/10/2011 10:17:40,22/03/2012 15:55:40,Closed,rajesh,vamsee,Rails 3,Fixed,"17/03/12 03:13:07; vamsee; Doesn't belong here, as of now. My idea was to send deploy messages to HipChat, but unfortunately you guys didn't take to it. So I'm gonna setup capistrano to post to google chat when it deploys. If you're not online, usually google chat sends an email about missed chats.","17/03/12 03:51:45; rajesh; i still want to see something on the admin dashboard - messages get deleted and forgotten.
+It helped me see which was the last release (across www, qa, ...) and which features to test, etc. Can we get some of that info back?",10/10/2011 10:17:40,22/03/2012 15:55:40,Closed,rajesh,vamsee,Rails 3,Rails 3,Fixed,"17/03/12 03:13:07; vamsee; Doesn't belong here, as of now. My idea was to send deploy messages to HipChat, but unfortunately you guys didn't take to it. So I'm gonna setup capistrano to post to google chat when it deploys. If you're not online, usually google chat sends an email about missed chats.","17/03/12 03:51:45; rajesh; i still want to see something on the admin dashboard - messages get deleted and forgotten.
 
 esp. now if our servers are going to be running many different versions - these git strings are hard to compare.",17/03/12 05:03:45; vamsee; Something like this will do? http://awesomescreenshot.com/0931qmwfb (https://deploytracking.heroku.com/)  - click on image for bigger res.,"17/03/12 05:24:15; rajesh; 
     yes - that would be good.
@@ -1434,7 +1434,7 @@ But we have a way around it for now - since staging branch only goes to QA, it t
 It's a new service, so I'm pretty sure this will be worked on either way.","19/03/12 10:06:20; vamsee; I did a second deploy after we moved the project, here goes: http://awesomescreenshot.com/0b91u1e71. If you look at that, though I feel it could be simpler, you can see that the same git hash is currently deployed from both staging and develop branch. This means that both demo and qa are on the same level now as far as deploying changes are concerned. 
 
 I think it would be even more easier if they let us configure multiple environments, but I guess it can't be far behind. ",22/03/12 15:55:40; rajesh; for now lets go with https://deploytracking.heroku.com/satyagrahi/pwx-1
-move source to GitHub,No description given,10/10/2011 10:17:42,17/10/2011 05:28:36,Closed,rajesh,vamsee,Rails 3,Fixed,"10/10/11 11:09:08; ajaya; 
+move source to GitHub,No description given,10/10/2011 10:17:42,17/10/2011 05:28:36,Closed,rajesh,vamsee,Rails 3,Rails 3,Fixed,"10/10/11 11:09:08; ajaya; 
 I would advise against this move unless there is something specific feature needed from github.  
 
 Pro:  It's f**king github.  Makes u look cool.
@@ -1457,7 +1457,7 @@ Yeah, definitely it's going to be a bit of work to move, and most likely a month
 
 * They have recently added Cloud9/Ace editor to the code views, so it's perfect to make quick edits, especially for Rajesh, as he's making a lot of UI-based edits. No need to fire up RubyMine and do the commit/push cycle if they're small edits. 
 
-* Yes, the cool factor is actually a turn off, I agree, but it comes at a great price, so what's the harm, except for the week or so of getting used to the new tool.  And the cool factor is actually backed by a lot of substance :)","10/10/11 11:09:16; rajesh; 
+* Yes, the cool factor is actually a turn off, I agree, but it comes at a great price, so what's the harm, except for the week or so of getting used to the new tool.  And the cool factor is actually backed by a lot of substance :)","10/10/11 11:09:16; rajesh; **Author: kristian**
 I am surprised about the cool factor - I guess I missed something :))
 
 but trac personally drives me crazy. for example to write up this, I click on the link on the email, get an error page because I am not logged in, login, 3 times back on the browser and then a reload on the browser.
@@ -1478,7 +1478,7 @@ backup and recovery - document process and test,"recently, qa was overwritten an
 
 we have a solid backup system in place (www) which should be documented and recovering from it should also be documented and tested.
 
-any backup of qa? maybe a much more reduced, simpler backup system for testing purposes would be good to implement. not required for dev.",10/10/2011 10:17:45,10/04/2012 03:45:04,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Unresolved,22/03/12 15:44:57; rajesh; maybe @ajaya and @vamsee can work together to make this happen over the weekend
+any backup of qa? maybe a much more reduced, simpler backup system for testing purposes would be good to implement. not required for dev.",10/10/2011 10:17:45,10/04/2012 03:45:04,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Ruby 1.9.3 Rails 3.2,Unresolved,22/03/12 15:44:57; rajesh; maybe @ajaya and @vamsee can work together to make this happen over the weekend
 Lightbox Effect on Galleries,"check out: http://www.samridhdhi.org/gallery
 
 you can click on a thumbnail and get a slide show too.
@@ -1487,16 +1487,16 @@ am sure there are many neat examples.
 
 something to think about in oct, but i did not want to lose this thought.
 
--r",10/10/2011 10:17:47,10/10/2011 11:09:20,Closed,rajesh,vamsee,Rails 3,Fixed,"10/10/11 11:09:20; rajesh; 
+-r",10/10/2011 10:17:47,10/10/2011 11:09:20,Closed,rajesh,vamsee,Rails 3,Rails 3,Fixed,"10/10/11 11:09:20; rajesh; **Author: rajesh**
 dup of !#8563"
-Explore moving all static data to S3,"Includes images, videos, etc. And hook it up to CloudFront for faster access, maybe. This means that we don't have to worry about backups, as AWS does dual-zone backup on all S3 assets by default (unless we specify it's not important)",10/10/2011 10:17:51,10/10/2011 11:09:22,Open,rajesh,vamsee,Wish List,Unresolved,"10/10/11 11:09:22; vamsee; 
+Explore moving all static data to S3,"Includes images, videos, etc. And hook it up to CloudFront for faster access, maybe. This means that we don't have to worry about backups, as AWS does dual-zone backup on all S3 assets by default (unless we specify it's not important)",10/10/2011 10:17:51,10/10/2011 11:09:22,Open,rajesh,vamsee,Wish List,Wish List,Unresolved,"10/10/11 11:09:22; vamsee; 
 Should have a flag for local view of attachments in case the local instance is unable to connect to AWS due to lack of internet connectivity."
-pwxadmin should be able to 'become' a user to do some quick maintenance,None,10/10/2011 10:17:53,13/01/2012 11:57:42,Open,rajesh,vamsee,Wish List,Unresolved
+pwxadmin should be able to 'become' a user to do some quick maintenance,None,10/10/2011 10:17:53,13/01/2012 11:57:42,Open,rajesh,vamsee,Wish List,Wish List,Unresolved
 Investigate Mysql::Error: Lock wait timeout exceeded; try restarting transaction,"In particular, does this happen only with this project (id 418, ""418-D4W7-Ldupai-Jerusalem-Well"") or with everything else. Error report (repeated nearly 40+ times):
 
-[production-PWX]proj_reports#update (ActiveRecord::StatementInvalid) ""Mysql::Error: Lock wait timeout exceeded; try restarting transaction: UPDATE `projects` SET `updated_at` = '2011-08-30 12:47:51', `modified_at` = '2011-08-30 12:47:51' WHERE `id` = 418""",10/10/2011 10:17:55,13/01/2012 11:57:16,Open,rajesh,vamsee,Bug Fix,Unresolved
-Get rid of DoubleRenderError in proj_list_json,"I've seen this happen quite often too. From my preliminary observation, looks like it happens when the search returns zero results.",10/10/2011 10:17:57,13/01/2012 11:56:36,Open,rajesh,vamsee,Bug Fix,Unresolved,"13/01/12 11:56:36; rajesh; don't know if such bugs can be fixed in the rails 3 upgrade, but certainly does not belong in this milestone"
-Get Vinita started with Janova,Start trying out Janova testing tool so Vinita could start creating the required test cases. Start here: (http://support.janova.us/forums/364440-janova-tutorials-getting-started),10/10/2011 10:17:59,22/03/2012 15:27:13,Open,rajesh,vinita,Structured Reporting,Unresolved,10/11/11 08:27:31; rajesh; @vinita - can we create tests so as to not have the IE problem on home page again?,"11/11/11 05:36:16; vamsee; Actually, I was telling @vcolaco the same thing. This would be a good example to start with. (@satyagrahi, you should refer to users with their username when you use the '@' format, so they get notified that you mentioned them).","11/11/11 05:40:00; rajesh; 
+[production-PWX]proj_reports#update (ActiveRecord::StatementInvalid) ""Mysql::Error: Lock wait timeout exceeded; try restarting transaction: UPDATE `projects` SET `updated_at` = '2011-08-30 12:47:51', `modified_at` = '2011-08-30 12:47:51' WHERE `id` = 418""",10/10/2011 10:17:55,13/01/2012 11:57:16,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved
+Get rid of DoubleRenderError in proj_list_json,"I've seen this happen quite often too. From my preliminary observation, looks like it happens when the search returns zero results.",10/10/2011 10:17:57,13/01/2012 11:56:36,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved,"13/01/12 11:56:36; rajesh; don't know if such bugs can be fixed in the rails 3 upgrade, but certainly does not belong in this milestone"
+Get Vinita started with Janova,Start trying out Janova testing tool so Vinita could start creating the required test cases. Start here: (http://support.janova.us/forums/364440-janova-tutorials-getting-started),10/10/2011 10:17:59,22/03/2012 15:27:13,Open,rajesh,vinita,Structured Reporting,Structured Reporting,Unresolved,10/11/11 08:27:31; rajesh; @vinita - can we create tests so as to not have the IE problem on home page again?,"11/11/11 05:36:16; vamsee; Actually, I was telling @vcolaco the same thing. This would be a good example to start with. (@satyagrahi, you should refer to users with their username when you use the '@' format, so they get notified that you mentioned them).","11/11/11 05:40:00; rajesh; 
     
     i used @vinita instead of @vcolaco.
     if Janova can test IE env and FF, etc. it would be great.","13/01/12 09:59:52; rajesh; @vamsee can we use Janavo for at least sanity testing 3.0 migration?
@@ -1520,7 +1520,7 @@ or, even the mobile number of the user, like so:
 
 @pwx reg 9840365177
 
-We can compare this number with the one which we have on the user's profile and register him (and assign the txtweb-mobile hash that comes along with the message for further matching).",10/10/2011 10:18:01,05/02/2012 05:27:06,Open,rajesh,vamsee,Wish List,Unresolved,"10/10/11 11:09:24; rajesh; 
+We can compare this number with the one which we have on the user's profile and register him (and assign the txtweb-mobile hash that comes along with the message for further matching).",10/10/2011 10:18:01,05/02/2012 05:27:06,Open,rajesh,vamsee,Wish List,Wish List,Unresolved,"10/10/11 11:09:24; rajesh; **Author: rajesh**
 we should set the text to: @pwx reg 988888888 rajesh or ""@pwx 999999999 rajesh"" basically saying ""SMS @pwx a message that includes your phone number and your name"".
 
 what really needs to happen is that, since the process is manual, admin gets a way to choose a user and click - 'Register'. that button should be there for all messages (regular or registration).
@@ -1531,7 +1531,7 @@ Send an SMS with the person's name in it and then admin in MSG CTL can assign th
 
 if the hash is already present, PWX highlights the user, but its upto the admin to overwrite.
 so, don't allow the admin to assign hash if already present. only if it does not exist in the db."
-Admin should be able to send sms to any registered user,"The admin should be able to send sms to any registered user through txtweb response (and/or a 3rd-party sms gateway) to give personalized instructions, etc.",10/10/2011 10:18:03,05/02/2012 05:26:38,Open,rajesh,vamsee,Wish List,Unresolved,"25/12/11 22:47:15; rajesh; @vamsee - Can we get a status on this issue: Is it possible with the new TxtWeb changes?
+Admin should be able to send sms to any registered user,"The admin should be able to send sms to any registered user through txtweb response (and/or a 3rd-party sms gateway) to give personalized instructions, etc.",10/10/2011 10:18:03,05/02/2012 05:26:38,Open,rajesh,vamsee,Wish List,Wish List,Unresolved,"25/12/11 22:47:15; rajesh; @vamsee - Can we get a status on this issue: Is it possible with the new TxtWeb changes?
 What is the effort estimate?
 
 With the new projects by Project Well and Ekoventure and new funding from Arghyam, can we quickly enable a prototype of this feature to ensure higher frequency in reporting? Either automatically or manually by @vcolaco 
@@ -1544,7 +1544,7 @@ photo gallery link on home page broken,"when you click on the photo gallery you 
 
 also, the options for the slide show include a lightbulb when you hover over and should be removed.
 
-beautify the whole thing! (increasing size is first step)",10/10/2011 10:18:05,16/12/2011 05:44:52,Closed,rajesh,vamsee,Cisco | import,Fixed,"19/10/11 13:42:50; vamsee; The links are fixed, and removed the lightbulb with ""false"" on hover. Deployed to dev, plz check. Now it shows ""click for details"" without the bulb. @satyagrahi, I don't think we can see the images on localhost unless we have the particular image in our /system folder in our dev machines. I don't, so it doesn't work for me, obviously. If you have the backup of all the images, we can make this work for you on localhost. We need to discuss what you're expecting on the beautification side.","20/10/11 12:26:51; rajesh; interesting that it worked on dev but not on qa.
+beautify the whole thing! (increasing size is first step)",10/10/2011 10:18:05,16/12/2011 05:44:52,Closed,rajesh,vamsee,Cisco | import,Cisco | import,Fixed,"19/10/11 13:42:50; vamsee; The links are fixed, and removed the lightbulb with ""false"" on hover. Deployed to dev, plz check. Now it shows ""click for details"" without the bulb. @satyagrahi, I don't think we can see the images on localhost unless we have the particular image in our /system folder in our dev machines. I don't, so it doesn't work for me, obviously. If you have the backup of all the images, we can make this work for you on localhost. We need to discuss what you're expecting on the beautification side.","20/10/11 12:26:51; rajesh; interesting that it worked on dev but not on qa.
 make sure we really test both on qa and www (when we finally deploy).
 it could work better or not on www than qa.",08/11/11 11:23:51; vamsee; This was pushed to production recently. @vcolaco please check this and close the ticket if you're satisfied.,08/11/11 12:51:39; vinita; On www & qa image gallery is blank. Pls fix the error asap. Testing on IE8.,"08/11/11 16:44:20; rajesh; 
     i can see it on FF6 (and
@@ -1589,18 +1589,18 @@ Subject: Re: [code] photo gallery link on home page broken (#572)
 --- 
 Reply to this email directly or view it on GitHub:
 https://github.com/pwx/code/issues/572#issuecomment-2692529"
-Debug new cycle creation form,New cycle creation fails with all sorts of errors when dates are not given properly. Make sure proper validation notices are shown instead.,10/10/2011 10:18:07,10/10/2011 10:18:07,Open,rajesh,vamsee,Bug Fix,Unresolved
-Replace DRb cache store with Memcache,"The DRb cache store seems to be occasionally acting up and throwing errors, Let's switch to memcache store while doing Rails 3 migration.",19/10/2011 07:29:03,19/03/2012 11:02:51,Closed,vamsee,vamsee,Rails 3,Fixed,27/10/11 05:15:53; kristian; switching to memcache means adding another single point of failure to whole application. I could write more about memcache but is the cache store produces errors then we have a problem with the database itself.,"27/10/11 08:05:01; vamsee; Hmm, usually I don't see memcache being a point of failure, but I won't rule out the possiblity. But I'm not too much in favor of ruby-based caching, as it eats more memory and slower to process requests than native solutions like memcached. I'm open to be convinced otherwise. 
+Debug new cycle creation form,New cycle creation fails with all sorts of errors when dates are not given properly. Make sure proper validation notices are shown instead.,10/10/2011 10:18:07,10/10/2011 10:18:07,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved
+Replace DRb cache store with Memcache,"The DRb cache store seems to be occasionally acting up and throwing errors, Let's switch to memcache store while doing Rails 3 migration.",19/10/2011 07:29:03,19/03/2012 11:02:51,Closed,vamsee,vamsee,Rails 3,Rails 3,Fixed,27/10/11 05:15:53; kristian; switching to memcache means adding another single point of failure to whole application. I could write more about memcache but is the cache store produces errors then we have a problem with the database itself.,"27/10/11 08:05:01; vamsee; Hmm, usually I don't see memcache being a point of failure, but I won't rule out the possiblity. But I'm not too much in favor of ruby-based caching, as it eats more memory and slower to process requests than native solutions like memcached. I'm open to be convinced otherwise. 
 
 I'm not sure what kind of ruby constructs we are using for caching (will look into it) but I'm guessing it's hashes. There's this problem with using hashes: http://book.ramaze.net/documentation/Innate/Cache/DRb.html.",19/03/12 11:02:51; vamsee; We're using dalli store on qa/www. I think this can be safely closed.
 Project report updates notification,"As of now we receive alerts from PWX notifying that there is some reporting activity on a particular project with the project ID but what has been updated/ changed needs to be notified?
 
-For e.g. if the member updates the narrative or the cost details in the project report, the notification should say 'narrantive or cost updated in report'.",21/10/2011 08:48:15,21/10/2011 08:57:59,Open,vinita,vamsee,Wish List,Unresolved
+For e.g. if the member updates the narrative or the cost details in the project report, the notification should say 'narrantive or cost updated in report'.",21/10/2011 08:48:15,21/10/2011 08:57:59,Open,vinita,vamsee,Wish List,Wish List,Unresolved
 Reporting tool to compile reports ,"Create a tool that can collate reports.
 
 
-",21/10/2011 09:04:29,23/01/2012 12:34:41,Open,vinita,vamsee,Wish List,Unresolved,23/01/12 12:34:41; rajesh; @vcolaco please expand/clarify your request
-Beautify PWX Blog,"",21/10/2011 09:07:46,21/10/2011 09:09:41,Open,vinita,vamsee,Wish List,Unresolved
+",21/10/2011 09:04:29,23/01/2012 12:34:41,Open,vinita,vamsee,Wish List,Wish List,Unresolved,23/01/12 12:34:41; rajesh; @vcolaco please expand/clarify your request
+Beautify PWX Blog,"",21/10/2011 09:07:46,21/10/2011 09:09:41,Open,vinita,vamsee,Wish List,Wish List,Unresolved
 Incorrect URL for The Samburu Project,"http://peerwater.org/organizations/103-The-Samburu-Project
 
 When you go to the page for the Samburu project and scroll down there is a field for the website:
@@ -1611,18 +1611,18 @@ Website www.thesambururoject.org""
 The URL in the website is missing a ""p"".  It reads ""www.thesambururoject.org"" it should read ""www.thesamburuproject.org""
 
 ""roject"" vs. ""project"" 
-",31/10/2011 08:04:36,10/11/2011 05:53:16,Closed,madan,,,Fixed,10/11/11 05:53:16; vamsee; Fixed by @satyagrahi
+",31/10/2011 08:04:36,10/11/2011 05:53:16,Closed,madan,,,,Fixed,10/11/11 05:53:16; vamsee; Fixed by @satyagrahi
 Analytix Filtering by Year,"http://peerwater.org/analytix
 
 I set the filter to show only projects funded by BPN in 2010, i.e. 2010 to 2010.  But it returned all projects. 
 
-",31/10/2011 11:13:33,01/03/2012 08:55:08,Open,madan,vamsee,AnalytiX 2.0,Unresolved
-Create a way to generate a datamodel diagram on demand,"Vallari asked for a current data model diagram. Since we're changing it all the time, figure out a way to generate it on the fly.",11/11/2011 07:49:07,16/12/2011 05:44:52,Closed,vamsee,vamsee,Cisco | import,Fixed,"22/11/11 10:51:49; vamsee; Used dbVisualizer, and sent it to Vallari."
+",31/10/2011 11:13:33,01/03/2012 08:55:08,Open,madan,vamsee,AnalytiX 2.0,AnalytiX 2.0,Unresolved
+Create a way to generate a datamodel diagram on demand,"Vallari asked for a current data model diagram. Since we're changing it all the time, figure out a way to generate it on the fly.",11/11/2011 07:49:07,16/12/2011 05:44:52,Closed,vamsee,vamsee,Cisco | import,Cisco | import,Fixed,"22/11/11 10:51:49; vamsee; Used dbVisualizer, and sent it to Vallari."
 provide admin ability to edit review ratings / comments,"just like admin is allowed to edit qandas, admin should be allowed to edit comments in the ratings section.
 
 this is for both membership and applications.
 
-if editing the rating (radio button) is harder, it could deferred.",16/11/2011 05:10:12,10/04/2012 04:06:32,Open,rajesh,ajaya,Ruby 1.9.3 Rails 3.2,Unresolved,"16/11/11 05:15:30; kristian; isn't admin something like a superuser or root-user of the system, so it should be able to anything possible on the system ? or are ""admins"" bound to an organization ? I am sure this is related to https://github.com/pwx/code/issues/435","16/11/11 05:21:12; rajesh; yes, login id #1 (pwxadmin) is a super user.
+if editing the rating (radio button) is harder, it could deferred.",16/11/2011 05:10:12,10/04/2012 04:06:32,Open,rajesh,ajaya,Ruby 1.9.3 Rails 3.2,Ruby 1.9.3 Rails 3.2,Unresolved,"16/11/11 05:15:30; kristian; isn't admin something like a superuser or root-user of the system, so it should be able to anything possible on the system ? or are ""admins"" bound to an organization ? I am sure this is related to https://github.com/pwx/code/issues/435","16/11/11 05:21:12; rajesh; yes, login id #1 (pwxadmin) is a super user.
 
 when logged in and visiting a qanda page, you can see an edit button next to each qanda.
 however, that edit option is not there on the ratings&comments tab.
@@ -1647,7 +1647,7 @@ If the report is not to be visible in the current session, then the following te
 or something similar. The ""Private"" can be a label like ""SMS"" but then we will need ""Private"" ""SMS"" and ""Private SMS"".
 
 
-adding @vamsee @ajaya @vcolaco",17/11/2011 04:06:46,06/04/2012 03:32:40,Open,rajesh,kristian,Controlled Visibility / Privacy,Unresolved,06/04/12 03:32:40; rajesh; right now the private report is completely invisible - please can you make it 'just visible' as mentioned above?
+adding @vamsee @ajaya @vcolaco",17/11/2011 04:06:46,06/04/2012 03:32:40,Open,rajesh,kristian,Controlled Visibility / Privacy,Controlled Visibility / Privacy,Unresolved,06/04/12 03:32:40; rajesh; right now the private report is completely invisible - please can you make it 'just visible' as mentioned above?
 report visibility defaults for org,"The privacy visibility feature is restricted to the reports coming under ""Operating Status Reports"" and ""Implementation Phase Reports"". That is 'proj_reports' by implementer themselves.
 
 Each org profile should have an admin box for privacy defaults for project reports:
@@ -1664,7 +1664,7 @@ Each org profile should have an admin box for privacy defaults for project repor
    + private
 - a link to a help page for description is needed. i am open to bubble help (that is currently present) or to new forms of presenting explanation.
 
-adding @vamsee @ajaya @vcolaco",17/11/2011 04:15:07,10/04/2012 09:27:56,Open,rajesh,rajesh,Controlled Visibility / Privacy,Unresolved,"27/01/12 06:34:48; rajesh; need to decide whether the privacy options are hierarchical or not.
+adding @vamsee @ajaya @vcolaco",17/11/2011 04:15:07,10/04/2012 09:27:56,Open,rajesh,rajesh,Controlled Visibility / Privacy,Controlled Visibility / Privacy,Unresolved,"27/01/12 06:34:48; rajesh; need to decide whether the privacy options are hierarchical or not.
 
 if hierarchy then a drop down works and checkboxes do not.
 
@@ -1793,7 +1793,7 @@ Lets not count 'submitted', but lets count 'withdrawn' (they may have had peer r
 > I think apart from checking the status_id, we also need to check if the 'needs_review' flag is set to false or not. Currently, we are counting apps which have needs_review set to false too. There are currently 27 apps (samburu, emw, wotr, etc) which have this set to false, so I guess this will reduce the overall (and earlier) number too. So, if I'm guessing right, the total number of apps peer reviewed would be the ones which are not a draft/submitted/widthdrawn, and also needs_review set to true. Am I correct? This would put the 'apps peer reviewed' number at 184.
 
 Almost, just add withdrawn.
-",16/12/2011 05:47:01,04/02/2012 17:01:45,Closed,rajesh,vamsee,Cisco | import,Fixed,"16/12/11 07:36:40; vamsee; The updated count is on demo, but it still links to an action called 'list all apps', basically shows all apps except drafts. I thought of updating the list query to the same conditions as the count, but should we instead create a new page which lists all peer-reviewed apps and link the count there?","16/12/11 09:18:04; rajesh; How much effort will that be?
+",16/12/2011 05:47:01,04/02/2012 17:01:45,Closed,rajesh,vamsee,Cisco | import,Cisco | import,Fixed,"16/12/11 07:36:40; vamsee; The updated count is on demo, but it still links to an action called 'list all apps', basically shows all apps except drafts. I thought of updating the list query to the same conditions as the count, but should we instead create a new page which lists all peer-reviewed apps and link the count there?","16/12/11 09:18:04; rajesh; How much effort will that be?
 We will need a new page, a new item in drop down, etc.
 nd it will affect many things (after logging in - 'all my applications').
 Note on the map these applications do NOT show.
@@ -1806,7 +1806,7 @@ But  it would be confusing ... 'My Active Apps' 'My peer reviewed apps' 'all my 
 We need to put this work in perspective of other tasks, e.g. creating a slide show of a projects photos","18/12/11 11:30:32; vamsee; This is on demo now, please check it out. Simply created a new page with new apps query and changed the title. The rest is  the same as the full listing page.","18/12/11 15:17:09; rajesh; This is fine, though hard to get to 'all apps' without going to 'all active apps' first.
 
 When it gets to qa / ability for me to modify text, let me know.","19/12/11 06:54:37; vamsee; I've put a ""--"" option in the drop down so both active and all apps can be accessed like usual (deployed to demo). Hope that suffices?","04/02/12 17:01:45; rajesh; ok for now, but final solution must include the ability to get to this screen from anywhere."
-Upgrade to Rails 2.3.14,First step in the path to Rails 3 upgrade.,22/12/2011 14:50:42,07/02/2012 06:38:30,Closed,vamsee,vamsee,Rails 3,Fixed,07/02/12 06:38:30; rajesh; 2.3.14 is already deployed to www
+Upgrade to Rails 2.3.14,First step in the path to Rails 3 upgrade.,22/12/2011 14:50:42,07/02/2012 06:38:30,Closed,vamsee,vamsee,Rails 3,Rails 3,Fixed,07/02/12 06:38:30; rajesh; 2.3.14 is already deployed to www
 plan for rails 3 and 3.1,"need a plan/documentation that is agreed on by all ( @ajaya @mkristian @vamsee )  for the rails 3 migration, that includes:
 
 - steps (2.3.14 is already done, ... what else ...)
@@ -1820,7 +1820,7 @@ plan for rails 3 and 3.1,"need a plan/documentation that is agreed on by all ( @
   -- upgrading server
   -- etc
 - any other items
-",26/12/2011 06:25:30,15/03/2012 05:53:39,Closed,rajesh,vamsee,Rails 3,Fixed,"26/12/11 07:46:43; vamsee; * Steps -> next is 3.0.11. I believe this is a more careful step than jumping to 3.1 directly. 
+",26/12/2011 06:25:30,15/03/2012 05:53:39,Closed,rajesh,vamsee,Rails 3,Rails 3,Fixed,"26/12/11 07:46:43; vamsee; * Steps -> next is 3.0.11. I believe this is a more careful step than jumping to 3.1 directly. 
 
 * Effort/Timeline -> The current timeline (mid-jan, most likely for 3.0.x) is still valid, but I'm not sure if we can do 3.1 by then. I'd either post-pone this or give one more week to this (this entirely conjecture, as I haven't worked with 3.1 before - I can research a bit more and update later).
 
@@ -1902,7 +1902,7 @@ but regarding treats: a big celebration is called for on launching 3.0, minor on
     wheelchairs get pushed around by rude aides. or be at home with many
     grandchildren crawling all over him begging for another eclair or
     donut.","15/03/12 05:53:39; rajesh; closed by the not-so skinny veggie guy, still crabby though."
-Upgrade to Rails 3.0.11,Step 2 towards Rails 3.x move,29/12/2011 06:30:33,10/04/2012 03:44:24,Closed,vamsee,vamsee,Rails 3,Fixed,"05/01/12 08:10:10; vamsee; Adding @satyagrahi 
+Upgrade to Rails 3.0.11,Step 2 towards Rails 3.x move,29/12/2011 06:30:33,10/04/2012 03:44:24,Closed,vamsee,vamsee,Rails 3,Rails 3,Fixed,"05/01/12 08:10:10; vamsee; Adding @satyagrahi 
 
 Wow, our routes file is really, really long (> 1k lines). And not to mention unnecessarily complicated in many places. I have a feeling the project's been worked on by some devs who didn't really understand REST. A big routes file means all those instructions have be parsed every time there is a new request, and it adds to the app startup time. Will try to simplify this as we go forward. Not going to be easy, as routing is married to the folder/controller structure, and I'd have to refactor/move these when required. Not going to do that now, the emphasis is more on writing some tests before I change something like this. For now concentrating on moving the entire routes file to the new routing API and making sure everything works like before.","05/01/12 09:39:11; rajesh; i thought i had created a ticket to fix the home_page routing, but can't find it anywhere.
 
@@ -1969,7 +1969,7 @@ Rajesh
 >
 >     Thanks,
 >     Rajesh
-",30/12/2011 05:37:38,30/12/2011 05:37:39,Open,rajesh,ajaya,Wish List,Unresolved
+",30/12/2011 05:37:38,30/12/2011 05:37:39,Open,rajesh,ajaya,Wish List,Wish List,Unresolved
 mobile website,"over one year ago we (Seema, Vallari, Larrie, ...) had met and developed a mobile strategy. using this space to document some of the email exchanges.
 
 need to decide whether to include in our 3.0 transition - i thought it had been deployed.
@@ -2158,7 +2158,7 @@ vallari
         We will let you decide about platforms, etc. Vallari (who is free Tue & Wed) will work with you to help define, refine, etc. and Abhishek will provide tech support.
 
         Regards,
-        Rajesh",07/01/2012 06:27:41,22/03/2012 17:21:15,Open,rajesh,vamsee,Wish List,Unresolved,08/03/12 11:44:05; vamsee; Does this belong in Rails 3 milestone?,"08/03/12 17:31:33; rajesh; this one always seems to get dropped. since you have a android phone, it might be worth checking to see what works now. if its working (or just needs to be deployed to work) then we can address and close it. 
+        Rajesh",07/01/2012 06:27:41,22/03/2012 17:21:15,Open,rajesh,vamsee,Wish List,Wish List,Unresolved,08/03/12 11:44:05; vamsee; Does this belong in Rails 3 milestone?,"08/03/12 17:31:33; rajesh; this one always seems to get dropped. since you have a android phone, it might be worth checking to see what works now. if its working (or just needs to be deployed to work) then we can address and close it. 
 
 if it requires a lot more work, move it to the next release, i guess. we don't have a process to incorporate misc features to releases.","09/03/12 06:20:36; vamsee; And you will have one soon :). But the mobile thing is a whole diff ballgame, worthy of it's own milestone. I don't think this can be shoehorned into R3, and I think at this performance the site will be too slow on EDGE to be of much use any way. I would move it to a time when we're fairly confident the site is quite performant (from the db pov)."
 existing privacy functionality - Rating & Comment,"currently we have privacy working for final Rating & Comments of apps and orgs 
@@ -2168,7 +2168,7 @@ if you are not logged in, you cannot see who made the final rating.
 this should work using our new framework, shouldn't it?
 
 adding @vamsee and @ajaya (who wrote the existing code)
-",13/01/2012 12:13:44,10/04/2012 09:34:30,Open,rajesh,rajesh,Controlled Visibility / Privacy,Unresolved,10/04/12 09:34:26; kristian; should do already
+",13/01/2012 12:13:44,10/04/2012 09:34:30,Open,rajesh,rajesh,Controlled Visibility / Privacy,Controlled Visibility / Privacy,Unresolved,10/04/12 09:34:26; kristian; should do already
 existing privacy functionality - Individual info,"currently we have privacy working for individuals
 
 if you are not logged in, you cannot dig into individual's contact data from the forms.
@@ -2176,7 +2176,7 @@ if you are not logged in, you cannot dig into individual's contact data from the
 this should work using our new framework, shouldn't it?
 
 adding @vamsee and @ajaya (who wrote the existing code)
-",13/01/2012 12:15:14,10/04/2012 17:02:24,Closed,rajesh,rajesh,Controlled Visibility / Privacy,Fixed,08/04/12 01:57:22; vamsee; @satyagrahi what do you mean by 'new framework' here?,"08/04/12 05:23:11; kristian; the ""new authorization"" framework",10/04/12 09:33:30; kristian; should do already
+",13/01/2012 12:15:14,10/04/2012 17:02:24,Closed,rajesh,rajesh,Controlled Visibility / Privacy,Controlled Visibility / Privacy,Fixed,08/04/12 01:57:22; vamsee; @satyagrahi what do you mean by 'new framework' here?,"08/04/12 05:23:11; kristian; the ""new authorization"" framework",10/04/12 09:33:30; kristian; should do already
 existing privacy functionality - Individual info in search,"currently we have privacy working for individual info
 
 if you are not logged in, search gives you results but greys out (makes non-clickable) the results for contacts.
@@ -2186,7 +2186,7 @@ this should work using our new framework, shouldn't it?
 separated it from #591 because its a different area, but could be combined.
 
 adding @vamsee and @ajaya (who wrote the existing code)
-",13/01/2012 12:17:25,10/04/2012 14:14:38,Open,rajesh,kristian,Controlled Visibility / Privacy,Unresolved,"06/04/12 03:21:55; rajesh; also as mentioned to @mkristian we need to not show search results that violate privacy.
+",13/01/2012 12:17:25,10/04/2012 14:14:38,Open,rajesh,kristian,Controlled Visibility / Privacy,Controlled Visibility / Privacy,Unresolved,"06/04/12 03:21:55; rajesh; also as mentioned to @mkristian we need to not show search results that violate privacy.
 
 for e.g. 
 - public searches should not show items that have been marked peer (or more restricted)
@@ -2230,7 +2230,7 @@ plain-old-ruby-object with sunspot DSL added to it and using
 solr-facet with the help of sunspots DSL"
 Download all attachments,"http://peerwater.org/organizations/142
 
-When reviewing an organization, would be nice if there was a single click to ""download all attachments"". ",16/01/2012 05:41:06,17/01/2012 05:31:59,Open,madan,vamsee,Wish List,Unresolved,17/01/12 05:20:33; rajesh; is it easy to add functionality by linking to google docs to view attachments online?,"17/01/12 05:24:49; madan; Either view all in separate tabs OR download all.
+When reviewing an organization, would be nice if there was a single click to ""download all attachments"". ",16/01/2012 05:41:06,17/01/2012 05:31:59,Open,madan,vamsee,Wish List,Wish List,Unresolved,17/01/12 05:20:33; rajesh; is it easy to add functionality by linking to google docs to view attachments online?,"17/01/12 05:24:49; madan; Either view all in separate tabs OR download all.
 If I'm online, then I would like view all in separate tabs.  If I'm heading
 out, I like to download all and then read at my leisure.
 
@@ -2266,7 +2266,7 @@ document current server/backup/deploy setup,"we (me and @vamsee ) need to docume
 
 4. things to look out for when moving off the server
 
-",23/01/2012 06:25:51,10/04/2012 03:46:06,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Unresolved
+",23/01/2012 06:25:51,10/04/2012 03:46:06,Open,rajesh,vamsee,Ruby 1.9.3 Rails 3.2,Ruby 1.9.3 Rails 3.2,Unresolved
 install rvm (or rbenv),"see #586
 
 we need to move to Ruby 1.9.2 (Rails 3.2 removes support for 1.8.7) and need rvm or equivalent.
@@ -2275,7 +2275,7 @@ one option is to create a new server config (T1.micro?) for all Rails3 and Ruby1
 and obviously the other option is to put it on the current server
 and doing both is the third option.
 
-@vamsee @mkristian ",23/01/2012 06:30:39,15/03/2012 05:52:13,Closed,rajesh,ajaya,Rails 3,Fixed,"26/01/12 05:56:19; kristian; going for ruby version from the OS gives the advantage of getting
+@vamsee @mkristian ",23/01/2012 06:30:39,15/03/2012 05:52:13,Closed,rajesh,ajaya,Rails 3,Rails 3,Fixed,"26/01/12 05:56:19; kristian; going for ruby version from the OS gives the advantage of getting
 security updates through automated ""security update process"" (if it is
 setup). the current ubuntu version comes with ruby-1.8.7 and that is
 enough for rails-3.2 and the coming LTS (this april) will come with
@@ -2305,7 +2305,7 @@ on two computers, the analytix window showed the login info (one was Safari on O
 other pages showed the login boxes, only analytix was using expired cache/session data
 
 adding @ajaya @madanvk @vinita
-",23/01/2012 09:46:24,23/01/2012 09:47:18,Open,rajesh,vamsee,Bug Fix,Unresolved
+",23/01/2012 09:46:24,23/01/2012 09:47:18,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved
 rural v urban classification,"need to classify projects as to whether they are:
 - urban
 - rural
@@ -2315,7 +2315,7 @@ best idea is to have checkboxes (allowing multiple choice) near the map.
 
 the real challenge is to put this in search, to allow sorting in project lists & analytix.
 
-adding @ajaya @madanvk @mkristian @vcolaco ",23/01/2012 09:52:37,23/01/2012 09:52:38,Open,rajesh,vamsee,Wish List,Unresolved
+adding @ajaya @madanvk @mkristian @vcolaco ",23/01/2012 09:52:37,23/01/2012 09:52:38,Open,rajesh,vamsee,Wish List,Wish List,Unresolved
 column filtering power (analytix 2.0),"@madanvk wants column filtering in project lists / analytix
 
 choose what columns and what ranges/values/options per column
@@ -2335,7 +2335,7 @@ to end with only one page.
 
 of course, some session info/cookie needs to be stored to remember preferences.
 
-@ajaya @mkristian - get involved, lots of design and blue sky options",23/01/2012 10:00:57,23/01/2012 10:00:57,Open,rajesh,vamsee,Wish List,Unresolved
+@ajaya @mkristian - get involved, lots of design and blue sky options",23/01/2012 10:00:57,23/01/2012 10:00:57,Open,rajesh,vamsee,Wish List,Wish List,Unresolved
 org list enhancement,"the org list needs a facelift:
 
 http://peerwater.org/organization_search/organization_search?link=country&orderby=asc
@@ -2349,7 +2349,7 @@ adding columns by using the entire width of page would be great. will provide co
 and adding column chooser - wow!
 
 adding @ajaya @mkristian @madanvk @vcolaco 
-keep the app list also in mind ... ",23/01/2012 12:03:08,23/01/2012 12:03:08,Open,rajesh,vamsee,Wish List,Unresolved
+keep the app list also in mind ... ",23/01/2012 12:03:08,23/01/2012 12:03:08,Open,rajesh,vamsee,Wish List,Wish List,Unresolved
 search with wildcard bug,"search for *d* and Germany shows up in the country list.
 
-ferret bug or our code?",23/01/2012 12:13:44,23/01/2012 12:13:44,Open,rajesh,vamsee,Bug Fix,Unresolved
+ferret bug or our code?",23/01/2012 12:13:44,23/01/2012 12:13:44,Open,rajesh,vamsee,Bug Fix,Bug Fix,Unresolved
