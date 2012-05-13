@@ -24,7 +24,7 @@ module ExportIssues
       
       http.start { |http|
         req = Net::HTTP::Get.new(uri.request_uri)
-        req.basic_auth 'githubusername', 'githubpassword'
+        req.basic_auth 'github_username', 'github_password'
         response = http.request(req)
         issues[idx] = JSON.parse(response.body)
       }
@@ -93,7 +93,7 @@ module ExportIssues
 
       http.start { |http|
         req = Net::HTTP::Get.new(uri.request_uri)
-        req.basic_auth 'vamsee', 'v4m533K4NGH'
+        req.basic_auth 'github_password', 'github_password'
         response = http.request(req)
         comment_pages[page-1] = JSON.parse(response.body)
       }
